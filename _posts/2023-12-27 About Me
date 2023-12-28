@@ -1,0 +1,47 @@
+---
+layout: post
+title: "About Me"
+---
+<p>I am a student studying sociology, data science, education, and information science. My research interests are: human-centered data science accessible technology, and data generation and visualization. Read more about my experience and my undergraduate research work in my resume/CV or find me on LinkedIn.</p>
+						<ul class="actions">
+							<li><a href="https://github.com/NatalieRMCastro/nataliecastro.github.io/blob/988a57bedf2cf36f0acc669595e28e98de5ee88e/natalie%20castro%20resume%202023.pdf" class="button">View Resume/CV</a></li>
+							<li><a href="https://www.linkedin.com/in/natalie-castro-591709228/" class="button">LinkedIn</a></li>
+						</ul>.
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=392" class="image fit thumb"><img src="https://picsum.photos/370/217?image=392" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=412" class="image fit thumb"><img src="https://picsum.photos/370/217?image=412" alt="" /></a>
+			<h3>Ultricies lacinia interdum</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=469" class="image fit thumb"><img src="https://picsum.photos/370/217?image=469" alt="" /></a>
+			<h3>Tortor metus commodo</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=574" class="image fit thumb"><img src="https://picsum.photos/370/217?image=574" alt="" /></a>
+			<h3>Quam neque phasellus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=565" class="image fit thumb"><img src="https://picsum.photos/370/217?image=565" alt="" /></a>
+			<h3>Nunc enim commodo aliquet</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=599" class="image fit thumb"><img src="https://picsum.photos/370/217?image=599" alt="" /></a>
+			<h3>Risus ornare lacinia</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+	</div>
+	<ul class="actions">
+		<li><a href="#" class="button">Full Portfolio</a></li>
+	</ul>
+</section>
