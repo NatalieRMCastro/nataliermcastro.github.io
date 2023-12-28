@@ -7,9 +7,9 @@ This is an example of the gallery feature from Strata.
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="https://picsum.photos/740/434?image=392" class="image fit thumb"><img src="assets/images/website resume.png" alt="photo of resume" /></a>
-			<h3>View my resume/CV</h3>
-			<p></p>
+			<a href="https://picsum.photos/740/434?image=392" class="image fit thumb"><img src="https://picsum.photos/370/217?image=392" alt="" /></a>
+			<h3>Magna sed consequat tempus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="https://picsum.photos/740/434?image=412" class="image fit thumb"><img src="https://picsum.photos/370/217?image=412" alt="" /></a>
