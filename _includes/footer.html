@@ -12,6 +12,7 @@
       {%- if site.pinterest_username -%}<li><a href="https://www.pinterest.com/{{ site.pinterest_username| cgi_escape | escape }}" class="icon fa-pinterest"></i><span class="label">Pinterest</span></a></li>{%- endif -%}
       {%- if site.youtube_username -%}<li><a href="https://www.youtube.com/{{ site.youtube_username| cgi_escape | escape }}" class="icon fa-youtube"><span class="label">YouTube</span></a></li>{%- endif -%}
       {%- if site.googleplus_username -%}<li><a href="https://plus.google.com/{{ site.googleplus_username| escape }}" class="icon fa-google-plus"><span class="label">Google+</span></a></li>{%- endif -%}
+      {% if site.mail_username -%}<li><a href="mailto:naca4005@colorado.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
       {%- if site.rss -%}<li><a href="{{ 'feed.xml' | relative_url }}" class="icon fa-rss"><span class="label">RSS</span></a></li>{%- endif -%}
     </ul>
     <ul class="copyright">
