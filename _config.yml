@@ -8,7 +8,7 @@ dribbble_username: ~
 facebook_username: ~
 flickr_username: ~
 instagram_username: ~
-linkedin_username: ~
+linkedin_username: https://www.linkedin.com/in/natalie-rm-castro/
 pinterest_username: ~
 youtube_username: ~
 googleplus_username: ~
@@ -17,7 +17,7 @@ rss: true
 show_excerpts: true
 date_format: "%b %-d, %Y"
 
-logo: https://picsum.photos/123?image=669
+logo: assets/images/avatar.png
 
 # Build settings
 # theme: jekyll-theme-strata
