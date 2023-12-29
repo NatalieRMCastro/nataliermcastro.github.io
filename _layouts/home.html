@@ -7,7 +7,9 @@ layout: default
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
-  {{ content }}
+  <div id="content-container">
+    {{ content }}
+  </div>
 
   {%- if site.posts.size > 0 -%}
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
@@ -35,3 +37,17 @@ layout: default
     </section>
   {%- endif -%}
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    // Intercept click on post links
+    $('.post-link').on('click', function (e) {
+      e.preventDefault(); // Prevent default link behavior
+
+      // Fetch the content of the clicked link
+      var url = $(this).attr('href');
+      $('#content-container').load(url + ' #content-container > *');
+    });
+  });
+</script>
