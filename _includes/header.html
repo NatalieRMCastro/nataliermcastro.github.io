@@ -12,40 +12,8 @@
   <nav id="navigation">
     <ul class="links">
       <li><a href="https://nataliermcastro.github.io/website/misc/2023/12/27/About-Me.html">about</a></li>
-      <li><a href="#" onclick="loadContent('#'); return false;">projects</a></li>
-      <li><a href="https://nataliermcastro.github.io/website/2023/12/27/Get-In-Touch.html" onclick="loadContent('https://nataliermcastro.github.io/website/2023/12/27/Get-In-Touch.html'); return false;">contact</a></li>
+      <li><a href="#https://nataliermcastro.github.io/website/>projects</a></li>
+      <li><a href="https://nataliermcastro.github.io/website/2023/12/27/Get-In-Touch.html">contact</a><li>
     </ul>
   </nav>
 </header>
-
-<!-- Content Container -->
-<div id="content-container"></div>
-
-<!-- Include jQuery (you can download and host it locally if needed) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Script to load content dynamically -->
-<script>
-  function loadContent(page) {
-    // Use jQuery to load content dynamically into the content container
-    $('#content-container').load(page);
-  }
-</script>
-
-<style>
-  /* Additional CSS for links and stacked layout */
-  .links {
-    list-style: none; /* Remove default list styles */
-    padding: 0;
-    margin: 0;
-  }
-
-  .links li {
-    margin-bottom: 10px; /* Add margin for spacing between stacked links */
-  }
-
-  /* Optional: Add hover styles for better interactivity */
-  .links a:hover {
-    color: #555; /* Change text color on hover */
-  }
-</style>
