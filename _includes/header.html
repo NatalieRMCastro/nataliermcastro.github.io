@@ -1,14 +1,21 @@
 <!-- Header -->
 <header id="header">
   <div class="inner">
-    <a href="{{ "/" | relative_url }}" class="image avatar"><img src="assets/images/avatar.png" alt="{{ site.title | escape }} width="300"" /></a>
+    <a href="{{ "/" | relative_url }}" class="image avatar"><img src="assets/images/avatar.png" alt="{{ site.title | escape }}" width="300" /></a>
     <h1>
       <strong>{{ site.title | escape }}</strong><br />
       {{ site.description | escape }}
     </h1>
   </div>
 
-  <ul class="actions">
-                <li><a href="_posts/2023-12-27-About-Me.md" class="button">about</a></li>
-              </ul>
+  <!-- Navigation -->
+  <nav id="navigation">
+    <ul class="actions">
+      <li><a href="https://nataliermcastro.github.io/website/misc/2023/12/27/About-Me.html" class="button">about</a></li>
+      <span style="border-right: 1px solid white;"></span> <!-- Vertical line -->
+      <li><a href="https://your-projects-link" class="button">projects</a></li>
+      <span style="border-right: 1px solid white;"></span> <!-- Vertical line -->
+      <li><a href="https://your-contact-link" class="button">contact</a></li>
+    </ul>
+  </nav>
 </header>
