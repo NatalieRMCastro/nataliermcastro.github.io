@@ -2,7 +2,7 @@
 layout: post
 title: Get In Touch
 published: true
-in_feed: true
+in_feed: false
 ---
 <!-- Three -->
 <section id="three">
