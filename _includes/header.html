@@ -10,10 +10,10 @@
 
   <!-- Navigation -->
   <nav id="navigation">
-    <ul class="actions">
-      <li><a href="#" onclick="loadContent('about.html'); return false;" class="button small-button">about</a></li>
-      <li><a href="#" onclick="loadContent('projects.html'); return false;" class="button small-button">projects</a></li>
-      <li><a href="#" onclick="loadContent('contact.html'); return false;" class="button small-button">contact</a></li>
+    <ul class="links">
+      <li><a href="#" onclick="loadContent('about.html'); return false;">about</a></li>
+      <li><a href="#" onclick="loadContent('projects.html'); return false;">projects</a></li>
+      <li><a href="#" onclick="loadContent('contact.html'); return false;">contact</a></li>
     </ul>
   </nav>
 </header>
@@ -33,16 +33,19 @@
 </script>
 
 <style>
-  /* Additional CSS for smaller buttons and stacked layout */
-  .button.small-button {
-    padding: 6px 10px; /* Adjust padding for smaller buttons */
-    margin: 5px 0; /* Add margin for spacing between stacked buttons */
-    display: block; /* Make buttons block-level elements for stacking */
-    width: 100%; /* Set width to 100% for full width */
+  /* Additional CSS for links and stacked layout */
+  .links {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+  }
+
+  .links li {
+    margin-bottom: 10px; /* Add margin for spacing between stacked links */
   }
 
   /* Optional: Add hover styles for better interactivity */
-  .button.small-button:hover {
-    background-color: #555; /* Change background color on hover */
+  .links a:hover {
+    color: #555; /* Change text color on hover */
   }
 </style>
