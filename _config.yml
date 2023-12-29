@@ -27,3 +27,4 @@ logo: assets/images/avatar.png
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-pdf-embed
