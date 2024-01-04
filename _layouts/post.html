@@ -4,8 +4,6 @@ layout: default
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="major post-header">
     {%- include header.html -%}
-    {%- include "<a href="{{ "/" | relative_url }}" class="image avatar"><img src="website/assets/images/avatar.png" alt="{{ site.title | escape }}" width="300" /></a>}
-
     <h2 class="post-title" itemprop="name headline">{{ page.title | escape }}</h2>
     <p>
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
