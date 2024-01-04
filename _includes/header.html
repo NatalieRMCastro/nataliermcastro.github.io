@@ -1,13 +1,13 @@
-<!-- Header -->
+  <!-- Header -->
 <header id="header">
   <div class="inner">
-    <a href="{{ "/" | relative_url }}" class="image avatar"><img src="assets/css/images/headshot.png" alt="Photo of Natalie" width="300" /></a>
-
+    <a href="{{ "/" | relative_url }}" class="image avatar"><img src="{{ site.logo | relative_url }}" alt="{{ site.title | escape }}" /></a>
     <h1>
       <strong>{{ site.title | escape }}</strong><br />
       {{ site.description | escape }}
     </h1>
   </div>
+</header>
 
   <!-- Navigation -->
   <nav id="navigation">
