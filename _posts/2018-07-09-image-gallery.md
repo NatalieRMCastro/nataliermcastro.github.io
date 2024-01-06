@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Image Gallery"
+published: true
+in_feed: false
 ---
 This is an example of the gallery feature from Strata.
 
