@@ -49,7 +49,7 @@ PROJECT TEXT
 
 PROJECT TEXT
 
-__Sources:__
+__Sources:__  
 billboard. (2023). Billboard Charts Legend. Retrieved from Billboard: 
 https://www.billboard.com/billboard-charts-legend/
 billboard. (2023). Billboard Explains: The Hot 100 Chart. Retrieved from Billboard: 
