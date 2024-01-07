@@ -19,7 +19,7 @@ how are popularity, time, and genre demonstrated through potential drug mentions
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=12nFVnqQTmt3kWSeZBa_dd7iRZbORTQIU" alt="ALTERNATIVE TEXT" /></span></div>
+			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1KfNr46geDTJ4dhQIe6OiwKOik75gA47B" alt="ALTERNATIVE TEXT" /></span></div>
 			
 		</div>
 	</div>
