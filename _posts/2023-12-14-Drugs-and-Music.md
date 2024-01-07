@@ -16,6 +16,15 @@ this scoring system. Billboard has made all tracks available through their websi
 origination of the chart in 1958. Intended to complement prior literature, my research question is: 
 how are popularity, time, and genre demonstrated through potential drug mentions in song titles?
 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1ebl0QNdivCnuVAm75HN0Z4exAgAQ1tWR" alt="whoops this page is still under construction :) please send me a message if you would like to chat about this project." /></span></div>
+			
+		</div>
+	</div>
+	</section>
+
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
