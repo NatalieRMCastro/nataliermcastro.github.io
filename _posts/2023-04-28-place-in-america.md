@@ -58,7 +58,7 @@ The one outlier in these correlations are people who identify as Hispanic. Not o
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1q6tHnqwVtmIp_wKrypvH1nDrDirGtgL_" alt="A correlation of different environmental factors for different raciaal groups. There is different colors depending on if it positively or negatively correlated. The food environment has the strongest impact on all races. For all environmental impacts, Hispanic individuals encountered no correlations for environmental impacts. Additionally, only AIAN are impacted by limited access to healthy foods and alcoholol-impaired driving deaths." /></span></div>
+			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1q6tHnqwVtmIp_wKrypvH1nDrDirGtgL_" alt="A correlation of different environmental factors for different raciaal groups. There is different colors depending on if it positively or negatively correlated. The food environment has the strongest impact on all races. For all environmental impacts, Hispanic individuals encountered no correlations for environmental impacts. Additionally, only AIAN are impacted by limited access to healthy foods and alcohlol-impaired driving deaths." /></span></div>
 			
 		</div>
 	</div>
