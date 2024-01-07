@@ -31,8 +31,7 @@ On the below graph, each blue dot is the median household income (MHI) of each c
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1qlt_KMfx-zRRA3bHZEXaWY6-l-o_IhPo" alt="A scatterplot showing the correlation of life expectancy rate and median household income. The x axis ranges between 40,000 dollars and 140,000 dollars. The majority of the plots are in between 40,000 and 100,000 with a life expectancy between 65-80 years old. The correlation between life expectancy rate and median household income is 0.61." /></span></div>
-			
+			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/file/d/1qlt_KMfx-zRRA3bHZEXaWY6-l-o_IhPo/preview" alt="A scatterplot showing the correlation of life expectancy rate and median household income. The x axis ranges between 40,000 dollars and 140,000 dollars. The majority of the plots are in between 40,000 and 100,000 with a life expectancy between 65-80 years old. The correlation between life expectancy rate and median household income is 0.61."/></span></div>
 		</div>
 	</div>
 	</section>
