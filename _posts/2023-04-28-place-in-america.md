@@ -70,7 +70,7 @@ Income is an important correlate to understand the life course on a meso level w
 
 Sources:
 
-Anon.n.d. “Explore Health Rankings | Rankings Data & Documentation.” County Health Rankings & Roadmaps. Retrieved April 28, 2023 (https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation).
+Anon.n.d. “Explore Health Rankings Rankings Data & Documentation.” County Health Rankings & Roadmaps. Retrieved April 28, 2023 (https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation).
 
 Barbieri, Magali. 2022. “Socioeconomic Disparities Do Not Explain the U.S. International Disadvantage in Mortality.” The Journals of Gerontology: Series B 77(Supplement_2):S158–66. doi: 10.1093/geronb/gbac030.
 
