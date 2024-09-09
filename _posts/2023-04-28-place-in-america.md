@@ -11,7 +11,7 @@ In the United States of America our average life expectancy is 75 years old — 
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1kwLwaPDYIvIJwwCljrX133ZubkrPoWcg" alt="Decorative black and white image of a stethescope"  /></span> 
+			<div class="col-12"><span class="image fit"><img src="assets/images/stethescope.png" alt="Decorative black and white image of a stethescope"  /></span> 
         <figcaption>photo by Hush Naidoo Jade on Upsplash.</figcaption>
 
       </div>
