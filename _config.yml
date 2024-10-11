@@ -14,7 +14,7 @@ youtube_username: ~
 googleplus_username: ~
 mail_username: naca4005@colorado.edu
 rss: true
-baseurl: /website/
+baseurl: /
 
 show_excerpts: true
 date_format: "%b %-d, %Y"
