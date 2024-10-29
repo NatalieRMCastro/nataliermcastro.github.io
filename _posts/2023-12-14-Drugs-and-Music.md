@@ -2,8 +2,8 @@
 layout: post
 title: "Drugs & Rock N Roll: Mentions of Substance Usage in Popular Culture"
 categories: projects
-published: true
-in_feed: true
+published: False
+in_feed: False
 ---
 
 Music is at the center of popular culture. As a historic representation of the development 
