@@ -11,14 +11,12 @@ In the United States of America our average life expectancy is 75 years old — 
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="stethescope.png" alt="Decorative black and white image of a stethescope"  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/stethescope.png" alt="Decorative black and white image of a stethescope"  /></span> 
         <figcaption>photo by Hush Naidoo Jade on Upsplash.</figcaption>
-
-      </div>
-			
+			</div>
 		</div>
 	</div>
-	</section>
+</section>
 
 This data is derived from demographic data even down to the county level. For example, the University of Wisconsin annually publishes the County Health Rankings & Roadmaps (CHR&R). This dataset allows demographers to provide an in-depth county analysis at disparities within America or make broad health generalizations. When comparing the United States to its ‘peer countries’ this is weighted in economic terms.
 
@@ -31,10 +29,10 @@ On the below graph, each blue dot is the median household income (MHI) of each c
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1qlt_KMfx-zRRA3bHZEXaWY6-l-o_IhPo" alt="A scatterplot showing the correlation of life expectancy rate and median household income. The x axis ranges between 40,000 dollars and 140,000 dollars. The majority of the plots are in between 40,000 and 100,000 with a life expectancy between 65-80 years old. The correlation between life expectancy rate and median household income is 0.61."/></span></div>
+			<div class="col-12"><span class="image fit"><img src="/assets/images/life_exp.png" alt="A scatterplot showing the correlation of life expectancy rate and median household income. The x axis ranges between 40,000 dollars and 140,000 dollars. The majority of the plots are in between 40,000 and 100,000 with a life expectancy between 65-80 years old. The correlation between life expectancy rate and median household income is 0.61."/></span></div>
 		</div>
 	</div>
-	</section>
+</section>
 
 When measuring demographic data, it typically asks questions about race and ethnicity. This has generated problems in historical comparisons and data because the categories are arbitrary. Typically, the census classifies those who identify as Hispanic as ‘other’ and select yes for ethnicity. These measures also exclude individuals who identify as Middle Eastern entirely. These limitations have to be understood when analyzing this data, however, historical oppression plays a strong factor in one’s life course and health outcomes.
 
@@ -45,9 +43,8 @@ How are these groups differentially impacted by median household income compared
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=17Vl3kYRVM9BEQvEP-NTp1bSUiUojVgr1" alt="A correlation similar to above, but split up by self-identified racial categories of Black, White, AIAN, and Hispanic. All families have a similar skew with lesser median household income and life expectancy. The correlations for Black, White, AIAN families are all significant at 0.57, 0.55, and 0.40 respectively. For Hispanic families, the lowest median income is at 20,000 dollars and ends at 100,000. The correlation for Hispanic life expectancy is only 0.07." /></span></div>
-			
-		</div>
+			<div class="col-12"><span class="image fit"><img src="/assets/images/census_exp.png" alt="A correlation similar to above, but split up by self-identified racial categories of Black, White, AIAN, and Hispanic. All families have a similar skew with lesser median household income and life expectancy. The correlations for Black, White, AIAN families are all significant at 0.57, 0.55, and 0.40 respectively. For Hispanic families, the lowest median income is at 20,000 dollars and ends at 100,000. The correlation for Hispanic life expectancy is only 0.07." /></span></div>
+			</div>
 	</div>
 	</section>
 
@@ -58,8 +55,7 @@ The one outlier in these correlations are people who identify as Hispanic. Not o
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="https://drive.google.com/uc?export-download&id=1q6tHnqwVtmIp_wKrypvH1nDrDirGtgL_" alt="A correlation of different environmental factors for different raciaal groups. There is different colors depending on if it positively or negatively correlated. The food environment has the strongest impact on all races. For all environmental impacts, Hispanic individuals encountered no correlations for environmental impacts. Additionally, only AIAN are impacted by limited access to healthy foods and alcohlol-impaired driving deaths." /></span></div>
-			
+			<div class="col-12"><span class="image fit"><img src="/assets/images/env_heat.png" alt="A correlation of different environmental factors for different raciaal groups. There is different colors depending on if it positively or negatively correlated. The food environment has the strongest impact on all races. For all environmental impacts, Hispanic individuals encountered no correlations for environmental impacts. Additionally, only AIAN are impacted by limited access to healthy foods and alcohlol-impaired driving deaths." /></span></div>	
 		</div>
 	</div>
 	</section>
@@ -68,6 +64,7 @@ While income is not the only proximal factor in health outcomes it plays a large
 
 Income is an important correlate to understand the life course on a meso level within the United States, however, on a macro scale it does not matter. Every single county is performing below the international average in life expectancy. Americans are dying sooner every year, which began to lag behind as early as the 1980s (Harris et al: 2021). COVD — 19 further exacerbated these gaps, especially among already marginalized groups. This necessitates a national health intervention looking outside the United States for solutions.
 
+---
 Sources:
 
 Anon.n.d. “Explore Health Rankings Rankings Data & Documentation.” County Health Rankings & Roadmaps. Retrieved April 28, 2023 (https://www.countyhealthrankings.org/explore-health-rankings/rankings-data-documentation).
