@@ -15,11 +15,13 @@ Teaching Queerly: A Zine of Practice is a pedagogy primer intended to support an
 
 Some of the images used in this document are AI generated. I chose to use these images to first abstain from using any stock photos of children, and also to capture a feeling unable to be found in stock images. The photo at the end of the zine with the post card saying "Queer + Happy", I took the photo myself in a small bookstore off of the Pike's Place market in Seattle. The photos of flowers were inteded to make the zine feel clean, fresh, and aesthetically pleasing. Also, they came from the Canva theme, and I rather liked them.
 
-Please feel free to use this primer in any way you see fit, I would not like attribution. I believe this material should be freely shared because it is a result of contributions from many academics. If citing this primer, please use the below bibliography to continue to build upon these works. I am not affiliated with a [Queer Endeavor](https://www.colorado.edu/center/a-queer-endeavor/), Dr. Leonardi is the co-founder and co-director, but I reccommend any resource linked on their website any kinds of professional development and resources for teaching queerly. 
+Please feel free to use this primer in any way you see fit, I would not like attribution. I believe this material should be freely shared because it is a result of contributions from many academics. If citing this primer, please use the below bibliography to continue to build upon these works. I am not affiliated with a <a href="https://www.colorado.edu/center/a-queer-endeavor/">Queer Endeavor</a>, Dr. Leonardi is the co-founder and co-director, but I reccommend any resource linked on their website any kinds of professional development and resources for teaching queerly. 
 
 
 </section>
-
+<section>
+	
+</section>
 <section>
 	
 <ul class="actions">
