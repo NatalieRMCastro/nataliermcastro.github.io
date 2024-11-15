@@ -26,6 +26,19 @@ $spacing-unit: 30px !default;
 		weight-bold:		400
 	);
 
+// Define fonts
+$header-font-family: 'Libre Baskerville', Helvetica, sans-serif;
+$body-font-family: Helvetica, sans-serif;
+
+// Apply fonts
+body {
+  font-family: $body-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+}
+
 // Palette.
 	$palette: (
 		bg:					#fff,
