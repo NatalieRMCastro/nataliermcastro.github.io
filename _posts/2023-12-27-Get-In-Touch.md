@@ -24,8 +24,27 @@ in_feed: false
 			<ul class="labeled-icons">
 				<li>
 					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
+					Colorado Laboratory for Users, Media, and Networks<br />
+					advised by Dr. Brian Keegan
+					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
 					COLUMN Lab<br />
 					advised by Dr. Brian Keegan
+				</li>
+				<li>
+					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
+					Palen Lab<br />
+					advised by Dr. Leysia Palen
+					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
+					Palen Lab<br />
+					advised by Dr. Leysia Palen
+				</li>
+				<li>
+					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
+					CU TECH Lab<br />
+					advised by Dr. David Glimp and Dr. Rachael Deagman Simonetta
+					<h3 class="icon fa-home"><span class="label">Affiliated with </span></h3>
+					CU TECH Lab<br />
+					co-advised by Dr. David Glimp and Dr. Rachael Deagman Simonetta
 				</li>
 				<li>
 					<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
