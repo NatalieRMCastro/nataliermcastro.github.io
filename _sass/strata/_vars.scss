@@ -18,13 +18,7 @@ $spacing-unit: 30px !default;
 		container-width:	100%
 	);
 
-// Font.
-	$font: (
-		family:				('Libre Baskerville', Helvetica, sans-serif),
-		family-fixed:		('Courier New', monospace),
-		weight:				400,
-		weight-bold:		400
-	);
+
 
 // Define fonts
 $header-font-family: 'Libre Baskerville', Helvetica, sans-serif;
@@ -37,7 +31,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
-}
+};
 
 // Palette.
 	$palette: (
