@@ -18,20 +18,23 @@ $spacing-unit: 30px !default;
 		container-width:	100%
 	);
 
-
-
-// Define fonts
-$header-font-family: 'Libre Baskerville', Helvetica, sans-serif;
-$body-font-family: Helvetica, sans-serif;
+// Font map
+$font: (
+  family: 'Helvetica, sans-serif',
+  family-header: 'Libre Baskerville, Helvetica, sans-serif',
+  family-fixed: 'Courier New, monospace',
+  weight: 400,
+  weight-bold: 400
+);
 
 // Apply fonts
 body {
-  font-family: $body-font-family;
+  font-family: map-get($font, family);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
-};
+  font-family: map-get($font, family-header);
+}
 
 // Palette.
 	$palette: (
