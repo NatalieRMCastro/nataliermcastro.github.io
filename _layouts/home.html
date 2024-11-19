@@ -12,7 +12,7 @@ layout: default
   {%- if site.posts.size > 0 -%}
     {%- assign date_format = site.date_format | default: "%b %-d, %Y" -%}
     <section class="post-list">
-      <h2 class="post-list-heading">{{ page.list_title | default: "Projects" }}</h2>
+      <h2 class="post-list-heading">{{ page.list_title | default: "Portfolio" }}</h2>
       {%- for post in site.posts -%}
         {%- if post.published != false and post.in_feed != false -%}
           <hr>
