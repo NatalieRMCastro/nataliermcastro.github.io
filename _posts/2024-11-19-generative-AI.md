@@ -5,7 +5,7 @@ categories: projects
 published: true
 in_feed: true
 ---
-For my MS thesis work, I have decided to employ Generative-AI to develop a new ways to provided data engagement that is readable and esaily accessible. 
+For my MS thesis work, I have decided to employ Generative-AI to develop a new ways to provided data engagement that is readable and easily accessible. 
 <section>
 
 <section>
