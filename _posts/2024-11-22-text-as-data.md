@@ -5,7 +5,7 @@ categories: projects
 published: true
 in_feed: true
 ---
-This repository holds the Gists and the Notebook Tutorials for a variety of NLP methods. I created these tutorials and Gists for my MS independnet study based on the textbook Text As Data by Justin Grimmer, Margaret Roberts, and Brandon Stewart.<section>
+This repository holds the Gists and the Notebook Tutorials for a variety of NLP methods. I created these tutorials and Gists for my MS independnet study based on the textbook Text As Data by Justin Grimmer, Margaret Roberts, and Brandon Stewart.
 
 <section>
 	<p>
