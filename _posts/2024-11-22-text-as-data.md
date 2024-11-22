@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "BERTopic Model Serialization"
+title: "Text As Data: Method Primer"
 categories: projects
 published: true
 in_feed: true
