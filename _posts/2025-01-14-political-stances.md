@@ -11,20 +11,13 @@ This page houses the current work for my text mining class, where I will be coll
  </section>
 
  <section>
-	<p>
 	<ul class="actions">
 		<li><a href="" class="button fit small">Introduction</a></li>
 	</ul>
-  </p>
   
-</section>
-
-<section>
-	<p>
 	<ul class="actions">
 		<li><a href="" class="button fit small">Data</a></li>
 	</ul>
-  </p>
   
 </section>
 
