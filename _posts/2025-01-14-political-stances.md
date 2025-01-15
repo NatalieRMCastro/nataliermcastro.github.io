@@ -11,6 +11,16 @@ This page houses the current work for my text mining class, where I will be coll
  </section>
 
  <section>
+
+  <div class="col-6 col-12-small">
+			<ul class="actions stacked">
+				<li><a href="#" class="button primary small">Introduction</a></li>
+				<li><a href="#" class="button small">Data</a></li>
+			</ul>
+		</div>
+ </section>
+
+ <section>
 	<ul class="actions">
 		<li><a href="" class="button fit small">Introduction</a></li>
 	</ul>
