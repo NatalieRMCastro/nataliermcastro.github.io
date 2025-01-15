@@ -3,7 +3,7 @@ layout: post
 title: "Political Stances: Data"
 categories: projects
 published: true
-in_feed: true
+in_feed: false
 ---
 
 [text]
