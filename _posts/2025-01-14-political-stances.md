@@ -12,12 +12,32 @@ This page houses the current work for my text mining class, where I will be coll
 
  <section>
 
-  <div class="col-6 col-12-small">
+ 	<div class="row">
+		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="#" class="button primary small">Introduction</a></li>
-				<li><a href="#" class="button small">Data</a></li>
+				<li><a href="#" class="button fit small">Introduction</a></li>
+				<li><a href="#" class="button fit small">Data</a></li>
 			</ul>
 		</div>
+		<div class="col-6 col-12-small">
+			<ul class="actions stacked">
+				<li><a href="#" class="button fit small">Clustering</a></li>
+				<li><a href="#" class="button fit small">LDA</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-12-small">
+			<ul class="actions stacked">
+				<li><a href="#" class="button fit small">ARM</a></li>
+				<li><a href="#" class="button fit small">Neural Nets</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-12-small">
+			<ul class="actions stacked">
+				<li><a href="#" class="button fit small">Conclusions</a></li>
+				<li><a href="#" class="button small fit">Small</a></li>
+			</ul>
+		</div>
+	</div>
  </section>
 
  <section>
