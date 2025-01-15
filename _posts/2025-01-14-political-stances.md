@@ -49,7 +49,8 @@ This page houses the current work for my text mining course (Spring 2025), where
   <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="WHOOPS! THIS PAGE IS STILL UNDER CONSTRUCTION.jpg" alt="A black and white text that says 'whoops! this page is still under construction"  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images
+/WHOOPS! THIS PAGE IS STILL UNDER CONSTRUCTION.jpg" alt="A black and white text that says 'whoops! this page is still under construction"  /></span> 
         
 			</div>
 		</div>
