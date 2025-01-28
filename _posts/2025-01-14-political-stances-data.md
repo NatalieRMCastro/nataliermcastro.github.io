@@ -16,6 +16,6 @@ The data used in this project comes primarily from two sources. The first is the
 	</div>
 
  <figure>
-  <img src="/assets/images/nga_hor.png" alt="Old oil painting, mostly red, of the house of representatives">
+  <img src="assets/images/nga_hor.jpg" alt="Old oil painting, mostly red, of the house of representatives">
   <figcaption>The House of Reprsentatives, *1822*, Samuel F.B. Morse.</figcaption>
 </figure>
