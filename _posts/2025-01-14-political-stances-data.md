@@ -19,8 +19,7 @@ The data used in this project comes primarily from two sources. The first is the
   <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images
-nga_hor.jpg" alt="Old oil painting, mostly red, of the house of representatives"  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/nga_hor.jpg" alt="Old oil painting, mostly red, of the house of representatives"  /></span> 
         
 			</div>
 		</div>
