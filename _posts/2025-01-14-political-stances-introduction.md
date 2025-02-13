@@ -6,6 +6,18 @@ published: true
 in_feed: false
 ---
 
+61% of United States adults are concerned about global warming or climate change (Inc, 2024). Concern about climate change is not new either – it has received increasing media and partisan attention dating into the late 1980s (Dunlap & McCright, 2008; Inc, 2024). 
+
+ <section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/gallup_concern.png" alt="A bar graph from Gallup - 61% of U.S. adults are concerned about climate change"  /></span> 
+        <figcaption>figure by Gallup</figcaption>
+			</div>
+		</div>
+	</div>
+</section>
+
 Climate change has become an increasingly polarizing issue through partisan lines – and increasing in recent decades. Partisan views have developed into a social identity of sorts, thus many controversial topics have become amalgamated into believing the ‘Democrat’ or ‘Republican’ view of such debates (Dunlap et al., 2016). Historically environmental protections have received bi-partisan support, yet after the 2008 election, perceptions began to change (Dunlap et al., 2016). The increase in access to mass media may contribute to increasing political polarization too. Liberal leaning news sources are more likely to report upon climate change action, while conservative news sources challenge this – a recent headline from Fox News illustrates this: “Dems blame LA fire on 'climate change' despite city cutting fire department budget” (Adame et al., 2025; Spady, 2025). Mass media specifically contributes a significant role in shaping partisan beliefs about climate change (Adame et al., 2025).
 
 <section>
