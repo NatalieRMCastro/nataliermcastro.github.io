@@ -24,17 +24,5 @@ The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key w
 
 
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/nga_hor.jpg" alt="Old oil painting, mostly red, of the house of representatives"  /></span> 
-        
-			</div>
-		</div>
-	</div>
-
-</section>
-
 ---
-Image Attributes: (1) _The House of Representatives, 1822, probably reworked 1823, Samuel F. B. Morse_
-
+Bibliography
