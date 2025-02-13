@@ -162,7 +162,7 @@ $size-header-pad: 4em;
 		margin: 0 0 (_size(element-margin) * 0.5) 0;
 
 		a {
-			color: inherit;
+			color: black;
 			text-decoration: none;
 		}
 	}
@@ -599,7 +599,7 @@ $size-header-pad: 4em;
 				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 				border-radius: _size(border-radius);
 				border: solid 3px rgba(255,255,255,0.5);
-				color: #fff;
+				color: #00F;
 				content: 'View';
 				display: inline-block;
 				font-size: 0.8em;
@@ -1168,7 +1168,7 @@ $size-header-pad: 4em;
 	.poptrox-popup {
 		@include vendor('box-sizing', 'content-box');
 		-webkit-tap-highlight-color: rgba(255,255,255,0);
-		background: #fff;
+		background: #00F;
 		border-radius: _size(border-radius);
 		box-shadow: 0 0.1em 0.15em 0 rgba(0,0,0,0.15);
 		overflow: hidden;
@@ -1192,7 +1192,7 @@ $size-header-pad: 4em;
 		}
 
 		.caption {
-			background: #fff;
+			background: #00F;
 			bottom: 0;
 			cursor: default;
 			font-size: 0.9em;
@@ -1219,7 +1219,7 @@ $size-header-pad: 4em;
 			width: 50%;
 
 			&:before {
-				color: #fff;
+				color: #00F;
 				font-size: 2.5em;
 				height: 1em;
 				line-height: 1em;
@@ -1253,7 +1253,7 @@ $size-header-pad: 4em;
 			@include icon;
 			@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
 			-webkit-tap-highlight-color: rgba(255,255,255,0);
-			color: #fff;
+			color: #00F;
 			height: 4em;
 			line-height: 4em;
 			opacity: 0;
