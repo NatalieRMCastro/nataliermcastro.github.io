@@ -41,22 +41,3 @@ This page houses the current work for my text mining course (Spring 2025), where
 		</div>
 	</div>
  </section>
-
-
-
-<section>
-
-	<p> Looking for something that's not here yet? By February 17th my introduction and data collection will be fully completed, and the rest to come soon! If you would like to see some over my other work I would reccomend looking at something else in my portfolio, or you can send me an email. </p>
-
-  <section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images
-/WHOOPS! THIS PAGE IS STILL UNDER CONSTRUCTION.jpg" alt="A black and white text that says 'whoops! this page is still under construction"  /></span> 
-        
-			</div>
-		</div>
-	</div>
-</section>
-[introduction text here] 
-</section>
