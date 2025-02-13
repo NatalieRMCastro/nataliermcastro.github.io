@@ -6,17 +6,14 @@ published: true
 in_feed: false
 ---
 
-The data used in this project comes primarily from two sources. The first is the [News API](https://newsapi.org/), and the second is collected with the support of the [Congress.Gov API](https://www.congress.gov/) and XML webscraping for the Bill text. Supplementary data includes the GOP and the DNC party platform documents, generated during the 2024 election cycle.
+Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. 
+
+#### NewsAPI
+The [NewsAPI] (https://newsapi.org/) is an easy to access API that provides key word queries to search for data in their repository of millions of articles. To understand partisan polarization in regard to climate change this is especially valuable, as many studies have begun to quantify the partisan lean of news websites. The keywords “climate change” and either “republican” or “democrat” were used to search NewsAPI. Returned from the query was the source, author, title of the article, description, url, and published date. A total of 1,559 news articles were found that have the keywords “Republican” and “climate change” and a total of 671 news articles were found for “Democrat” – this totals to 2,230 total articles collected.
+
+#### Congess.gov API
+
 <section>
-[data text here]
-
- </section>
-
-<section>
-
-	<p> Looking for something that's not here yet? By February 17th my introduction and data collection will be fully completed, and the rest to come soon! If you would like to see some over my other work I would reccomend looking at something else in my portfolio, or you can send me an email. </p>
-
-  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
 			<div class="col-12"><span class="image fit"><img src="/assets/images/nga_hor.jpg" alt="Old oil painting, mostly red, of the house of representatives"  /></span> 
@@ -24,6 +21,8 @@ The data used in this project comes primarily from two sources. The first is the
 			</div>
 		</div>
 	</div>
+
 </section>
-_The House of Representatives, 1822, probably reworked 1823, Samuel F. B. Morse_
-</section>
+---
+Image Attributes: (1) _The House of Representatives, 1822, probably reworked 1823, Samuel F. B. Morse_
+
