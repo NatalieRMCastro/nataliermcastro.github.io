@@ -6,7 +6,7 @@ published: true
 in_feed: false
 ---
 
-61% of United States adults are concerned about global warming or climate change (Inc, 2024). Concern about climate change is not new either – it has received increasing media and partisan attention dating into the late 1980s (Dunlap & McCright, 2008; Inc, 2024). 
+By 2030, climate change’s impact on high-temperature days will double, but only 61% of United States adults are concerned about global warming or climate change (Inc, 2024). Concern about climate change is not new either – it has received increasing media and partisan attention dating into the late 1980s (Dunlap & McCright, 2008; Inc, 2024; Treen et al., 2020). Since 2008, the number of high-temperature days have tripled which decreases overall wellbeing specifically in countries who have less GDP or growing economies (Gallup Inc., 2022). Risks extend into flooding, high temperature, agricultural issues, food insecurity, and the like (Gallup Inc., 2022). However, the most intense impacts of Climate Change are disproportionately in the Global South, thus allowing for its intense politicization in the United States. 
 
  <section>
 	<div class="box alt">
