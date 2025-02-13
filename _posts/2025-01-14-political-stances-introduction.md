@@ -14,3 +14,7 @@ Climate change has become an increasingly polarizing issue through partisan line
 		<p><span class="image right"><img src="/assets/images/democrats.jpg" alt="" /></span> In contrast, Democrat’s favor more climate forward climate change policies. In 2022, the Inflation Reduction Act was passed by the Senate, totaling over 300 billion dollars to invest in global warming (Yearwood, 2022). This bill is claimed as “critical to humanity”, as climate change is viewed by many as something which impacts many people across the world (Yearwood, 2022). Furthermore, this bill supports clean energy, electric vehicle tax credits, and broader emission goals. </p>
 	</section>
 
+Donald Trump’s plans for office aim to directly disassemble the effort by the Democrats, claiming “to further defeat inflation, my plan will terminate the Green New Deal, which I call the Green New Scam… and [I will] rescind all unspent funds under the misnamed Inflation Reduction Act” (Martínez, 2024). Not only is the Republican Party anti-climate change, they actively block and dismantle what policy the Democrat Party passes – this is not new to the Trump Era either, during 2008 a ‘sturdy legislate wall’ was established against the Obama Administration (Dunlap et al., 2016).
+
+---
+Bibliography:
