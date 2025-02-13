@@ -13,6 +13,17 @@ The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key w
 
 ### Congess.gov API
 
+
+
+### Party Platform Declarations 
+
+<section>
+	<p><span class="image left"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt=""  /></span> </p>
+	<p><span class="image right"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
+</section>
+
+
+
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
@@ -23,13 +34,6 @@ The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key w
 	</div>
 
 </section>
-
-### Party Platform Declarations 
-
-<section>
-		<p><span class="image left"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt=""  /></span> </p>
-		<p><span class="image right"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
-	</section>
 
 ---
 Image Attributes: (1) _The House of Representatives, 1822, probably reworked 1823, Samuel F. B. Morse_
