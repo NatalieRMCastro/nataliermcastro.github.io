@@ -45,18 +45,30 @@ Image Attributions:
 (3): PBS
 
 Bibliography:
+
 Adame, B. J., Corman, S. R., Endres, C. J., Farmer, R. D., & Awonuga, T. (2025). How partisan news outlets frame vested interests in climate change. Journal of Environmental Management, 375, 124159. https://doi.org/10.1016/j.jenvman.2025.124159
+
 Dixon, G., Clarke, C., Jacquet, J., Evensen, D. T. N., & Hart, P. S. (2024). The complexity of pluralistic ignorance in Republican climate change policy support in the United States. Communications Earth & Environment, 5(1), 1–6. https://doi.org/10.1038/s43247-024-01240-x
+
 Dunlap, R. E., & McCright, A. M. (2008). A Widening Gap: Republican and Democratic Views on Climate Change. Environment: Science and Policy for Sustainable Development, 50(5), 26–35. https://doi.org/10.3200/ENVT.50.5.26-35
+
 Dunlap, R. E., McCright, A. M., & Yarosh, J. H. (2016). The Political Divide on Climate Change: Partisan Polarization Widens in the U.S. Environment: Science and Policy for Sustainable Development, 58(5), 4–23. https://doi.org/10.1080/00139157.2016.1208995
+
 Gallup Inc. (2022). Climate Change and Wellbeing Around the World. Gallup.
+
 Inc, G. (2024, December 13). Are Americans Concerned About Global Warming? Gallup.Com. https://news.gallup.com/poll/355427/americans-concerned-global-warming.aspx
 Jones, N., Witze, A., Tollefson, J., & Kozlov, M. (2025). What Trump 2.0 means for science: The likely winners and losers. Nature, 637(8046), 532–535. https://doi.org/10.1038/d41586-025-00052-z
+
 Jud, S., & Nguyen, Q. (2024). Disasters and Divisions: How Partisanship Shapes Policymaker Responses to Climate Change (SSRN Scholarly Paper No. 4870935). Social Science Research Network. https://doi.org/10.2139/ssrn.4870935
+
 Martínez, A. (2024, November 15). Trump wants to “Drill, baby, drill.” What does that mean for climate concerns? NPR. https://www.npr.org/2024/11/13/nx-s1-5181963/trump-promises-more-drilling-in-the-u-s-to-boost-fossil-fuel-production
+
 Spady, A. (2025). Dems blame LA fire on “climate change” despite city cutting fire department budget | Fox News. Fox News. https://www.foxnews.com/politics/dems-blame-fire-climate-change-despite-cutting-fire-department-budget
+
 Stern, P. C., & Dietz, T. (1994). The Value Basis of Environmental Concern. Journal of Social Issues, 50(3), 65–84. https://doi.org/10.1111/j.1540-4560.1994.tb02420.x
+
 Treen, K. M. d’I., Williams, H. T. P., & O’Neill, S. J. (2020). Online misinformation about climate change. WIREs Climate Change, 11(5), e665. https://doi.org/10.1002/wcc.665
+
 Yearwood, L. (Director). (2022, August 7). A look at the policies in the Democrats’ historic climate bill [Broadcast]. In PBS News. https://www.pbs.org/newshour/show/a-look-at-the-policies-in-the-democrats-historic-climate-bill
 
 
