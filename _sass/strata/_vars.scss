@@ -37,35 +37,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Palette.
-	$palette: (
-		bg:					#fff,
-		fg:					#a2a2a2,
-		fg-bold:			#787878,
-		fg-light:			#b2b2b2,
-		border:				#efefef,
-		border-bg:			#f7f7f7,
-		border2:			#dfdfdf,
-		border2-bg:			#e7e7e7,
+$palette: (
+	bg:					#fff,
+	fg:					#a2a2a2,
+	fg-bold:			#787878,
+	fg-light:			#b2b2b2,
+	border:				#efefef,
+	border-bg:			#f7f7f7,
+	border2:			#dfdfdf,
+	border2-bg:			#e7e7e7,
 
-		accent1: (
-			bg:				#49bf9d,
-			fg:				mix(#49bf9d, #ffffff, 25%),
-			fg-bold:		#ffffff,
-			fg-light:		mix(#49bf9d, #ffffff, 40%),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(255,255,255,0.5),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
+	accent1: (
+		bg:				#0000FF, // Classic blue
+		fg:				mix(#0000FF, #ffffff, 25%), // Light blue
+		fg-bold:		mix(#0000FF, #000000, 40%), // Darker blue for contrast
+		fg-light:		mix(#0000FF, #ffffff, 50%), // Softer blue for subtle text
+		border:			rgba(0, 0, 255, 0.5), // Semi-transparent blue border
+		border-bg:		rgba(0, 0, 255, 0.1), // Lighter blue background border
+		border2:		rgba(0, 0, 255, 0.7), // Slightly darker border
+		border2-bg:		rgba(0, 0, 255, 0.3)  // Medium transparency blue
+	),
 
-		accent2: (
-			bg:				#1f1815,
-			fg:				rgba(255,255,255,0.5),
-			fg-bold:		#ffffff,
-			fg-light:		rgba(255,255,255,0.4),
-			border:			rgba(255,255,255,0.25),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(255,255,255,0.5),
-			border2-bg:		rgba(255,255,255,0.2)
-		)
-	);
+	accent2: (
+		bg:				#1f1815,
+		fg:				rgba(255,255,255,0.5),
+		fg-bold:		#ffffff,
+		fg-light:		rgba(255,255,255,0.4),
+		border:			rgba(255,255,255,0.25),
+		border-bg:		rgba(255,255,255,0.075),
+		border2:		rgba(255,255,255,0.5),
+		border2-bg:		rgba(255,255,255,0.2)
+	)
+);
