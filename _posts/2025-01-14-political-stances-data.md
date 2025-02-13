@@ -18,8 +18,8 @@ The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key w
 ### Party Platform Declarations 
 
 <section>
-	<p><span class="image"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt=""  /></span> </p>
-	<p><span class="image"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
+	<p><span class="image fit"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt=""  /></span> </p>
+	<p><span class="image fit"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
 </section>
 
 
