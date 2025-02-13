@@ -23,6 +23,8 @@ The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key w
 </section>
 
 
-
+<section>
 ---
 Bibliography
+
+</section>
