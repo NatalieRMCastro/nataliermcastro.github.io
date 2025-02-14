@@ -59,7 +59,20 @@ To collect the bill text, I then made an individual web-scraping call to the XML
 
 
 ### Party Platform Declarations 
+Next, I used two forms of supplementary media – the GOP and DNC Party Platform for the 2024 election. This will serve as an anchor for the analysis to understand the kinds of public facing language each party uses. I downloaded the PDFs from the party’s respective websites, but will not be linking them here due to copyright concerns. Using the Python Library *pypdf*, I converted the documents into a text file and ‘read’ through each page using the following code:
 
+```python
+''' EXTRACTING TEXT FROM REPUBLICAN DOCUMENT'''
+republican_party_platform = []
+
+for page in range(0,len(rep_pdf.pages)):
+    current_page = rep_pdf.pages[page]
+    current_text = current_page.extract_text()
+    republican_party_platform.append(current_text)
+```
+The text was then joined together and coerced into a new text file with the basic file write function in Python. It should be noted that the Democrat Party Platform was much longer than that of the Republican Party at 92 pages (in comparison to 28). I also would like to take the liberty to note that the Democrat PDF was rendered in Google Docs, but the Republican’s was rendered on a Mac Computer Adobe Acrobat Version, last updated in July. 
+
+#### Raw Data
 <section>
 	<p><span class="image fit"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt=""  /></span> </p>
 	<p><span class="image fit"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
