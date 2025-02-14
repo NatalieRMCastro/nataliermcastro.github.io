@@ -78,6 +78,31 @@ The text was then joined together and coerced into a new text file with the basi
 	<p><span class="image fit"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></span> </p>
 </section>
 
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/DNC Party Platform - Raw Text.png" class="image fit thumb"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt="" /></a>
+			<h3>DNC Party Platform - Raw Text</h3>
+			<p>This Word Cloud shows the raw DNC Party Platform document for the 2024 election cycle. The largest words are "President Biden", "Federal", and "American"</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/GOP Party Platform - Raw Text.png" class="image fit thumb"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></a>
+			<h3>GOP Party Platform - Raw Text</h3>
+			<p>This Word CLoud shows the raw GOP Party Platform document for the 2024 election cycle. The largest words are "will", "American", and "Republican".</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=469" class="image fit thumb"><img src="https://picsum.photos/370/217?image=469" alt="" /></a>
+			<h3>Tortor metus commodo</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="https://picsum.photos/740/434?image=574" class="image fit thumb"><img src="https://picsum.photos/370/217?image=574" alt="" /></a>
+			<h3>Quam neque phasellus</h3>
+			<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+		</article>
+	</div>
+</section>
+
 
 <section>
 ---
