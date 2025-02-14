@@ -8,6 +8,16 @@ in_feed: false
 
 Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file.
 
+**Table of Contents**
+- [NewsAPI](#NewsAPI)
+  	- [Raw Data](#NA_Raw_Data)
+- [Congress API + Web Scraping](#CongressAPI)
+	- [Raw Data](#C_Raw_Data)
+   	- [Clean Data](#C_Clean_Data)
+ - [Party Platform Declarations](#PPD)
+   	- [Raw Data](#PPD_Raw_data)
+
+ <a id="NewsAPI"></a>
 ### NewsAPI
 The [NewsAPI](https://newsapi.org/) is an easy to access API that provides key word queries to search for data in their repository of millions of articles. To understand partisan polarization in regard to climate change this is especially valuable, as many studies have begun to quantify the partisan lean of news websites. The keywords “climate change” and either “republican” or “democrat” were used to search NewsAPI. The URL query used to connect to the NewsAPI was created through a base url and url post system. The posted url is:
 
@@ -22,11 +32,12 @@ url_post = {'apiKey':api_key,
 
 Another version of the POST URL was generated for Republican and Climate News sources. Returned from the query was the source, author, title of the article, description, url, and published date. A total of 1,559 news articles were found that have the keywords “Republican” and “climate change” and a total of 671 news articles were found for “Democrat” – this totals to 2,230 total articles collected. 
 
+ <a id="NA_Raw_Data"></a>
 #### Raw Data
 The raw data from NewsAPI is relatively clean – it had minimal aggregation from the NewsAPI curators, making this task relatively smooth! An example of a raw title and description are “The Trump-Newsom Fight Over an Alleged 'Water Restoration Declaration,' Explained – Trump claimed Newsom's refusal to sign the document led to a water shortage during the Los Angeles fires. But there's more to the story” and the cleaned version is “the trump newsom fight over an alleged water restoration declaration explained trump claimed newsom s refusal to sign the document led to a water shortage during the los angeles fires but there s more to the story”. While this text may look more challenging for the human eye to read, it becomes much easier for the computer to read. The title and description were concatenated to capture more meaning from such short phrases. Considering both the title and description to better understand partisan views are important. Many people often skim the results page or headlines, but never really dive into an article at the same rate. This results in more biased language used in these headlines because they are attempting to get readers to engage. 
 
 
-
+ <a id="CongressAPI"></a>
 ### Congess.gov API + Web Scraping 
 The[Congress.Gov API]( https://github.com/LibraryOfCongress/api.congress.gov) is a publicly available tool that can assist anyone who is interested in collecting government data. [Congress.gov]( https://www.congress.gov/), serves as a repository for the government to archive any Bill or Policy proceedings since the 1970s. To best iterative capture policy about climate change, I first used the Congress.gov front end to identify information about the bills and download my search results ([stored here]( https://github.com/NatalieRMCastro/climate-policy/tree/main/data/raw)). However, this data is not comprehensive and only provides information about the congress it was passed under, its latest action, the action note, bill number, origin chamber, title, and URL. Functions were created to parse through the information to generate labels for Sponsor Affiliation (Republican or Democrat), Sponsor State,  and then a built URL to pass into the congress API. 
 
@@ -60,16 +71,12 @@ Using the _url_builder_ function, it was able to iterate through the DataFrame, 
 
 To collect the bill text, an individual web-scraping call was made to the XML URL found with the *xml_link_collector*. Throughout this process, it became clear that many of the older bills did not have a digitized version of the bill available, thus making the sample size smaller. A total of 3,262 policy documents were collected using the Congress.Gov API, or 40% of the entire climate related bills introduced at the federal level.
 
+ <a id="C_Raw_Data"></a>
 #### Raw Text
 As noted above, the raw texts comes from [Congress's XML archive](https://www.congress.gov/119/bills/hr375/BILLS-119hr375rfs.xml) of freshly presented and historical bills about climate change. This archive is structured in an expected and consistent way so retrieving data from it can be easily iterated on. Text was collected from the 'body' tag, and then stored alongside of its other features such as Commitee, Sponsor State, or Congress Number. Policy documents represent concern from political entities about something (as noted earlier, this may or may not be about climate change). Thus, the archived text uses similar language and a similar tone because if is written as a formal policy document. 
 
  <section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image left"><img src="/assets/images/xml page.png" alt=""  /></span> 
-			</div>
-
-   ```python
+	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span>  ```python
 ''' 🫧🧼 | now lets create a cleaning function '''
 
 def text_cleaner(text):
@@ -84,10 +91,17 @@ def text_cleaner(text):
     
     except:
         return(text)
-```
+```</p>
+		
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image left"><img src="/assets/images/xml page.png" alt=""  /></span> 
+			</div>
 		</div>
 	</div>
 </section>
+
+  
 
 After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
 
@@ -102,10 +116,11 @@ After applying a cleaning iteratively to the documents the texts are transformed
 	</div>
 </section>
 
-#### Clean Text
+ <a id="C_Clean_Data"></a>
+#### Clean Data
 
 
-
+ <a id="PPD"></a>
 ### Party Platform Declarations 
 Next, two forms of supplementary media were collected – the GOP and DNC Party Platform for the 2024 election. This will serve as an anchor for the analysis to understand the kinds of public facing language each party uses. I downloaded the PDFs from the party’s respective websites, but will not be linking them here due to copyright concerns. Using the Python Library *pypdf*, I converted the documents into a text file and ‘read’ through each page using the following code:
 
@@ -120,6 +135,7 @@ for page in range(0,len(rep_pdf.pages)):
 ```
 The text was then joined together and coerced into a new text file with the basic file write function in Python. It should be noted that the Democrat Party Platform was much longer than that of the Republican Party at 92 pages (in comparison to 28). I also would like to take the liberty to note that the Democrat PDF was rendered in Google Docs, but the Republican’s was rendered on a Mac Computer Adobe Acrobat Version, last updated in July. 
 
+ <a id="PPD_Raw_Data"></a>
 #### Raw Data
 
 <section class="gallery">
