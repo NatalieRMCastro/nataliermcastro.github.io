@@ -6,14 +6,15 @@ published: true
 in_feed: false
 ---
 
-Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file. To reference how the data was cleaned, the HTML version of [the notebook is provided here](https://nataliermcastro.github.io/projects/2025/02/14/political-stances-cleaning.html) and a [downloadable version here](https://github.com/NatalieRMCastro/climate-policy/blob/main/1.%20Data%20Cleaning.ipynb). 
+Data for this project originated from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file. To reference how the data was cleaned, the HTML version of [the notebook is provided here](https://nataliermcastro.github.io/projects/2025/02/14/political-stances-cleaning.html) and a [downloadable version here](https://github.com/NatalieRMCastro/climate-policy/blob/main/1.%20Data%20Cleaning.ipynb). 
 
-The clean data is stored in this [GitHub Respoitory](https://github.com/NatalieRMCastro/climate-policy/tree/main/data/clean). The core method used to generate the DataFrames were both Count Vectorizer or TF-IDF vectorizer. These methods were then duplicated for a Porter Stemmed version of the text, a Lemmatized version of the text, and the cleaned but multiple word forms version. This resulted in a total of 6 different dataframes for each source. 
+The clean data is stored in this [Hugging Face Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136), which was created for this project. The core method used to generate the DataFrames were both Count Vectorizer or TF-IDF vectorizer. These methods were then duplicated for a Porter Stemmed version of the text, a Lemmatized version of the text, and the cleaned but multiple word forms version. This resulted in a total of 6 different dataframes for each source. 
 
 **Table of Contents**
 - [NewsAPI](#NewsAPI)
 - [Congress API + Web Scraping](#CongressAPI)
-- [Party Platform Declarations](#PPD)  
+- [Party Platform Declarations](#PPD)
+  
 ---
 
  <a id="NewsAPI"></a>
@@ -35,8 +36,10 @@ Another version of the POST URL was generated for Republican and Climate News so
 #### Raw Data
 The raw data from NewsAPI is relatively clean – it had minimal aggregation from the NewsAPI curators, making this task relatively smooth! An example of a raw title and description are 
 > “The Trump-Newsom Fight Over an Alleged 'Water Restoration Declaration,' Explained – Trump claimed Newsom's refusal to sign the document led to a water shortage during the Los Angeles fires. But there's more to the story”
+
 The cleaned version is 
 > “the trump newsom fight over an alleged water restoration declaration explained trump claimed newsom s refusal to sign the document led to a water shortage during the los angeles fires but there s more to the story”.
+
 While this text may look more challenging for the human eye to read, it becomes much easier for the computer to read. The title and description were concatenated to capture more meaning from such short phrases. Considering both the title and description to better understand partisan views are important. Many people often skim the results page or headlines, but never really dive into an article at the same rate. This results in more biased language used in these headlines because they are attempting to get readers to engage. 
 
 <a id="NA_Clean_Data"></a>
@@ -85,7 +88,7 @@ def xml_link_collector(url):
         print (f"⚠️ uh oh! there was an error when using the API with this url:{url}\n ")
         return ("NO URL FOUND")
 ``` 
-Using the _url_builder_ function, it was able to iterate through the DataFrame, build a URL and then using  *xml_link_collector* the built URL would be passed in, called to the Congress.Gov API, and the XML URL (generated from parsing through the API response) would be the final output. My interest in collecting the text from the policy is for two primary reasons. First, to explore what language is used and potential similarities between Republican and Democrat Sponsored policies. Second, I am interested in understanding the similarities or differences between policy and news headlines on an intensely politicized issue. 
+Using the _url_builder_ function, it was able to iterate through the DataFrame, build a URL and then using  *xml_link_collector* the built URL would be passed in, called to the Congress.Gov API, and the XML URL (generated from parsing through the API response) would be the final output.The motivation in collecting the text from the policy is for two primary reasons. First, to explore what language is used and potential similarities between Republican and Democrat Sponsored policies. Second, to better understand the similarities or differences between policy and news headlines on an intensely politicized issue. 
 
 To collect the bill text, an individual web-scraping call was made to the XML URL found with the *xml_link_collector*. Throughout this process, it became clear that many of the older bills did not have a digitized version of the bill available, thus making the sample size smaller. A total of 3,262 policy documents were collected using the Congress.Gov API, or 40% of the entire climate related bills introduced at the federal level.
 
@@ -97,7 +100,7 @@ As noted above, the raw texts comes from [Congress's XML archive](https://www.co
 	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> The image to the left is a screen capture from the API URL (possible to be viewed through the Congress XML link above), showing the individual webpages that were scrpaed. As illustrated, the text is also relatively clean. There are no advertisements nor inconsistencies in the layouts from one policy to the next. </p>
 		
 </section>
-The text from each webpage was collected and cleaned using the text cleaner function, described below. After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
+The text from each webpage was collected and cleaned using the *text cleaner* function, described below. After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
 
  <section>
 	<div class="box alt">
@@ -167,7 +170,7 @@ The raw bill text vocabulary had the most prevalent words of "United State", "Ad
 
 <a id="PPD"></a>
 ### Party Platform Declarations 
-Next, two forms of supplementary media were collected – the GOP and DNC Party Platform for the 2024 election. This will serve as an anchor for the analysis to understand the kinds of public facing language each party uses. I downloaded the PDFs from the party’s respective websites, but will not be linking them here due to copyright concerns. Using the Python Library *pypdf*, I converted the documents into a text file and ‘read’ through each page using the following code:
+Next, two forms of supplementary media were collected – the GOP and DNC Party Platform for the 2024 election. This will serve as an anchor for the analysis to understand the kinds of public facing language each party uses. PDFs were downloaded the PDFs from the party’s respective websites, but will not be linking them here due to copyright concerns. Using the Python Library *pypdf*, the documents were converted into a text file and ‘read’ through each page using the following code:
 
 ```python
 ''' EXTRACTING TEXT FROM REPUBLICAN DOCUMENT'''
@@ -178,7 +181,7 @@ for page in range(0,len(rep_pdf.pages)):
     current_text = current_page.extract_text()
     republican_party_platform.append(current_text)
 ```
-The text was then joined together and coerced into a new text file with the basic file write function in Python. It should be noted that the Democrat Party Platform was much longer than that of the Republican Party at 92 pages (in comparison to 28). I also would like to take the liberty to note that the Democrat PDF was rendered in Google Docs, but the Republican’s was rendered on a Mac Computer Adobe Acrobat Version, last updated in July. 
+The text was then joined together and coerced into a new text file with the basic file write capabilities provided by Python. It should be noted that the Democrat Party Platform was much longer than that of the Republican Party at 92 pages (in comparison to 28). It is interesting, but not relevant to note that the Democrat PDF was rendered in Google Docs, but the Republican’s was rendered on a Mac Computer Adobe Acrobat Version, last updated in July. 
 
 <a id="PPD_Raw_Data"></a>
 #### Raw Data
@@ -226,6 +229,12 @@ Table 3 demonstrates the shift in vocabulary for the different types of Stemming
 
 
 ---  
-Bibliography
+### Bibliography:
 
+Bird, S., Loper, E., & Kafe, E. (n.d.). Natural Language Toolkit: WordNet stemmer interface. Retrieved February 14, 2025, from https://www.nltk.org/_modules/nltk/stem/wordnet.html#WordNetLemmatizer
 
+Porter, M. F. (2001, October). Snowball: A language for stemming algorithms. Snowball.Tartarus.Org. http://snowball.tartarus.org/texts/introduction.html
+
+scikit-learn. (2024a). scikit-learn/sklearn/feature_extraction/text.py—Count vectorizer [Computer software]. https://github.com/scikit-learn/scikit-learn/blob/6a0838c416c7c2a6ee7fe4562cd34ae133674b2e/sklearn/feature_extraction/text.py
+
+scikit-learn. (2024b). scikit-learn/sklearn/feature_extraction/text.py—Tf-idf vectorizer [Computer software]. https://github.com/scikit-learn/scikit-learn/blob/6a0838c41/sklearn/feature_extraction/text.py#L1734
