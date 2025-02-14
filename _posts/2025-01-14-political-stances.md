@@ -38,5 +38,4 @@ This page houses the current work for my text mining course (Spring 2025), where
 	</div>
  </section>
 
- Want the data? Visit my [HuggingFace Repository
-](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136). Want the code? Visit my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/tree/main)
+ Want the data? Visit my [HuggingFace Repository](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) 🐻. Want the code? Visit my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/tree/main)🐈‍⬛.
