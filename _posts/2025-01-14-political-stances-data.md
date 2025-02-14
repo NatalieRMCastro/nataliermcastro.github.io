@@ -32,7 +32,7 @@ def url_builder(congress,bill_type,bill_number):
     base_url = "https://api.congress.gov/v3/bill/"
     
     request_url = ""
-    request_url = request_url + base_url + str(congress) + "/" + bill_type + "/" + str(bill_number) + '/text?api_key=te7ilzFKEeAOrjfEalH5mrtFU0Dw35E6B70Nfhnn'
+    request_url = request_url + base_url + str(congress) + "/" + bill_type + "/" + str(bill_number) + '/text?api_key=xxx'
     
     return (request_url)
 
