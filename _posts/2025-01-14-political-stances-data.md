@@ -211,9 +211,6 @@ The text was then joined together and coerced into a new text file with the basi
 	</div>
 </section>
 
-
-
-
  #### Clean Data 
  
 Table 3 demonstrates the shift in vocabulary for the different types of Stemming, Lemming, and Vecotorizing Techniques. The Party Platforms have the smallest vocabulary out of the other two sources, and thus the lowest variation between the types. Between the Porter Stem and the Lemmatization, regardless of vecotorizer was a difference of about 400 words. 
