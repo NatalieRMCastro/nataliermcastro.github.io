@@ -82,22 +82,22 @@ The text was then joined together and coerced into a new text file with the basi
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/DNC Party Platform - Raw Text.png" class="image fit thumb"><img src="/assets/images/DNC Party Platform - Raw Text.png" alt="" /></a>
-			<h4>DNC Party Platform - Raw Text</h4>
+			<h3>DNC Party Platform - Raw Text</h3>
 			<p>This Word Cloud shows the raw DNC Party Platform document for the 2024 election cycle. The largest words are "President Biden", "Federal", and "American"</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/GOP Party Platform - Raw Text.png" class="image fit thumb"><img src="/assets/images/GOP Party Platform - Raw Text.png" alt="" /></a>
-			<h4>GOP Party Platform - Raw Text</h4>
+			<h3>GOP Party Platform - Raw Text</h3>
 			<p>This Word CLoud shows the raw GOP Party Platform document for the 2024 election cycle. The largest words are "will", "American", and "Republican".</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/DNC Party Platform - Clean Text.png" class="image fit thumb"><img src="/assets/images/DNC Party Platform - Clean Text.png" alt="" /></a>
-			<h4>DNC Party Platform - Clean Text</h4>
+			<h3>DNC Party Platform - Clean Text</h3>
 			<p>Now, the largest words are "american", "president", and "biden".</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/GOP Party Platform - Clean Text.png" class="image fit thumb"><img src="/assets/images/GOP Party Platform - Clean Text.png" alt="" /></a>
-			<h4>GOP Clean Party Platform</h4>
+			<h3>GOP Party Platform - Clean Text</h3>
 			<p>After cleaning, the text looks a little different with the largest words as "republican","american", and "border".</p>
 		</article>
 	</div>
