@@ -14,7 +14,7 @@ Data came from four sources. The NewsAPI, to collect information about public me
 - [Congress API + Web Scraping](#CongressAPI)
 	- [Raw Data](#C_Raw_Data)  
    	- [Clean Data](#C_Clean_Data)
-- [Party Platform Declarations](#PPD)
+- [Party Platform Declarations](#PPD)  
    	- [Raw Data](#PPD_Raw_data)
 ---
 
