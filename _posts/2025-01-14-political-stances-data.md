@@ -8,11 +8,14 @@ in_feed: false
 
 Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file. To reference how the data was cleaned, the HTML version of [the notebook is provided here](https://nataliermcastro.github.io/projects/2025/02/14/political-stances-cleaning.html) and a [downloadable version here](https://github.com/NatalieRMCastro/climate-policy/blob/main/1.%20Data%20Cleaning.ipynb). 
 
+The clean data is stored in this [GitHub Respoitory](https://github.com/NatalieRMCastro/climate-policy/tree/main/data/clean). The core method used to generate the DataFrames were both Count Vectorizer or TF-IDF vectorizer. These methods were then duplicated for a Porter Stemmed version of the text, a Lemmatized version of the text, and the cleaned but multiple word forms version. This resulted in a total of 6 different dataframes for each source. 
+
 **Table of Contents**
 - [NewsAPI](#NewsAPI)
   	- [Raw Data](#NA_Raw_Data)
+  	- [Clean Data](#NA_Clean_Data)
 - [Congress API + Web Scraping](#CongressAPI)
-	- [Raw Data](#C_Raw_Data)
+	- [Raw Data](#C_Raw_Data)  
  	- [Clean Data](#C_Clean_Data)
 - [Party Platform Declarations](#PPD)  
    	- [Raw Data](#PPD_Raw_data)
@@ -35,7 +38,25 @@ Another version of the POST URL was generated for Republican and Climate News so
 
  <a id="NA_Raw_Data"></a>
 #### Raw Data
-The raw data from NewsAPI is relatively clean – it had minimal aggregation from the NewsAPI curators, making this task relatively smooth! An example of a raw title and description are “The Trump-Newsom Fight Over an Alleged 'Water Restoration Declaration,' Explained – Trump claimed Newsom's refusal to sign the document led to a water shortage during the Los Angeles fires. But there's more to the story” and the cleaned version is “the trump newsom fight over an alleged water restoration declaration explained trump claimed newsom s refusal to sign the document led to a water shortage during the los angeles fires but there s more to the story”. While this text may look more challenging for the human eye to read, it becomes much easier for the computer to read. The title and description were concatenated to capture more meaning from such short phrases. Considering both the title and description to better understand partisan views are important. Many people often skim the results page or headlines, but never really dive into an article at the same rate. This results in more biased language used in these headlines because they are attempting to get readers to engage. 
+The raw data from NewsAPI is relatively clean – it had minimal aggregation from the NewsAPI curators, making this task relatively smooth! An example of a raw title and description are 
+> “The Trump-Newsom Fight Over an Alleged 'Water Restoration Declaration,' Explained – Trump claimed Newsom's refusal to sign the document led to a water shortage during the Los Angeles fires. But there's more to the story”
+
+The cleaned version is 
+> “the trump newsom fight over an alleged water restoration declaration explained trump claimed newsom s refusal to sign the document led to a water shortage during the los angeles fires but there s more to the story”.
+
+While this text may look more challenging for the human eye to read, it becomes much easier for the computer to read. The title and description were concatenated to capture more meaning from such short phrases. Considering both the title and description to better understand partisan views are important. Many people often skim the results page or headlines, but never really dive into an article at the same rate. This results in more biased language used in these headlines because they are attempting to get readers to engage. 
+
+<a id='NA_Clean_Data"></a>
+#### Clean Data
+The final cleaned version from the article titles and descriptions resulted in a total vocabulary of about 2,000 words. This can be expected because the descriptions of the texts are rather short, and in addition, the topics are foucsed. Reported in Table 1 are the different vocabulary sizes for each cleaning technique. 
+
+| <span style="color:black; background-color:transparent; font-size:18px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:18px;">__Vocabulary Size__</span> |
+| --- | --- |
+|Cleaned Text, No Processing|2505|
+|Porter Stem|2120|
+|Lemmatization|2358|
+
+Again, the source of the News Headlines and Descriptions came from an API, so it can be excpected that there is not a lot of 'messy' data which comes from this process. The main source of variety in vocabulary size originates from the techniques used to Stem and Lemmatize the words, as they are looking for different types of wordforms from the available morphemes. 
 
 
  <a id="CongressAPI"></a>
@@ -77,10 +98,10 @@ To collect the bill text, an individual web-scraping call was made to the XML UR
 As noted above, the raw texts comes from [Congress's XML archive](https://www.congress.gov/119/bills/hr375/BILLS-119hr375rfs.xml) of freshly presented and historical bills about climate change. This archive is structured in an expected and consistent way so retrieving data from it can be easily iterated on. Text was collected from the 'body' tag, and then stored alongside of its other features such as Commitee, Sponsor State, or Congress Number. Policy documents represent concern from political entities about something (as noted earlier, this may or may not be about climate change). Thus, the archived text uses similar language and a similar tone because if is written as a formal policy document. 
 
  <section>
-	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on <a> [RegEx](https://en.wikipedia.org/wiki/Regular_expression) </a>, which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.</p>
+	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> The image to the left is a screen capture from the API URL (possible to be viewed through the Congress XML link above), showing the individual webpages that were scrpaed. As illustrated, the text is also relatively clean. There are no advertisements nor inconsistencies in the layouts from one policy to the next. The text from each webpage was collected and cleaned using the text cleaner function, described below.</p>
 		
 </section>
-
+After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
 ```python
 ''' 🫧🧼 | now lets create a cleaning function '''
 
@@ -107,11 +128,11 @@ def text_cleaner(text):
 	</div>
 </section>
 
- <a id="C_Clean_Data"></a>
+<a id="C_Clean_Data"></a>
 #### Clean Data
 
 
- <a id="PPD"></a>
+<a id="PPD"></a>
 ### Party Platform Declarations 
 Next, two forms of supplementary media were collected – the GOP and DNC Party Platform for the 2024 election. This will serve as an anchor for the analysis to understand the kinds of public facing language each party uses. I downloaded the PDFs from the party’s respective websites, but will not be linking them here due to copyright concerns. Using the Python Library *pypdf*, I converted the documents into a text file and ‘read’ through each page using the following code:
 
@@ -126,7 +147,7 @@ for page in range(0,len(rep_pdf.pages)):
 ```
 The text was then joined together and coerced into a new text file with the basic file write function in Python. It should be noted that the Democrat Party Platform was much longer than that of the Republican Party at 92 pages (in comparison to 28). I also would like to take the liberty to note that the Democrat PDF was rendered in Google Docs, but the Republican’s was rendered on a Mac Computer Adobe Acrobat Version, last updated in July. 
 
- <a id="PPD_Raw_Data"></a>
+<a id="PPD_Raw_Data"></a>
 #### Raw Data
 
 <section class="gallery">
