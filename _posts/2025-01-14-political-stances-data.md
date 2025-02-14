@@ -107,6 +107,15 @@ The text from each webpage was collected and cleaned using the text cleaner func
 
 The raw XML is pictured above. This was captured by just looking at the text output from the *requests.text()* feature in the Pyton Library. The raw text from the website preserved the hierarchial bulleting system that is traditional in bills. There are not a lot of coherent sentences present in the text because of this. However, the jargon used to define and operationalize climate change by different political parties is most pertient to the reserach task at hand, making policy documents an important addition to the data.
 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Bill - Raw Text.png " alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 <a id="C_Clean_Data"></a>
 #### Clean Data
 Cleaning the text will not remove any of the meaningful words, and in fact, TF-IDF allows for vectorization to uplift the significance of words that carry important semantic meaning. Across all texts the *text_cleaner* was used. It filters for different kinds of characters and outputs a string with the freshly cleaned text. 
@@ -127,6 +136,16 @@ def text_cleaner(text):
     except:
         return(text)
 ```
+
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Bill - Clean Text.png " alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 
 <a id="PPD"></a>
