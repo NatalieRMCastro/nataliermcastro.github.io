@@ -1169,7 +1169,7 @@ $size-header-pad: 4em;
 	.poptrox-popup {
 		@include vendor('box-sizing', 'content-box');
 		-webkit-tap-highlight-color: rgba(255,255,255,0);
-		background: #00F;
+		background: #f2f2ff;
 		border-radius: _size(border-radius);
 		box-shadow: 0 0.1em 0.15em 0 rgba(0,0,0,0.15);
 		overflow: hidden;
