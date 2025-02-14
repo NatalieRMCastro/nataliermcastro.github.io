@@ -6,14 +6,14 @@ published: true
 in_feed: false
 ---
 
-Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file.
+Data came from four sources. The NewsAPI, to collect information about public media exposure to partisan views of climate change. A combination of the Congress API, to generate metadata about all proposed Federal climate change bill information since the 93rd congress (1973), and then web scraping the Library of Congress to collect the bill text. Finally, auxiliary information from both Democrat and Republican Party Platforms about language used in the most recent presidential election. If you are interested in seeing exactly how the data was collected, you are welcome to reference [this page, which links to the MarkDown](https://nataliermcastro.github.io/projects/2025/02/13/climate-data-cleaning.html) version of the notebook or the [GitHub repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/0.%20Data%20Collection%20-%20for%20website.ipynb) where you can download the IPYNB file. To reference how the data was cleaned, the HTML version of [the notebook is provided here](https://nataliermcastro.github.io/projects/2025/02/14/political-stances-cleaning.html) and a [downloadable version here](https://github.com/NatalieRMCastro/climate-policy/blob/main/1.%20Data%20Cleaning.ipynb). 
 
 **Table of Contents**
 - [NewsAPI](#NewsAPI)
   	- [Raw Data](#NA_Raw_Data)
 - [Congress API + Web Scraping](#CongressAPI)
-	- [Raw Data](#C_Raw_Data)  
-   	- [Clean Data](#C_Clean_Data)
+	- [Raw Data](#C_Raw_Data)
+ 	- [Clean Data](#C_Clean_Data)
 - [Party Platform Declarations](#PPD)  
    	- [Raw Data](#PPD_Raw_data)
 ---
