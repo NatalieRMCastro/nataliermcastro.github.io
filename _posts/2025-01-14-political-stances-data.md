@@ -60,6 +60,49 @@ Using the _url_builder_ function, it was able to iterate through the DataFrame, 
 
 To collect the bill text, an individual web-scraping call was made to the XML URL found with the *xml_link_collector*. Throughout this process, it became clear that many of the older bills did not have a digitized version of the bill available, thus making the sample size smaller. A total of 3,262 policy documents were collected using the Congress.Gov API, or 40% of the entire climate related bills introduced at the federal level.
 
+#### Raw Text
+As noted above, the raw texts comes from [Congress's XML archive](https://www.congress.gov/119/bills/hr375/BILLS-119hr375rfs.xml) of freshly presented and historical bills about climate change. This archive is structured in an expected and consistent way so retrieving data from it can be easily iterated on. Text was collected from the 'body' tag, and then stored alongside of its other features such as Commitee, Sponsor State, or Congress Number. Policy documents represent concern from political entities about something (as noted earlier, this may or may not be about climate change). Thus, the archived text uses similar language and a similar tone because if is written as a formal policy document. 
+
+ <section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image left"><img src="/assets/images/xml page.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
+
+```python
+''' 🫧🧼 | now lets create a cleaning function '''
+
+def text_cleaner(text):
+    try:
+        scrubbed_text1 = re.sub('\d',' ',text)
+        scrubbed_text2 = re.findall('\w+',scrubbed_text1)
+        scrubbed_text3 = ' '.join(scrubbed_text2)
+        scrubbed_text = scrubbed_text3.lower()
+        clean_text = scrubbed_text.strip(" ")
+        
+        return(clean_text)
+    
+    except:
+        return(text)
+```
+
+
+ <section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image right"><img src="/assets/images/raw bill text.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+#### Clean Text
+
 
 
 ### Party Platform Declarations 
@@ -106,6 +149,7 @@ The text was then joined together and coerced into a new text file with the basi
 
 <section>
 ---
+
 Bibliography
 
 </section>
