@@ -12,7 +12,7 @@ Data came from four sources. The NewsAPI, to collect information about public me
 - [NewsAPI](#NewsAPI)
   	- [Raw Data](#NA_Raw_Data)
 - [Congress API + Web Scraping](#CongressAPI)
-	- [Raw Data](#C_Raw_Data)
+	- [Raw Data](#C_Raw_Data)  
    	- [Clean Data](#C_Clean_Data)
 - [Party Platform Declarations](#PPD)
    	- [Raw Data](#PPD_Raw_data)
