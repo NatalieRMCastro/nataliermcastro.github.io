@@ -14,8 +14,9 @@ Data came from four sources. The NewsAPI, to collect information about public me
 - [Congress API + Web Scraping](#CongressAPI)
 	- [Raw Data](#C_Raw_Data)
    	- [Clean Data](#C_Clean_Data)
- - [Party Platform Declarations](#PPD)
+- [Party Platform Declarations](#PPD)
    	- [Raw Data](#PPD_Raw_data)
+---
 
  <a id="NewsAPI"></a>
 ### NewsAPI
@@ -76,7 +77,11 @@ To collect the bill text, an individual web-scraping call was made to the XML UR
 As noted above, the raw texts comes from [Congress's XML archive](https://www.congress.gov/119/bills/hr375/BILLS-119hr375rfs.xml) of freshly presented and historical bills about climate change. This archive is structured in an expected and consistent way so retrieving data from it can be easily iterated on. Text was collected from the 'body' tag, and then stored alongside of its other features such as Commitee, Sponsor State, or Congress Number. Policy documents represent concern from political entities about something (as noted earlier, this may or may not be about climate change). Thus, the archived text uses similar language and a similar tone because if is written as a formal policy document. 
 
  <section>
-	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span>  ```python
+	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.</p>
+		
+</section>
+
+```python
 ''' 🫧🧼 | now lets create a cleaning function '''
 
 def text_cleaner(text):
@@ -91,21 +96,7 @@ def text_cleaner(text):
     
     except:
         return(text)
-```</p>
-		
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image left"><img src="/assets/images/xml page.png" alt=""  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-  
-
-After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
-
-
+```
 
  <section>
 	<div class="box alt">
