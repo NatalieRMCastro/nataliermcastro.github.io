@@ -34,11 +34,9 @@ This page houses the current work for my text mining course (Spring 2025), where
 				<li><a href="#" class="button fit small">Graph Gallery</a></li>
 			</ul>
 		</div>
- 		<div class="col-6 col-12-small">
-			<ul class="actions stacked">
-				<li><a href="https://github.com/NatalieRMCastro/climate-policy/tree/main" class="button fit small">Code Repository</a></li>
-				<li><a href="https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136" class="button fit small">Data Repository</a></li>
-			</ul>
-		</div>
+
 	</div>
  </section>
+
+ Want the data? Visit my [HuggingFace Repository
+](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136). Want the code? Visit my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/tree/main)
