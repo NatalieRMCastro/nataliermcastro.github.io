@@ -12,13 +12,8 @@ The clean data is stored in this [GitHub Respoitory](https://github.com/NatalieR
 
 **Table of Contents**
 - [NewsAPI](#NewsAPI)
-  	- [Raw Data](#NA_Raw_Data)
-  	- [Clean Data](#NA_Clean_Data)
 - [Congress API + Web Scraping](#CongressAPI)
-	- [Raw Data](#C_Raw_Data)  
- 	- [Clean Data](#C_Clean_Data)
 - [Party Platform Declarations](#PPD)  
-   	- [Raw Data](#PPD_Raw_data)
 ---
 
  <a id="NewsAPI"></a>
@@ -40,17 +35,15 @@ Another version of the POST URL was generated for Republican and Climate News so
 #### Raw Data
 The raw data from NewsAPI is relatively clean – it had minimal aggregation from the NewsAPI curators, making this task relatively smooth! An example of a raw title and description are 
 > “The Trump-Newsom Fight Over an Alleged 'Water Restoration Declaration,' Explained – Trump claimed Newsom's refusal to sign the document led to a water shortage during the Los Angeles fires. But there's more to the story”
-
 The cleaned version is 
 > “the trump newsom fight over an alleged water restoration declaration explained trump claimed newsom s refusal to sign the document led to a water shortage during the los angeles fires but there s more to the story”.
-
 While this text may look more challenging for the human eye to read, it becomes much easier for the computer to read. The title and description were concatenated to capture more meaning from such short phrases. Considering both the title and description to better understand partisan views are important. Many people often skim the results page or headlines, but never really dive into an article at the same rate. This results in more biased language used in these headlines because they are attempting to get readers to engage. 
 
-<a id='NA_Clean_Data"></a>
+<a id="NA_Clean_Data"></a>
 #### Clean Data
 The final cleaned version from the article titles and descriptions resulted in a total vocabulary of about 2,000 words. This can be expected because the descriptions of the texts are rather short, and in addition, the topics are foucsed. Reported in Table 1 are the different vocabulary sizes for each cleaning technique. 
 
-| <span style="color:black; background-color:transparent; font-size:18px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:18px;">__Vocabulary Size__</span> |
+| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
 | --- | --- |
 |Cleaned Text, No Processing|2505|
 |Porter Stem|2120|
@@ -61,7 +54,7 @@ Again, the source of the News Headlines and Descriptions came from an API, so it
 
  <a id="CongressAPI"></a>
 ### Congess.gov API + Web Scraping 
-The[Congress.Gov API]( https://github.com/LibraryOfCongress/api.congress.gov) is a publicly available tool that can assist anyone who is interested in collecting government data. [Congress.gov]( https://www.congress.gov/), serves as a repository for the government to archive any Bill or Policy proceedings since the 1970s. To best iterative capture policy about climate change, I first used the Congress.gov front end to identify information about the bills and download my search results ([stored here]( https://github.com/NatalieRMCastro/climate-policy/tree/main/data/raw)). However, this data is not comprehensive and only provides information about the congress it was passed under, its latest action, the action note, bill number, origin chamber, title, and URL. Functions were created to parse through the information to generate labels for Sponsor Affiliation (Republican or Democrat), Sponsor State,  and then a built URL to pass into the congress API. 
+The [Congress.Gov API]( https://github.com/LibraryOfCongress/api.congress.gov) is a publicly available tool that can assist anyone who is interested in collecting government data. [Congress.gov]( https://www.congress.gov/), serves as a repository for the government to archive any Bill or Policy proceedings since the 1970s. To best iterative capture policy about climate change, I first used the Congress.gov front end to identify information about the bills and download my search results ([stored here]( https://github.com/NatalieRMCastro/climate-policy/tree/main/data/raw)). However, this data is not comprehensive and only provides information about the congress it was passed under, its latest action, the action note, bill number, origin chamber, title, and URL. Functions were created to parse through the information to generate labels for Sponsor Affiliation (Republican or Democrat), Sponsor State,  and then a built URL to pass into the congress API. 
 
 ```python
 ''' BUILDING A FUNCTION FOR THE URLS '''
@@ -98,11 +91,27 @@ To collect the bill text, an individual web-scraping call was made to the XML UR
 As noted above, the raw texts comes from [Congress's XML archive](https://www.congress.gov/119/bills/hr375/BILLS-119hr375rfs.xml) of freshly presented and historical bills about climate change. This archive is structured in an expected and consistent way so retrieving data from it can be easily iterated on. Text was collected from the 'body' tag, and then stored alongside of its other features such as Commitee, Sponsor State, or Congress Number. Policy documents represent concern from political entities about something (as noted earlier, this may or may not be about climate change). Thus, the archived text uses similar language and a similar tone because if is written as a formal policy document. 
 
  <section>
-	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> The image to the left is a screen capture from the API URL (possible to be viewed through the Congress XML link above), showing the individual webpages that were scrpaed. As illustrated, the text is also relatively clean. There are no advertisements nor inconsistencies in the layouts from one policy to the next. The text from each webpage was collected and cleaned using the text cleaner function, described below.</p>
+	 <p><span class="image left"><img src="/assets/images/xml page.png" alt="" /></span> The image to the left is a screen capture from the API URL (possible to be viewed through the Congress XML link above), showing the individual webpages that were scrpaed. As illustrated, the text is also relatively clean. There are no advertisements nor inconsistencies in the layouts from one policy to the next. </p>
 		
 </section>
-After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
-```python
+The text from each webpage was collected and cleaned using the text cleaner function, described below. After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
+
+ <section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/raw bill text.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+The raw XML is pictured above. This was captured by just looking at the text output from the *requests.text()* feature in the Pyton Library. The raw text from the website preserved the hierarchial bulleting system that is traditional in bills. There are not a lot of coherent sentences present in the text because of this. However, the jargon used to define and operationalize climate change by different political parties is most pertient to the reserach task at hand, making policy documents an important addition to the data.
+
+<a id="C_Clean_Data"></a>
+#### Clean Data
+Cleaning the text will not remove any of the meaningful words, and in fact, TF-IDF allows for vectorization to uplift the significance of words that carry important semantic meaning. Across all texts the *text_cleaner* was used. It filters for different kinds of characters and outputs a string with the freshly cleaned text. 
+
+ ```python
 ''' 🫧🧼 | now lets create a cleaning function '''
 
 def text_cleaner(text):
@@ -118,18 +127,6 @@ def text_cleaner(text):
     except:
         return(text)
 ```
-
- <section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/raw bill text.png" alt=""  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-<a id="C_Clean_Data"></a>
-#### Clean Data
 
 
 <a id="PPD"></a>
