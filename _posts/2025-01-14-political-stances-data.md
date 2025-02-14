@@ -207,8 +207,8 @@ The text was then joined together and coerced into a new text file with the basi
 
 <section>
 
- #### Clean Data
- <section>
+ #### Clean Data 
+
 | <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
 | --- | --- | --- |
 |Cleaned Text, No Processing|Count Vectorizer|943|
@@ -218,7 +218,6 @@ The text was then joined together and coerced into a new text file with the basi
 |Porter Stem|TF-IDF Vectorizer|890|
 |Lemmatization|TF-IDF Vectorizer|1,376|
 
-</section>
 ---
 
 Bibliography
