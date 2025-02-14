@@ -63,7 +63,7 @@ Jud, S., & Nguyen, Q. (2024). Disasters and Divisions: How Partisanship Shapes P
 
 Martínez, A. (2024, November 15). Trump wants to “Drill, baby, drill.” What does that mean for climate concerns? NPR. https://www.npr.org/2024/11/13/nx-s1-5181963/trump-promises-more-drilling-in-the-u-s-to-boost-fossil-fuel-production
 
-Spady, A. (2025). Dems blame LA fire on “climate change” despite city cutting fire department budget | Fox News. Fox News. https://www.foxnews.com/politics/dems-blame-fire-climate-change-despite-cutting-fire-department-budget
+Spady, A. (2025). Dems blame LA fire on “climate change” despite city cutting fire department budget ; Fox News. Fox News. https://www.foxnews.com/politics/dems-blame-fire-climate-change-despite-cutting-fire-department-budget
 
 Stern, P. C., & Dietz, T. (1994). The Value Basis of Environmental Concern. Journal of Social Issues, 50(3), 65–84. https://doi.org/10.1111/j.1540-4560.1994.tb02420.x
 
