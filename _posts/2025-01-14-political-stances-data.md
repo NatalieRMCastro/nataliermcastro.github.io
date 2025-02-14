@@ -68,13 +68,8 @@ As noted above, the raw texts comes from [Congress's XML archive](https://www.co
 		<div class="row gtr-50 gtr-uniform">
 			<div class="col-12"><span class="image left"><img src="/assets/images/xml page.png" alt=""  /></span> 
 			</div>
-		</div>
-	</div>
-</section>
 
-After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
-
-```python
+   ```python
 ''' 🫧🧼 | now lets create a cleaning function '''
 
 def text_cleaner(text):
@@ -90,6 +85,12 @@ def text_cleaner(text):
     except:
         return(text)
 ```
+		</div>
+	</div>
+</section>
+
+After applying a cleaning iteratively to the documents the texts are transformed into something that is machine readable and easy to model in subsequent analysis. The *text_cleaner* function is built on [RegEx](https://en.wikipedia.org/wiki/Regular_expression), which can identify digits (filtered out first), and alphabetical characters (kept). String properties in Python allow for lowering of the text and stripping the unneccessary white space characters generated during RegEx cleaning. The cleaned bills were stored in the same dataframe for consistency.
+
 
 
  <section>
