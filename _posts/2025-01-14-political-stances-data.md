@@ -43,11 +43,14 @@ While this text may look more challenging for the human eye to read, it becomes 
 #### Clean Data
 The final cleaned version from the article titles and descriptions resulted in a total vocabulary of about 2,000 words. This can be expected because the descriptions of the texts are rather short, and in addition, the topics are foucsed. Reported in Table 1 are the different vocabulary sizes for each cleaning technique. 
 
-| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
-| --- | --- |
-|Cleaned Text, No Processing|2505|
-|Porter Stem|2120|
-|Lemmatization|2358|
+| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
+| --- | --- | --- |
+|Cleaned Text, No Processing|Count Vectorizer|2,504|
+|Porter Stem|Count Vectorizer|2,357|
+|Lemmatization|Count Vectorizer|2,119|
+|Cleaned Text, No Processing|TF-IDF Vectorizer|2,504|
+|Porter Stem|TF-IDF Vectorizer|2,357|
+|Lemmatization|TF-IDF Vectorizer|2,119|
 
 Again, the source of the News Headlines and Descriptions came from an API, so it can be excpected that there is not a lot of 'messy' data which comes from this process. The main source of variety in vocabulary size originates from the techniques used to Stem and Lemmatize the words, as they are looking for different types of wordforms from the available morphemes. 
 
@@ -137,6 +140,16 @@ def text_cleaner(text):
         return(text)
 ```
 
+This processing function resulted in some, but minimal changes. As noted with the NewsAPI, the structure of the text documents in their XML form is relatively clean, thus the majority of cleaning is similarizing word stems and ensuring there are no stopwords.
+
+| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
+| --- | --- | --- |
+|Cleaned Text, No Processing|Count Vectorizer|21,700|
+|Porter Stem|Count Vectorizer|15,490|
+|Lemmatization|Count Vectorizer|15,490|
+|Cleaned Text, No Processing|TF-IDF Vectorizer|21,700|
+|Porter Stem|TF-IDF Vectorizer|10,001|
+|Lemmatization|TF-IDF Vectorizer|15,490|
 
 <section>
 	<div class="box alt">
@@ -193,6 +206,19 @@ The text was then joined together and coerced into a new text file with the basi
 
 
 <section>
+
+ #### Clean Data
+ <section>
+| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
+| --- | --- | --- |
+|Cleaned Text, No Processing|Count Vectorizer|943|
+|Porter Stem|Count Vectorizer|890|
+|Lemmatization|Count Vectorizer|1,376|
+|Cleaned Text, No Processing|TF-IDF Vectorizer|943|
+|Porter Stem|TF-IDF Vectorizer|890|
+|Lemmatization|TF-IDF Vectorizer|1,376|
+
+</section>
 ---
 
 Bibliography
