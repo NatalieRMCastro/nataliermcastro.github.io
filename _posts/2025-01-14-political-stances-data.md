@@ -151,6 +151,8 @@ This processing function resulted in some, but minimal changes. As noted with th
 |Porter Stem|TF-IDF Vectorizer|10,001|
 |Lemmatization|TF-IDF Vectorizer|15,490|
 
+The raw bill text vocabulary had the most prevalent words of "United State", "Administrator", and "section". The other words refer to the composition of the documents, like amend or inserting. A similar distribution of words is seen in the clean bill text, however "section", "paragraph", and "subsection" seem to be the most prevalent. This could be due to the unigram model employed to tokenize the data. The total clean vocabulary, of single words, is 21,700 words. The TF-IDF vectorizer with Porter Stemming reduced this over half to a total of 10,001 words. This may be a result of multiple iterations of the same action, such as viewed, view, or viewing. This data had the largest shift in vocabulary after text pre-processing techniques were applied.
+
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
@@ -159,6 +161,8 @@ This processing function resulted in some, but minimal changes. As noted with th
 		</div>
 	</div>
 </section>
+
+
 
 
 <a id="PPD"></a>
@@ -207,8 +211,10 @@ The text was then joined together and coerced into a new text file with the basi
 
 
 
- #### Clean Data   
+ #### Clean Data 
+ 
 Table 3 demonstrates the shift in vocabulary for the different types of Stemming, Lemming, and Vecotorizing Techniques. The Party Platforms have the smallest vocabulary out of the other two sources, and thus the lowest variation between the types. Between the Porter Stem and the Lemmatization, regardless of vecotorizer was a difference of about 400 words. 
+
 | <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
 | --- | --- | --- |
 |Cleaned Text, No Processing|Count Vectorizer|943|
