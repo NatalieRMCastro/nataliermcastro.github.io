@@ -21,7 +21,7 @@ Association Rule Mining (ARM) is the task of understanding interactions through 
 To preform ARM, R was utilized. The full code used to describe the visuals provided below are presented in [ARM - CODE](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm-code.html). The R file and workspace may also be downlaoaded at the provided link.
 
 <a id="ARM_Viz"></a>
-#### Associaiton Rules for Climate, Government, Republican, and Democrat
+#### Association Rules for Climate, Government, Republican, and Democrat
 The figures illustrated below are generated using lemmatized data. This allows for a merge of multiple word forms with the same word senses to be illustrated visually. If you see words that are incomplete like 'extren' this may be representing "externally", or "external"
 <section class="gallery">
 	<div class="row">
