@@ -5,8 +5,23 @@ categories: projects
 published: true
 in_feed: false
 ---
+
+ <section>
+<ul class="actions">
+		<li><a href="https://drive.google.com/uc?export-download&id=1F3mMoKVJo9gyNN4bz8GpG8Y4EwGFJEpL" class="buttonprimary icon fa-download">Download R Workspace</a></li>
+	</ul>
+ </section>
+
+ 
+
+ <section>
+<ul class="actions">
+		<li><a href="https://drive.google.com/uc?export-download&id=1m96NQJZ5jT6T1z5k9g1rF1wsYSFCQF-s" class="buttonprimary icon fa-download">Download R Code</a></li>
+	</ul>
+ </section>
+---
 ##########################
-# 1. ENVIRONMENT CREATION --------------------------
+ 1. ENVIRONMENT CREATION --------------------------
 ##########################
 install.packages("arules", dependencies = TRUE)
 install.packages("TSP")
