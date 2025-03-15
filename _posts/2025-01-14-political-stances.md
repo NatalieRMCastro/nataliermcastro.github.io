@@ -24,7 +24,7 @@ This page houses the current work for my text mining course (Spring 2025), where
 		</div>
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="#" class="button fit small">ARM</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm.html" class="button fit small">Association Rule Mining</a></li>
 				<li><a href="#" class="button fit small">Conclusion</a></li>
 			</ul>
 		</div>
