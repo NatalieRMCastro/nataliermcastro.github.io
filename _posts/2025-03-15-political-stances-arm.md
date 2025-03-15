@@ -26,7 +26,7 @@ The figures illustrated below are generated using lemmatized data. This allows f
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Climate ARM.png" class="image fit thumb"><img src="/assets/images/Climate ARM alt="" /></a>
+			<a href="/assets/images/Climate ARM.png" class="image fit thumb"><img src="/assets/images/Climate ARM.png" alt="" /></a>
 			<h3>Climate Associations</h3>
 			<p>The highgest supported accosciations when climate is present are the words "weather","change", and "president"</p>
 		</article>
