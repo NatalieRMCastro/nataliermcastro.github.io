@@ -22,6 +22,8 @@ To preform ARM, R was utilized. The full code used to describe the visuals provi
 
 <a id="ARM_Viz"></a>
 #### Association Rules for Climate, Government, Republican, and Democrat
+Association role mining was identified based on words which co-occur. The large amount of data originally presented to the model generated over 11,000 rules. These rules alone were far reaching, and after filtering for lift validity did not provide much shape to the data. To mediate this, words were selected it order to identify what was the most meaningfully co-occurring in certain contexts. To do so the words “climate”, “Democrat”, “Republican”, “Science”, “Tribal”, “Government”. The most confident rules were then selected to be visualized. First, the rules for climate and government are described to illustrate the embedding space. Then, the partisian representations for “Democrat” and “Republican” are both discussed.
+
 The figures illustrated below are generated using lemmatized data. This allows for a merge of multiple word forms with the same word senses to be illustrated visually. If you see words that are incomplete like 'extren' this may be representing "externally", or "external"
 <section class="gallery">
 	<div class="row">
