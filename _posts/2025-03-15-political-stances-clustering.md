@@ -133,7 +133,7 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
-			<h3>Distribution of Climate News Clustering Topics</h3>
+			<h3>Distribution of Climate News Clustered Topics</h3>
 			<p>text</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
@@ -142,14 +142,14 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 			<p>text</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/kmeans 100 clusters bill data.png" class="image fit thumb"><img src="/assets/images/kmeans 100 clusters bill data.png" alt="" /></a>
-			<h3>Introduced Climate Policy: K-Means Clustering</h3>
+			<a href="/assets/images/kmeans Climate Cluster Distribution.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Cluster Distribution.png" alt="" /></a>
+			<h3>Distribution of Introduced Cliamte Policy Clustered Topics</h3>
 			<p>text</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/GOP Party Platform - Clean Text.png" class="image fit thumb"><img src="/assets/images/GOP Party Platform - Clean Text.png" alt="" /></a>
-			<h3>GOP Party Platform - Clean Text</h3>
-			<p>After cleaning, the text looks a little different with the largest words as "republican","american", and "border".</p>
+			<a href="/assets/images/kmeans Climate Clustering Small Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Small Scatter.png" alt="" /></a>
+			<h3>Introduced Climate Policy: K-Means Clustering</h3>
+			<p>text</p>
 		</article>
 	</div>
 </section>
