@@ -154,7 +154,7 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Clustering Small Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Small Scatter.png" alt="" /></a>
 			<h3>Introduced Climate Policy: K-Means Clustering</h3>
-			<p>text</p>
+			<p>As expected, the NEPA cluster is far reaching. It is not siloed within a particular topic such as water safety or ground pollution, thus it is similar to multiple aspects in the embedding space. Similar language used in climate bills about different topics may be identified. For example, cluster 5 is about species protection which is semantically closest to cluster 4 focusing on lake resotration. The cluster with terms about disapproval (13) is closet to NEPA and mercurcy terms.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
