@@ -70,6 +70,9 @@ def shadow_tester(data_name,data,random_state,num_iterations, step_size,cluster_
     return (shadow_scores)
 ```
 
+This function was applied to each type of data, the News Corpus, the Climate Bills, and the Party Platform. Systematically testing the number of clusters with the best fit will generate more accurate models. Reported below are the parameters set for each model. As noted previously, the random state instantiates a shared vector, so the results may be replicated if so desired.
+
+
 <div style="display: flex; gap: 20px; align-items: flex-start;">
 
   <!-- Left Column: Image Section -->
@@ -91,69 +94,38 @@ def shadow_tester(data_name,data,random_state,num_iterations, step_size,cluster_
     <table style="width: 100%;">
       <thead>
         <tr>
-          <th style="color:black; background-color:transparent; font-size:16px;">Cleaning Technique</th>
-          <th style="color:black; background-color:transparent; font-size:16px;">Vectorizer Type</th>
-          <th style="color:black; background-color:transparent; font-size:16px;">Vocabulary Size</th>
+          <th style="color:black; background-color:transparent; font-size:14px;">Data Source</th>
+          <th style="color:black; background-color:transparent; font-size:14px;">Number of Clusters</th>
+          <th style="color:black; background-color:transparent; font-size:14px;">Number of Iterations</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Cleaned Text, No Processing</td>
-          <td>Count Vectorizer</td>
-          <td>2,504</td>
+          <td>News Corpus</td>
+          <td>4</td>
+          <td>1,000</td>
         </tr>
-        <tr>
-          <td>Porter Stem</td>
-          <td>Count Vectorizer</td>
-          <td>2,357</td>
+	<tr>
+          <td>News Corpus</td>
+          <td>20</td>
+          <td>1,000</td>
         </tr>
-        <tr>
-          <td>Lemmatization</td>
-          <td>Count Vectorizer</td>
-          <td>2,119</td>
+	<tr>
+          <td>Climate Policy</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
-        <tr>
-          <td>Cleaned Text, No Processing</td>
-          <td>TF-IDF Vectorizer</td>
-          <td>2,504</td>
+	<tr>
+          <td>Party Platform</td>
+          <td>-</td>
+          <td>-</td>
         </tr>
-        <tr>
-          <td>Porter Stem</td>
-          <td>TF-IDF Vectorizer</td>
-          <td>2,357</td>
-        </tr>
-        <tr>
-          <td>Lemmatization</td>
-          <td>TF-IDF Vectorizer</td>
-          <td>2,119</td>
-        </tr>
+	      
       </tbody>
     </table>
   </div>
 
 </div>
-
-
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/Systemic Clustering Testing.png" alt="An example output from the Cluster Testing Function"  /></span> 
-        <figcaption>Example Function Output from Systematic Testing</figcaption>
-			</div>
-		</div>
-	</div>
-</section>
-
-| <span style="color:black; background-color:transparent; font-size:16px;">__Cleaning Technique__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vectorizer Type__</span> | <span style="color:black; background-color:transparent; font-size:16px;">__Vocabulary Size__</span> |
-| --- | --- | --- |
-|Cleaned Text, No Processing|Count Vectorizer|2,504|
-|Porter Stem|Count Vectorizer|2,357|
-|Lemmatization|Count Vectorizer|2,119|
-|Cleaned Text, No Processing|TF-IDF Vectorizer|2,504|
-|Porter Stem|TF-IDF Vectorizer|2,357|
-|Lemmatization|TF-IDF Vectorizer|2,119|
-
-This function was applied to each type of data, the News Corpus, the Climate Bills, and the Party Platform. Systematically testing the number of clusters with the best fit will generate more accurate models. Reported below are the parameters set for each model. 
 
  <a id="Finding1"></a>
 ### Findings
