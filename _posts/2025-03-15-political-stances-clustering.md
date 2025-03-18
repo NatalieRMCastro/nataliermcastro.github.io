@@ -91,6 +91,7 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 
   <!-- Right Column: Table -->
   <div style="flex: 1;">
+	  K-Means Clustering Parameters for Corpora
     <table style="width: 100%;">
       <thead>
         <tr>
