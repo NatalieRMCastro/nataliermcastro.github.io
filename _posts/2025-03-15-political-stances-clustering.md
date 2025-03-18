@@ -147,16 +147,6 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
-			<h3>Distribution of Climate News Clustered Topics</h3>
-			<p>text</p>
-		</article>
-		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/kmeans Climate Clustering Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
-			<h3>Climate News: K-Means Clustering</h3>
-			<p>text</p>
-		</article>
-		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Cluster Distribution.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Cluster Distribution.png" alt="" /></a>
 			<h3>Distribution of Introduced Cliamte Policy Clustered Topics</h3>
 			<p>The largest cluster is in relation to NEPA, with over 900 bills fitting into this topic. Subsequently, the distribution of the clusters are normal, and there are a relatively even distribution amongst clusters. A few of the largest clusters are: (19) eligible, treatment, stormwater, wastewater, loans (2) climate, adopotion, global, coastal, resilience (8) permit, discharge, vessel, permitting, specification. Remaining clustes are primarily concerned with water, waste or pollution, and inequtiable impact. </p>
@@ -166,10 +156,21 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 			<h3>Introduced Climate Policy: K-Means Clustering</h3>
 			<p>text</p>
 		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
+			<h3>Distribution of Climate News Clustered Topics</h3>
+			<p>text</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/kmeans Climate Clustering Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
+			<h3>Climate News: K-Means Clustering</h3>
+			<p>text</p>
+		</article>
+		
 	</div>
 </section>
 
-In comparison to the introduced climate bills, the media coverage about climate change from a paritisa
+In comparison to the introduced climate bills, the media coverage about climate change from a paritisan lens is less dense and topically interconnected. This can be inferred from *Figure Climate News: K-Means Clustering*. Unlike the NEPA cluster, there are not as many distincy forms of clutering between the topics. Interrelated topics may be identified when in reference to a particular entity like the transition between the Biden Administration and the Trump Administration (Clusters 18 and 4). The largest two clusters from the media dataset are focused on the incoming Trump Adminsitration (Clusters 6 and 9). Subsequently is a cluster about the Los Angeles Wildfires, which was extremly pertinent at the time of data collection. Spatially, this cluster is closest to Clusters 7 and 9, both of which are about Donald Trump and then a senate hearing. This suggests that there are not other media forms or current topics which were close to the magnitude of the L.A. fires. In the K-Means clustering of introduced climate bills, wildfires is not one of the 20 topics identified. 
 
 <a id="hclust"></a>
 ### H-Clust and Cosine Similarity Findings: 
