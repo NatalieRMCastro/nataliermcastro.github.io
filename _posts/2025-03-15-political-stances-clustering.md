@@ -95,9 +95,10 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
     <table style="width: 100%;">
       <thead>
         <tr>
-          <th style="color:black; background-color:transparent; font-size:14px;">Data Source</th>
-          <th style="color:black; background-color:transparent; font-size:14px;">Number of Clusters</th>
-          <th style="color:black; background-color:transparent; font-size:14px;">Number of Iterations</th>
+          <th style="color:black; background-color:transparent; font-size:12px;">Data Source</th>
+          <th style="color:black; background-color:transparent; font-size:12px;">Number of Clusters</th>
+          <th style="color:black; background-color:transparent; font-size:12px;">Number of Iterations</th>
+	<th style="color:black; background-color:transparent; font-size:12px;">Silhouette Score</th>
         </tr>
       </thead>
       <tbody>
@@ -105,23 +106,19 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
           <td>News Corpus</td>
           <td>4</td>
           <td>1,000</td>
+	<td>0.011</td>
         </tr>
 	<tr>
           <td>News Corpus</td>
           <td>20</td>
           <td>1,000</td>
+	<td>0.027</td>
         </tr>
 	<tr>
           <td>Climate Policy</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-	<tr>
-          <td>Party Platform</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-	      
+          <td>100</td>
+          <td>0.24</td>
+        </tr> 
       </tbody>
     </table>
   </div>
@@ -131,3 +128,28 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
  <a id="Finding1"></a>
 ### Findings
 
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
+			<h3>Distribution of Climate News Clustering Topics</h3>
+			<p>text</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/kmeans Climate Clustering Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
+			<h3>Climate News: K-Means Clustering</h3>
+			<p>text</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/kmeans 100 clusters bill data.png" class="image fit thumb"><img src="/assets/images/kmeans 100 clusters bill data.png" alt="" /></a>
+			<h3>Introduced Climate Policy: K-Means Clustering</h3>
+			<p>text</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/GOP Party Platform - Clean Text.png" class="image fit thumb"><img src="/assets/images/GOP Party Platform - Clean Text.png" alt="" /></a>
+			<h3>GOP Party Platform - Clean Text</h3>
+			<p>After cleaning, the text looks a little different with the largest words as "republican","american", and "border".</p>
+		</article>
+	</div>
+</section>
