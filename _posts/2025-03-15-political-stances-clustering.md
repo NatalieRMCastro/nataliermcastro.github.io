@@ -159,7 +159,7 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
 			<h3>Distribution of Climate News Clustered Topics</h3>
-			<p>text</p>
+			<p>The largest clusters are concerned with the new Trump Adminsitration. Three out of the four largest clusters focused on Donald Trump. The only exception being a cluster concerned with the Los Angeles Wildfires, something which topped news charts for days. Climate topics are not as clear in this distribution of topics. Illustrated from this iteration of K-Means clustering is the decision to withdrawl from the Paris Cliamte Agreement, the L.A. Fires, and the hurricane in North Carolina. This illustrates that the media is more concerned with disastorous and largely consequential events instead of more passive changes in regards to climate change.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Clustering Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
