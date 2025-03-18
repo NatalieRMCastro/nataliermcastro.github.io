@@ -10,17 +10,18 @@ Clustering is a text mining method which uses the frequencies within a document 
 To answer the research questions, the data will be clustered separately. One model will be used to inform the differences in partisian conceptializations of climate policy and the next will be used to inform the differences in media coverage about contentious partisian differences. In this analysis, the Party Platform will not be clustered because there are only two items in that dataset. 
 
 **Table of Contents**
-- [Method](#Method)
+- [Method: K-Means](#method_kmeans)
 - [Cluster Optimization](#Cluster Optimization)
+- [Method: H-Clust](#method_hclust)
+- [Method: PCA](#method_pca)
 - [K-Means Findings](#kmeans)
-- [HClust and Cosine Similarity](#hclust)
+- [HClust and Cosine Similarity Findings](#hclust)
 - [PCA Findings](#pca)
-- [x](#Finding2)
   
 ---
 
- <a id="Method"></a>
-### Method
+ <a id="method_kmeans"></a>
+### Method: K-Means
 
 To cluster any form of natural language data, the documents must be vectorized. Doing so allows for the computer to ‘read’ the language, but instead of with eyes it is computation. Document-Term Matrices were created for each data form. The first, is of Climate Bill data. This was collected from the United States Library of Congress and contains all bills with the topic of ‘climate’ that was introduced in either chamber. The total vocabulary after removing for stop words, numerical characters, and labels was over 10,000 different words. This data was collected using XML web scraping and the API provided by the Library of Congress. Next, news headlines were collected about ‘climate change’ and then labeled in accordance with the Partisan party mentioned in the news headline. This includes the news headline descriptions, but not the entire article. This data was collected using the NewsData API. Finally, each party platform for the 2024 United States Election was utilized. To read more about the data collection process, reference [Data Collection](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html)
 
@@ -31,7 +32,7 @@ Creating Document Term Matrices allow for the vectorization. Each document count
 To generate the clusters the Python library Sci-Kit Learn was utilized. The parameters afforded through the library are the number of iterations, number of clusters, and random state. The same random state was used across the model to set the model in a similar ‘mode’ when it is clustering the visualizations. Other than setting a defined seed, the random state does not have much of an effect on how the clusters are generated or represented in two-dimensional space. For all tests and modeling the random state of 811 was selected. No particular reason, I just thought it would be a nice number. 
 
  <a id="Cluster Optimization"></a>
-### Cluster Optimization
+#### K-Means Cluster Optimization
 To identify the most appropriate clusters for the data, a recursive algorithim was created to test clustering methods at different step sizes. The purpose of this function was to systematically identify the best fitting cluster for each dataset on the same random seed and parameters. 
 
 
@@ -130,9 +131,18 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 
 </div>
 
+ <a id="method_hclust"></a>
+### Method: H-Clust
+
+
+ <a id="method_pca"></a>
+### Method: Principle Compontent Analysis
+
  <a id="kmeans"></a>
 ### K-Means: Topic Representations of Introduced Climate Bills and Media Concerns
+K-Means represents the different clustering methods using the Euclidean distnance of the vectorized text. The more similar a document, it will be clustered closer together in the high dimensional space. First let's address how climate change represented in climate policy introduced at the federal level. Using K-Means, it was illustrated the different trends or types of climate policy. The complexity and length of the documents resulted in a generous amount of topics. During optimization, the silhouette score continued to increase as the number of clusters increased - even into the upper 200s for *k* clusters. 100 clusters was selected to visualize because it is still detailed enough to obtain a silhouette score of 0.23, however, not too detailed in an attempt to preserve interpretability. A smaller K-Means clustering set of 20 was also established for the Climate Policy Data in order to compare a similar amount of clusters for the news data.
 
+The distribution of the clusters may be observed in *Figure: Distribution of Introduced Cliamte Policy Clustered Topics* is fairly even, with the largest cluster being about the National Environmental Protection Act (NEPA) and wildfires. This would explain the far-reaching clustering demonstrated in *Figure: Introduced Climate Policy: K-Means Clustering*. As NEPA is an organization which has ties to multiple facets of climate change and other concerns. 
 
 <section class="gallery">
 	<div class="row">
@@ -149,7 +159,7 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Cluster Distribution.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Cluster Distribution.png" alt="" /></a>
 			<h3>Distribution of Introduced Cliamte Policy Clustered Topics</h3>
-			<p>text</p>
+			<p>The largest cluster is in relation to NEPA, with over 900 bills fitting into this topic. Subsequently, the distribution of the clusters are normal, and there are a relatively even distribution amongst clusters. A few of the largest clusters are: (19) eligible, treatment, stormwater, wastewater, loans (2) climate, adopotion, global, coastal, resilience (8) permit, discharge, vessel, permitting, specification. Remaining clustes are primarily concerned with water, waste or pollution, and inequtiable impact. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Clustering Small Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Small Scatter.png" alt="" /></a>
