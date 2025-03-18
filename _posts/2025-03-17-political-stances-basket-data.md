@@ -57,7 +57,6 @@ bill_information.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>Bill Type</th>
       <th>Sponser Affiliation</th>
       <th>Sponser State</th>
@@ -68,21 +67,10 @@ bill_information.head(2)
       <th>ab</th>
       <th>abandon</th>
       <th>...</th>
-      <th>zoe</th>
-      <th>zone</th>
-      <th>zonea</th>
-      <th>zonesnotwithstand</th>
-      <th>zoneth</th>
-      <th>zoo</th>
-      <th>zoolog</th>
-      <th>zoonot</th>
-      <th>zooplankton</th>
-      <th>zquez</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0</td>
       <td>hr</td>
       <td>D</td>
@@ -94,19 +82,8 @@ bill_information.head(2)
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>1</td>
       <td>hr</td>
       <td>R</td>
@@ -118,16 +95,6 @@ bill_information.head(2)
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -167,7 +134,6 @@ news.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>Party</th>
       <th>publisher</th>
       <th>aapi</th>
@@ -177,22 +143,10 @@ news.head(2)
       <th>ability</th>
       <th>able</th>
       <th>abolish</th>
-      <th>...</th>
-      <th>yes</th>
-      <th>york</th>
-      <th>young</th>
-      <th>youth</th>
-      <th>zealot</th>
-      <th>zeldin</th>
-      <th>zero</th>
-      <th>zers</th>
-      <th>zone</th>
-      <th>zuckerberg</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0</td>
       <td>Republican</td>
       <td>The Verge</td>
@@ -204,19 +158,8 @@ news.head(2)
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>1</td>
       <td>Republican</td>
       <td>Gizmodo.com</td>
@@ -228,16 +171,6 @@ news.head(2)
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
     </tr>
   </tbody>
 </table>
