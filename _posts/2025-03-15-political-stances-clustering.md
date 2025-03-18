@@ -148,7 +148,8 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Cluster Distribution.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Cluster Distribution.png" alt="" /></a>
-			<h3>Distribution of Introduced Cliamte Policy Clustered Topics</h3>
+			<h3>
+				Distribution of Introduced Cliamte Policy Clustered Topics</h3>
 			<p>The largest cluster is in relation to NEPA, with over 900 bills fitting into this topic. Subsequently, the distribution of the clusters are normal, and there are a relatively even distribution amongst clusters. A few of the largest clusters are: (19) eligible, treatment, stormwater, wastewater, loans (2) climate, adopotion, global, coastal, resilience (8) permit, discharge, vessel, permitting, specification. Remaining clustes are primarily concerned with water, waste or pollution, and inequtiable impact. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
@@ -158,7 +159,8 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate News.png" class="image fit thumb"><img src="/assets/images/kmeans Climate News.png" alt="" /></a>
-			<h3>Distribution of Climate News Clustered Topics</h3>
+			<h3>
+				Distribution of Climate News Clustered Topics</h3>
 			<p>The largest clusters are concerned with the new Trump Adminsitration. Three out of the four largest clusters focused on Donald Trump. The only exception being a cluster concerned with the Los Angeles Wildfires, something which topped news charts for days. Climate topics are not as clear in this distribution of topics. Illustrated from this iteration of K-Means clustering is the decision to withdrawl from the Paris Cliamte Agreement, the L.A. Fires, and the hurricane in North Carolina. This illustrates that the media is more concerned with disastorous and largely consequential events instead of more passive changes in regards to climate change.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
