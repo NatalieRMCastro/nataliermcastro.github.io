@@ -169,6 +169,8 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 	</div>
 </section>
 
+In comparison to the introduced climate bills, the media coverage about climate change from a paritisa
+
 <a id="hclust"></a>
 ### H-Clust and Cosine Similarity Findings: 
 
