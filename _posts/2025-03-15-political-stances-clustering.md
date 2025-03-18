@@ -8,6 +8,7 @@ in_feed: false
 
 **Table of Contents**
 - [Method](#Method)
+- [Cluster Optimization](#Cluster Optimization)
 - [Findings](#Finding1)
 - [x](#Finding2)
   
@@ -24,7 +25,62 @@ Creating Document Term Matrices allow for the vectorization. Each document count
 
 To generate the clusters the Python library Sci-Kit Learn was utilized. The parameters afforded through the library are the number of iterations, number of clusters, and random state. The same random state was used across the model to set the model in a similar ‘mode’ when it is clustering the visualizations. Other than setting a defined seed, the random state does not have much of an effect on how the clusters are generated or represented in two-dimensional space. For all tests and modeling the random state of 811 was selected. No particular reason, I just thought it would be a nice number. 
 
+ <a id="Cluster Optimization"></a>
+### Cluster Optimization
+To identify the most appropriate clusters for the data, a recursive algorithim was created to test clustering methods at different step sizes. The purpose of this function was to systematically identify the best fitting cluster for each dataset on the same random seed and parameters. 
 
+
+``` python
+'''SILHOUETTE CLUSTERING'''
+## Defining the function to take the data to cluster, a consistent random state to use across testing, the desired number of clusters, and the number of iterations
+def shadow_reporter(data,random_state,num_clusters,num_iterations):
+
+    ## Instantiating the Model with the desired parameters
+    km = KMeans()
+    km.set_params(random_state=random_state)
+    km.set_params(n_clusters = num_clusters)
+    km.set_params(n_init = num_iterations)
+    ## Fitting the data
+    km.fit(data)
+    ## Assessing the model for each iteration on performance metrics.
+    shadow = metrics.silhouette_score(data, km.labels_,sample_size = len(data))
+    return (shadow)
+
+
+''' SHADOW TESTER '''
+
+## This function takes a range and applies the Shadow Reporter based on the current parameters for the iteration. 
+def shadow_tester(data_name,data,random_state,num_iterations, step_size,cluster_start,cluster_end):
+    shadow_scores = []
+
+    ## Iterating through the parameters with a certain step size
+    for clust in tqdm(range(cluster_start,cluster_end,step_size),desc='🧺🐜... clustering',leave=True):
+        clust_score = shadow_reporter(data,random_state,clust,num_iterations)
+        shadow_scores.append({'Clusters':clust,"Silhouette":clust_score})
+    title = f"Silhouette Clustering Testing:\n{data_name}\n\tIterations: {num_iterations}\n\tCluster Range: {cluster_start} - {cluster_end}\n\tStep Size: {step_size}"
+    df = pd.DataFrame(shadow_scores)
+    plot = sb.lineplot(data=df,x='Clusters',y='Silhouette')
+
+    ## Printing the output to judge best clustering fit.
+    print (title)
+    print ("-------------------------------------------------------------------------------")
+    plt.show()
+    print ("-------------------------------------------------------------------------------")
+    print (df)
+    return (shadow_scores)
+```
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Systemic Clustering Testing.png" alt="An example output from the Cluster Testing Function"  /></span> 
+        <figcaption>Example Function Output from Systematic Testing</figcaption>
+			</div>
+		</div>
+	</div>
+</section>
+
+This function was applied to each type of data, the News Corpus, the Climate Bills, and the Party Platform. Systematically testing the number of clusters with the best fit will generate more accurate models. Reported below are the parameters set for each model. 
 
  <a id="Finding1"></a>
 ### Findings
