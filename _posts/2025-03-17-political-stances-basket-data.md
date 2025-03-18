@@ -210,7 +210,6 @@ party_platform.head(2)
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Unnamed: 0</th>
       <th>Party</th>
       <th>ability</th>
       <th>able</th>
@@ -221,21 +220,10 @@ party_platform.head(2)
       <th>accountability</th>
       <th>accountable</th>
       <th>...</th>
-      <th>won</th>
-      <th>word</th>
-      <th>work</th>
-      <th>worker</th>
-      <th>working</th>
-      <th>world</th>
-      <th>worship</th>
-      <th>worst</th>
-      <th>year</th>
-      <th>young</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
       <td>0</td>
       <td>Republican</td>
       <td>1</td>
@@ -247,19 +235,8 @@ party_platform.head(2)
       <td>1</td>
       <td>4</td>
       <td>...</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>15</td>
-      <td>2</td>
-      <td>15</td>
-      <td>2</td>
-      <td>1</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
-      <th>1</th>
       <td>1</td>
       <td>Democrat</td>
       <td>7</td>
@@ -271,16 +248,6 @@ party_platform.head(2)
       <td>6</td>
       <td>14</td>
       <td>...</td>
-      <td>10</td>
-      <td>1</td>
-      <td>101</td>
-      <td>79</td>
-      <td>81</td>
-      <td>69</td>
-      <td>4</td>
-      <td>4</td>
-      <td>149</td>
-      <td>10</td>
     </tr>
   </tbody>
 </table>
@@ -446,16 +413,6 @@ dtm_df.head()
       <th>abercrombi</th>
       <th>abey</th>
       <th>...</th>
-      <th>universal</th>
-      <th>unjustly</th>
-      <th>unlawful</th>
-      <th>unnecessary</th>
-      <th>upholding</th>
-      <th>various</th>
-      <th>vigorously</th>
-      <th>violate</th>
-      <th>weakened</th>
-      <th>whistleblower</th>
     </tr>
   </thead>
   <tbody>
@@ -472,16 +429,6 @@ dtm_df.head()
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
@@ -496,16 +443,6 @@ dtm_df.head()
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
@@ -520,16 +457,6 @@ dtm_df.head()
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
@@ -544,16 +471,6 @@ dtm_df.head()
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
@@ -568,16 +485,6 @@ dtm_df.head()
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
     </tr>
   </tbody>
 </table>
@@ -633,16 +540,6 @@ dtm_df.head(1)
       <th>abercrombi</th>
       <th>abey</th>
       <th>...</th>
-      <th>universal</th>
-      <th>unjustly</th>
-      <th>unlawful</th>
-      <th>unnecessary</th>
-      <th>upholding</th>
-      <th>various</th>
-      <th>vigorously</th>
-      <th>violate</th>
-      <th>weakened</th>
-      <th>whistleblower</th>
     </tr>
   </thead>
   <tbody>
@@ -659,16 +556,6 @@ dtm_df.head(1)
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
     </tr>
   </tbody>
 </table>
