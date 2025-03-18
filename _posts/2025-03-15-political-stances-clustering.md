@@ -5,11 +5,16 @@ categories: projects
 published: true
 in_feed: false
 ---
+Clustering is a text mining method which uses the frequencies within a document to assign meaning. To answer the overarching question of ideological differences divided among party lines clustering methods will be used to both identify differences or subsequent similaries from the differences in the available data. Methods used in this exploration are K-Means Clustering (completed in Python), *hclust* informed by Cosine Similarity for hierarchical clustering (completed in R), and Principal Component Analysis for 3-D spatial representation (completed in Python). This combination of methods are applied to provide a holistic understanding of the data provided in addition to different embedding measures to interpret the data differently. 
+
+To answer the research questions, the data will be clustered separately. One model will be used to inform the differences in partisian conceptializations of climate policy and the next will be used to inform the differences in media coverage about contentious partisian differences. In this analysis, the Party Platform will not be clustered because there are only two items in that dataset. 
 
 **Table of Contents**
 - [Method](#Method)
 - [Cluster Optimization](#Cluster Optimization)
-- [Findings](#Finding1)
+- [K-Means Findings](#kmeans)
+- [HClust and Cosine Similarity](#hclust)
+- [PCA Findings](#pca)
 - [x](#Finding2)
   
 ---
@@ -17,7 +22,7 @@ in_feed: false
  <a id="Method"></a>
 ### Method
 
-To cluster any form of natural language data, the documents must be vectorized. Doing so allows for the computer to ‘read’ the language, but instead of with eyes it is computation. Document-Term Matrices were created for each data form. The first, is of Climate Bill data. This was collected from the United States Library of Congress and contains all bills with the topic of ‘climate’ that was introduced in either chamber. The total vocabulary after removing for stop words, numerical characters, and labels was over 10,000 different words. This data was collected using XML web scraping and the API provided by the Library of Congress. Next, news headlines were collected about ‘climate change’ and then labeled in accordance with the Partisan party mentioned in the news headline. This includes the news headline descriptions, but not the entire article. This data was collected using the NewsData API. Finally, each party platform for the 2024 United States Election was utilized. To read more about the data collection process, reference [Data Collection]([LINK HERE](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html))
+To cluster any form of natural language data, the documents must be vectorized. Doing so allows for the computer to ‘read’ the language, but instead of with eyes it is computation. Document-Term Matrices were created for each data form. The first, is of Climate Bill data. This was collected from the United States Library of Congress and contains all bills with the topic of ‘climate’ that was introduced in either chamber. The total vocabulary after removing for stop words, numerical characters, and labels was over 10,000 different words. This data was collected using XML web scraping and the API provided by the Library of Congress. Next, news headlines were collected about ‘climate change’ and then labeled in accordance with the Partisan party mentioned in the news headline. This includes the news headline descriptions, but not the entire article. This data was collected using the NewsData API. Finally, each party platform for the 2024 United States Election was utilized. To read more about the data collection process, reference [Data Collection](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html)
 
 Specifically for K-Means clustering, the data was normalized before by using TF-IDF. TF-IDF was developed by Luhn and Sparack Jones and is used for information retrieval [1, 2]. It informs what terms are uniquely relevant to providing meaning through the documents. This method calculates the term frequency and then the inverse document frequency. This provides a relative amount of how important the word is to the entire corpus and in relation to the document. For example, the word ‘climate’ can be assumed to be highly frequent across all documents, this term will be down weighted. This normalization process helps to situate the documents within a contextual space that is bounded in frequency.
 
@@ -125,8 +130,8 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 
 </div>
 
- <a id="Finding1"></a>
-### Findings
+ <a id="kmeans"></a>
+### K-Means: Topic Representations of Introduced Climate Bills and Media Concerns
 
 
 <section class="gallery">
@@ -153,3 +158,11 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 		</article>
 	</div>
 </section>
+
+<a id="hclust"></a>
+### H-Clust and Cosine Similarity Findings: 
+
+
+<a id="pca"></a>
+### PCA Findings: 
+
