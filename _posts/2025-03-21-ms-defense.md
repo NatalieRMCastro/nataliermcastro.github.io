@@ -6,9 +6,10 @@ published: true
 in_feed: true
 ---
 <section>
-With much gratitude and excitement, I announce my passing MS Thesis Defense! This work is the culmination of two years of research at my time in the Department of Information Science at the University of Colorado at Boulder. I am deeply grateful for the amazing support I have recieved, the mentorship, and kindness from the department.
+With much gratitude and excitement, I announce my passing MS Thesis Defense! 
 </section>
 
+My work is titled 'Inclusive Governance: Equitable Access to School Board Meetings Using Comparative NLP Methods'.This work is the culmination of two years of research at my time in the Department of Information Science at the University of Colorado at Boulder. I am deeply grateful for the amazing support I have received, the mentorship, and kindness from the department. On my Committee was [Dr. Brian Keegan](https://www.brianckeegan.com/), [Dr. Leysia Palen](https://cmci.colorado.edu/~palen/), and [Dr. Alexandra Siegel](https://aasiegel.github.io/website/website-main/).
 
 The construction of the educational imaginary throughout the school district varies based on the socio-historical context of the school district. As school boards construct imaginaries through discourse, they are rationalizing the future through generating problematizations. Students’ in the school district are then impacted through the discursive effects of these policies. Attending the school board meeting to provide input into how this is affecting the student is a privilege not afforded to all parents. It requires organizational knowledge and the ability to dedicate time to the meeting. 
 
