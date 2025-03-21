@@ -6,8 +6,7 @@ published: true
 in_feed: true
 ---
 <section>
-
-  <p>With much gratituity and pleasure, I announce my passing MS Thesis Defense! This work is the culmination of two years of research at my time in the Department of Information Science at the University of Colorado at Boulder. I am deeply grateful for the amazing support I have recieved, the mentorship, and kindness from the department.</p>
+With much gratituity and pleasure, I announce my passing MS Thesis Defense! This work is the culmination of two years of research at my time in the Department of Information Science at the University of Colorado at Boulder. I am deeply grateful for the amazing support I have recieved, the mentorship, and kindness from the department.
 </section>
 
 <section>
