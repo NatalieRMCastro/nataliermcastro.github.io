@@ -160,6 +160,80 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
  <a id="method_pca"></a>
 ### Method: Principle Compontent Analysis
 
+```python
+def pca_tester(scaled_data, raw_data, components,title):
+    ''' PCA FITTING '''
+    ## Fitting the PCA Model to the number of components desired
+    pca_model = PCA(n_components=components)
+    result = pca_model.fit_transform(scaled_data)
+
+    ## Extracting the Values to Identify Variance
+    eigenvalues = pca_model.explained_variance_
+    explained_variance_ratio = pca_model.explained_variance_ratio_
+    cumulative_variance = np.cumsum(explained_variance_ratio)
+
+    ## Creating and Index for the Numbers of Principle Components Generated
+    component_indices = np.arange(1, components + 1)
+
+    ## Fitting them to a dataframe to plot
+    data = {
+        'Component': component_indices,
+        'Eigen Values': list(eigenvalues),
+        'Explained Variance Ratio': list(explained_variance_ratio),
+        'Cumulative Variance': list(cumulative_variance)
+    }
+
+    plotting_data = pd.DataFrame.from_dict(data)
+
+    ## Identfiying the largest Eigen Value drop
+    eigenvalue_diffs = np.diff(eigenvalues) 
+    max_drop_index = np.argmax(np.abs(eigenvalue_diffs))  
+    max_drop_component = component_indices[max_drop_index]  
+
+    ''' PLOTTING '''
+    fig = make_subplots(rows=1, cols=2, subplot_titles=["Eigenvalues", "Variance"])
+
+    ## Plotting EigenValues on the left hand side
+    fig.add_trace(
+        go.Scatter(x=plotting_data["Component"], y=plotting_data["Eigen Values"], mode="lines+markers", name="Eigenvalues"),
+        row=1, col=1
+    )
+
+    ## Highlight the largest drop
+    fig.add_trace(
+        go.Scatter(
+            x=[max_drop_component, max_drop_component + 1],
+            y=[eigenvalues[max_drop_index], eigenvalues[max_drop_index + 1]],
+            mode="markers+lines",
+            marker=dict(color='red', size=10),
+            name="Largest Drop"
+        ),
+        row=1, col=1
+    )
+
+    ## Plotting Variance on the right hand side
+    fig.add_trace(
+        go.Scatter(x=plotting_data["Component"], y=plotting_data["Explained Variance Ratio"], mode="lines+markers", name="Explained Variance Ratio"),
+        row=1, col=2
+    )
+    
+    fig.add_trace(
+        go.Scatter(x=plotting_data["Component"], y=plotting_data["Cumulative Variance"], mode="lines+markers", name="Cumulative Variance"),
+        row=1, col=2
+    )
+
+    ## Situating Plotting Labels
+    fig.update_layout(title_text=title, showlegend=True, xaxis_title="Principal Component", yaxis_title="Values")
+
+    fig.show()
+```
+
+<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/pca_fitting.png" alt="Two graphs side by side that illustrate the differences in Eigen Values and Explained Variance" /></span></div>
+			</div>
+	</div>
+
  <a id="kmeans"></a>
 ### K-Means: Topic Representations of Introduced Climate Bills and Media Concerns
 K-Means represents the different clustering methods using the Euclidean distnance of the vectorized text. The more similar a document, it will be clustered closer together in the high dimensional space. First let's address how climate change represented in climate policy introduced at the federal level. Using K-Means, it was illustrated the different trends or types of climate policy. The complexity and length of the documents resulted in a generous amount of topics. During optimization, the silhouette score continued to increase as the number of clusters increased - even into the upper 200s for *k* clusters. 100 clusters was selected to visualize because it is still detailed enough to obtain a silhouette score of 0.23, however, not too detailed in an attempt to preserve interpretability. A smaller K-Means clustering set of 20 was also established for the Climate Policy Data in order to compare a similar amount of clusters for the news data.
