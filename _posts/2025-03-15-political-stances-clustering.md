@@ -227,12 +227,15 @@ def pca_tester(scaled_data, raw_data, components,title):
 
     fig.show()
 ```
-
-<div class="box alt">
+ <section>
+	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src"assets/images/pca fitting.png" alt="Two graphs side by side that illustrate the differences in Eigen Values and Explained Variance" /></span></div>
+			<div class="col-12"><span class="image fit"><img src="assets/images/pca fitting.png" alt="Two graphs side by side that illustrate the differences in Eigen Values and Explained Variance"  /></span> 
 			</div>
+		</div>
 	</div>
+</section>
+
 
  <a id="kmeans"></a>
 ### K-Means: Topic Representations of Introduced Climate Bills and Media Concerns
