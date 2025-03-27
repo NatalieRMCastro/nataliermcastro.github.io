@@ -42,10 +42,12 @@ Creating Document Term Matrices allow for the vectorization. Each document count
 			<a href="/assets/images/kmeans dataprep.png" class="image fit thumb"><img src="/assets/images/kmeans dataprep.png" alt="" /></a>
 			<h3>
 				News Data TF-IDF Example</h3>
-			<p>The data is available at [this Hugging Face repository](https://huggingface.co/datasets/nataliecastro/climate-news-tfidf-lemmed/blob/main/News%20Articles%20Lemmed-%20TFIDF.csv). The Lemmed and TF-IDF version of the data was utilized in order to bound the frequency. Lemmatized data was then used to combine multiple word senses. </p>
+			<p>The Lemmed and TF-IDF version of the data was utilized in order to bound the frequency. Lemmatized data was then used to combine multiple word senses. </p>
 		</article>	
 	</div>
 </section>
+
+The data is available at [this Hugging Face repository](https://huggingface.co/datasets/nataliecastro/climate-news-tfidf-lemmed/blob/main/News%20Articles%20Lemmed-%20TFIDF.csv)
 
 #### Generating K-Means Clusters
 
