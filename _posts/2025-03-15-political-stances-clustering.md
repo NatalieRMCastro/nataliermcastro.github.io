@@ -227,6 +227,8 @@ def pca_tester(scaled_data, raw_data, components,title):
 
     fig.show()
 ```
+text 
+
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
