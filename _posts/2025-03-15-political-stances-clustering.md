@@ -232,7 +232,7 @@ text
  <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="assets/images/pca fitting.png" alt="Two graphs side by side that illustrate the differences in Eigen Values and Explained Variance"  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/pca fitting.png" alt="Two graphs side by side that illustrate the differences in Eigen Values and Explained Variance"  /></span> 
 			</div>
 		</div>
 	</div>
