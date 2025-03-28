@@ -291,7 +291,7 @@ In comparison to the introduced climate bills, the media coverage about climate 
 </div>
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid black;" allowfullscreen></iframe>
+  <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
 </div>
 
 <section>
@@ -304,6 +304,8 @@ In comparison to the introduced climate bills, the media coverage about climate 
 			</ul>
 		</div>
 <section/>
+
+The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.
 
 <a id="pca"></a>
 ### PCA Findings: 
