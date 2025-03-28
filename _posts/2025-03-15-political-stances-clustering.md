@@ -289,10 +289,12 @@ In comparison to the introduced climate bills, the media coverage about climate 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
 </div>
+*Radial Network of Most Similar Words*
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
 </div>
+*Dendrogram of Most Similar Words*
 
 <section>
 
