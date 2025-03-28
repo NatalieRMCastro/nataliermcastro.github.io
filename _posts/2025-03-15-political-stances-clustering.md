@@ -291,8 +291,19 @@ In comparison to the introduced climate bills, the media coverage about climate 
 </div>
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <iframe src="/assets/images/hclust random parition large.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
+  <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid black;" allowfullscreen></iframe>
 </div>
+
+<section>
+
+ 	<div class="row">
+		<div class="col-6 col-12-small">
+			<ul class="actions stacked">
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html" class="button fit small">View Dendrogram in Separate Page</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
+			</ul>
+		</div>
+<section/>
 
 <a id="pca"></a>
 ### PCA Findings: 
