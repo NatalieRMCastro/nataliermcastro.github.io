@@ -75,8 +75,8 @@ The language used to construct narratives about climate change and climate relat
 ### 15 Most Meaningful Rules for Support, Lift, and Confidence
 
 #### Support
+The top 15 rules for support are concerned first with legislative outcomes. Support measures the frequency across the entire dataset, so these numbers in relative to confidence and lift will be lower. However, these will have a higher count because support measures what is most likely to co-occur across the entire dataset. Rules like 'moment' and 'just' may illustrate news as they often report on the current moment. Rules like 'coordin' and 'reccomend' illustrate the coordiation and planning required to successfully pass climate bills. This rule or even keyword are not present in the above explored topic specific word clouds. This suggests that the use of 'moment', 'just', 'coordin', and 'reccomend' are illustrative of a specific process, and are not affiliated with a specifc partisian affiliation more than the next. The rule 'tribe' and 'indian', and its inverse, was also included in the highest co-occurance. This suggests that when referencing policy about Indigenous and First Nation People in the United States, they are referred to both as a group and also "Indian". 
 
-| <span style="font-family: 'Times New Roman', serif; font-size: 9px;">Rule</span>   | <span style="font-family: 'Times New Roman', serif; font-size: 9px;">Support</span> | <span style="font-family: 'Times New Roman', serif; font-size: 9px;">Confidence</span> | <span style="font-family: 'Times New Roman', serif; font-size: 9px;">Lift</span> | <span style="font-family: 'Times New Roman', serif; font-size: 9px;">Count</span> |
 | rules                    | support     | confidence  | lift     | count |
 | ------------------------ | ----------- | ----------- | -------- | ----- |
 | {fall} => {speaker}      | 0.131276023 | 0.942003515 | 6.453356 | 536   |
@@ -97,6 +97,7 @@ The language used to construct narratives about climate change and climate relat
 
 
 #### Lift
+Lift is not as illustrative about keyword specific rules or that of support. Lift measures the dependence between items, and uses the presence of one to measure the presence of the other. This measure inform how often one word is present when the other is present. For these reasons, the overwhelming majority of rules with the highest lift illustrate the numerical ordering of the federal regulations. These are used to enumerate specific policies in the bills, but are so frequent they mask the presence of the context itself. This suggests a need to either (1) remove the Roman Numerals and loose some hierachical structuring of the text, (2) use another metric to identify the most meaningful rules, like support, (3) use specific words to frame an ARM analysis.
 
 | rules                 | support     | confidence  | lift     | count |
 | --------------------- | ----------- | ----------- | -------- | ----- |
@@ -117,6 +118,7 @@ The language used to construct narratives about climate change and climate relat
 | {bb,cc} => {aa}       | 0.05143277  | 0.985915493 | 11.24439 | 210   |
 
 #### Confidence
+Similarly to lift, confidence preforms similarly. There is an increased variatio in co-occurance, even with the Roman Numerals, which may suggest other considerations about how the bills are structured. For example, in Roman Numeral VII the words 'recommend', 'specif', 'known', and 'maximum' were most likely to be present. In Roman Numeral VI 'serv', 'studi', 'particip', and 'technic' can be identified. This may provide an insight into how climate bills are structured, and the concerns hierachically nested in the text.
 
 | rules                      | support     | confidence  | lift     | count |
 | -------------------------- | ----------- | ----------- | -------- | ----- |
