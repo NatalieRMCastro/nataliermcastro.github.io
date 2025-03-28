@@ -9,14 +9,24 @@ in_feed: false
 There are multiple associtations within natural language. Texts we generate are embedded with nuance and word senses and further analysis may provide insight into the nuance of word co-occurance. For example, consider the word "climate" and words which may trail after it. "Change" may be a suitable word to follow "climate". But what are other possibilities of words that may follow, and in a specific text corpus like news and introduced climate bills at the federal level. Using Association Rule Mining, a systematic analysis may be conducted about what words are most likely to follow in suite from the next. 
 
 **Table of Contents**
-- [Method](#Method)
+- [Data Preparation](#Method)
 - [Party Platform Declarations](#PPD)
   
 ---
 
  <a id="Method"></a>
-### Method
-Association Rule Mining (ARM) is the task of understanding interactions through transaction data. Transaction data represents a collection of documents where each row is a document. The columns then illustrate the words which compose each row, or transaction. Take the sentence ‘The ocean is blue and the ocean is big’, the row would compose of the words ‘ocean’, ‘blue’, ‘big’. Words like stop words are removed from the data because they are frequent, and likely to co-occur with most of the words because of their syntactical functions. In addition to filtering out the stopwords, pre-processing data for ARM does not rely on frequencies, just the presence of the words. In short, ARM takes transaction data, which is composed of the unique meaningful words in each document. To view how basket data was generated, reference the code provided [here](https://nataliermcastro.github.io/projects/2025/03/17/political-stances-basket-data.html) 
+### Data Preparation
+Association Rule Mining (ARM) is the task of understanding interactions through transaction data. Transaction data represents a collection of documents where each row is a document. The columns then illustrate the words which compose each row, or transaction. Take the sentence ‘The ocean is blue and the ocean is big’, the row would compose of the words ‘ocean’, ‘blue’, ‘big’. Words like stop words are removed from the data because they are frequent, and likely to co-occur with most of the words because of their syntactical functions. In addition to filtering out the stopwords, pre-processing data for ARM does not rely on frequencies, just the presence of the words. In short, ARM takes transaction data, which is composed of the unique meaningful words in each document. To view how basket data was generated, reference the code provided [here](https://nataliermcastro.github.io/projects/2025/03/17/political-stances-basket-data.html), the data is stored at this [HuggingFace Repository](https://huggingface.co/datasets/nataliecastro/climate-corpus-basket-data/blob/main/Basket%20Data.csv). A snippet of the transaction data is illustrated below. This continues on with however many documents compose the total corpus. The transactions illustrated in the screenshot are short because they are news headlines, however, further down in the corpus are the climate bills which extend beyond just a few words.
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/transaction data.png" alt="An example of thhe CSV basket data. Each row is a comma separated list of the meaningful words."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 
 To preform ARM, R was utilized. The full code used to describe the visuals provided below are presented in [ARM - CODE](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm-code.html) or provided at my [GitHub](https://github.com/NatalieRMCastro/climate-policy/blob/main/3.%20Association%20Rule%20Mining.R). The R file and workspace may also be downlaoaded at the provided link.
 
