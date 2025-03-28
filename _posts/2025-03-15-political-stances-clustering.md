@@ -290,6 +290,9 @@ In comparison to the introduced climate bills, the media coverage about climate 
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
 </div>
 
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <iframe src="/assets/images/hclust random parition large.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
+</div>
 
 <a id="pca"></a>
 ### PCA Findings: 
