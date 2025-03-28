@@ -10,8 +10,8 @@ There are multiple associtations within natural language. Texts we generate are 
 
 **Table of Contents**
 - [Data Preparation](#Method)
-- [Party Platform Declarations](#PPD)
-  
+- [Association Rules for Climate, Government, Republican, and Democrat](#ARM_Viz)
+- [15 Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
 ---
 
  <a id="Method"></a>
@@ -31,7 +31,7 @@ Association Rule Mining (ARM) is the task of understanding interactions through 
 To preform ARM, R was utilized. The full code used to describe the visuals provided below are presented in [ARM - CODE](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm-code.html) or provided at my [GitHub](https://github.com/NatalieRMCastro/climate-policy/blob/main/3.%20Association%20Rule%20Mining.R). The R file and workspace may also be downlaoaded at the provided link.
 
 <a id="ARM_Viz"></a>
-#### Association Rules for Climate, Government, Republican, and Democrat
+### Association Rules for Climate, Government, Republican, and Democrat
 Association role mining was identified based on words which co-occur. The large amount of data originally presented to the model generated over 11,000 rules. These rules alone were far reaching, and after filtering for lift validity did not provide much shape to the data. To mediate this, words were selected it order to identify what was the most meaningfully co-occurring in certain contexts. To do so the words “climate”, “Democrat”, “Republican”, “Science”, “Tribal”, “Government”. The most confident rules were then selected to be visualized. First, the rules for climate and government are described to illustrate the embedding space. Then, the partisian representations for “Democrat” and “Republican” are both discussed.
 
 The figures illustrated below are generated using lemmatized data. This allows for a merge of multiple word forms with the same word senses to be illustrated visually. If you see words that are incomplete like 'extren' this may be representing "externally", or "external"
@@ -69,3 +69,8 @@ For the term ‘Republican” the most confident rules which mention climate rel
 Rules generated from ‘Democrat’ co-occurrence illustrate more emotion that illustrate concern. These rules may be illustrated with “injustice” , “justice”, “safe” or “benefit”. These words, or words with similar word senses were not illustrated in the Republican affiliated rules with the most confidence. This may demonstrate the kinds of language used to construct media and policy about the Democrats are inherently more emotional and concerned with justice. In addition, the co-occurrence with words that *may* be related to climate change is higher. Words that are used to illustrate this are: “green”, “waste”, “disaster”, “hazard”, and “extreme”. These words also co-occur alongside of marginalized groups such as “gender”, “territories”, “indigenous”, and “color”. The combination of the rules presented show a fundamentally different media and policy space. 
 
 The language used to construct narratives about climate change and climate related concerns are politically siloed. Co-occureances most likely in the Republican group are more aligned the words that co-occurred with the word “government”. Neither of the co-occurrence spaces are closely aligned with that of the “scientific” or “tribal” associations.
+
+<a id="top_15"></a>
+### 15 Most Meaningful Rules for Support, Lift, and Confidence
+
+
