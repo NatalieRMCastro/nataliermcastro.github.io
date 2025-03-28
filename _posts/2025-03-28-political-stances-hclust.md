@@ -11,7 +11,7 @@ in_feed: false
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
        <li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html#hclust" class="button fit small">Return to Clustering</a></li>
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html" class="button fit small">View Dendrogram in Separate Page</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
 			</ul>
 		</div>
 <section/>
