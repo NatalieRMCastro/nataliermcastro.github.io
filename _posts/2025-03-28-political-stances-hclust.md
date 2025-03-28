@@ -16,6 +16,7 @@ in_feed: false
 		</div>
 <section/>
 
+
 ```r
 ##########################
 # 1. ENVIRONMENT CREATION --------------------------
