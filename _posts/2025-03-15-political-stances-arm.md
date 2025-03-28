@@ -93,127 +93,9 @@ The language used to construct narratives about climate change and climate relat
 | {tribe} => {indian}      | 0.103110458 | 0.931415929 | 8.376589 | 421   |
 | {indian} => {tribe}      | 0.103110458 | 0.927312775 | 8.376589 | 421   |
 
-<table>
-<thead>
-<tr>
-<th>rules</th>
-<th>support</th>
-<th>confidence</th>
-<th>lift</th>
-<th>count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>{fall} =&gt; {speaker}</td>
-<td>0.131276023</td>
-<td>0.942003515</td>
-<td>6.453356</td>
-<td>536</td>
-</tr>
-<tr>
-<td>{speaker} =&gt; {fall}</td>
-<td>0.131276023</td>
-<td>0.899328859</td>
-<td>6.453356</td>
-<td>536</td>
-</tr>
-<tr>
-<td>{moment} =&gt; {just}</td>
-<td>0.105069802</td>
-<td>0.977220957</td>
-<td>7.499987</td>
-<td>429</td>
-</tr>
-<tr>
-<td>{just} =&gt; {moment}</td>
-<td>0.105069802</td>
-<td>0.806390977</td>
-<td>7.499987</td>
-<td>429</td>
-</tr>
-<tr>
-<td>{rem} =&gt; {just}</td>
-<td>0.104579966</td>
-<td>0.979357798</td>
-<td>7.516387</td>
-<td>427</td>
-</tr>
-<tr>
-<td>{just} =&gt; {rem}</td>
-<td>0.104579966</td>
-<td>0.802631579</td>
-<td>7.516387</td>
-<td>427</td>
-</tr>
-<tr>
-<td>{rem} =&gt; {max}</td>
-<td>0.10409013</td>
-<td>0.974770642</td>
-<td>9.364679</td>
-<td>425</td>
-</tr>
-<tr>
-<td>{rem} =&gt; {moment}</td>
-<td>0.10409013</td>
-<td>0.974770642</td>
-<td>9.066033</td>
-<td>425</td>
-</tr>
-<tr>
-<td>{moment} =&gt; {max}</td>
-<td>0.10409013</td>
-<td>0.968109339</td>
-<td>9.300683</td>
-<td>425</td>
-</tr>
-<tr>
-<td>{moment} =&gt; {rem}</td>
-<td>0.10409013</td>
-<td>0.968109339</td>
-<td>9.066033</td>
-<td>425</td>
-</tr>
-<tr>
-<td>{just} =&gt; {max}</td>
-<td>0.10409013</td>
-<td>0.79887218</td>
-<td>7.674812</td>
-<td>425</td>
-</tr>
-<tr>
-<td>{coordin} =&gt; {recommend}</td>
-<td>0.103600294</td>
-<td>0.621145374</td>
-<td>3.638646</td>
-<td>423</td>
-</tr>
-<tr>
-<td>{recommend} =&gt; {coordin}</td>
-<td>0.103600294</td>
-<td>0.606886657</td>
-<td>3.638646</td>
-<td>423</td>
-</tr>
-<tr>
-<td>{tribe} =&gt; {indian}</td>
-<td>0.103110458</td>
-<td>0.931415929</td>
-<td>8.376589</td>
-<td>421</td>
-</tr>
-<tr>
-<td>{indian} =&gt; {tribe}</td>
-<td>0.103110458</td>
-<td>0.927312775</td>
-<td>8.376589</td>
-<td>421</td>
-</tr>
-</tbody>
-</table>
-
 
 #### Lift
+
 | rules                 | support     | confidence  | lift     | count |
 | --------------------- | ----------- | ----------- | -------- | ----- |
 | {vi,viii} => {ix}     | 0.056086211 | 0.765886288 | 12.92196 | 229   |
@@ -233,6 +115,7 @@ The language used to construct narratives about climate change and climate relat
 | {bb,cc} => {aa}       | 0.05143277  | 0.985915493 | 11.24439 | 210   |
 
 #### Confidence
+
 | rules                      | support     | confidence  | lift     | count |
 | -------------------------- | ----------- | ----------- | -------- | ----- |
 | {vii,viii} => {vi}         | 0.073230468 | 0.996666667 | 6.805    | 299   |
