@@ -307,7 +307,7 @@ In comparison to the introduced climate bills, the media coverage about climate 
 		</div>
 <section/>
 
-The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.
+The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.  
 
 <a id="pca"></a>
 ### PCA Findings: 
