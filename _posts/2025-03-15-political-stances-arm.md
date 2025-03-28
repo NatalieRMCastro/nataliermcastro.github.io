@@ -14,7 +14,7 @@ There are multiple associtations within natural language. Texts we generate are 
 - [Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
 - [Word Association in Climate Related Text Corpora](#conc)
       
----
+
 
  <a id="Method"></a>
 ### Data Preparation
