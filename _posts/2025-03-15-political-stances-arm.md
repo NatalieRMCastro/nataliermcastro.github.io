@@ -11,7 +11,8 @@ There are multiple associtations within natural language. Texts we generate are 
 **Table of Contents**
 - [Data Preparation](#Method)
 - [Association Rules for Climate, Government, Republican, and Democrat](#ARM_Viz)
-- [15 Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
+- [Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
+- [Word Association in Climate Related Text Corpora](#conc)
 ---
 
  <a id="Method"></a>
@@ -133,3 +134,7 @@ The language used to construct narratives about climate change and climate relat
 | {serv,vii} => {vi}         | 0.051677688 | 0.995283019 | 6.795553 | 211   |
 | {studi,vii} => {vi}        | 0.051677688 | 0.995283019 | 6.795553 | 211   |
 | {particip,vii} => {vi}     | 0.05143277  | 0.995260664 | 6.7954   | 210   |
+
+
+ <a id="conc"></a>
+### Word Association in Climate Related Text Corpora
