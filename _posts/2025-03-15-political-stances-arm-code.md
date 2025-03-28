@@ -20,6 +20,7 @@ in_feed: false
 	</ul>
  </section>
 ---
+``` r
 ##########################
  1. ENVIRONMENT CREATION --------------------------
 ##########################
@@ -374,3 +375,4 @@ write(indg_rules_sorted,
 earth_tone_palette <- colorRampPalette(c("beige","brown", "darkolivegreen"))
 ## Visualizing the rules
 plot(indg_rules_sorted,method='graph',shading='confidence',control = list(colors = earth_tone_palette(10)))
+```
