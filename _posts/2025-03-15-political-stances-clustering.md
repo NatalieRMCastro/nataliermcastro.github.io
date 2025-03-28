@@ -232,7 +232,7 @@ def pca_tester(scaled_data, raw_data, components,title):
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/HClust Before Word Cloud.jpeg" alt="Wordccloud with before HClust Methods - The largest words are 'cover', 'recycle', and 'list'."  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/pca fitting.png" alt="A line graph demonstrating the elbow curve used to identify how many PCs are best."  /></span> 
 			</div>
 		</div>
 	</div>
@@ -277,6 +277,14 @@ In comparison to the introduced climate bills, the media coverage about climate 
 
 <a id="hclust"></a>
 ### H-Clust and Cosine Similarity Findings: 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/HClust Before Word Cloud.jpeg" alt="Wordccloud with before HClust Methods - The largest words are 'cover', 'recycle', and 'list'."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 
 <a id="pca"></a>
