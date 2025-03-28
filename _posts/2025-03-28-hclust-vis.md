@@ -12,7 +12,7 @@ Full Dendrogram:
  	<div class="row">
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html" class="button fit small">Return to Clustering</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html#hclust" class="button fit small">Return to Clustering</a></li>
 				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
 			</ul>
 		</div>
