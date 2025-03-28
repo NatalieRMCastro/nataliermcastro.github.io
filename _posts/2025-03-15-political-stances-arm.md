@@ -93,7 +93,7 @@ The language used to construct narratives about climate change and climate relat
 | {tribe} => {indian}      | 0.103110458 | 0.931415929 | 8.376589 | 421   |
 | {indian} => {tribe}      | 0.103110458 | 0.927312775 | 8.376589 | 421   |
 
-table>
+<table>
 <thead>
 <tr>
 <th>rules</th>
