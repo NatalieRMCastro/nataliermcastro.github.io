@@ -301,7 +301,7 @@ In comparison to the introduced climate bills, the media coverage about climate 
  	<div class="row">
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html" class="button fit small">View Dendrogram in Separate Page</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
 				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
 			</ul>
 		</div>
@@ -309,6 +309,10 @@ In comparison to the introduced climate bills, the media coverage about climate 
 
 The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.  
 
+<section>
+
+ 
+</section>
 <a id="pca"></a>
 ### PCA Findings: 
 
