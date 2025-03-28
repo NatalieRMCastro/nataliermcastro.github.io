@@ -74,6 +74,8 @@ The language used to construct narratives about climate change and climate relat
 ### 15 Most Meaningful Rules for Support, Lift, and Confidence
 
 #### Support
+| <span style="color:black; background-color:transparent; font-size:16px;">Rule</span> | <span style="color:black; background-color:transparent; font-size:16px;">Support</span> | <span style="color:black; background-color:transparent; font-size:16px;">Confidence</span> | <span style="color:black; background-color:transparent; font-size:16px;">Lift</span> | <span style="color:black; background-color:transparent; font-size:16px;">Count</span> |
+| --- | --- | --- | --- | --- |
 | rules                    | support     | confidence  | lift     | count |
 | ------------------------ | ----------- | ----------- | -------- | ----- |
 | {fall} => {speaker}      | 0.131276023 | 0.942003515 | 6.453356 | 536   |
