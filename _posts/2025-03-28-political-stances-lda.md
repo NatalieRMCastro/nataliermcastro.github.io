@@ -18,7 +18,7 @@ introduction text to lda
  <a id="data"></a>
 ### Data Preparation: Unlabed Document Term Matricies
 
-text
+Three different LDA models will be generated during this analysis, one for news data, one for proposed climate bills, and one for the Party Platform. To do so, each datasource requires an unlabeled document term matrix. This means that every row represents a document in the corpus, and then the columns are the cleaned and meaningful words which consist the texts. More information about how the data was cleaned and collected may be found linked here.
 
  <a id="method_lda"></a>
 ### Method: Latent Dirichlet Allocation 
