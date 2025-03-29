@@ -42,13 +42,14 @@ First, the question “how is climate change represented in climate policy passe
 
 Second, news coverage plays a large role in how people receive information, process it in accordance with their values system, and share it with their close social network. In my second question, “what ways does news coverage reflect polarization in regards to climate change?” I will consider how media either solidifies or challenges prior assumptions about climate change and its polarization. Second, I am interested in knowing more about how news channels cater to their audiences through headlines. This leads into my third point of interest when considering the similarities in language used between different news sources – so if there is a liberal leaning news source what is the overlap in language used (or differences) with a conservative news source. Finally, I am interested in tracking the different language used to express concern or disbelief in climate change to help illustrate multiple beliefs centering global warming. 
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCfSkBvo22o?si=Or2eP5yb5GlLMXFb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 Image Attributions:
 (1): Gallup Inc 
 (2): (Saul Loeb / AFP / Getty)
 (3): PBS
+(4): NASA
 
 Bibliography:
 
