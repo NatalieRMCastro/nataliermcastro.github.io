@@ -155,7 +155,7 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 
  <a id="method_hclust"></a>
 ### Method: H-Clust
-
+The code used to complete the H-Clust analysis may be found at [this page](https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html), or downloaded at [my GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20Clustering.R)
 
  <a id="method_pca"></a>
 ### Method: Principle Compontent Analysis
