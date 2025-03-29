@@ -48,6 +48,8 @@ Bibliography:
 
 Adame, B. J., Corman, S. R., Endres, C. J., Farmer, R. D., & Awonuga, T. (2025). How partisan news outlets frame vested interests in climate change. Journal of Environmental Management, 375, 124159. https://doi.org/10.1016/j.jenvman.2025.124159
 
+Azdren Coma, Erik W. Johnson & Philip Schwadel (2024) Elite Cueing, Gender, and the Partisan Gap in Environmental Support, The Sociological Quarterly, 65:4, 448-468, DOI: 10.1080/00380253.2024.2347917
+
 Dixon, G., Clarke, C., Jacquet, J., Evensen, D. T. N., & Hart, P. S. (2024). The complexity of pluralistic ignorance in Republican climate change policy support in the United States. Communications Earth & Environment, 5(1), 1–6. https://doi.org/10.1038/s43247-024-01240-x
 
 Dunlap, R. E., & McCright, A. M. (2008). A Widening Gap: Republican and Democratic Views on Climate Change. Environment: Science and Policy for Sustainable Development, 50(5), 26–35. https://doi.org/10.3200/ENVT.50.5.26-35
@@ -55,6 +57,8 @@ Dunlap, R. E., & McCright, A. M. (2008). A Widening Gap: Republican and Democrat
 Dunlap, R. E., McCright, A. M., & Yarosh, J. H. (2016). The Political Divide on Climate Change: Partisan Polarization Widens in the U.S. Environment: Science and Policy for Sustainable Development, 58(5), 4–23. https://doi.org/10.1080/00139157.2016.1208995
 
 Gallup Inc. (2022). Climate Change and Wellbeing Around the World. Gallup.
+
+Hao, Feng, and Joshua Doyle. “How Does Social Trust Shape the Politicization of America’s Climate Change Perception?—A Study of Two National Surveys in 2022 and 2023.” Sociology Compass 19, no. 2 (2025): e70035. https://doi.org/10.1111/soc4.70035.
 
 Inc, G. (2024, December 13). Are Americans Concerned About Global Warming? Gallup.Com. https://news.gallup.com/poll/355427/americans-concerned-global-warming.aspx
 Jones, N., Witze, A., Tollefson, J., & Kozlov, M. (2025). What Trump 2.0 means for science: The likely winners and losers. Nature, 637(8046), 532–535. https://doi.org/10.1038/d41586-025-00052-z
