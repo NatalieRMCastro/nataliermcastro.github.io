@@ -18,7 +18,20 @@ introduction text to lda
  <a id="data"></a>
 ### Data Preparation: Unlabed Document Term Matricies
 
-Three different LDA models will be generated during this analysis, one for news data, one for proposed climate bills, and one for the Party Platform. To do so, each datasource requires an unlabeled document term matrix. This means that every row represents a document in the corpus, and then the columns are the cleaned and meaningful words which consist the texts. More information about how the data was cleaned and collected may be found linked here.
+Three different LDA models will be generated during this analysis, one for news data, one for proposed climate bills, and one for the Party Platform. To do so, each datasource requires an unlabeled document term matrix. This means that every row represents a document in the corpus, and then the columns are the cleaned and meaningful words which consist the texts. More information about how the data was cleaned and collected may be found [linked here](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html). 
+
+The Count Vectorizer was used here because of its ability to show the feature names after the fact of clustering and are able to show larger distances between the data. Labels are removed from this data because the LDA model only takes numerical data, so the prevalence of the label would cause the model not to work. Illustrated below is the lemmatized and CountVectorizer processed version of the Party Platform. This data may be downloaded, alongside others used in this analysis, at [my HuggingFace Collection](https://huggingface.co/datasets/nataliecastro/climate-news-countvectorizer-dtm). 
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/lda data example.png" alt="A Document Term Matrix with the words in the party platform. The values in the cells are whole numbers."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+
 
  <a id="method_lda"></a>
 ### Method: Latent Dirichlet Allocation 
