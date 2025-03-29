@@ -23,7 +23,7 @@ To answer the research questions, the data will be clustered separately. One mod
  <a id="method_kmeans"></a>
 ### Method: K-Means
 
-To cluster any form of natural language data, the documents must be vectorized. Doing so allows for the computer to ‘read’ the language, but instead of with eyes it is computation. Document-Term Matrices were created for each data form. The first, is of Climate Bill data. This was collected from the United States Library of Congress and contains all bills with the topic of ‘climate’ that was introduced in either chamber. The total vocabulary after removing for stop words, numerical characters, and labels was over 10,000 different words. This data was collected using XML web scraping and the API provided by the Library of Congress. Next, news headlines were collected about ‘climate change’ and then labeled in accordance with the Partisan party mentioned in the news headline. This includes the news headline descriptions, but not the entire article. This data was collected using the NewsData API. Finally, each party platform for the 2024 United States Election was utilized. To read more about the data collection process, reference [Data Collection](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html)
+To cluster any form of natural language data, the documents must be vectorized. Doing so allows for the computer to ‘read’ the language, but instead of with eyes it is computation. Document-Term Matrices were created for each data form. The first, is of Climate Bill data. This was collected from the United States Library of Congress and contains all bills with the topic of ‘climate’ that was introduced in either chamber. The total vocabulary after removing for stop words, numerical characters, and labels was over 10,000 different words. This data was collected using XML web scraping and the API provided by the Library of Congress. Next, news headlines were collected about ‘climate change’ and then labeled in accordance with the Partisan party mentioned in the news headline. This includes the news headline descriptions, but not the entire article. This data was collected using the NewsData API. Finally, each party platform for the 2024 United States Election was utilized. To read more about the data collection process, reference [Data Collection](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) The code for K-Means may be found at my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20K-Means%20Clustering.ipynb), it is not stored on my website because the file is too large! My apologies.
 
 #### Data Preparation
 
@@ -159,6 +159,8 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 
  <a id="method_pca"></a>
 ### Method: Principle Compontent Analysis
+Similarly to K-Means the code for PCA is stored at the tail end of the notebook stored at my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20K-Means%20Clustering.ipynb), it is not stored on my website because the file is too large! My apologies.
+
 
 ```python
 def pca_tester(scaled_data, raw_data, components,title):
