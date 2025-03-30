@@ -5,6 +5,16 @@ categories: projects
 published: true
 in_feed: false
 ---
+ <section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/01/14/political-stances.html" class="button fit small">Navigate to Project Page</a></li>
+                <li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm.html" class="button fit small">Navigate to ARM Page</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
  <section>
 <ul class="actions">
@@ -19,6 +29,7 @@ in_feed: false
 		<li><a href="https://drive.google.com/uc?export-download&id=1m96NQJZ5jT6T1z5k9g1rF1wsYSFCQF-s" class="buttonprimary icon fa-download">Download R Code</a></li>
 	</ul>
  </section>
+
 ---
 ``` r
 ##########################
