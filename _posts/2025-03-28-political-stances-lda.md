@@ -128,22 +128,9 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 ##### LDA Clustering: Proposed Climate Bills
 <iframe src="/assets/images/LDA Interactive Topics - Bills.html" width="100%" height="600px" title="Bills Data" scrolling="no" style="border: none; overflow: hidden;"></iframe>
 
-<iframe src="/assets/images/LDA Interactive Topics - Bills.html" width="100%" height="600px" title="Bills Data" scrolling="no" style="border: none; overflow: hidden;" id="lda_frame_bills"></iframe>
-
-<script>
-    function resizeIframe() {
-        var iframe = document.getElementById('lda_frame_bills');
-        var iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        
-        // Adjust iframe height based on the scrollHeight of the content inside
-        iframe.style.height = iframeDocument.body.scrollHeight + 'px';
-    }
-
-    // Call resize function when iframe content has loaded
-    document.getElementById('lda_frame_bills').onload = resizeIframe;
-</script>
 
 ##### LDA Clustering: 2024 Party Platforms
 <iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" height="600px" title="Party Data" scrolling="no" style="border: none; overflow: hidden;"></iframe>
 
+<iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" style="border: none; overflow: hidden;" id="ldavis_el768431687202567204275348056"></iframe>
 
