@@ -88,7 +88,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/LDA  - climate news.png"" class="image fit thumb"><img src="/assets/images/LDA  - climate news.png"" alt="" /></a>
+			<a href="/assets/images/LDA  - climate news.png"" class="image fit thumb"><img src="/assets/images/LDA  - climate news.png" alt="" /></a>
 			<h3>
 				LDA Clustering for Climate News</h3>
 			<p>figure explanation. </p>
