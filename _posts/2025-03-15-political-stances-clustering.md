@@ -9,11 +9,11 @@ Clustering is a text mining method which uses the frequencies within a document 
 
 To answer the research questions, the data will be clustered separately. One model will be used to inform the differences in partisian conceptializations of climate policy and the next will be used to inform the differences in media coverage about contentious partisian differences. In this analysis, the Party Platform will not be clustered because there are only two items in that dataset. 
 
-Clustering is used in this analysis to illustrate different atterns within the data. For example, clustering may show differences in topic or opinion from the media. To better understand how media coverage differs, clustering may illuminate different language used to discuss climate change. Clustering allows something similar to occur for the climate bills. It can demonstrate the largest or most important topics to climate policy across time. Without using clustering methods, this sort of analysis would otherwise be completed by hand.
+Clustering is used in this analysis to illustrate different atterns within the data. For example, clustering may show differences in topic or opinion from the media. To better understand how media coverage differs, clustering may illuminate different language used to discuss climate change. Clustering allows something similar to occur for the climate bills. It can demonstrate the largest or most important topics to climate policy across time. Without using clustering methods, this sort of analysis would otherwise be completed by hand. It can be expected that the media would center clusters around political figures or particular events, like the Los Angeles Wildfires. For climate bills, it may be expected to know more about particular concerns about climate change, like chemical regulations or energy shifts.
 
 **Table of Contents**
 - [Method: K-Means](#method_kmeans)
-- [Cluster Optimization](#Cluster Optimization)
+- [Cluster Optimization](#Cluster_Optimization)
 - [Method: H-Clust](#method_hclust)
 - [Method: PCA](#method_pca)
 - [K-Means Findings](#kmeans)
@@ -55,7 +55,7 @@ The data is available at [this Hugging Face repository](https://huggingface.co/d
 
 To generate the clusters the Python library Sci-Kit Learn was utilized. The parameters afforded through the library are the number of iterations, number of clusters, and random state. The same random state was used across the model to set the model in a similar ‘mode’ when it is clustering the visualizations. Other than setting a defined seed, the random state does not have much of an effect on how the clusters are generated or represented in two-dimensional space. For all tests and modeling the random state of 811 was selected. No particular reason, I just thought it would be a nice number. 
 
- <a id="Cluster Optimization"></a>
+ <a id="Cluster_Optimization"></a>
 #### K-Means Cluster Optimization
 To identify the most appropriate clusters for the data, a recursive algorithim was created to test clustering methods at different step sizes. The purpose of this function was to systematically identify the best fitting cluster for each dataset on the same random seed and parameters. 
 
