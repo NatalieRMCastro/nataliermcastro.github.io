@@ -13,7 +13,7 @@ Support, Confidence, and Lift are measures that are used to inform how relevant 
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/arm rules.png alt="An overview of the fractions for calculating lift, support, and confidence."  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/arm rules.png" alt="An overview of the fractions for calculating lift, support, and confidence."  /></span> 
 			</div>
 		</div>
 	</div>
