@@ -78,7 +78,26 @@ def save_topics(model, vectorizer, top_n=10):
 ### LDA Findings
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="700px" style="border: 2px solid blue;" allowfullscreen></iframe>
+  <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="700px" style="border: 2px solid gray;" allowfullscreen></iframe>
 </div>
 
+For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/LDA  - climate news.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/LDA - party platform.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
