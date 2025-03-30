@@ -159,6 +159,32 @@ This function was applied to each type of data, the News Corpus, the Climate Bil
 ### Method: H-Clust
 The code used to complete the H-Clust analysis may be found at [this page](https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html), or downloaded at [my GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20Clustering.R)
 
+To preform HClust, or hierarchical clustering, R is utilized. The data used for HClust is a Document Term Matrix (DTM). An image of the data may be found in the News Data TF-IDF example earlier on the page. A DTM is utilized here because it uses the frequencies of words in a single document to identify potential clusters. Each row then becomes a vector in the dataset. The data is then normalized and transposed in order to meaningfully bound the data.
+
+```r
+## Normalizing the Data
+dtm_normalized <- as.matrix(dtm_data)
+
+dtm_normalized <- apply(dtm_normalized,1,function(i) round(i/sum(i),3))
+## And transposing to return to a DTM
+dtm_normalized <- t(dtm_normalized)
+```
+
+With the normalized data, the cosine distnace was then calculated for the entire matrix. Due to the size of this dataset, the compute time was lengthy. Cosine distance is utilized to identify how related the vectors are, so instead of similarity, which is commonly discussed in NLP, cosine *distance* is calculating the *difference* in documents.
+
+```r
+cosine_distance <- dist(dtm_normalized,method='cosine')
+```
+
+As noted earlier, the size of the data was a barrier to computation. For this reason, after calculating the cosine distance, the most 2,500 similar vectors were utilized in further clustering. The labels were then sorted as well to reassign them appropriatlely to the small portion of sorted data.
+
+Finally, to cluster the data the method *hclust* was utilized. Ward Linkage method analyzes the variance in the clusters. This method was selected because we already know that the vectors selected are similar, but how varied are they?
+
+```r
+cosine_hclusters <- hclust(smaller_data_dist, method = "ward.D")
+cosine_hclusters$labels <- labels 
+```
+
  <a id="method_pca"></a>
 ### Method: Principle Compontent Analysis
 Similarly to K-Means the code for PCA is stored at the tail end of the notebook stored at my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20K-Means%20Clustering.ipynb), it is not stored on my website because the file is too large! My apologies.
@@ -317,6 +343,12 @@ The size and scope of the data used in this anaylsis is not appropriate for HClu
 
  
 </section>
+
 <a id="pca"></a>
 ### PCA Findings: 
 
+---
+Bibliography:
+[1] Luhn, H. P. “A Statistical Approach to Mechanized Encoding and Searching of Literary Information.” IBM Journal of Research and Development 1, no. 4 (October 1957): 309–17. https://doi.org/10.1147/rd.14.0309.
+
+[2] Spärck Jones, Karen. “A Statistical Interpretation of Term Specificity and Its Application in Retrieval.” Journal of Documentation 60, no. 5 (January 1, 2004): 493–502. https://doi.org/10.1108/00220410410560573.
