@@ -5,7 +5,25 @@ categories: projects
 published: true
 in_feed: false
 ---
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/01/14/political-stances.html" class="button fit small">Navigate to Project Page</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-lda.html" class="button fit small">Navigate to LDA Page</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 # 5. Latent Dirichlet Allocation
 
 ## 1. Environment Creation:
@@ -1131,10 +1149,14 @@ bills_model_best = bills_model[18]['LDA MODEL']
 topic_visualizer(bills_model_best,bills_data,18,"LDA Topic Modeling with 18 Clusters - Introduced Climate Bills",fontsize=10)
 ```
 
-
-    
-![png](output_35_0.png)
-    
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/output_35_0.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 
 
@@ -1195,11 +1217,15 @@ party_model_best = party_model[8]['LDA MODEL']
 topic_visualizer(party_model_best,vectorizer_party,8,"LDA Topic Modeling with 8 Clusters - 2024 Partisan Platforms",fontsize=10)
 ```
 
-
     
-![png](output_38_0.png)
-    
-
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/output_38_0.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 
 ```python
@@ -1212,9 +1238,14 @@ topic_visualizer(news_model_best, vectorizer_news, 8,"LDA Topic Modeling with 8 
 ```
 
 
-    
-![png](output_40_0.png)
-    
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/output_40_0.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 
 #### creating a special visualizer for the longer topic models
