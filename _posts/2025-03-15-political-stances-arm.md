@@ -8,7 +8,13 @@ in_feed: false
 
 There are multiple associtations within natural language. Texts we generate are embedded with nuance and word senses and further analysis may provide insight into the nuance of word co-occurance. For example, consider the word "climate" and words which may trail after it. "Change" may be a suitable word to follow "climate". But what are other possibilities of words that may follow, and in a specific text corpus like news and introduced climate bills at the federal level. Using Association Rule Mining, a systematic analysis may be conducted about what words are most likely to follow in suite from the next. 
 
-Support, Confidence, and Lift are measures that are used to inform how relevant a rule is across the corpus. 
+Support, Confidence, and Lift are measures that are used to inform how relevant a rule is across the corpus. I will briefly explain them, as they are used to anchor the analysis presented here.
+
+*Support* is calculated using the frequency of two words co-occuring. For example, if there are 100 words in the corpus, and the word 'climate' occurs ten times and it co-occurs with 'shift' only once. This means the value of support for the rule climate -> shift would be 0.01. 
+
+*Confidence* is calculated using frequency of one word co-occuring for the amount of times the first word occurs. Using the same example as above, the word 'climate' occured ten times, and 'shift' occured once when climate was present. This means that the confidence of the rule climate -> is 0.1.
+
+*Lift* is calculated using the value of support. The numerator is the value of support for a particular rule. The denominator is then how often the first word occurs in the corpus multiplied by that of the frequency the second word occurs in the corpus. This metric is utilized to illustrate the significance of the relationship. If the value is exactly one, this indicates a relationship that is independent of the other.
 
 <section>
 	<div class="box alt">
@@ -18,6 +24,9 @@ Support, Confidence, and Lift are measures that are used to inform how relevant 
 		</div>
 	</div>
 </section>
+
+Image Citation: Yaman, Sezin, Fabian Fagerholm, Myriam Munezero, Tomi Männistö, and Tommi Mikkonen. “Patterns of User Involvement in Experiment-Driven Software Development.” Information and Software Technology 120 (April 2020): 106244. https://doi.org/10.1016/j.infsof.2019.106244.
+
 
 
 **Table of Contents**
