@@ -319,14 +319,11 @@ In comparison to the introduced climate bills, the media coverage about climate 
 
 <a id="hclust"></a>
 ### H-Clust and Cosine Similarity Findings: 
-
-H-Clust illustrates a small portion of the documents. Only the first 500 most similar items in the corpora were included in the data provided to the *hclust* algorithm.
-
 <section>
     <div class="box alt">
         <div class="row gtr-50 gtr-uniform">
             <div class="col-6">
-                <p>First, it should be noted the word cloud developed from the normalized document term matrix. Recall that the data used was lemmatized, thus the words presented that are truncated are actually representative of multiple word endings. The words 'cover', 'recycl', 'credit', 'commerci' were notable large. It should be noted that many specific concerns, actions, and actors are represented in this wordcould.</p>
+                <p>H-Clust illustrates a small portion of the documents. Only the first 500 most similar items in the corpora were included in the data provided to the *hclust* algorithm. First, it should be noted the word cloud developed from the normalized document term matrix. Recall that the data used was lemmatized, thus the words presented that are truncated are actually representative of multiple word endings. The words 'cover', 'recycl', 'credit', 'commerci' were notable large. It should be noted that many specific concerns, actions, and actors are represented in this wordcould.</p>
             </div>
             <div class="col-6">
                 <a href="/assets/images/HClust Before Word Cloud.jpeg" target="_blank">
@@ -338,6 +335,9 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
     </div>
 </section>
 
+The Radial Network uses the library *NetworkX* to help develop relationships between teh data using nodes. In this instance, the nodes are illustrative of differnt 'branchings' of similarity. In this case, because the data was paritioned the radial network may not be illustrative of the entire dataset. After closer analysis, the majority of the words illustrated in the network begin with the letter A. 
+
+This may be because of how the Cosine Distance metric calculates, and because the columns were alphabetical it may have granted a higher weight to that of the words which came first in the DTM. This is further illustrated in the differences from K-Means Clustering, and also the wordcloud generated from the normalized DTM in R. 
 <section>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
@@ -345,6 +345,9 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
 </section>
 *Radial Network of Most Similar Words*
 
+A similar pattern is identified in the Dendrogram. A larger number of words was selected to be visualized, which is why the visualized words extend into the letter 'c'. However, this demonstrates a different phenomenon of language - the situation of wordforms takes precendece over other forms of co-occurance in hclust. This suggests that using it in such a scope may not be the most efficient. It also suggests, that the words which may be nested hierarhcically are similar in their meaning.
+
+For example, consider the hierarchical cluster with the words 'administration', 'appeal', 'authorization', 'agencies', 'adjourn' and 'adjust'. While all of these words share the same first letter, they are hierachically positioned close to each other because they share meaning and significance in the legislative process more that that of 'asbestos', 'baseline', or 'app'.
 <section>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
@@ -362,8 +365,6 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
         </div>
     </div> 
 </section> 
-
-
 
 The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.  
 
