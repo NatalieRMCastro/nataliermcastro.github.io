@@ -13,6 +13,7 @@ introduction text to lda
 - [Method: LDA](#method_lda)
 - [Cluster Optimization](#cluster_optimization)
 - [LDA Findings](#findings)
+- [LDA Clusters: Interactive Analysis](#interactive)
 
 ---
  <a id="data"></a>
@@ -35,6 +36,15 @@ The Count Vectorizer was used here because of its ability to show the feature na
 
  <a id="method_lda"></a>
 ### Method: Latent Dirichlet Allocation 
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/03/30/political-stances-lda-code.html" class="button fit small">View Code</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
 ```python
 def lda_tester(topic_number,dataset,vectorizer,top_n,dataset_name):
@@ -83,8 +93,6 @@ def save_topics(model, vectorizer, top_n=10):
 
 For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
-
-
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
@@ -100,3 +108,17 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 		</article>
 	</div>
 </section>
+
+ <a id="#interactive"></a>
+### LDA Clustering: Interactive Analysis
+
+##### LDA Clustering: Climate Related News Topics
+<iframe src="/assets/images/LDA Interactive Topics - News.html" width="100%" height="600px" title="News Data"></iframe>
+
+##### LDA Clustering: Proposed Climate Bills
+<iframe src="/assets/images/LDA Interactive Topics - Bills.html" width="100%" height="600px" title="Bills Data"></iframe>
+
+##### LDA Clustering: 2024 Party Platforms
+<iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" height="600px" title="Party Data"></iframe>
+
+
