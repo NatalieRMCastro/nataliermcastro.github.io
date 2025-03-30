@@ -338,15 +338,18 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
     </div>
 </section>
 
-
+<section>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
 </div>
+</section>
 *Radial Network of Most Similar Words*
-	
+
+<section>
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
 </div>
+</section>
 *Dendrogram of Most Similar Words*
 
 <section>
