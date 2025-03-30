@@ -24,6 +24,7 @@ in_feed: false
         </div>
     </div> 
 </section> 
+
 # 5. Latent Dirichlet Allocation
 
 ## 1. Environment Creation:
