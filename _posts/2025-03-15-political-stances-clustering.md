@@ -16,6 +16,7 @@ Clustering is used in this analysis to illustrate different atterns within the d
 - [Cluster Optimization](#Cluster_Optimization)
 - [Method: H-Clust](#method_hclust)
 - [Method: PCA](#method_pca)
+- [Findigns](#findings)
 - [K-Means Findings](#kmeans)
 - [HClust and Cosine Similarity Findings](#hclust)
 - [PCA Findings](#pca)
@@ -189,6 +190,7 @@ cosine_hclusters$labels <- labels
 ### Method: Principle Compontent Analysis
 Similarly to K-Means the code for PCA is stored at the tail end of the notebook stored at my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/blob/main/4.%20K-Means%20Clustering.ipynb), it is not stored on my website because the file is too large! My apologies.
 
+To complete PCA, a tester function was developed to identifyt the 'elbow' or the point where the EigenValues experience less of a decrease. The Eigenvalue is  a metric that is used to represent the variance of each component. This concept is rooted in linear algebra and may be understood as a summary of the larger matrix. When PCA is used to reduce the dimension, it is the measured with the Eigenvalue.
 
 ```python
 def pca_tester(scaled_data, raw_data, components,title):
@@ -219,7 +221,12 @@ def pca_tester(scaled_data, raw_data, components,title):
     eigenvalue_diffs = np.diff(eigenvalues) 
     max_drop_index = np.argmax(np.abs(eigenvalue_diffs))  
     max_drop_component = component_indices[max_drop_index]  
+```
+The code listed above preforms a few steps, first, it instantiates a PCA model with the number of components fed into the function during its recursive loop. Then, the scaled data is fit to the model and Eigenvalues, expained variarance ration, and cumulative variance is calculated.
 
+The component indicies are stored alongside of the above values in a DataFrame. The largest variance is the calculated to identify the largest shift of the PCA cluster. 
+
+```python
     ''' PLOTTING '''
     fig = make_subplots(rows=1, cols=2, subplot_titles=["Eigenvalues", "Variance"])
 
@@ -257,6 +264,7 @@ def pca_tester(scaled_data, raw_data, components,title):
 
     fig.show()
 ```
+Next, the figure is plotted. Two plots are instantiated with the left plot illustrating the change in EigenValue over the change in components. The right plot demonstrates the variance over increase in PCs. The title is set to the currecnt data that was fed into the function, thus it allows it to become more recursive. 
  
 
 <section>
@@ -268,6 +276,10 @@ def pca_tester(scaled_data, raw_data, components,title):
 	</div>
 </section>
 
+The figureabove illustrates the PCA Component Testing for Bill Data. The 'elbow' is around 50 principle components. The first elbow however, is arouhnd 15. Because the plot was rendered in Plotly Express, when ran in the notebook the EigenValue and principlce component are displayed on mouse hover. As expected, the Cumulative Variance *increases* as the number of clusters are increased. This is assumed because as the number of clusters increase the vector similarity will become smaller and moree specific for each cluster, thus, the variability will be increased. 
+ 
+ <a id="findings"></a>
+## Findings
 
  <a id="kmeans"></a>
 ### K-Means: Topic Representations of Introduced Climate Bills and Media Concerns
