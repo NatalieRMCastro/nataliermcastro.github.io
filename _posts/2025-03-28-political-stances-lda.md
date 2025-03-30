@@ -83,21 +83,20 @@ def save_topics(model, vectorizer, top_n=10):
 
 For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/LDA  - climate news.png" alt=""  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
 
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/LDA - party platform.png" alt=""  /></span> 
-			</div>
-		</div>
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/LDA  - climate news.png"" class="image fit thumb"><img src="/assets/images/LDA  - climate news.png"" alt="" /></a>
+			<h3>
+				LDA Clustering for Climate News</h3>
+			<p>figure explanation. </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/LDA - party platform.png" class="image fit thumb"><img src="/assets/images/LDA - party platform.png" alt="" /></a>
+			<h3>LDA Clustering for Climate News</h3>
+			<p>figure explanation</p>
+		</article>
 	</div>
 </section>
