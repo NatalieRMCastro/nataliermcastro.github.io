@@ -5,6 +5,15 @@ categories: projects
 published: true
 in_feed: false
 ---
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/01/14/political-stances.html" class="button fit small">Navigate to Project Page</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
 By 2030, climate change’s impact on high-temperature days will double, but only 61% of United States adults are concerned about global warming or climate change (Inc, 2024). Concern about climate change is not new either – it has received increasing media and partisan attention dating into the late 1980s (Dunlap & McCright, 2008; Inc, 2024; Treen et al., 2020). Since 2008, the number of high-temperature days have tripled which decreases overall wellbeing specifically in countries who have less GDP or growing economies (Gallup Inc., 2022). Risks extend into flooding, high temperature, agricultural issues, food insecurity, and the like (Gallup Inc., 2022). However, the most intense impacts of Climate Change are disproportionately in the Global South, thus allowing for its intense politicization in the United States. People who are not immediatley impacted may have less incentive to take actions which mitigate climate change, however, this is rapdily changing (Hao and Doyle, 2025). 
 
