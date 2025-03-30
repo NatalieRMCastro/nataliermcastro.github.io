@@ -9,6 +9,8 @@ Clustering is a text mining method which uses the frequencies within a document 
 
 To answer the research questions, the data will be clustered separately. One model will be used to inform the differences in partisian conceptializations of climate policy and the next will be used to inform the differences in media coverage about contentious partisian differences. In this analysis, the Party Platform will not be clustered because there are only two items in that dataset. 
 
+Clustering is used in this analysis to illustrate different atterns within the data. For example, clustering may show differences in topic or opinion from the media. To better understand how media coverage differs, clustering may illuminate different language used to discuss climate change. Clustering allows something similar to occur for the climate bills. It can demonstrate the largest or most important topics to climate policy across time. Without using clustering methods, this sort of analysis would otherwise be completed by hand.
+
 **Table of Contents**
 - [Method: K-Means](#method_kmeans)
 - [Cluster Optimization](#Cluster Optimization)
