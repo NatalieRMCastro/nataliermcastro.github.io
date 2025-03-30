@@ -50,6 +50,7 @@ The Count Vectorizer was used here because of its ability to show the feature na
         <div class="col-6 col-12-small">
             <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
                 <li><a href="https://nataliermcastro.github.io/projects/2025/03/30/political-stances-lda-code.html" class="button fit small">View Code</a></li>
+		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/5.%20Latent%20Dirichlet%20Allocation.ipynb" class="button fit small">Visit GitHub Repository</a></li>
             </ul>
         </div>
     </div> 
