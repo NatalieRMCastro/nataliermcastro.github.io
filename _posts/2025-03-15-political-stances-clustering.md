@@ -323,15 +323,6 @@ In comparison to the introduced climate bills, the media coverage about climate 
 H-Clust illustrates a small portion of the documents. Only the first 500 most similar items in the corpora were included in the data provided to the *hclust* algorithm.
 
 <section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/HClust Before Word Cloud.jpeg" alt="Wordccloud with before HClust Methods - The largest words are 'cover', 'recycle', and 'list'."  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-<section>
     <div class="box alt">
         <div class="row gtr-50 gtr-uniform">
             <div class="col-6">
