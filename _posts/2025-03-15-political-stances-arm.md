@@ -8,6 +8,17 @@ in_feed: false
 
 There are multiple associtations within natural language. Texts we generate are embedded with nuance and word senses and further analysis may provide insight into the nuance of word co-occurance. For example, consider the word "climate" and words which may trail after it. "Change" may be a suitable word to follow "climate". But what are other possibilities of words that may follow, and in a specific text corpus like news and introduced climate bills at the federal level. Using Association Rule Mining, a systematic analysis may be conducted about what words are most likely to follow in suite from the next. 
 
+**Table of Contents**
+- [Metrics of Association Rule Mining](#calculations)
+- [Data Preparation](#Method)
+- [Association Rules for Climate, Government, Republican, and Democrat](#ARM_Viz)
+- [Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
+- [Word Association in Climate Related Text Corpora](#conc)
+
+      
+---
+ <a id="calculations"></a>
+### Metrics of Association Rule Mining
 Support, Confidence, and Lift are measures that are used to inform how relevant a rule is across the corpus. I will briefly explain them, as they are used to anchor the analysis presented here.
 
 *Support* is calculated using the frequency of two words co-occuring. For example, if there are 100 words in the corpus, and the word 'climate' occurs ten times and it co-occurs with 'shift' only once. This means the value of support for the rule climate -> shift would be 0.01. 
@@ -27,15 +38,7 @@ Support, Confidence, and Lift are measures that are used to inform how relevant 
 
 Image Citation: Yaman, Sezin, Fabian Fagerholm, Myriam Munezero, Tomi Männistö, and Tommi Mikkonen. “Patterns of User Involvement in Experiment-Driven Software Development.” Information and Software Technology 120 (April 2020): 106244. https://doi.org/10.1016/j.infsof.2019.106244.
 
-
-
-**Table of Contents**
-- [Data Preparation](#Method)
-- [Association Rules for Climate, Government, Republican, and Democrat](#ARM_Viz)
-- [Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
-- [Word Association in Climate Related Text Corpora](#conc)
-      
-
+The [Apriori Algorithm](https://en.wikipedia.org/wiki/Apriori_algorithm#:~:text=Apriori%20is%20designed%20to%20operate,item%20sets%20among%20the%20candidates.) is what ARM operates on. It specifically uses transcript data, which reads the rows and then generates an understanding of co-occurance within documents. The algorithm is bottom up and begins to count any rules that co-occur in each document. 
 
  <a id="Method"></a>
 ### Data Preparation
