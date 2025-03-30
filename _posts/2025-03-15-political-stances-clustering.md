@@ -382,6 +382,39 @@ The size and scope of the data used in this anaylsis is not appropriate for HClu
 <a id="pca"></a>
 ### PCA Findings: 
 
+News Clusters:
+Principle Component 6: 
+coast: 0.1610
+entire: 0.1610
+salting: 0.1610
+
+Principle Component 10: 
+extend: 0.1654
+battled: 0.1654
+reconciling: 0.1654
+
+Principle Component 16: 
+tore: 0.1397
+panicked: 0.1364
+suburb: 0.1353
+
+Bill Clusters:
+Principle Component 6: 
+bisphenol: 0.0816
+aldehyde: 0.0815
+xylenol: 0.0815
+
+Principle Component 7: 
+bargain: 0.0869
+preindustrialized: 0.0862
+amounting: 0.0862
+
+Principle Component 9:
+ephemeral: 0.0872
+intermittent: 0.0760
+continuously: 0.0752
+
+
 ---
 Bibliography:
 [1] Luhn, H. P. “A Statistical Approach to Mechanized Encoding and Searching of Literary Information.” IBM Journal of Research and Development 1, no. 4 (October 1957): 309–17. https://doi.org/10.1147/rd.14.0309.
