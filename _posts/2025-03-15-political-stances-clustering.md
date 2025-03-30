@@ -335,7 +335,7 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
     <div class="box alt">
         <div class="row gtr-50 gtr-uniform">
             <div class="col-6">
-                <p>First, it should be noted the word cloud developed from the normalized document term matrix. Recall that the data used was lemmatized, thus the words presented that are truncated are actually representative of multiple word endings. The words 'cover', 'recycl', 'credit', 'commerci' were notable large. It should be noted that many specific concerns, actions, and actors are represented in this wordcould. Some additional wordclouds from cleaned data may be found on the [Data section](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html).</p>
+                <p>First, it should be noted the word cloud developed from the normalized document term matrix. Recall that the data used was lemmatized, thus the words presented that are truncated are actually representative of multiple word endings. The words 'cover', 'recycl', 'credit', 'commerci' were notable large. It should be noted that many specific concerns, actions, and actors are represented in this wordcould.</p>
             </div>
             <div class="col-6">
                 <a href="/assets/images/HClust Before Word Cloud.jpeg" target="_blank">
@@ -352,23 +352,23 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
 </div>
 *Radial Network of Most Similar Words*
-
-<section>
-
- 	<div class="row">
-		<div class="col-6 col-12-small">
-			<ul class="actions stacked">
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
-			</ul>
-		</div>
-<section/>
 	
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust random parition large.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
 </div>
 *Dendrogram of Most Similar Words*
 
+<section>
+
+ 	<div class="row">
+		<div class="col-6 col-12-small">
+			<ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
+			</ul>
+		</div>
+</section>
 
 The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.  
 
