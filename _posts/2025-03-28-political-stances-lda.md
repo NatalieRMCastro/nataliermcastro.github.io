@@ -76,3 +76,9 @@ def save_topics(model, vectorizer, top_n=10):
 
  <a id="#findings"></a>
 ### LDA Findings
+
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="250px" style="border: 2px solid blue;" allowfullscreen></iframe>
+</div>
+*Dendrogram of Most Similar Words*
+
