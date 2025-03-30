@@ -5,6 +5,15 @@ categories: projects
 published: true
 in_feed: false
 ---
+ <section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/01/14/political-stances.html" class="button fit small">Navigate to Project Page</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
 There are multiple associtations within natural language. Texts we generate are embedded with nuance and word senses and further analysis may provide insight into the nuance of word co-occurance. For example, consider the word "climate" and words which may trail after it. "Change" may be a suitable word to follow "climate". But what are other possibilities of words that may follow, and in a specific text corpus like news and introduced climate bills at the federal level. Using Association Rule Mining, a systematic analysis may be conducted about what words are most likely to follow in suite from the next. 
 
