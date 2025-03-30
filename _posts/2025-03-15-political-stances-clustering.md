@@ -353,16 +353,17 @@ H-Clust illustrates a small portion of the documents. Only the first 500 most si
 *Dendrogram of Most Similar Words*
 
 <section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/03/28/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
+                <li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
- 	<div class="row">
-		<div class="col-6 col-12-small">
-			<ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
 
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/hclust-vis.html" class="button fit small">View Dendrogram in Separate Page</a></li>
-				<li><a href="https://nataliermcastro.github.io/projects/2025/03/28/political-stances-hclust.html" class="button fit small">View Code</a></li>
-			</ul>
-		</div>
-</section>
 
 The size and scope of the data used in this anaylsis is not appropriate for HClust. Illustrated here is a small parition of the data, and is not representative of the entire vector space.  
 
