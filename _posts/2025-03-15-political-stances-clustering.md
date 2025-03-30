@@ -309,7 +309,7 @@ The distribution of the clusters may be observed in *Figure: Distribution of Int
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/kmeans Climate Clustering Scatter.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
 			<h3>Climate News: K-Means Clustering</h3>
-			<p>text</p>
+			<p>The largest clusters for climate news was (0) energy, renewable, buy, best, trump; (1) federal, state, government, plan, trump; (2) stronger, speech, stage, america, and biden. As proporsed in the introduction, the news clusters are particularly focused with certain actors, versus specific topics, as identified in Climate Policy</p>
 		</article>
 		
 	</div>
@@ -319,6 +319,10 @@ In comparison to the introduced climate bills, the media coverage about climate 
 
 <a id="hclust"></a>
 ### H-Clust and Cosine Similarity Findings: 
+
+H-Clust illustrates a small portion of the documents. Only the first 500 most similar items in the corpora were included in the data provided to the *hclust* algorithm.
+
+First, it should be noted the word cloud developed from the normalized document term matrix. Recall that the data used was lemmatized, thus the words presented that are truncated are actually representative of multiple word endings. The words 'cover', 'recycl', 'credit', 'commerci' were notable large. It should be noted that many specific concerns, actions, and actors are represented in this wordcould. Some additional wordclouds from cleaned data may be found on the [Data section](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html).
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
@@ -327,6 +331,19 @@ In comparison to the introduced climate bills, the media coverage about climate 
 		</div>
 	</div>
 </section>
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12">
+				<a href="/assets/images/HClust Before Word Cloud.jpeg" target="_blank">
+					<img src="/assets/images/HClust Before Word Cloud.jpeg" alt="Wordcloud with before HClust Methods - The largest words are 'cover', 'recycle', and 'list'." style="max-width: 300px; height: auto; display: block; margin: auto;"/>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/hclust radial small.html" width="100%" height="500px" style="border: none;" allowfullscreen></iframe>
