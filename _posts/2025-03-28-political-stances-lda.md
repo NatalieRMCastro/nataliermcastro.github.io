@@ -129,6 +129,10 @@ def lda_modeler(start_topics, end_topics,dataset,vectorizer,top_n,dataset_name):
  <a id="#findings"></a>
 ### LDA Findings
 
+The largest portion of the data collected was the Climate Policy, thus 18 topics were selected to be allocated by LDA. This choice is supported by identifying both the elbow in prior LDA testing and the visualization provided here. Topics are identified to illustrate different concerns or facets of climate policy. Many topics are concerned about ecological health, chemical regulations, climate mitigation, or water safety. These topics demonstrate the range of climate realted issues since the 1970s. 
+
+For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties. Specific named entities were not present in proposed climate bills which is why they are not labeled in this way. 
+
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="650px" allowfullscreen></iframe>
 </div>
@@ -136,8 +140,6 @@ def lda_modeler(start_topics, end_topics,dataset,vectorizer,top_n,dataset_name):
 <section>
 	<br>
 </section>
-
-For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
 <section class="gallery">
 	<div class="row">
@@ -155,7 +157,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 	</div>
 </section>
 
- <a id="#interactive"></a>
+<a id="#interactive"></a>
 ### LDA Clustering: Interactive Analysis
 
 #### LDA Clustering: Climate Related News Topics
@@ -199,6 +201,12 @@ The 2024 Election Party Platforms developed two clusters, one may assumably be a
 
 Specific concerns identied by LDA for the Democrat Party Platform are "family" , "people", "care", "community", and "energy". The distribution of these words for the tokens (to see this illustrated, select the Topic 1 bubble) demonstrated little overlap into the Republican Party Platform. The most meaningful words in the Republican Party Platform are: "american", "policy", "border", "restore", and "education". There is no direct mention in either of the topics, outside of "energy" to direct cliamte related concern. For the Democrat Topic, or Topic 1, at a relevance of zero the term "water" was identified.
 
+<a id="#conclusions"></a>
+### Conclusions:
+The topics identified through Latent Dirichlet Allocation provided insight into current media concerns and historical climate policy. For current media concerns particular ideologies were not able to be identified because of the separation and broadness of the words assigned to the topics. However, the findings identified for the news coverage are in alignment with findings from K-Means Clustering. In contrast, partisan ideological divides were able to be identified in the language used to define the parties for the 2024 Presidental Election. Neither of the parties focused on climate change. 
+
+For Climate Related Bills, topics were able to identify the most persistent cliamte related concerns. The news cycle data is more responsive to current events, which is why in both LDA and K-Means the [Los Angeles Wildfires
+](https://en.wikipedia.org/wiki/January_2025_Southern_California_wildfires) were able to become a large topic. For Climate Related bills, partisan language is not included directly into the bill itself. For this reason, partisan ideological differences were not able to be identified from this analysis.
 
 ---
 ## Bibliography:
