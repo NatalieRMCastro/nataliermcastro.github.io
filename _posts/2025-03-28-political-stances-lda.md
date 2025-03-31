@@ -15,7 +15,9 @@ in_feed: false
     </div> 
 </section> 
 
-introduction text to lda
+Latent Dirichlet Allocation (LDA) is a form of topic modeling. It is a "generative probabilistic model for collections of discrete data such as text corpora" [1] which sorts documents. A topic is developed over the distirbution of topic probabilities to consider multiple organizations of the data. LDA supports an exploration of the topics in multiple different representations of the text. 
+
+Topic Modeling is used in this instance because of the size of the corpus and its span over time. In addition, it can provide insight into different groupings of data that may not have been previsouly considered. Topic modeling is applied to this data provide an overall understanding of the contents in the corpus. 
 
 **Table of Contents**
 - [Data](#data)
@@ -133,4 +135,9 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 <iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" height="600px" title="Party Data" scrolling="no" style="border: none; overflow: hidden;"></iframe>
 
 <iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" height="600px" style="border: none; overflow: hidden; max-width: 100%; max-height: 100%;" id="ldavis_el768431687202567204275348056"></iframe>
+
+---
+## Bibliography:
+[1] Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. J. Mach. Learn. Res., 3(null), 993–1022.
+
 
