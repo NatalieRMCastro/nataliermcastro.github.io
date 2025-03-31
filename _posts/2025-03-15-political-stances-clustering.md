@@ -29,7 +29,7 @@ Clustering is used in this analysis to illustrate different atterns within the d
 - [Findigns](#findings)
 - [K-Means Findings](#kmeans)
 - [HClust and Cosine Similarity Findings](#hclust)
-- [PCA Findings](#pca)
+- [Components of Climate News and Proposed Climate Bills](#pca)
   
 ---
 
@@ -457,39 +457,41 @@ The size and scope of the data used in this anaylsis is not appropriate for HClu
 
 
 <a id="pca"></a>
-### PCA Findings: 
+### Components of Climate News and Proposed Climate Bills: 
+Principle Component Analysis was conducted for the Climate Newsheadlines and the Proposed Climate Bills. The Party Platform is essentially already split into two clusters, and there are only two documents in the corpus, so PCA clustering does not illustrate nuance in the current form.
 
-News Clusters:
+Listed below are a close consideration of a set of the Principle Components identified. 
+**News Clusters:**
 Principle Component 6: 
-coast: 0.1610
-entire: 0.1610
-salting: 0.1610
+> coast: 0.1610
+> entire: 0.1610
+> salting: 0.1610
 
 Principle Component 10: 
-extend: 0.1654
-battled: 0.1654
-reconciling: 0.1654
+> extend: 0.1654
+> battled: 0.1654
+> reconciling: 0.1654
 
 Principle Component 16: 
-tore: 0.1397
-panicked: 0.1364
-suburb: 0.1353
+> tore: 0.1397
+> panicked: 0.1364
+> suburb: 0.1353
 
-Bill Clusters:
+**Proposed Climate Bills:**
 Principle Component 6: 
-bisphenol: 0.0816
-aldehyde: 0.0815
-xylenol: 0.0815
+> bisphenol: 0.0816
+> aldehyde: 0.0815
+> xylenol: 0.0815
 
 Principle Component 7: 
-bargain: 0.0869
-preindustrialized: 0.0862
-amounting: 0.0862
+> bargain: 0.0869
+> preindustrialized: 0.0862
+> amounting: 0.0862
 
 Principle Component 9:
-ephemeral: 0.0872
-intermittent: 0.0760
-continuously: 0.0752
+> ephemeral: 0.0872
+> intermittent: 0.0760
+> continuously: 0.0752
 
 
 <section class="gallery">
@@ -497,31 +499,34 @@ continuously: 0.0752
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/PCA - bills - affiliation - 3D.png" class="image fit thumb"><img src="/assets/images/PCA - bills - affiliation - 3D.png" alt="" /></a>
 			<h3>
+				
 				Proposed Bill PCA: Chemicals, Industrialization, and Time </h3>
-			<p>text </p>
+			<p>Visualized for the Climate Bills was the partisian label of the primary sponsor of the bill. The majority is a single label, this suggests that the most relevant and continuous bills are proposed only by one party. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/PCA - bills - affiliation.png" class="image fit thumb"><img src="/assets/images/PCA - bills - affiliation.png" alt="" /></a>
 			<h3>Proposed Bill PCA: Time and Industrialization</h3>
-			<p>text</p>
+			<p>The words illustrative of time and industrialization are "intimidation", "chemical", "deadly", "divide", and "earning". These words show specific concerns for the portion of Priciple Components selected to visualize.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/PCA - news - 3d.png" class="image fit thumb"><img src="/assets/images/PCA - news - 3d.png" alt="" /></a>
 			<h3>
-				Climate News PCA: Oceans, Mitigation, and Concern</h3>
-			<p> text </p>
+				
+    
+    Climate News PCA: Oceans, Mitigation, and Concern</h3>
+			<p> The legend for this visualization is the different News Publishers. This illustrates how differing publishers are grouped in semantic space. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/PCA - news.png" class="image fit thumb"><img src="/assets/images/PCA - news.png" alt="" /></a>
 			<h3>Climate News PCA: Oceans and Mitigation</h3>
-			<p>text</p>
+			<p>The words illustrative of oceans and mitigation use "bridge", "evidenced", "reconciling", and "skeptic". The publisher clustering differences are more clear here. There is a central 'node' of the articles, but one publisher is identified to be on the fringes of the PCA visualizations.</p>
 		</article>
 		
 	</div>
 </section>
 
 ---
-Bibliography:
+## Bibliography:  
 [1] Luhn, H. P. “A Statistical Approach to Mechanized Encoding and Searching of Literary Information.” IBM Journal of Research and Development 1, no. 4 (October 1957): 309–17. https://doi.org/10.1147/rd.14.0309.
 
 [2] Spärck Jones, Karen. “A Statistical Interpretation of Term Specificity and Its Application in Retrieval.” Journal of Documentation 60, no. 5 (January 1, 2004): 493–502. https://doi.org/10.1108/00220410410560573.
