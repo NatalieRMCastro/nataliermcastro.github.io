@@ -22,7 +22,7 @@ Topic Modeling is used in this instance because of the size of the corpus and it
 **Table of Contents**
 - [Data](#data)
 - [Method: LDA](#method_lda)
-- [Cluster Optimization](#cluster_optimization)
+- [Cluster Optimization](#allocation_optimization)
 - [LDA Findings](#findings)
 - [LDA Clusters: Interactive Analysis](#interactive)
 
@@ -58,6 +58,25 @@ The Count Vectorizer was used here because of its ability to show the feature na
     </div> 
 </section> 
 
+To generate LDA clusters, the data was imported and then processed as described above. Once a topic model is instantiated, it may be customized for the specifc parameters. 
+
+```python
+ lda_model = LatentDirichletAllocation(n_components=topic_number,max_iter=50, learning_method='online')
+
+fit_model = lda_model.fit_transform(dataset)
+```
+
+This fitting process will be completed for each of the datasets, so one for the News Corpus, one for the Bills Corpus, and a final for the party platform. Each of these will then be explored and visualized in depth. The instantiation process is fairly straightforward, however, to optimize the use of the LDA algorithim, recursive testing must be applied to each dataset.
+
+ <a id="#allocation_optimization"></a>
+### Allocation Optimization
+
+A function was developed to systematically test different allocation numbers, another function was developed to save the iterations of the topic model across testing and recall it later. 
+
+The *lda_tester* takes a number of topics, so four or eight, the dataset that is in Document Term Matrix form, the vectorizer, number of words for visualization, and a name of the dataset. This function takes a lot, so it will be explained through the steps of the function. First, it instantiates the model with an online learning method (the batch calculations are different) and passes in the desired number of topics. 
+
+The LDA model is then fit with the provided dataset. Using the *save_topics* function (described next) takes the LDA model, vectorizer, and top words to vectorize. These are then both returned for subsequent analysis. 
+
 ```python
 def lda_tester(topic_number,dataset,vectorizer,top_n,dataset_name):
     ## Instantiating a model:
@@ -69,12 +88,9 @@ def lda_tester(topic_number,dataset,vectorizer,top_n,dataset_name):
     
     ## Storing the contents of the topic model:
     topic_contents = save_topics(lda_model, vectorizer,top_n)
-
-    plot_title = f"LDA for {topic_number} Clusters - {dataset_name}"
-    #topic_visualizer(lda_model, dataset,topic_number,plot_title,fontsize=10)
-    
     return (lda_model,topic_contents)
 ```
+The *save_topics* then takes the LDA model and the vectorizer for the dataset. The model component are then iterated through and the top words are extracted and saved. This is then stored in a dictionary format, with the the IDX value, or index, and then a list of the top words for the particular topic.
 
 ```python
 ## Creating a storage container for the topics in the list:
@@ -93,8 +109,22 @@ def save_topics(model, vectorizer, top_n=10):
     return (topic_contents)
 ```
 
- <a id="#cluster_optimization"></a>
-### Cluster Optimization
+To then wrap it all together, a recursive function was developed to just pass in a range of the dataset, the data, its vectorizer, and then a string of the dataset name. The function iterates through the entire range and applies the *lda_tester* and passess the model and the topics into another dictionary format. 
+
+For subsequent analysis, this was particularly helpful because the topic model was able to be called through the dictionary structure. Different amounts of the allocation were able to be visualized and explored because of this. 
+
+```python
+def lda_modeler(start_topics, end_topics,dataset,vectorizer,top_n,dataset_name):
+    
+    dataset_topics = {}
+    
+    for topic_set in tqdm(range (start_topics,end_topics,2),desc='🐜🐛... inching through data',leave=False,):
+        lda_model, lda_topics = lda_tester(topic_set,dataset,vectorizer,top_n,dataset_name)
+        
+        dataset_topics[topic_set] = {"LDA MODEL":lda_model,"LDA TOPICS": lda_topics}
+        
+    return (dataset_topics)
+```
 
  <a id="#findings"></a>
 ### LDA Findings
