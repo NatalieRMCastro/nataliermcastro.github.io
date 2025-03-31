@@ -512,7 +512,7 @@ continuously: 0.0752
 			<p> text </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/PCA - news.png" class="image fit thumb"><img src="/assets/images/kmeans Climate Clustering Scatter.png" alt="" /></a>
+			<a href="/assets/images/PCA - news.png" class="image fit thumb"><img src="/assets/images/PCA - news.png" alt="" /></a>
 			<h3>Climate News PCA: Oceans and Mitigation</h3>
 			<p>text</p>
 		</article>
