@@ -130,9 +130,12 @@ def lda_modeler(start_topics, end_topics,dataset,vectorizer,top_n,dataset_name):
 ### LDA Findings
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-  <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="700px" style="border: 2px solid gray;" allowfullscreen></iframe>
+  <iframe src="/assets/images/lda_climate_bills.html" width="100%" height="650px" allowfullscreen></iframe>
 </div>
 
+<section>
+	<br>
+</section>
 For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
 <section class="gallery">
