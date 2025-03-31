@@ -165,9 +165,10 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 
 
 ##### LDA Clustering: 2024 Party Platforms
-<div style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;">
+
+<div style="width: 100%; overflow: hidden; display: block; text-align: center;">
     <iframe src="/assets/images/LDA Interactive Topics - Party.html" 
-            style="width: 100%; height: 100%; border: none;">
+            style="width: 100%; max-width: 100%; height: auto; min-height: 600px; border: none;">
     </iframe>
 </div>
 
