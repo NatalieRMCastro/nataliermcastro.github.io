@@ -456,8 +456,11 @@ Illustrated with the labels, PCA helps to identify clusters between different gr
 <a id=""></a>
 ### Conclusions: 
 
+Using a variety of clustering methods, a closer look into topic and ideological lines were presented. First, let's consider the climate policy corpora. K - Means provided insight into the re-occuring discussion about the Environmental Protection Agency, clean water, and also "climate adaptation" and "resilience". The most prevalent topics were close to each other when visualized, however, as the EPA is important to many aspects of climate change, it was pervasive throughout the entire visualizaiton. Hierarchical clustering provided similar inisight with words about specifc climate actions and then specific climate concerns. Principle Component Analysis generated clusters that were still insightful into the content of the documents, but were not as clear as K-Means. The clusters selected for visualization were about chemicals, industrializaiton, and time. PCA identified some of the words characteristic of this cluster to be 'chemical', 'deadly', 'earning', and 'divide'. When illustrating by label, one party was overwhelminingly present, however it is unclear which one.
 
-Principle Component Analysis illustrated some of the clusters within the data, but they were not as representative as the K-Means clustering.
+Next, let's consider news media. PCA illustrated a clear divide for some topics between media publishers. This supports prior understandings about partisian differences in news coverage. Furthermore, the topics generated using K-Means at this stage were actor oriented. The three out of the top four topics were about President Donald Trump. The other topic was about the disasterous wildfires in Los Angeles close to the time of data collection. Some other concerns in the K-Means clusters about climate change are off-shore drilling, hurricanes, and the United States withdrawl from the Paris climate agreement. Dissimilar to the EPA cluster in the proposed climate bills, the visualizaiton illustrates a more clear partitioning between the topics. 
+
+Using clustering techniques provided an insight into what was being talked about, who is the actor of concern, and how topics are situated within each other. 
 
 ---
 ## Bibliography:  
