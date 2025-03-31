@@ -158,10 +158,24 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 ### LDA Clustering: Interactive Analysis
 
 ##### LDA Clustering: Climate Related News Topics
-<iframe src="/assets/images/LDA Interactive Topics - News.html" width="100%" height="600px" title="News Data" scrolling="no" style="border: none; overflow: hidden;"></iframe>
+<div style="width: 100%; text-align: center; overflow: auto;">
+    <div style="display: inline-block; transform: scale(0.6); transform-origin: top left; overflow: auto;">
+        <iframe src="/assets/images/LDA Interactive Topics - News.html"
+                style="width: 1000px; height: 600px; border: none;">
+        </iframe>
+    </div>
+</div>
+
 
 ##### LDA Clustering: Proposed Climate Bills
-<iframe src="/assets/images/LDA Interactive Topics - Bills.html" width="100%" height="600px" title="Bills Data" scrolling="no" style="border: none; overflow: hidden;"></iframe>
+<div style="width: 100%; text-align: center; overflow: auto;">
+    <div style="display: inline-block; transform: scale(0.6); transform-origin: top left; overflow: auto;">
+        <iframe src="/assets/images/LDA Interactive Topics - Bills.html"
+                style="width: 1000px; height: 600px; border: none;">
+        </iframe>
+    </div>
+</div>
+
 
 
 ##### LDA Clustering: 2024 Party Platforms
@@ -169,7 +183,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 <div style="width: 100%; text-align: center; overflow: auto;">
     <div style="display: inline-block; transform: scale(0.6); transform-origin: top left; overflow: auto;">
         <iframe src="/assets/images/LDA Interactive Topics - Party.html"
-                style="width: 1000px; height: 6000px; border: none;">
+                style="width: 1000px; height: 600px; border: none;">
         </iframe>
     </div>
 </div>
