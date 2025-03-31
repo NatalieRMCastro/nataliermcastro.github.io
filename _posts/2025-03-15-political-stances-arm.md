@@ -22,7 +22,7 @@ There are multiple associtations within natural language. Texts we generate are 
 - [Data Preparation](#Method)
 - [Association Rules for Climate, Government, Republican, and Democrat](#ARM_Viz)
 - [Most Meaningful Rules for Support, Lift, and Confidence](#top_15)
-- [Word Association in Climate Related Text Corpora](#conc)
+- [Conclusions](#conc)
 
       
 ---
@@ -174,4 +174,10 @@ Similarly to lift, confidence preforms similarly. There is an increased variatio
 
 
  <a id="conc"></a>
-### Word Association in Climate Related Text Corpora
+### Conclusions:
+
+Association Rule Mining illustrates co-occurance between words. 
+The rules with the highest confidence and lift were overwhelmingly about the structure of the documents. The way in which lift and confidence are calculated, enable the top fifteen rules to be the most expected: roman numerals. For this corpus, support, may be more appropriate to understand the most likley associations. A few examples are "fall" to "speaker", "coordinate" to "reccomend", and "tribe" to "indian". These rules suggest that a specific analysis requires a scoping term like 'Republican' or 'Democrat'. 
+
+This specifically helps to answer questions about named concerns, like 'climate', 'government' or partisan affiliations. Republican was most affiliated with concerns about immigration and the physical action of cliamte change. Democrat was most affiliated with words of concern like 'disproportion', 'fair', or 'threat'. Neither climate or government have clear overlap with either of the partisan associated rules. Association with the word 'tribal' (word choice was rationalized earlier) illustrated more co-occurance with words discussing mitigation like 'promote', 'enforce', and 'mitigate'. The language used to construct narratives about climate change are politically siloed.
+
