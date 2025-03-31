@@ -25,6 +25,7 @@ Topic Modeling is used in this instance because of the size of the corpus and it
 - [Cluster Optimization](#allocation_optimization)
 - [LDA Findings](#findings)
 - [LDA Clusters: Interactive Analysis](#interactive)
+- [Conclusions](#conclusions)
 
 ---
  <a id="data"></a>
