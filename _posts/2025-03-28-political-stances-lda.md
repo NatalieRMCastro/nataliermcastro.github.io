@@ -166,7 +166,11 @@ For both Party Platforms and News Clustering partisan affiliated words are color
     </div>
 </div>
 
+Eight news topics were visualized. The largest term frequency for the entire corpus was "Trump", "Biden", "President", "Donald", and "Wildfire". This is similar to the clustering identified in [K-Means](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html#kmeans).
 
+The only topic that was visualized semantically far was six and three. Topic 3 was about the Los Angeles Wild Fires, Topic 6 was less clear to interpret. The most relevant words are "energy", "city", "baby", and "new". Topic 7 was concerned with DEI programs and topic 8 about the passing of President Jimmy Carter.
+
+The topics related to climate were the most prevalent, however, they were concerned with a particular event: the Los Angeles Wildfires.
 
 ##### LDA Clustering: Proposed Climate Bills
 <div style="width: 100%; text-align: center; overflow: hidden;">
@@ -181,7 +185,7 @@ The Climate Bills had a wide range of topics with words that where illustrative 
 
 The largest topic, number one, was about eligibility and facilities for a broad swath of people ("school", "tribal", and "labor"). As the relevance metric is adjusted, the most meaningul word is "justice". Other topics are concerned with chemicals (2,9,15), technology (5), waste (6,13), or conservation (10,12).
 
-The topic specifcally about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
+The topic specificaly about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
 
 
 ##### LDA Clustering: 2024 Party Platforms
