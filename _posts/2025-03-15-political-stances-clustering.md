@@ -30,6 +30,7 @@ Clustering is used in this analysis to illustrate different atterns within the d
 - [K-Means Findings](#kmeans)
 - [HClust and Cosine Similarity Findings](#hclust)
 - [Components of Climate News and Proposed Climate Bills](#pca)
+- [Conclusions](#conclusions)
   
 ---
 
@@ -524,6 +525,9 @@ Listed below are a close consideration of a set of the Principle Components iden
 		
 	</div>
 </section>
+
+<a id=""></a>
+### Conclusions: 
 
 ---
 ## Bibliography:  
