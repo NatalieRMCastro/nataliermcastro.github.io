@@ -177,8 +177,11 @@ For both Party Platforms and News Clustering partisan affiliated words are color
     </div>
 </div>
 
+The Climate Bills had a wide range of topics with words that where illustrative of their specific related concerned. A few topics were visualized to overlap those being 3 and 7. Both of these topics were related to water and its related ecology. However, these were generated as different topics because seven was specifically about the Chesapeake region. 
 
+The largest topic, number one, was about eligibility and facilities for a broad swath of people ("school", "tribal", and "labor"). As the relevance metric is adjusted, the most meaningul word is "justice". Other topics are concerned with chemicals (2,9,15), technology (5), waste (6,13), or conservation (10,12).
 
+The topic specifcally about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
 
 
 ##### LDA Clustering: 2024 Party Platforms
