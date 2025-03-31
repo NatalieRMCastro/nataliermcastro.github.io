@@ -169,6 +169,14 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 
 <iframe src="/assets/images/LDA Interactive Topics - Party.html" width="100%" height="600px" style="border: none; overflow: hidden; max-width: 100%; max-height: 100%;" id="ldavis_el768431687202567204275348056"></iframe>
 
+<div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
+    <iframe src="/assets/images/LDA Interactive Topics - Party.html" 
+            style="width: 600px; height: 800px; border: none; 
+                   transform: scale(0.8); transform-origin: top left;">
+    </iframe>
+</div>
+
+
 ---
 ## Bibliography:
 [1] Blei, D. M., Ng, A. Y., & Jordan, M. I. (2003). Latent dirichlet allocation. J. Mach. Learn. Res., 3(null), 993–1022.
