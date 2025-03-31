@@ -136,6 +136,7 @@ def lda_modeler(start_topics, end_topics,dataset,vectorizer,top_n,dataset_name):
 <section>
 	<br>
 </section>
+
 For both Party Platforms and News Clustering partisan affiliated words are colored in accoradance to the traditional colors associated with political parties.
 
 <section class="gallery">
@@ -144,12 +145,12 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 			<a href="/assets/images/LDA  - climate news.png" class="image fit thumb"><img src="/assets/images/LDA  - climate news.png" alt="" /></a>
 			<h3>
 				LDA Clustering for Climate News</h3>
-			<p>figure explanation. </p>
+			<p>The eight news clusters are separated in partisan ideologies. Consider Topic 5 with the words "elon", "work" , or "wildfire". However, the topics are not illustrative of particluar ideological beliefs in regards to climate change. In Topics 6 and 4 both affiliations are mentioned and general climate claims are identified. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/LDA - party platform.png" class="image fit thumb"><img src="/assets/images/LDA - party platform.png" alt="" /></a>
-			<h3>LDA Clustering for Climate News</h3>
-			<p>figure explanation</p>
+			<h3>LDA Clustering for 2024 Partisan Platforms</h3>
+			<p>The topics with both Republican and Democrat mentioned are all except for Topic 4. This only mentions the word "Republican". The topics illustrate a particular concern, like "care" or "illegal", however, the presence of multiple partisan identies within the topics does not allow for an allocation to determine ideological beliefs. </p>
 		</article>
 	</div>
 </section>
@@ -157,7 +158,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
  <a id="#interactive"></a>
 ### LDA Clustering: Interactive Analysis
 
-##### LDA Clustering: Climate Related News Topics
+#### LDA Clustering: Climate Related News Topics
 <div style="width: 100%; text-align: center; overflow: hidden;">
     <div style="display: inline-block; transform-origin: top left;">
         <iframe src="/assets/images/LDA Interactive Topics - News.html"
@@ -170,7 +171,7 @@ Eight news topics were visualized. The largest term frequency for the entire cor
 
 The topics related to climate were the most prevalent, however, they were concerned with a particular event: the Los Angeles Wildfires.
 
-##### LDA Clustering: Proposed Climate Bills
+#### LDA Clustering: Proposed Climate Bills
 <div style="width: 100%; text-align: center; overflow: hidden;">
     <div style="display: inline-block; transform-origin: top left;">
         <iframe src="/assets/images/LDA Interactive Topics - Bills.html"
@@ -184,7 +185,7 @@ The Climate Bills had a wide range of topics with words that where illustrative 
 The largest topic, number one, was about eligibility and facilities for a broad swath of people ("school", "tribal", and "labor"). As the relevance metric is adjusted, the most meaningul word is "justice". Other topics are concerned with chemicals (2,9,15), technology (5), waste (6,13), or conservation (10,12). The topic specifically about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
 
 
-##### LDA Clustering: 2024 Party Platforms
+#### LDA Clustering: 2024 Party Platforms
 
 <div style="width: 100%; text-align: center; overflow: hidden;">
     <div style="display: inline-block; transform-origin: top left;">
