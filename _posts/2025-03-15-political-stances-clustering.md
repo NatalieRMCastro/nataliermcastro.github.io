@@ -462,12 +462,13 @@ The size and scope of the data used in this anaylsis is not appropriate for HClu
 Principle Component Analysis was conducted for the Climate Newsheadlines and the Proposed Climate Bills. The Party Platform is essentially already split into two clusters, and there are only two documents in the corpus, so PCA clustering does not illustrate nuance in the current form.
 
 Listed below are a close consideration of a set of the Principle Components identified. 
-**News Clusters:**
+
+#### News Clusters:
 > Principle Component 6: 
 > coast: 0.1610
 > entire: 0.1610
 > salting: 0.1610
-
+> 
 > Principle Component 10: 
 > extend: 0.1654
 > battled: 0.1654
@@ -478,7 +479,7 @@ Listed below are a close consideration of a set of the Principle Components iden
 > panicked: 0.1364
 > suburb: 0.1353
 
-**Proposed Climate Bills:**
+####  Proposed Climate Bills:
 > Principle Component 6: 
 > bisphenol: 0.0816
 > aldehyde: 0.0815
@@ -526,8 +527,13 @@ Listed below are a close consideration of a set of the Principle Components iden
 	</div>
 </section>
 
+Illustrated with the labels, PCA helps to identify clusters between different groups. For example, the separation between Media Publishers becomes clear when coloring based on label. A discrepancy in partisan distribution was identified for a PCA visualization that was human labeled "chemicals", "industralization", and "time". This suggests that either a particular political party only contributes to climate bills about this topic. However, while assumptions can be made about which political party in lieu of the literature, unless the labels were named, the assumptions would be unfounded.
+
 <a id=""></a>
 ### Conclusions: 
+
+
+Principle Component Analysis illustrated some of the clusters within the data, but they were not as representative as the K-Means clustering.
 
 ---
 ## Bibliography:  
