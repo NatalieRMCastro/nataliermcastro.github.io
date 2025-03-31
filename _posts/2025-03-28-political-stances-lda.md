@@ -171,7 +171,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
 
 <div style="width: 100%; overflow: hidden; display: flex; justify-content: center;">
     <iframe src="/assets/images/LDA Interactive Topics - Party.html" 
-            style="width: 1000px; height: 850px; border: none; 
+            style="width: 1200px; height: 850px; border: none; 
                    transform: scale(0.8); transform-origin: top left;">
     </iframe>
 </div>
