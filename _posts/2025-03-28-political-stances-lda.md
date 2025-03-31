@@ -166,9 +166,7 @@ For both Party Platforms and News Clustering partisan affiliated words are color
     </div>
 </div>
 
-Eight news topics were visualized. The largest term frequency for the entire corpus was "Trump", "Biden", "President", "Donald", and "Wildfire". This is similar to the clustering identified in [K-Means](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html#kmeans).
-
-The only topic that was visualized semantically far was six and three. Topic 3 was about the Los Angeles Wild Fires, Topic 6 was less clear to interpret. The most relevant words are "energy", "city", "baby", and "new". Topic 7 was concerned with DEI programs and topic 8 about the passing of President Jimmy Carter.
+Eight news topics were visualized. The largest term frequency for the entire corpus was "Trump", "Biden", "President", "Donald", and "Wildfire". This is similar to the clustering identified in [K-Means](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-clustering.html#kmeans). The only topic that was visualized semantically far was six and three. Topic 3 was about the Los Angeles Wild Fires, Topic 6 was less clear to interpret. The most relevant words are "energy", "city", "baby", and "new". Topic 7 was concerned with DEI programs and topic 8 about the passing of President Jimmy Carter.
 
 The topics related to climate were the most prevalent, however, they were concerned with a particular event: the Los Angeles Wildfires.
 
@@ -183,9 +181,7 @@ The topics related to climate were the most prevalent, however, they were concer
 
 The Climate Bills had a wide range of topics with words that where illustrative of their specific related concerned. A few topics were visualized to overlap those being 3 and 7. Both of these topics were related to water and its related ecology. However, these were generated as different topics because seven was specifically about the Chesapeake region. 
 
-The largest topic, number one, was about eligibility and facilities for a broad swath of people ("school", "tribal", and "labor"). As the relevance metric is adjusted, the most meaningul word is "justice". Other topics are concerned with chemicals (2,9,15), technology (5), waste (6,13), or conservation (10,12).
-
-The topic specificaly about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
+The largest topic, number one, was about eligibility and facilities for a broad swath of people ("school", "tribal", and "labor"). As the relevance metric is adjusted, the most meaningul word is "justice". Other topics are concerned with chemicals (2,9,15), technology (5), waste (6,13), or conservation (10,12). The topic specifically about climate change and the lived impact on people (8) is about 5% of the topic distribtution.
 
 
 ##### LDA Clustering: 2024 Party Platforms
@@ -198,6 +194,9 @@ The topic specificaly about climate change and the lived impact on people (8) is
     </div>
 </div>
 
+The 2024 Election Party Platforms developed two clusters, one may assumably be about the Democrat Platform and the next the Republican Platform. It should be noted that the Republican Party Platform was much longer than the Democrat one, so it may be assumed the Republican Party Platform was Topic 1. However, after a close analysis of the language used (and the named actors) the Democrat Party Platform is actually Topic 1. 
+
+Specific concerns identied by LDA for the Democrat Party Platform are "family" , "people", "care", "community", and "energy". The distribution of these words for the tokens (to see this illustrated, select the Topic 1 bubble) demonstrated little overlap into the Republican Party Platform. The most meaningful words in the Republican Party Platform are: "american", "policy", "border", "restore", and "education". There is no direct mention in either of the topics, outside of "energy" to direct cliamte related concern. For the Democrat Topic, or Topic 1, at a relevance of zero the term "water" was identified.
 
 
 ---
