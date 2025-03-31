@@ -41,13 +41,21 @@ if(typeof(LDAvis) !== "undefined"){
 </script>
 
 <style>
-    /* Force the LDA visualization to fit within the iframe's width and height */
     #ldavis_el768431687202567204275348056 {
-        width: 100% !important;
-        height: 100% !important;
-        max-width: 100% !important;
-        max-height: 100% !important;
-    }
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+/* Scale the actual visualization */
+.ldavis {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(0.8); /* Adjust scale as needed */
+    transform-origin: top left;
+}
 
     /* Adjust the individual components inside the visualization */
     .py-ldavis {
