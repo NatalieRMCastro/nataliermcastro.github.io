@@ -33,10 +33,27 @@ in_feed: false
 <tr><td>Climate Bills: Hearing Committee                   </td><td style="text-align: center;">      2256      </td><td style="text-align: center;">     967      </td></tr>
 </tbody>
 </table>
+
 ### Method
 
 ### Results
+<table>
+<thead>
+<tr><th>Abbreviation  </th><th> Bill Type                                                     </th></tr>
+</thead>
+<tbody>
+<tr><td>hconres       </td><td>Concurrent Resolution Originating From House of Representatives</td></tr>
+<tr><td>hjres         </td><td>Joint Resolution Originating from House of Representatives     </td></tr>
+<tr><td>hr            </td><td>House of Representatives                                       </td></tr>
+<tr><td>hres          </td><td>Resolution From House of Representatives                       </td></tr>
+<tr><td>s             </td><td>Senate                                                         </td></tr>
+<tr><td>sconres       </td><td>Concurrent Resolution Originating From Senate                  </td></tr>
+<tr><td>sjres         </td><td>Joint Resolution Originating from Senate                       </td></tr>
+<tr><td>sres          </td><td>Resolution from Senate                                         </td></tr>
+</tbody>
+</table>
 
+https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
 
 <table>
 <thead>
