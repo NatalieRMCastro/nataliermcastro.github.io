@@ -37,6 +37,10 @@ This page houses the current work for my text mining course (Spring 2025), where
   		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
 				<li><a href="#" class="button fit small">Conclusions</a></li>
+			</ul>
+		</div>
+  		<div class="col-6 col-12-small">
+			<ul class="actions stacked">
 				<li><a href="#" class="button fit small">Graph Gallery</a></li>
 			</ul>
 		</div>
