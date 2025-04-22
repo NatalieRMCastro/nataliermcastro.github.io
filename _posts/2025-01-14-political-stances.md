@@ -25,18 +25,18 @@ This page houses the current work for my text mining course (Spring 2025), where
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
 				<li><a href="https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm.html" class="button fit small">Association Rule Mining</a></li>
-				<li><a href="#" class="button fit small">Support Vector Machines</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html" class="button fit small">Support Vector Machines</a></li>
 			</ul>
 		</div>
 		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="#" class="button fit small">Naïve Bayes</a></li>
-				<li><a href="#" class="button fit small">Decision Trees</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html" class="button fit small">Naïve Bayes</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-trees.html" class="button fit small">Decision Trees</a></li>
 			</ul>
 		</div>
   		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="#" class="button fit small">Conclusions</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-conclusion.html" class="button fit small">Conclusions</a></li>
 			</ul>
 		</div>
   		<div class="col-6 col-12-small">
