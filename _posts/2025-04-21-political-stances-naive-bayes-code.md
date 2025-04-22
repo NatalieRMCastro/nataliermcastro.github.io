@@ -278,16 +278,6 @@ news_data.head(2)
       <th>able</th>
       <th>abolish</th>
       <th>...</th>
-      <th>yes</th>
-      <th>york</th>
-      <th>young</th>
-      <th>youth</th>
-      <th>zealot</th>
-      <th>zeldin</th>
-      <th>zero</th>
-      <th>zers</th>
-      <th>zone</th>
-      <th>zuckerberg</th>
     </tr>
   </thead>
   <tbody>
@@ -304,16 +294,6 @@ news_data.head(2)
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -328,16 +308,6 @@ news_data.head(2)
       <td>0.0</td>
       <td>0.0</td>
       <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
     </tr>
   </tbody>
 </table>
@@ -383,16 +353,6 @@ bills_data.head(2)
       <th>ab</th>
       <th>abandon</th>
       <th>...</th>
-      <th>zoe</th>
-      <th>zone</th>
-      <th>zonea</th>
-      <th>zonesnotwithstand</th>
-      <th>zoneth</th>
-      <th>zoo</th>
-      <th>zoolog</th>
-      <th>zoonot</th>
-      <th>zooplankton</th>
-      <th>zquez</th>
     </tr>
   </thead>
   <tbody>
@@ -409,16 +369,6 @@ bills_data.head(2)
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>1</th>
@@ -433,16 +383,6 @@ bills_data.head(2)
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -488,16 +428,6 @@ party_data.head()
       <th>accountable</th>
       <th>achieved</th>
       <th>...</th>
-      <th>won</th>
-      <th>word</th>
-      <th>work</th>
-      <th>worker</th>
-      <th>working</th>
-      <th>world</th>
-      <th>worship</th>
-      <th>worst</th>
-      <th>year</th>
-      <th>young</th>
     </tr>
   </thead>
   <tbody>
@@ -514,16 +444,6 @@ party_data.head()
       <td>4</td>
       <td>1</td>
       <td>...</td>
-      <td>1</td>
-      <td>1</td>
-      <td>4</td>
-      <td>15</td>
-      <td>2</td>
-      <td>15</td>
-      <td>2</td>
-      <td>1</td>
-      <td>7</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>1</th>
@@ -538,16 +458,6 @@ party_data.head()
       <td>14</td>
       <td>1</td>
       <td>...</td>
-      <td>10</td>
-      <td>1</td>
-      <td>101</td>
-      <td>79</td>
-      <td>81</td>
-      <td>69</td>
-      <td>4</td>
-      <td>4</td>
-      <td>149</td>
-      <td>10</td>
     </tr>
   </tbody>
 </table>
@@ -691,16 +601,7 @@ accuracy_news_data_publisher, precision_news_data_publisher, recall_news_data_pu
                                                                                          'News Headlines',
                                                                                          'Publisher', 'mnb cm - news publisher.png',
                                                                                                   True ,15 ,  fig_x = 6, fig_y =  6)
-```
 
-
-    
-![png](/assets/images/output_28_0.png)
-    
-
-
-
-```python
 accuracy_news_data_combined, precision_news_data_combined, recall_news_data_combined = mnb_modeler(data_train_news_combined, labels_train_news_combined,
                                                                                          data_test_news_combined, labels_test_news_combinedr,
                                                                                           'LABEL',
@@ -709,10 +610,6 @@ accuracy_news_data_combined, precision_news_data_combined, recall_news_data_comb
                                                                                           True, 15, fig_x = 6, fig_y = 6)
 ```
 
-
-    
-![png](/assets/images/output_29_0.png)
-    
 
 
 ### 3.2 Cliamte Related Bill Data
@@ -741,48 +638,22 @@ accuracy_bills_data_state, precision_bills_data_state, recall_bills_data_state =
                                                                                          'Climate Bills',
                                                                                          'Bill Sponsor State', 'mnb cm - sponser state label.png',
                                                                                           False, 20, fig_x = 9, fig_y = 9)
-```
 
-
-    
-![png](/assets/images/output_32_0.png)
-    
-
-
-
-```python
 accuracy_bills_data_state, precision_bills_data_state, recall_bills_data_state = mnb_modeler(data_train_bills_state, labels_train_bills_state,
                                                                                          data_test_bills_state, labels_test_bills_state,
                                                                                           'Sponser State',
                                                                                          'Climate Bills',
                                                                                          'Bill Sponsor State', 'mnb cm - sponser state label truncated.png',
                                                                                           True, 20, fig_x = 6, fig_y = 6)
-```
-
-
-    
-![png](/assets/images/output_33_0.png)
     
 
-
-
-```python
 accuracy_bills_data_combined, precision_bills_data_combined, recall_bills_data_combined = mnb_modeler(data_train_bills_combined, labels_train_bills_combined,
                                                                                          data_test_bills_combined, labels_test_bills_combined,
                                                                                           'LABEL',
                                                                                          'Climate Bills',
                                                                                          'Bill Metadata', 'mnb cm - bill metadata label.png',
                                                                                           True, 15, fig_x = 6, fig_y = 6)
-```
 
-
-    
-![png](/assets/images/output_34_0.png)
-    
-
-
-
-```python
 accuracy_bills_data_type, precision_bills_data_type, recall_bills_data_type = mnb_modeler(data_train_bills_type, labels_train_bills_type,
                                                                                          data_test_bills_type, labels_test_bills_type,
                                                                                           'Bill Type',
@@ -790,11 +661,6 @@ accuracy_bills_data_type, precision_bills_data_type, recall_bills_data_type = mn
                                                                                          'Bill Type', 'mnb cm - bill type label.png',
                                                                                           False, 15, fig_x = 6, fig_y = 6)
 ```
-
-
-    
-![png](/assets/images/output_35_0.png)
-    
 
 
 
