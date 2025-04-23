@@ -262,10 +262,18 @@ The model varied in its preformance. The labels with the highest accuracy was fr
 			<p> TEXT .</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/NB - News Data Publisher Labels.png" class="image fit thumb"><img src="/assets/images/NB - News Data Publisher Labels.png" alt="Freerepublic has the most news sources that are meaningful according to Naive Bayes with 40. The remained all have below ten." /></a>
-			<h3>Hearing Committee</h3>
 			<p> TEXT </p>
 		</article>
+	</div>
+</section>
+
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - News Data Publisher Labels.png" alt="Freerepublic has the most news sources that are meaningful according to Naive Bayes with 40. The remained all have below ten."  /></span> 
+			</div>
+		</div>
 	</div>
 </section>
 
