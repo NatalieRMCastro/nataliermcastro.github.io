@@ -327,11 +327,6 @@ There was five different labels from climate bills: sponsor state, sponsor affil
         </div>
       </div>
     </div>
-	  <p> Abbreviation Source: [Bills & Resolutions](https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
-)The bill type was also considered as a label. The type differs based on where the bill originated from and if it is a resolution. 
-
-The classifier had the most success at discriminating between bills introducing from the House of Representatives and the Senate. With some accuracy, it has able to identify jount House Resolutions and House Resolutions. It struggled holistically in identfying differences between Senate introduced bills.
-	  </p>
   </section>
 
   <!-- Right Column: Table -->
@@ -356,7 +351,10 @@ The classifier had the most success at discriminating between bills introducing 
 
 </div>
 
+Abbreviation Source: [Bills & Resolutions](https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
+)The bill type was also considered as a label. The type differs based on where the bill originated from and if it is a resolution. 
 
+The classifier had the most success at discriminating between bills introducing from the House of Representatives and the Senate. With some accuracy, it has able to identify jount House Resolutions and House Resolutions. It struggled holistically in identfying differences between Senate introduced bills.
 
 ### Conclusions
 
