@@ -280,8 +280,12 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn.
 
 ### Decision Tree: Bill Sponsor Affiliation
-<iframe src="/assets/images/Decision Tree - Climate Bills Sponsor Affiliation Entropy.pdf" width="100%" height="600px" style="border: none;"></iframe>
-
+<iframe
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/NatalieRMCastro/nataliermcastro.github.io/89c8ed91d5d8d2a8f1387f0795ca1abcab36f197/assets/images/Decision%20Tree%20-%20Climate%20Bills%20Sponsor%20Affiliation%20Entropy.pdf"
+  width="100%"
+  height="600px"
+  style="border: none;">
+</iframe>
 
 ### Decision Tree: Bill Type
 <iframe
@@ -292,5 +296,11 @@ Due to the lower results of the ability to classify across many labels, the deci
 </iframe>
 
 ### Decision Tree: News Headlines 
+<iframe
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/NatalieRMCastro/nataliermcastro.github.io/89c8ed91d5d8d2a8f1387f0795ca1abcab36f197/assets/images/Decision%20Tree%20-%20News%20Headlines%20Partisan%20Affiliation%20Entropy.pdf"
+  width="100%"
+  height="600px"
+  style="border: none;">
+</iframe>
 
 ### Conclusions
