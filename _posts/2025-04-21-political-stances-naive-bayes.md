@@ -70,13 +70,13 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/Government Association Plot.png" alt="" /></a>
+			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/aassets/images/NB - Testing Data - Party Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
 			<p> TEXT </p>
 		</article>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/Democrat Association Rules.png" alt="" /></a>
+			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - News Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Partisian Label Paritions of News Headlines</h3>
 			<p> TEXT </p>
 		</article>
