@@ -124,39 +124,40 @@ Multiple Kernels and costs were tested to exhaust the possibilities of the model
 
 
 ### Assessing the Preformance of Multiple Iterations of SVM
+Across all tests, the relative performance of different labels is similar. The Sentiment classification has the highest accuracy with a range between 93% and 94% for Climate Bills. The precision and recall mirror these patterns with the same rate of prediction. The News headlines have a larger range between 89%  and 90%. Precison tends to be above the accuracy, ranging between 82% - 94%. The recall is much lower, yet comparable to the scores of the other 'well' preforming labels in the news data. It ranges from 58% to 66%. The model had similar preformance trends to that of the Naive Bayes model and the same labels.
 
 
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - Climate Bills.png" alt="" /></a>
-			<h3>Sentiment Score Distribution: Proposed Climate Bills</h3>
-			<p> The distribution matches the news headlines, but has an overwhelming about of positive samples. There is a long skewed tail beginning at 0.7 valence. </p>
+			<a href="/assets/images/SVM Linear Cost 100 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Linear Cost 100 - Model Evaluation.png" alt="" /></a>
+			<h3>Linear Kernel with Cost 100</h3>
+			<p> The average accuracy between the Linear Models is the same at 56%. The average precision is 43.4% and the average recall is 43.2%.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Distribution - News.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - News.png" alt="" /></a>
-			<h3>Sentiment Score Distribution: News Headlines</h3>
-			<p> The scores are a negatively skewed (right leaning not sentiment negative!) modal distribution. The majority of the sample have an strong positive average. </p>
+			<a href="/assets/images/SVM Linear Cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Linear Cost 1000 - Model Evaluation.png" alt="" /></a>
+			<h3> There is no observed difference between the varying costs in any evaluation metric. </h3>
+			<p> </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Labels Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Labels Distribution - Climate Bills.png" alt="" /></a>
-			<h3>Sentiment Label Distribution: Proposed Climate Bills</h3>
-			<p>The distribution is uneven with 135 negative instances and 3,088 positive instances. This may cause later classification issues.</p>
+			<a href="/assets/images/SVM Poly - cost 100 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Poly - cost 100 - Model Evaluation.png" alt="" /></a>
+			<h3>Polynomial Kernel with Cost 100</h3>
+			<p>The average accuracy is 54.5%, average precision is 45.9%, and average recall is  40.8%.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - Climate Bills.png" alt="" /></a>
-			<h3>Sentiment Score Distribution: Proposed Climate Bills</h3>
-			<p> The distribution matches the news headlines, but has an overwhelming about of positive samples. There is a long skewed tail beginning at 0.7 valence. </p>
+			<a href="/assets/images/SVM Poly - cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Poly - cost 1000 - Model Evaluation.png" alt="" /></a>
+			<h3>Polynomial Kernel with Cost 1000</h3>
+			<p>The average accuracy is 56.1%, average precision is 46.1%, and average recall is  42.7%. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Distribution - News.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - News.png" alt="" /></a>
-			<h3>Sentiment Score Distribution: News Headlines</h3>
-			<p> The scores are a negatively skewed (right leaning not sentiment negative!) modal distribution. The majority of the sample have an strong positive average. </p>
+			<a href="/assets/images/SVM Poly - cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Poly - cost 1000 - Model Evaluation.png" alt="" /></a>
+			<h3>RBF Kernel with Cost 100</h3>
+			<p>The average accuracy is 49.4%, average precision is 48.2%, and average recall is  40.8%. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/Sentiment Labels Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Labels Distribution - Climate Bills.png" alt="" /></a>
-			<h3>Sentiment Label Distribution: Proposed Climate Bills</h3>
-			<p>The distribution is uneven with 135 negative instances and 3,088 positive instances. This may cause later classification issues.</p>
+			<a href="/assets/images/SVM RBF - cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM RBF - cost 1000 - Model Evaluation.png" alt="" /></a>
+			<h3>RBF Kernel with Cost 1000</h3>
+			<p>The average accuracy is 49.5%, average precision is 43.2%, and average recall is  42.6%. </p>
 		</article>
 	</div>
 </section>
