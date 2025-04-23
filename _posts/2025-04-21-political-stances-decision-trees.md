@@ -29,6 +29,25 @@ in_feed: false
 
  <a id="data-prep"></a>
 ### Data Preparation
+Data was prepared using the same functions outlined in great detail in the Naive Bayes model. It can be reviewed [here](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#data-prep), or in any of the linked notebooks. The training and testing split is similar to that of the Naive Bayes model as well. A headed version of the dataframes are provided here alongside with the distribution of the train, test, split.
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - bills data.png" alt="Labeled Proposed Climate Bill Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - news data.png" alt="Labeled News Headline Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 #### **Train Test Split Distribution**
 <table>
@@ -47,7 +66,90 @@ in_feed: false
 </tbody>
 </table>
 
+The same naming scheme and train and test scheme were applied across all machine learning methods applied here. This is in order to be able to compare the methods and discuss the original nuance between them. For all three methods, the exact same data preparation was applied - which is why it is not repeated here. 
+
 ### Method
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-tree-code.html" class="button fit small">View Code</a></li>
+		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/7.%20Decision%20Trees.ipynb" class="button fit small">Visit GitHub Repository</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
+
+A Decision Tree Modeler was developed similar to that of the systematic testing developed in [Naive Bayes Modeling](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html). The Decision Tree used to classify the data was from [SciKit Learn's DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html#sklearn.tree.DecisionTreeClassifier). Both the Entropy and Gini models were tested. The splitter was set to 'best' , in opposition to the 'random' node split. The max depth was then limited to 7 for Decision Tree readability. The minimum samples split and leaf were inflated to ten. This is because of the scope and number of features in the dataset. The data was also limited to 500 maximum features in order to extract the most frequent commonalities between the data. The max leaf nodes and the minimum impurity decrease were set at the defaults from SciKit Learn. Finally, the class weight was balanced in order to normalize the differences in label distribution. In order to preserve systematic testing, a random state was set to thirty. The random state was able to preserve the essence of 'randomness' across the nuancce within the data.
+
+```python
+## Decision Tree Modeler:
+def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_name, graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
+    data_train = data_train.drop(columns = label_column_name).copy()
+    data_test = data_test.drop(columns = label_column_name).copy()
+    
+    feature_names_train = list(data_train.columns)
+    feature_names_test = list(data_test.columns)
+    
+    decision_tree = DecisionTreeClassifier(criterion='entropy', ## This is changed based on the model test that was used
+                                      splitter = 'best',
+                                      max_depth = 7,
+                                      min_samples_split = 10,
+                                      min_samples_leaf = 10,
+                                      max_features = 500,
+                                      random_state = 30,
+                                      max_leaf_nodes = None,
+                                      min_impurity_decrease = 0.0,
+                                      class_weight = 'balanced')
+
+    ## Fitting the data
+    decision_tree_model = decision_tree.fit(data_train, labels_train)
+    tree.plot_tree(decision_tree,feature_names = feature_names_train)
+    plt.savefig(f"Decision Tree - {file_name}.png")
+    
+    ## Plotting the tree
+    dot_data = tree.export_graphviz(decision_tree_model, out_file=None,
+                                    feature_names=feature_names_train,
+                                    class_names = [str(cls) for cls in decision_tree_model.classes_],
+                                    filled=True,
+                                    rounded=True,
+                                    special_characters=True, 
+                                    label='all', proportion = True
+                                   )
+
+    cleaned_dot_data = re.sub(r'value = \[[^\]]*\]&lt;br/&gt;|value = \[[^\]]*\]<br/?>', '', dot_data)
+    
+    graph = graphviz.Source(cleaned_dot_data)
+    graph.render(f"Decision Tree - {graph_title}",cleanup=True)
+    
+    
+    ## Creating predictions
+    predictions = decision_tree_model.predict(data_test)
+    
+    
+
+    ## Assessing the models abilitiy
+    accuracy, precision, recall = model_verification(labels_test, predictions)
+    
+    ## Filtering for Clean Visualizations
+        ## Filtering for Clean Visualizations
+    if filter_top_n:
+        # Call filter_top_n_labels to get filtered labels and predictions
+        labels_test_filtered, predictions_filtered = filter_top_n_labels(labels_test, predictions, N)
+
+        # If data remains after filtering, create the filtered confusion matrix
+        if len(labels_test_filtered) > 0 and len(predictions_filtered) > 0:
+            visual_confusion_matrix(labels_test_filtered, predictions_filtered,
+                                    f"{graph_title} (Top {N})", labels_name,
+                                    f"filtered_{file_name}", fig_x, fig_y)
+        else:
+            print(f"[Warning] No data left after filtering top {N} labels — skipping confusion matrix.")
+    else:
+        # If no filtering is needed, generate confusion matrix with all data
+        visual_confusion_matrix(labels_test, predictions, graph_title, labels_name, file_name, fig_x, fig_y)
+    
+    return (accuracy, precision, recall)
+```
 
  <a id="results-model-evaluation"></a>
 ### Evaluating Gini and Entropy Decision Trees
