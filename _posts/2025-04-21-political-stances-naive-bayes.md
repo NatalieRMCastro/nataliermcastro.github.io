@@ -26,10 +26,31 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 - [A Naive Reading of the News](#results-news-data)
 - [Interpreting Features about Climate Bills Naively](#results-bills-data)
 - [Conclusions](#conc)
+  
 ---
 
  <a id="data-prep"></a>
 ### Data Preparation
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - bills data.png" alt="Labeled Proposed Climate Bill Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - news data.png" alt="Labeled News Headline Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+** Train and Testing Data Parition **
 <table>
 <thead>
 <tr><th>                                                   </th><th style="text-align: center;">  Training Data </th><th style="text-align: center;"> Testing Data </th></tr>
@@ -45,6 +66,22 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 <tr><td>Climate Bills: Hearing Committee                   </td><td style="text-align: center;">      2256      </td><td style="text-align: center;">     967      </td></tr>
 </tbody>
 </table>
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/Government Association Plot.png" alt="" /></a>
+			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
+			<p> TEXT </p>
+		</article>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/Democrat Association Rules.png" alt="" /></a>
+			<h3>Testing Data Partisian Label Paritions of News Headlines</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
 
 <a id="method"></a>
 ### Method
@@ -78,13 +115,83 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 </tbody>
 </table>
 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the above table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 <a id="results-news-data"></a>
 ### A Naive Reading of the News Headlines
 
 
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - news publisher.png" class="image fit thumb"><img src="/assets/images/mnb cm - news publisher.png" alt="" /></a>
+			<h3> Publisher </h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/mnb cm - news partisian affiliation.png" alt="" /></a>
+			<h3> Named Political Party </h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - news combined label.png" class="image fit thumb"><img src="/assets/images/mnb cm - news combined label.png" alt="" /></a>
+			<h3>Combined Headline Metadata</h3>
+			<p> TEXT .</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/NB - News Data Publisher Labels.png" class="image fit thumb"><img src="/assets/images/NB - News Data Publisher Labels.png" alt="Freerepublic has the most news sources that are meaningful according to Naive Bayes with 40. The remained all have below ten." /></a>
+			<h3>Hearing Committee</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
+
+
+
 <a id="results-news-data"></a>
 ### Interpreting Features About Climate Bills Naively
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - sponser state label truncated.png" class="image fit thumb"><img src="/assets/images/mnb cm - sponser state label truncated.png" alt="" /></a>
+			<h3>Bill Sponsor State</h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - sponsor affiliation label.png" class="image fit thumb"><img src="/assets/images/mnb cm - sponsor affiliation label.png" alt="" /></a>
+			<h3> Sponsor Affiliation </h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - bill metadata label.png" class="image fit thumb"><img src="/assets/images/mnb cm - bill metadata label.png" alt="" /></a>
+			<h3>Combined Bill Metadata</h3>
+			<p> TEXT .</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/mnb cm - bill committee label.png" class="image fit thumb"><img src="/assets/images/mnb cm - bill committee label.png" alt="" /></a>
+			<h3>Hearing Committee</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/mnb cm - bill type label.png" alt=" TEXT "  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 <table>
 <thead>
 <tr><th>Abbreviation  </th><th> Bill Type                                                     </th></tr>
