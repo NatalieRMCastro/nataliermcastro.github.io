@@ -17,6 +17,17 @@ in_feed: false
 
 ### Overview
 
+**Table of Contents**
+- [Data Preparation](#data-prep)
+- [Method](#method)
+- [Evaluating The Gini and Entropy Decision Trees](#results-model-evaluation)
+- [A Naive Reading of the News](#results-news-data)
+- [Interpreting Features about Climate Bills Naively](#results-bills-data)
+- [Conclusions](#conc)
+  
+---
+
+ <a id="data-prep"></a>
 ### Data Preparation
 
 #### **Train Test Split Distribution**
@@ -38,9 +49,56 @@ in_feed: false
 
 ### Method
 
-### Results
+ <a id="results-model-evaluation"></a>
+### Evaluating Gini and Entropy Decision Trees
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree gini cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- bills partisian affiliation.png" alt="" /></a>
+			<h3> Gini Partisian Affiliation Labeling for Climate Bills </h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a hrefassets/images/decision tree entropy cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bills partisian affiliation.png" alt="" /></a>
+			<h3> Entropy Partisian Affiliation Labeling for Climate Bills </h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree gini cm- news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- news partisian affiliation.png" alt="" /></a>
+			<h3>Gini Partisian Affiliation Labeling for News Headlines</h3>
+			<p> TEXT .</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree entropy cm- news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- news partisian affiliation.png" alt=" " /></a>
+			<h3>Entropy Partisian Affiliation Labeling for News Headlines</h3>
+			<p> TEXT </p>
+		</article>
+  <article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree gini cm- bill type label.png" class="image fit thumb"><img src="/aassets/images/decision tree gini cm- bill type label.png" alt="" /></a>
+			<h3>Entropy Proposed Bill Type Labeling</h3>
+			<p> TEXT .</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree entropy cm- bill type label.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bill type label.png" alt=" " /></a>
+			<h3>Entropy Proposed Bill Type Labeling</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
+
 
 #### Gini Model Evaluation
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Gini - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 <table>
 <thead>
 <tr><th>                                                   </th><th style="text-align: center;">  Accuracy </th><th style="text-align: center;"> Precision </th><th style="text-align: center;"> Recall </th></tr>
@@ -58,6 +116,15 @@ in_feed: false
 </table>
 
 #### Entropy Model Evaluation
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Entropy - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 <table>
 <thead>
 <tr><th>                                                   </th><th style="text-align: center;">  Accuracy </th><th style="text-align: center;"> Precision </th><th style="text-align: center;"> Recall </th></tr>
