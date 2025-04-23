@@ -310,6 +310,8 @@ There was five different labels from climate bills: sponsor state, sponsor affil
 	</div>
 </section>
 
+
+
  <a id="bill-type"></a>
 <div style="display: flex; gap: 20px; align-items: flex-start;">
 
@@ -325,6 +327,7 @@ There was five different labels from climate bills: sponsor state, sponsor affil
         </div>
       </div>
     </div>
+	  <p> The bill type was also considered as a label. The type differs based on where the bill originated from and if it is a resolution.  </p>
   </section>
 
   <!-- Right Column: Table -->
