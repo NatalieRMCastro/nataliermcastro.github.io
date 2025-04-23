@@ -284,6 +284,12 @@ Due to the lower results of the ability to classify across many labels, the deci
 
 
 ### Decision Tree: Bill Type
+<iframe
+  src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/NatalieRMCastro/nataliermcastro.github.io/3543eb536c77a40d7192689f63f7738ae0a98136/assets/images/Decision%20Tree%20-%20Climate%20Bill%20Type%20Entropy.pdf"
+  width="100%"
+  height="600px"
+  style="border: none;">
+</iframe>
 
 ### Decision Tree: News Headlines 
 
