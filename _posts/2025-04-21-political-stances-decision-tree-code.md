@@ -90,11 +90,12 @@ def train_test_splitter(data, label_column):
 
 ```python
 
-def visual_confusion_matrix(data,labels, predictions ,title, label_name, file_name, fig_x, fig_y):
+def visual_confusion_matrix(labels, predictions ,title, label_name, file_name, fig_x, fig_y):
     
     _labels = sorted(set(labels).union(set(predictions)))
-
-    confusion_df = pd.DataFrame(data, index=_labels, columns=_labels)
+    
+    matrix_ = confusion_matrix(labels, predictions, labels=_labels)
+    confusion_df = pd.DataFrame(matrix_, index=_labels, columns=_labels)
 
     fig, ax = plt.subplots(figsize=(fig_x, fig_y))
         
@@ -128,18 +129,27 @@ def model_verification(true_labels, predictions):
 
 ```python
 def filter_top_n_labels(labels, predictions, N):
-    top_labels = [label for label, _ in Counter(labels).most_common(N)]
-    mask = [(yt in top_labels and yp in top_labels) for yt, yp in zip(labels, predictions)]
+    matrix_ = confusion_matrix(labels, predictions)
+    label_sums = matrix_.sum(axis=1)  
+    
+    top_labels_indices = label_sums.argsort()[-N:][::-1]  
+
+    unique_labels = sorted(set(labels)) 
+    top_labels = [unique_labels[i] for i in top_labels_indices]  
+    
+    mask = [yt in top_labels or yp in top_labels for yt, yp in zip(labels, predictions)]
+
     labels_filtered = [yt for yt, m in zip(labels, mask) if m]
     predictions_filtered = [yp for yp, m in zip(predictions, mask) if m]
-    return labels_filtered, predictions_filtered
+    
+    return labels_filtered[0:N], predictions_filtered[0:N]
 
 ```
 
 
 ```python
 ## Decision Tree Modeler:
-def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_name, feature_names, graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
+def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_name, graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
     data_train = data_train.drop(columns = label_column_name).copy()
     data_test = data_test.drop(columns = label_column_name).copy()
     
@@ -148,10 +158,9 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
     
     decision_tree = DecisionTreeClassifier(criterion='entropy', ## This is changed based on the model test that was used
                                       splitter = 'best',
-                                      max_depth = 8,
-                                      min_samples_split = 4,
-                                      min_samples_leaf = 1,
-                                      min_weight_fraction_leaf = 0,
+                                      max_depth = 7,
+                                      min_samples_split = 10,
+                                      min_samples_leaf = 10,
                                       max_features = 500,
                                       random_state = 30,
                                       max_leaf_nodes = None,
@@ -160,16 +169,23 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 
     ## Fitting the data
     decision_tree_model = decision_tree.fit(data_train, labels_train)
+    tree.plot_tree(decision_tree,feature_names = feature_names_train)
+    plt.savefig(f"Decision Tree - {file_name}.png")
     
     ## Plotting the tree
     dot_data = tree.export_graphviz(decision_tree_model, out_file=None,
                                     feature_names=feature_names_train,
+                                    class_names = [str(cls) for cls in decision_tree_model.classes_],
                                     filled=True,
                                     rounded=True,
-                                    special_characters=True,)
+                                    special_characters=True, 
+                                    label='all', proportion = True
+                                   )
+
+    cleaned_dot_data = re.sub(r'value = \[[^\]]*\]&lt;br/&gt;|value = \[[^\]]*\]<br/?>', '', dot_data)
     
-    graph = graphviz.Source(dot_data)
-    graph.render(f"Decision Tree - {graph_title}")
+    graph = graphviz.Source(cleaned_dot_data)
+    graph.render(f"Decision Tree - {graph_title}",cleanup=True)
     
     
     ## Creating predictions
@@ -181,13 +197,21 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
     accuracy, precision, recall = model_verification(labels_test, predictions)
     
     ## Filtering for Clean Visualizations
-    if filter_top_n == True:
-        labels_test, predictions = filter_top_n_labels(labels_test, predictions, N)
+        ## Filtering for Clean Visualizations
+    if filter_top_n:
+        # Call filter_top_n_labels to get filtered labels and predictions
+        labels_test_filtered, predictions_filtered = filter_top_n_labels(labels_test, predictions, N)
 
-    ## Generating a confusion matrix
-    
-    matrix_ = confusion_matrix(labels_test, predictions)
-    visual_confusion_matrix(matrix_, labels_test, predictions, graph_title, labels_name, file_name, fig_x, fig_y)
+        # If data remains after filtering, create the filtered confusion matrix
+        if len(labels_test_filtered) > 0 and len(predictions_filtered) > 0:
+            visual_confusion_matrix(labels_test_filtered, predictions_filtered,
+                                    f"{graph_title} (Top {N})", labels_name,
+                                    f"filtered_{file_name}", fig_x, fig_y)
+        else:
+            print(f"[Warning] No data left after filtering top {N} labels — skipping confusion matrix.")
+    else:
+        # If no filtering is needed, generate confusion matrix with all data
+        visual_confusion_matrix(labels_test, predictions, graph_title, labels_name, file_name, fig_x, fig_y)
     
     return (accuracy, precision, recall)
 ```
@@ -691,14 +715,12 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 accuracy_news_data_party, precision_news_data_party, recall_news_data_party = tree_modeler(data_train_news_party, labels_train_news_party,
                                                                                          data_test_news_party, labels_test_news_party,
                                                                                           'Party',
-                                                                                         'News Headlines',
                                                                                          'News Headlines Partisan Affiliation', 'Partisan Affiliation', 'decision tree gini cm- news partisian affiliation.png',
                                                                                          False, 10,fig_x = 6, fig_y = 6)
 ```
 
-
     
-![png](/assets/images/output_25_0.png)
+![png](/assets/images/output_25_1.png)
     
 
 
@@ -707,16 +729,14 @@ accuracy_news_data_party, precision_news_data_party, recall_news_data_party = tr
 accuracy_news_data_publisher, precision_news_data_publisher, recall_news_data_publisher = tree_modeler(data_train_news_publisher, labels_train_news_publisher,
                                                                                          data_test_news_publisher, labels_test_news_publisher,
                                                                                           'publisher',
-                                                                                         'News Headlines Publisher',
                                                                                          'News Headlines Publisher', 'Publisher', 'decision tree gini cm - news publisher.png',
                                                                                          True, 10,fig_x = 6, fig_y = 6)
 
 accuracy_news_data_combined, precision_news_data_combined, recall_news_data_combined = tree_modeler(data_train_news_combined, labels_train_news_combined,
                                                                                          data_test_news_combined, labels_test_news_combined,
                                                                                           'LABEL',
-                                                                                         'News Headlines Metadata',
                                                                                          'News Headlines Metadata', 'Publisher and Partisan Affiliation', 'decision tree gini cm - news metadata.png',
-                                                                                         True, 10,fig_x = 6, fig_y = 6)
+                                                                                         True, 10,fig_x = 12, fig_y = 12)
 ```
 
 
@@ -728,14 +748,12 @@ accuracy_news_data_combined, precision_news_data_combined, recall_news_data_comb
 accuracy_news_data_party, precision_news_data_party, recall_news_data_party = tree_modeler(data_train_news_party, labels_train_news_party,
                                                                                          data_test_news_party, labels_test_news_party,
                                                                                           'Party',
-                                                                                         'News Headlines',
-                                                                                         'News Headlines Partisan Affiliation', 'Partisan Affiliation', 'decision tree entropy cm- news partisian affiliation.png',
+                                                                                         'News Headlines Partisan Affiliation Entropy', 'Partisan Affiliation', 'decision tree entropy cm- news partisian affiliation.png',
                                                                                          False, 10,fig_x = 6, fig_y = 6)
 ```
 
-
     
-![png](/assets/images/output_29_0.png)
+![png](/assets/images/output_29_1.png)
     
 
 
@@ -744,16 +762,13 @@ accuracy_news_data_party, precision_news_data_party, recall_news_data_party = tr
 accuracy_news_data_publisher, precision_news_data_publisher, recall_news_data_publisher = tree_modeler(data_train_news_publisher, labels_train_news_publisher,
                                                                                          data_test_news_publisher, labels_test_news_publisher,
                                                                                           'publisher',
-                                                                                         'News Headlines Publisher',
-                                                                                         'News Headlines Publisher', 'Publisher', 'decision tree entropy cm - news publisher.png',
-                                                                                         True, 30,fig_x = 6, fig_y = 6)
-
+                                                                                         'News Headlines Publisher Entropy', 'Publisher', 'decision tree entropy cm - news publisher.png',
+                                                                                         True, 10,fig_x = 6, fig_y = 6)
 accuracy_news_data_combined, precision_news_data_combined, recall_news_data_combined = tree_modeler(data_train_news_combined, labels_train_news_combined,
                                                                                          data_test_news_combined, labels_test_news_combined,
                                                                                           'LABEL',
-                                                                                         'News Headlines Metadata',
-                                                                                         'News Headlines Metadata', 'Publisher and Partisan Affiliation', 'decision tree entropy cm - news metadata.png',
-                                                                                         True, 30,fig_x = 6, fig_y = 6)
+                                                                                         'News Headlines Metadata Entropy', 'Publisher and Partisan Affiliation', 'decision tree entropy cm - news metadata.png',
+                                                                                         True, 10,fig_x = 6, fig_y = 6)
 ```
 
 ### 3.2 Climate Bills Data
@@ -765,14 +780,12 @@ accuracy_news_data_combined, precision_news_data_combined, recall_news_data_comb
 accuracy_bills_data_party, precision_bills_data_party, recall_bills_data_party = tree_modeler(data_train_bills_party, labels_train_bills_party,
                                                                                          data_test_bills_party, labels_test_bills_party,
                                                                                           'Sponser Affiliation',
-                                                                                         'Climate Bills Sponsor Affiliation',
                                                                                          'Climate Bills Sponsor Affiliation', 'Partisan Affiliation', 'decision tree gini cm- bills partisian affiliation.png',
                                                                                          False, 10,fig_x = 6, fig_y = 6)
 ```
 
-
     
-![png](/assets/images/output_36_0.png)
+![png](assets/images/output_33_1.png)
     
 
 
@@ -781,32 +794,26 @@ accuracy_bills_data_party, precision_bills_data_party, recall_bills_data_party =
 accuracy_bills_data_state, precision_bills_data_state, recall_bills_data_state = tree_modeler(data_train_bills_state, labels_train_bills_state,
                                                                                          data_test_bills_state, labels_test_bills_state,
                                                                                           'Sponser State',
-                                                                                         'Climate Bills Sponsor State',
                                                                                          'Climate Bills Sponsor State', 'Sponsor State', 'decision tree gini cm- bills sponsor state.png',
                                                                                          True, 20 ,fig_x = 6, fig_y = 6)
-
 
 accuracy_bills_data_combined, precision_bills_data_combined, recall_bills_data_combined = tree_modeler(data_train_bills_combined, labels_train_bills_combined,
                                                                                          data_test_bills_combined, labels_test_bills_combined,
                                                                                           'LABEL',
-                                                                                         'Climate Bills Metadata',
                                                                                          'Climate Bills Metadata', 'Metadata', 'decision tree gini cm- bills combined label.png',
                                                                                          True, 20 ,fig_x = 6, fig_y = 6)
 
-    
 accuracy_bills_data_type, precision_bills_data_type, recall_bills_data_type = tree_modeler(data_train_bills_type, labels_train_bills_type,
                                                                                          data_test_bills_type, labels_test_bills_type,
                                                                                           'Bill Type',
-                                                                                         'Climate Bill Type',
                                                                                          'Climate Bill Type', 'Bill Type', 'decision tree gini cm- bill type label.png',
                                                                                          False, 20 ,fig_x = 6, fig_y = 6)
 
 accuracy_bills_data_committee, precision_bills_data_committee, recall_bills_data_committee = tree_modeler(data_train_bills_committee, labels_train_bills_committee,
                                                                                          data_test_bills_committee, labels_test_bills_committee,
                                                                                           'Committees',
-                                                                                         'Climate Bill Committees',
                                                                                          'Climate Bill Committees', 'Hearing Committee', 'decision tree gini cm- bill committee label.png',
-                                                                                         True, 10 ,fig_x = 12, fig_y = 12)
+                                                                                         False, 5 ,fig_x = 12, fig_y = 12)
 ```
 
 
@@ -817,14 +824,13 @@ accuracy_bills_data_committee, precision_bills_data_committee, recall_bills_data
 accuracy_bills_data_party, precision_bills_data_party, recall_bills_data_party = tree_modeler(data_train_bills_party, labels_train_bills_party,
                                                                                          data_test_bills_party, labels_test_bills_party,
                                                                                           'Sponser Affiliation',
-                                                                                         'Climate Bills Sponsor Affiliation',
-                                                                                         'Climate Bills Sponsor Affiliation', 'Partisan Affiliation', 'decision tree entropy cm- bills partisian affiliation.png',
+                                                                                         'Climate Bills Sponsor Affiliation Entropy', 'Partisan Affiliation', 'decision tree entropy cm- bills partisian affiliation.png',
                                                                                          False, 10,fig_x = 6, fig_y = 6)
 ```
 
 
     
-![png](/assets/images/output_42_0.png)
+![png](assets/images/output_39_1.png)
     
 
 
@@ -833,36 +839,27 @@ accuracy_bills_data_party, precision_bills_data_party, recall_bills_data_party =
 accuracy_bills_data_state, precision_bills_data_state, recall_bills_data_state = tree_modeler(data_train_bills_state, labels_train_bills_state,
                                                                                          data_test_bills_state, labels_test_bills_state,
                                                                                           'Sponser State',
-                                                                                         'Climate Bills Sponsor State',
-                                                                                         'Climate Bills Sponsor State', 'Sponsor State', 'decision tree entropy cm- bills sponsor state.png',
+                                                                                         'Climate Bills Sponsor State Entropy', 'Sponsor State', 'decision tree entropy cm- bills sponsor state.png',
                                                                                          True, 20 ,fig_x = 6, fig_y = 6)
 
 accuracy_bills_data_combined, precision_bills_data_combined, recall_bills_data_combined = tree_modeler(data_train_bills_combined, labels_train_bills_combined,
                                                                                          data_test_bills_combined, labels_test_bills_combined,
                                                                                           'LABEL',
-                                                                                         'Climate Bills Metadata',
-                                                                                         'Climate Bills Metadata', 'Metadata', 'decision tree entropy cm- bills combined label.png',
+                                                                                         'Climate Bills Metadata Entropy', 'Metadata', 'decision tree entropy cm- bills combined label.png',
                                                                                          True, 20 ,fig_x = 6, fig_y = 6)
 
 accuracy_bills_data_type, precision_bills_data_type, recall_bills_data_type = tree_modeler(data_train_bills_type, labels_train_bills_type,
                                                                                          data_test_bills_type, labels_test_bills_type,
                                                                                           'Bill Type',
-                                                                                         'Climate Bill Type',
-                                                                                         'Climate Bill Type', 'Bill Type', 'decision tree entropy cm- bill type label.png',
+                                                                                         'Climate Bill Type Entropy', 'Bill Type', 'decision tree entropy cm- bill type label.png',
                                                                                          False, 20 ,fig_x = 6, fig_y = 6)
 
 accuracy_bills_data_committee, precision_bills_data_committee, recall_bills_data_committee = tree_modeler(data_train_bills_committee, labels_train_bills_committee,
                                                                                          data_test_bills_committee, labels_test_bills_committee,
                                                                                           'Committees',
-                                                                                         'Climate Bill Committees',
-                                                                                         'Climate Bill Committees', 'Hearing Committee', 'decision tree entropy cm- bill committee label.png',
-                                                                                         True, 10 ,fig_x = 12, fig_y = 12)
+                                                                                         'Climate Bill Committees Entropy', 'Hearing Committee', 'decision tree entropy cm- bill committee label.png',
+                                                                                         False, 10 ,fig_x = 12, fig_y = 12)
 ```
-
-
-  
-
-
 
 ## 4. Assessing Validity
 
@@ -970,9 +967,6 @@ ax.tick_params(axis='x')
 ax.set_xticks(index)
 ax.set_xticklabels(models)
 ax.xaxis.set_minor_locator(AutoMinorLocator(5))
-ax.grid(which='minor', linestyle=':', linewidth='0.5')  # Minor gridlines style
-ax.grid(which='major', linestyle='-', linewidth='0.75')  # Major gridlines style
-
 
 ax.legend()
 
@@ -984,7 +978,7 @@ plt.show();
 
 
     
-![png](/assets/images/output_53_0.png)
+![png](assets/images/output_47_0.png)
     
 
 
@@ -1092,8 +1086,7 @@ ax.tick_params(axis='x')
 ax.set_xticks(index)
 ax.set_xticklabels(models)
 ax.xaxis.set_minor_locator(AutoMinorLocator(5))
-ax.grid(which='minor', linestyle=':', linewidth='0.5')  # Minor gridlines style
-ax.grid(which='major', linestyle='-', linewidth='0.75')  # Major gridlines style
+
 
 
 ax.legend()
@@ -1106,7 +1099,7 @@ plt.show();
 
 
     
-![png](/assets/images/output_56_0.png)
+![png](assets/images/output_50_0.png)
     
 
 
