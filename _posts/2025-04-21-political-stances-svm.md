@@ -17,7 +17,7 @@ in_feed: false
 
 ### Overview
 
-### Sentimenet Analaysis
+### Sentiment Analaysis
 The sentiment was calculated for all news articles and climate bills in an attempt to generate a classifier which preforms well on sentiment. This decision was motivated as it may be interesting to train a classifier - in addition to the tools already provided - in an attempt to identify nuance within sentiment. To generate a sentiment label to compliment the eight labels in the data already, NLTK was utilized. The [Seniment Intensity Analyzer from the Vader attribute](https://www.nltk.org/api/nltk.sentiment.vader.html#nltk.sentiment.vader.SentimentIntensityAnalyzer) was utilized to generate a numerical score referred to as the 'compound'. It illustrates how strong a particular emotion is throughout the text. 
 
 The analyzer was instantiated through a non-paramaratized call and then wrapped into a function:
@@ -98,6 +98,67 @@ This function utilized *x* as an input, which would then be lambda applied to an
     </div> 
 </section> 
 
-### Results
+
+
+<div style="display: flex; justify-content: space-around; text-align: center;">
+
+  <div>
+    <img src="/assets/images/svm linear split.png" alt="" width="200">
+    <p>Linear Kernel</p>
+  </div>
+
+  <div>
+    <img src="/assets/images/svm polynomial split.png" alt="" width="200">
+    <p>Polynomial Kernel</p>
+  </div>
+
+  <div>
+    <img src="/assets/images/svm rbf split.png" alt="" width="200">
+    <p>Radial Basis Function Kernel</p>
+  </div>
+
+</div>
+*Image Source: [Plot Classification Boundaries with Different SVM Kernels](https://scikit-learn.org/stable/auto_examples/svm/plot_svm_kernels.html)*
+
+Multiple Kernels and costs were tested to exhaust the possibilities of the model. The linear kernel 
+
+
+### Assessing the Preformance of Multiple Iterations of SVM
+
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - Climate Bills.png" alt="" /></a>
+			<h3>Sentiment Score Distribution: Proposed Climate Bills</h3>
+			<p> The distribution matches the news headlines, but has an overwhelming about of positive samples. There is a long skewed tail beginning at 0.7 valence. </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Distribution - News.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - News.png" alt="" /></a>
+			<h3>Sentiment Score Distribution: News Headlines</h3>
+			<p> The scores are a negatively skewed (right leaning not sentiment negative!) modal distribution. The majority of the sample have an strong positive average. </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Labels Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Labels Distribution - Climate Bills.png" alt="" /></a>
+			<h3>Sentiment Label Distribution: Proposed Climate Bills</h3>
+			<p>The distribution is uneven with 135 negative instances and 3,088 positive instances. This may cause later classification issues.</p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - Climate Bills.png" alt="" /></a>
+			<h3>Sentiment Score Distribution: Proposed Climate Bills</h3>
+			<p> The distribution matches the news headlines, but has an overwhelming about of positive samples. There is a long skewed tail beginning at 0.7 valence. </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Distribution - News.png" class="image fit thumb"><img src="/assets/images/Sentiment Distribution - News.png" alt="" /></a>
+			<h3>Sentiment Score Distribution: News Headlines</h3>
+			<p> The scores are a negatively skewed (right leaning not sentiment negative!) modal distribution. The majority of the sample have an strong positive average. </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/Sentiment Labels Distribution - Climate Bills.png" class="image fit thumb"><img src="/assets/images/Sentiment Labels Distribution - Climate Bills.png" alt="" /></a>
+			<h3>Sentiment Label Distribution: Proposed Climate Bills</h3>
+			<p>The distribution is uneven with 135 negative instances and 3,088 positive instances. This may cause later classification issues.</p>
+		</article>
+	</div>
+</section>
 
 ### Conclusions
