@@ -33,7 +33,7 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 ### Data Preparation
 All supervised learning models (ie, they take label data) require a few things. The first, is a train test parition. This is important because to test the models efficacy it requires an unseen dataset - it not the model is trained incorrectly and is often times [overfit](https://en.wikipedia.org/wiki/Overfitting). Next, the supervised model requires labels. The [data](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) utilized in this project is a combination of [News Headlines](https://huggingface.co/datasets/nataliecastro/climate-news-countvectorizer-dtm/viewer) and [Proposed Bills](https://huggingface.co/datasets/nataliecastro/climate-bills-lemmed-count-vectorizer/tree/main) tagged as climate at the federal level. The data may be found either at the in-text links just provided, or at the [HuggingFace Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) developed for this project. The prior labels generated for news data are the mentioned partisian affiliation, and the publisher of the news source. For the proposed bills the labels included are the bill sponsor's state, partisian affiliation, [bill type](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#bill-type), and hearing committee. 
 
-For the purposes of the following machine learning methods, a 'combined' metadata label was generated. For all combined labels the token '\|' was utilized to split the different labels. This token was selected because of its rarity in the other labels, and a clean way to later visualize the combined labels. An example of news metadata label may be 'Republican | The Verge', and for the proposed cliamte bills 'hr \| D \| hi'. The combined label for the bills data first represents the bill type, or what chamber it originated from, then the bill sponsor's partisian affiliation and state. This code is consistent across the entire dataset. The two figures below illustrate the headed versions of the data frames, with their labels preserved. It should be noted that the labels were removed for the classification by the model, or else it wouldn't work!
+For the purposes of the following machine learning methods, a 'combined' metadata label was generated. For all combined labels the token '\|' was utilized to split the different labels. This token was selected because of its rarity in the other labels, and a clean way to later visualize the combined labels. An example of news metadata label may be 'Republican \| The Verge', and for the proposed cliamte bills 'hr \| D \| hi'. The combined label for the bills data first represents the bill type, or what chamber it originated from, then the bill sponsor's partisian affiliation and state. This code is consistent across the entire dataset. The two figures below illustrate the headed versions of the data frames, with their labels preserved. It should be noted that the labels were removed for the classification by the model, or else it wouldn't work!
 
 <section>
 	<div class="box alt">
@@ -92,18 +92,20 @@ Each label had a custom testing and training split, as the model can only handle
 </tbody>
 </table>
 
-The distribution of the Partisian Labels are illustrated below. It is important when developing these models to consider the distribution of the labels within the training and testing sets. If the training sets are disparate this may lead to the model overfitting on a particular label and not 'learning' what comprises of the other labels. 
+The distribution of the Partisian Labels are illustrated below. It is important when developing these models to consider the distribution of the labels within the training and testing sets. If the training sets are disparate this may lead to the model overfitting on a particular label and not 'learning' what comprises of the other labels.  Provided below are the distributions, specifically for the testing data of the Partisian Labels. For the News Headlines, the distribution is relatively split equally between Republican and Democrat. In comparison to the Proposed Cliamte Bills, the distribution is not as equal - and includes the Indepent Partisian Affiliation. These differences in distribution are not something to necessarily correct - as the goal of machine learning is not to have the model discern half of the data automatically as one label - but to instead be able to learn the semantic characteristics which generate text to be a particular label.
+
+
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
-			<p> TEXT </p>
+			<p> The Democrat party has 538 testing instances, which is more than the Republican party with 422 testing instances. The Independnet party has seven testing instances. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - News Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Partisian Label Paritions of News Headlines</h3>
-			<p> TEXT </p>
+			<p> The distribution of testing data between Republican and Democrat is relatively even. The Republican label has 124 testing instances, and the Democrat label has 122 instances. </p>
 		</article>
 	</div>
 </section>
