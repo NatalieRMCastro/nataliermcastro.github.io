@@ -23,6 +23,7 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 **Table of Contents**
 - [Data Preparation](#data-prep)
 - [Method](#method)
+- [Model Evaluation](#results-model-evaluation)
 - [A Naive Reading of the News](#results-news-data)
 - [Interpreting Features about Climate Bills Naively](#results-bills-data)
 - [Conclusions](#conc)
