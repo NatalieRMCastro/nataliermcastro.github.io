@@ -100,7 +100,6 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
 			<p> TEXT </p>
 		</article>
-		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - News Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Partisian Label Paritions of News Headlines</h3>
