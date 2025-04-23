@@ -136,8 +136,8 @@ Across all tests, the relative performance of different labels is similar. The S
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/SVM Linear Cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Linear Cost 1000 - Model Evaluation.png" alt="" /></a>
-			<h3> There is no observed difference between the varying costs in any evaluation metric. </h3>
-			<p> </p>
+			<h3> Linear Kernel with Cost 1000 </h3>
+			<p> There is no observed difference between the varying costs in any evaluation metric.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/SVM Poly - cost 100 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM Poly - cost 100 - Model Evaluation.png" alt="" /></a>
@@ -158,6 +158,44 @@ Across all tests, the relative performance of different labels is similar. The S
 			<a href="/assets/images/SVM RBF - cost 1000 - Model Evaluation.png" class="image fit thumb"><img src="/assets/images/SVM RBF - cost 1000 - Model Evaluation.png" alt="" /></a>
 			<h3>RBF Kernel with Cost 1000</h3>
 			<p>The average accuracy is 49.5%, average precision is 43.2%, and average recall is  42.6%. </p>
+		</article>
+	</div>
+</section>
+
+So... what is the best model? The polynomial kernel with cost 1000. The data was paritioned using a "U" like concave into the other classification. This works particulary well for this type of data because in some cases, the labels are binary - in addition, the few testing instances that are negative may make their features *more salient* because they are more unique in this way. To keep the discussion concisce, only the results from this particular model will be reported. If desired, the outputs from the models are all listed in the [GitHub version of the code notebook](https://github.com/NatalieRMCastro/climate-policy/blob/main/8.%20Support%20Vector%20Machines.ipynb).
+
+### Assessing the Classifications of the Polynomial Cost 1000 SVM
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/filtered_svm - poly - cost 1000 - news - metadata.png" class="image fit thumb"><img src="/assets/images/filtered_svm - poly - cost 1000 - news - metadata.png" alt="" /></a>
+			<h3>News: Publisher & Partisianship</h3>
+			<p>  </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/svm - poly - cost 1000 - news - party.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - news - party.png" alt="" /></a>
+			<h3>News: Partisian Affiliation</h3>
+			<p> </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/svm - poly - cost 1000 - news - sentiment.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - news - sentiment.png" alt="" /></a>
+			<h3>News: Sentiment</h3>
+			<p></p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" alt="" /></a>
+			<h3>Climate Bills: Sentiment</h3>
+			<p></p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" alt="" /></a>
+			<h3>Climate Bills: Sponsor Affiliation</h3>
+			<p></p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/filtered_svm - poly - cost 1000 - bills - sponsor state.png" class="image fit thumb"><img src="/assets/images/filtered_svm - poly - cost 1000 - bills - sponsor state.png" alt="" /></a>
+			<h3>Climate Bills: Sponsor State</h3>
+			<p> </p>
 		</article>
 	</div>
 </section>
