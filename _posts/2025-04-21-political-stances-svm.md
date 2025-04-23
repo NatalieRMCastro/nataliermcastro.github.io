@@ -38,6 +38,16 @@ in_feed: false
 </table>
 
 ### Method
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm-code.html" class="button fit small">View Code</a></li>
+		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/8.%20Support%20Vector%20Machines.ipynb" class="button fit small">Visit GitHub Repository</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 
 ### Results
 
