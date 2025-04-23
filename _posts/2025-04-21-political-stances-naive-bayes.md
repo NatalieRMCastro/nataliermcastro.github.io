@@ -249,20 +249,20 @@ The model varied in its preformance. The labels with the highest accuracy was fr
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - news publisher.png" class="image fit thumb"><img src="/assets/images/mnb cm - news publisher.png" alt="" /></a>
 			<h3> Publisher </h3>
-			<p> TEXT </p>
+			<p> The most prominent pattern is for the label 'Freerepublic.com'. There is not a clear accuracy diagonal, but there are a few accurate predictions. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/mnb cm - news partisian affiliation.png" alt="" /></a>
 			<h3> Named Political Party </h3>
-			<p> TEXT </p>
+			<p> The 'diganoal' of accuracy is illustrate,d however, a majority of the testing samples were misclassified. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - news combined label.png" class="image fit thumb"><img src="/assets/images/mnb cm - news combined label.png" alt="" /></a>
 			<h3>Combined Headline Metadata</h3>
-			<p> TEXT .</p>
+			<p> Similar to the preferencec of 'Freerepublic.com' This is demonstrated in the Combined label too. Nearly all of the predictions are in this column.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<p> TEXT </p>
+			<p> If any of the labels are too small to read, feel free to click on the image to expand it! Illustrated here are the confusion matricies generated from testing the News Headlines. For the combined label and the publisher label the classification favored the news source 'Freerepublic.com'. When assessing the pattern identification of the partisianship, it is clear that the majority of the the predictions were correct. There was not a particular trend to overpredicting a particular label - but there were more Democrat predictions than Republican predictions. This is not expected because of balance in the testing set.  </p>
 		</article>
 	</div>
 </section>
