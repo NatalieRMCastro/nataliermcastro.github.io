@@ -283,27 +283,29 @@ The model tended to overpredict for the label 'Freerepublic.com'. To explore pot
 <a id="results-news-data"></a>
 ### Interpreting Features About Climate Bills Naively
 
+There was five different labels from climate bills: sponsor state, sponsor affiliation, metadata, committee, and bill type. The accuracy for this data was overall higher than the news data, however, it may in part be due to it had 'more' chances, because the data had more labels. The highest preforming labels were sponsor affiliaiton, bill type, and sponsor state. It should be noted that in the sponsor state, metadata, and committee were truncated to the top ten labels. These were sorted based on the number of predictions assigned to the testing data, and then sorted from most to least. A custom function was developed to do so, and may be reviewed at the [code page](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes-code.html).
+
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - sponser state label truncated.png" class="image fit thumb"><img src="/assets/images/mnb cm - sponser state label truncated.png" alt="" /></a>
 			<h3>Bill Sponsor State</h3>
-			<p> TEXT </p>
+			<p> A clear diagonal is illustrated from correct classifications. The state which had the most predictions (and most accurate) was Califronia, with 37 accurate classifications. Next was New Jersey with 22 accurate predictions. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - sponsor affiliation label.png" class="image fit thumb"><img src="/assets/images/mnb cm - sponsor affiliation label.png" alt="" /></a>
 			<h3> Sponsor Affiliation </h3>
-			<p> TEXT </p>
+			<p> The facets about an Indepent Bill Sponsor were not learned through training, and no testing predictions were assigned to the party. The most common misclassification for the Independent party was Democrat proposed bills. The Republican party had the most predicted labels, with 166 misclassifications from the democrat party.  </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - bill metadata label.png" class="image fit thumb"><img src="/assets/images/mnb cm - bill metadata label.png" alt="" /></a>
 			<h3>Combined Bill Metadata</h3>
-			<p> TEXT .</p>
+			<p> A similar pattern is observed from the Sponsor State prediction. Both Democrat and Republican bills were accurately predicted. Something similar is identified with Texas, however the classifier struggled to identify the Democrat sponsored bills. .</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/mnb cm - bill committee label.png" class="image fit thumb"><img src="/assets/images/mnb cm - bill committee label.png" alt="" /></a>
 			<h3>Hearing Committee</h3>
-			<p> TEXT </p>
+			<p> The committees with the most predictions were House - Energy and Commerce (129), Senate - Enrvironment and Public Works (165), and House - Transportation and Infrastructure (58). The model had the most success with labels that had a large amount of candidates for classification. </p>
 		</article>
 	</div>
 </section>
