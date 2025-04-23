@@ -275,5 +275,16 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 
 </table>
 
+### Decision Tree Visualization
+
+Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn.
+
+### Decision Tree: Bill Sponsor Affiliation
+<iframe src="/assets/images/Decision Tree - Climate Bills Sponsor Affiliation Entropy.pdf" width="100%" height="600px" style="border: none;"></iframe>
+
+
+### Decision Tree: Bill Type
+
+### Decision Tree: News Headlines 
 
 ### Conclusions
