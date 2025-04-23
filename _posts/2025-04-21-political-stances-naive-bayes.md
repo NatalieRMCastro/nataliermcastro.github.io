@@ -346,13 +346,14 @@ There was five different labels from climate bills: sponsor state, sponsor affil
 <tr><td>sconres       </td><td>Concurrent Resolution Originating From Senate                  </td></tr>
 <tr><td>sjres         </td><td>Joint Resolution Originating from Senate                       </td></tr>
 <tr><td>sres          </td><td>Resolution from Senate                                         </td></tr>
+<tr><td>Source          </td><td>[Bills & Resolutions](https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
+)                                         </td></tr>
 </tbody>
 </table>
   </div>
 
 </div>
 
-https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
 
 
 ### Conclusions
