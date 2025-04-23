@@ -50,7 +50,7 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 	</div>
 </section>
 
-** Train and Testing Data Parition **
+**Train and Testing Data Parition**
 <table>
 <thead>
 <tr><th>                                                   </th><th style="text-align: center;">  Training Data </th><th style="text-align: center;"> Testing Data </th></tr>
