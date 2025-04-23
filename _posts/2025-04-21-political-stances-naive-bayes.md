@@ -31,24 +31,9 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 
  <a id="data-prep"></a>
 ### Data Preparation
-All supervised learning models (ie, they take label data) require a few things. The first, is a train test parition. This is important because to test the models efficacy it requires an unseen dataset - it not the model is trained incorrectly and is often times [overfit](https://en.wikipedia.org/wiki/Overfitting). Next, the supervised model requires labels. The [data](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) utilized in this project is a combination of [News Headlines](https://huggingface.co/datasets/nataliecastro/climate-news-countvectorizer-dtm/viewer) and Proposed Bills tagged as climate at the federal level. The data may be found either at the in-text links just provided, or at the [HuggingFace Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) developed for this project. The prior labels generated for news data are the mentioned partisian affiliation, and the publisher of the news source. For the proposed bills the labels included are the bill sponsor's state, partisian affiliation, [bill type](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#bill-type), and hearing committee. 
+All supervised learning models (ie, they take label data) require a few things. The first, is a train test parition. This is important because to test the models efficacy it requires an unseen dataset - it not the model is trained incorrectly and is often times [overfit](https://en.wikipedia.org/wiki/Overfitting). Next, the supervised model requires labels. The [data](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) utilized in this project is a combination of [News Headlines](https://huggingface.co/datasets/nataliecastro/climate-news-countvectorizer-dtm/viewer) and [Proposed Bills](https://huggingface.co/datasets/nataliecastro/climate-bills-lemmed-count-vectorizer/tree/main) tagged as climate at the federal level. The data may be found either at the in-text links just provided, or at the [HuggingFace Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) developed for this project. The prior labels generated for news data are the mentioned partisian affiliation, and the publisher of the news source. For the proposed bills the labels included are the bill sponsor's state, partisian affiliation, [bill type](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#bill-type), and hearing committee. 
 
-For the purposes of the following machine learning methods, a 'combined' metadata label was generated. For all combined labels the token '|' was utilized to split the different labels. This token was selected because of its rarity in the other labels, and a clean way to later visualize the combined labels. 
-
-``` python
-def train_test_splitter(data, label_column):
-    
-    data_train, data_test = train_test_split(data, test_size = 0.3,)
-    labels_train = data_train[label_column]
-    labels_test = data_test[label_column]
-    
-    #data_train.drop(columns='LABEL', inplace=True)
-    #data_test.drop(columns='LABEL', inplace=True)
-    
-    
-    return (data_train, data_test, labels_train, labels_test)
-
-```
+For the purposes of the following machine learning methods, a 'combined' metadata label was generated. For all combined labels the token '\|' was utilized to split the different labels. This token was selected because of its rarity in the other labels, and a clean way to later visualize the combined labels. An example of news metadata label may be 'Republican | The Verge', and for the proposed cliamte bills 'hr \| D \| hi'. The combined label for the bills data first represents the bill type, or what chamber it originated from, then the bill sponsor's partisian affiliation and state. This code is consistent across the entire dataset. The two figures below illustrate the headed versions of the data frames, with their labels preserved. It should be noted that the labels were removed for the classification by the model, or else it wouldn't work!
 
 <section>
 	<div class="box alt">
@@ -68,6 +53,28 @@ def train_test_splitter(data, label_column):
 	</div>
 </section>
 
+To generate a Train Test Split consistently across all of the superivsed models (Naive Bayes, [Decision Trees](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-trees.html), and [Support Vector Machines](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html)), a custom function was developed. This function would take a Pandas DataFrame and then the label column. This is used to generate both lists of labels and to then visualizae the distribution of the particular label with respect to the train test split. 
+
+The function uses [sklearn's train_test_split](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html) with a parition of 30% reserved for testing. The size of the dataset allows for this large of a parition to be taken. The custom function then generates a list of the training labels, and the testing labels. The option to remove the label column is preserved in the function but seldomly used. Finally, the function returns the training data, testing data, and their respective labels stored in separate lists. 
+
+``` python
+def train_test_splitter(data, label_column):
+    
+    data_train, data_test = train_test_split(data, test_size = 0.3,)
+    labels_train = data_train[label_column]
+    labels_test = data_test[label_column]
+    
+    #data_train.drop(columns='LABEL', inplace=True)
+    #data_test.drop(columns='LABEL', inplace=True)
+    
+    
+    return (data_train, data_test, labels_train, labels_test)
+
+```
+
+
+Each label had a custom testing and training split, as the model can only handle one label at once (but this was in an attempt to be mitigated by generating the combined 'metadata' labels. It is illustrated in the *Train and Testing Data Parition Table* that regardless of the label, the split generated is the same size every time.
+
 **Train and Testing Data Parition**
 <table>
 <thead>
@@ -85,10 +92,11 @@ def train_test_splitter(data, label_column):
 </tbody>
 </table>
 
+The distribution of the Partisian Labels are illustrated below. It is important when developing these models to consider the distribution of the labels within the training and testing sets. If the training sets are disparate this may lead to the model overfitting on a particular label and not 'learning' what comprises of the other labels. 
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/aassets/images/NB - Testing Data - Party Data Partisan Labels.png" alt="" /></a>
+			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
 			<p> TEXT </p>
 		</article>
