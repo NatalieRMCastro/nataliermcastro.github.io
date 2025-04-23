@@ -124,6 +124,8 @@ The distribution of the Partisian Labels are illustrated below. It is important 
     </div> 
 </section> 
 
+The method section is split into two parts, first an explanation of how the MNB models were fit. As noted earlier, there is eight different dataframes which MNB will be trained on, so internal consistency is important - especially when evaluating the performance of different labels tandemly. Next, the evaluation function is described and its application. 
+
 #### Systemicatically Fitting the Multinomial Naïve Bayes Models
 
 ```python
