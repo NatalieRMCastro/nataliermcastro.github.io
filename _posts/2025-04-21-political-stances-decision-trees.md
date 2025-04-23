@@ -154,6 +154,31 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
  <a id="results-model-evaluation"></a>
 ### Evaluating Gini and Entropy Decision Trees
 
+#### Gini Model Evaluation
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Gini - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+
+#### Entropy Model Evaluation
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Entropy - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+
+</table>
+
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
@@ -250,34 +275,11 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 </table>
 
 
-#### Gini Model Evaluation
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Gini - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-
-#### Entropy Model Evaluation
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/Decision Trees Entropy - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the below table."  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-
-</table>
 
 ### Decision Tree Visualization
 
-Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn.
+Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn. To generate these visualizations, the values (or impurity) scores were removed, and the class name was added to the node in order to identify more clearly the detail within the tree.
 
 ### Decision Tree: Bill Sponsor Affiliation
 <iframe
