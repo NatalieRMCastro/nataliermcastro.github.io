@@ -126,7 +126,53 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 
 #### Systemicatically Fitting the Multinomial Naïve Bayes Models
 
+```python
+def mnb_modeler(data_train, labels_train, data_test, labels_test, label_column_name,  graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
+    data_train = data_train.drop(columns = label_column_name).copy()
+    data_test = data_test.drop(columns = label_column_name).copy()
+    
+    mnb_model = MultinomialNB()
+
+    ## Fitting the data
+    mnb_full = mnb_model.fit(data_train, labels_train)
+    
+    ## Creating predictions
+    predictions = mnb_full.predict(data_test)
+    
+    ## Assessing the models abilitiy
+    accuracy, precision, recall = model_verification(labels_test, predictions)
+    
+    ## Filtering for Clean Visualizations
+    if filter_top_n == True:
+        labels_test, predictions = filter_top_n_labels(labels_test, predictions, N)
+
+    ## Generating a confusion matrix
+    
+    matrix_ = confusion_matrix(labels_test, predictions)
+    visual_confusion_matrix(matrix_, labels_test, predictions, graph_title, labels_name, file_name, fig_x, fig_y)
+    
+    return (accuracy, precision, recall)
+```
+
 #### Devoping a System for Model Evaluation
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/Confusion Matrix.png" alt="A Confusion Matrix with the equations for recall, precision, and accuracy"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+*Image Source: Jurafsky and Martin, Speech and Language Processing, page 67*
+
+```python
+def model_verification(true_labels, predictions):
+    accuracy = accuracy_score(true_labels, predictions)
+    precision = precision_score(true_labels, predictions, average='macro', zero_division = 0)
+    recall = recall_score(true_labels, predictions, average='macro', zero_division = 0)
+    
+    return accuracy, precision, recall
+```
 
 ### Results
 The results section is split into two parts, the first is an evaluation of the Multinomial Naïve Bayes Models' preformance. Next, a discussion will be presented about the nuance behind the confusion matricies presented. Finally, this page will close with the potential implications of the resutls presented here with respect to the research questions outlined in the introduction.
@@ -264,4 +310,8 @@ https://www.house.gov/the-house-explained/the-legislative-process/bills-resoluti
 
 ---
 ### Bibliography
+
 Grimmer, J., Roberts, M. E., & Stewart, B. M. (2022). Text as data: A new framework for machine learning and the social sciences. Princeton University Press.
+
+Jurafsky, D., & Martin, J. (2025). Speech and Language Processing (3rd ed.). https://web.stanford.edu/~jurafsky/slp3/ed3book_Jan25.pdf
+
