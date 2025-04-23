@@ -73,7 +73,7 @@ def train_test_splitter(data, label_column):
 ```
 
 
-Each label had a custom testing and training split, as the model can only handle one label at once (but this was in an attempt to be mitigated by generating the combined 'metadata' labels. It is illustrated in the *Train and Testing Data Parition Table* that regardless of the label, the split generated is the same size every time.
+Each label had a custom testing and training split, as the model can only handle one label at once (but this was in an attempt to be mitigated by generating the combined 'metadata' labels. It is illustrated in the *Train and Testing Data Parition Table* that regardless of the label, the split generated is the same size every time. In total eight dataframes were generated for each type of label. To then include the testing and training splits, a total of sixteen dataframes were generated.
 
 **Train and Testing Data Parition**
 <table>
@@ -100,7 +100,7 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - Party Data Partisan Labels.png" alt="" /></a>
 			<h3>Testing Data Paritisan Label Paritions of Proposed Climate Bills</h3>
-			<p> The Democrat party has 538 testing instances, which is more than the Republican party with 422 testing instances. The Independnet party has seven testing instances. </p>
+			<p> The Democrat party has 538 testing instances, which is more than the Republican party with 422 testing instances. The Independent party has seven testing instances. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/NB - Testing Data - News Data Partisan Labels.png" class="image fit thumb"><img src="/assets/images/NB - Testing Data - News Data Partisan Labels.png" alt="" /></a>
@@ -109,6 +109,7 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 		</article>
 	</div>
 </section>
+
 
 <a id="method"></a>
 ### Method
@@ -123,8 +124,23 @@ The distribution of the Partisian Labels are illustrated below. It is important 
     </div> 
 </section> 
 
+#### Systemicatically Fitting the Multinomial Naïve Bayes Models
+
+#### Devoping a System for Model Evaluation
+
+### Results
+The results section is split into two parts, the first is an evaluation of the Multinomial Naïve Bayes Models' preformance. Next, a discussion will be presented about the nuance behind the confusion matricies presented. Finally, this page will close with the potential implications of the resutls presented here with respect to the research questions outlined in the introduction.
+
 <a id="results-model-evaluation"></a>
 ### Assessing the Validity of the Multinomial Naïve Bayes
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the above table."  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 <table>
 <thead>
@@ -142,14 +158,6 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 </tbody>
 </table>
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - Model Evaluation.png" alt="An overview of the model validity. Everything illustrated is present in the above table."  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
 
 <a id="results-news-data"></a>
 ### A Naive Reading of the News Headlines
@@ -210,17 +218,27 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 	</div>
 </section>
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/mnb cm - bill type label.png" alt=" TEXT "  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
  <a id="bill-type"></a>
-<table>
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+  <!-- Left Column: Image Section -->
+  <section style="flex: 1;">
+    <div class="box alt">
+      <div class="row gtr-50 gtr-uniform">
+        <div class="col-12">
+          <span class="image fit">
+            <img src="/assets/images/mnb cm - bill type label.png" alt="" />
+          </span>
+          <figcaption>Confusion Matrix for MNB Classification of Bill Type</figcaption>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Right Column: Table -->
+  <div style="flex: 1;">
+	 Abbreviations for Federal Bill Types
+    <table>
 <thead>
 <tr><th>Abbreviation  </th><th> Bill Type                                                     </th></tr>
 </thead>
@@ -235,6 +253,9 @@ The distribution of the Partisian Labels are illustrated below. It is important 
 <tr><td>sres          </td><td>Resolution from Senate                                         </td></tr>
 </tbody>
 </table>
+  </div>
+
+</div>
 
 https://www.house.gov/the-house-explained/the-legislative-process/bills-resolutions#:~:text=Concurrent%20Resolutions&text=A%20concurrent%20resolution%20originating%20in,the%20Secretary%20of%20the%20Senate.
 
