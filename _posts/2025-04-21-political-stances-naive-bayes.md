@@ -267,6 +267,7 @@ The model varied in its preformance. The labels with the highest accuracy was fr
 	</div>
 </section>
 
+The model tended to overpredict for the label 'Freerepublic.com'. To explore potential causees of this, the testing set was examined. 40 of the samples in the testing dataset did belong to Freerepublic. This may be assumed why there was prediction issues in this case. Outside of the 'Freerepublic.com' label, the classifier was able to accurately predict articles from the 'Americanthinker.com', 'Forbes', 'Raw Story' and 'Yahoo Entertainment'. This suggests that in some cases the model was able to accurately predict the publisher. The model maintained thie preformance for 'Republican \| Forbes' and 'Republican \| Yahoo Entertainment'. This suggests that the model is able to discern between what partisian affiliation is being discussed and by what news party. 
 
 <section>
 	<div class="box alt">
