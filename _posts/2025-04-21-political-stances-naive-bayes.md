@@ -31,6 +31,24 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 
  <a id="data-prep"></a>
 ### Data Preparation
+All supervised learning models (ie, they take label data) require a few things. The first, is a train test parition. This is important because to test the models efficacy it requires an unseen dataset - it not the model is trained incorrectly and is often times [overfit](https://en.wikipedia.org/wiki/Overfitting). Next, the supervised model requires labels. The [data](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) utilized in this project is a combination of [News Headlines](https://huggingface.co/datasets/nataliecastro/climate-news-countvectorizer-dtm/viewer) and Proposed Bills tagged as climate at the federal level. The data may be found either at the in-text links just provided, or at the [HuggingFace Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) developed for this project. The prior labels generated for news data are the mentioned partisian affiliation, and the publisher of the news source. For the proposed bills the labels included are the bill sponsor's state, partisian affiliation, [bill type](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#bill-type), and hearing committee. 
+
+For the purposes of the following machine learning methods, a 'combined' metadata label was generated. For all combined labels the token '|' was utilized to split the different labels. This token was selected because of its rarity in the other labels, and a clean way to later visualize the combined labels. 
+
+``` python
+def train_test_splitter(data, label_column):
+    
+    data_train, data_test = train_test_split(data, test_size = 0.3,)
+    labels_train = data_train[label_column]
+    labels_test = data_test[label_column]
+    
+    #data_train.drop(columns='LABEL', inplace=True)
+    #data_test.drop(columns='LABEL', inplace=True)
+    
+    
+    return (data_train, data_test, labels_train, labels_test)
+
+```
 
 <section>
 	<div class="box alt">
@@ -192,6 +210,7 @@ The questions posed in the [introduction](https://nataliermcastro.github.io/proj
 	</div>
 </section>
 
+ <a id="bill-type"></a>
 <table>
 <thead>
 <tr><th>Abbreviation  </th><th> Bill Type                                                     </th></tr>
