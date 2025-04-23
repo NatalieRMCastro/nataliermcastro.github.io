@@ -60,7 +60,7 @@ in_feed: false
 			<p> TEXT </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a hrefassets/images/decision tree entropy cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bills partisian affiliation.png" alt="" /></a>
+			<a href="/assets/images/decision tree entropy cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bills partisian affiliation.png" alt="" /></a>
 			<h3> Entropy Partisian Affiliation Labeling for Climate Bills </h3>
 			<p> TEXT </p>
 		</article>
@@ -75,7 +75,7 @@ in_feed: false
 			<p> TEXT </p>
 		</article>
   <article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/decision tree gini cm- bill type label.png" class="image fit thumb"><img src="/aassets/images/decision tree gini cm- bill type label.png" alt="" /></a>
+			<a href="/assets/images/decision tree gini cm- bill type label.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- bill type label.png" alt="" /></a>
 			<h3>Entropy Proposed Bill Type Labeling</h3>
 			<p> TEXT .</p>
 		</article>
@@ -86,6 +86,66 @@ in_feed: false
 		</article>
 	</div>
 </section>
+
+<table border="1" cellspacing="0" cellpadding="5">
+  <thead>
+    <tr>
+      <th rowspan="2"></th>
+      <th colspan="3" style="text-align: center;">Gini</th>
+      <th colspan="3" style="text-align: center;">Entropy</th>
+    </tr>
+    <tr>
+      <th style="text-align: center;">Accuracy</th>
+      <th style="text-align: center;">Precision</th>
+      <th style="text-align: center;">Recall</th>
+      <th style="text-align: center;">Accuracy</th>
+      <th style="text-align: center;">Precision</th>
+      <th style="text-align: center;">Recall</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>News Headlines: Partisian Affiliation</td>
+      <td style="text-align: center;">0.585</td><td style="text-align: center;">0.621</td><td style="text-align: center;">0.607</td>
+      <td style="text-align: center;">0.585</td><td style="text-align: center;">0.621</td><td style="text-align: center;">0.607</td>
+    </tr>
+    <tr>
+      <td>News Headlines: Publisher</td>
+      <td style="text-align: center;">0.008</td><td style="text-align: center;">0</td><td style="text-align: center;">0.011</td>
+      <td style="text-align: center;">0.004</td><td style="text-align: center;">0.002</td><td style="text-align: center;">0.01</td>
+    </tr>
+    <tr>
+      <td>News Headlines: Publisher and Partisian Affiliation</td>
+      <td style="text-align: center;">0.008</td><td style="text-align: center;">0</td><td style="text-align: center;">0.008</td>
+      <td style="text-align: center;">0.004</td><td style="text-align: center;">0</td><td style="text-align: center;">0.008</td>
+    </tr>
+    <tr>
+      <td>Climate Bills: Sponsor Affiliation</td>
+      <td style="text-align: center;">0.454</td><td style="text-align: center;">0.44</td><td style="text-align: center;">0.478</td>
+      <td style="text-align: center;">0.434</td><td style="text-align: center;">0.396</td><td style="text-align: center;">0.457</td>
+    </tr>
+    <tr>
+      <td>Climate Bills: Sponsor State</td>
+      <td style="text-align: center;">0.033</td><td style="text-align: center;">0.019</td><td style="text-align: center;">0.019</td>
+      <td style="text-align: center;">0.034</td><td style="text-align: center;">0.035</td><td style="text-align: center;">0.049</td>
+    </tr>
+    <tr>
+      <td>Climate Bills: Metadata</td>
+      <td style="text-align: center;">0.029</td><td style="text-align: center;">0</td><td style="text-align: center;">0.005</td>
+      <td style="text-align: center;">0.017</td><td style="text-align: center;">0.009</td><td style="text-align: center;">0.036</td>
+    </tr>
+    <tr>
+      <td>Climate Bills: Bill Type</td>
+      <td style="text-align: center;">0.09</td><td style="text-align: center;">0.353</td><td style="text-align: center;">0.305</td>
+      <td style="text-align: center;">0.461</td><td style="text-align: center;">0.309</td><td style="text-align: center;">0.293</td>
+    </tr>
+    <tr>
+      <td>Climate Bills: Hearing Committee</td>
+      <td style="text-align: center;">0.022</td><td style="text-align: center;">0.002</td><td style="text-align: center;">0.014</td>
+      <td style="text-align: center;">0.009</td><td style="text-align: center;">0.012</td><td style="text-align: center;">0.047</td>
+    </tr>
+  </tbody>
+</table>
 
 
 #### Gini Model Evaluation
