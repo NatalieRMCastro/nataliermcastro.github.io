@@ -124,9 +124,13 @@ The distribution of the Partisian Labels are illustrated below. It is important 
     </div> 
 </section> 
 
-The method section is split into two parts, first an explanation of how the MNB models were fit. As noted earlier, there is eight different dataframes which MNB will be trained on, so internal consistency is important - especially when evaluating the performance of different labels tandemly. Next, the evaluation function is described and its application. 
+The method section is split into two parts, first an explanation of how the MNB models were fit. As noted earlier, there is eight different dataframes which MNB will be trained on, so internal consistency is important - especially when evaluating the performance of different labels tandemly. Next, the evaluation function is described and its application. The [Multinomial Naïve Bayes](https://en.wikipedia.org/wiki/Naive_Bayes_classifier#Multinomial_naive_Bayes) model was selected because of the multiplicity of dimensions and complexity presented in the data. 
 
 #### Systemicatically Fitting the Multinomial Naïve Bayes Models
+
+To systemctically fit the model, a custom function was needed. The idea behind this function was to internally train, assess, and visualize the performance of the MNB with respect to a particular dataset. The first inputs to this function are the training data and testing data, their respective labels. This is essential from training the models and assessing them. Next, the column name is needed for the label, as the function will then drop the labels that were preserved during data preparation. The confusion matrix graph title and file name are the subsequent inputs. The final parameters are used in the generation of the visual confusion matrix, and will be explained in the next section. 
+
+After instantiating an unparameratized, or the defaults of MNB provided by [SciKit Learn](http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.MultinomialNB.html). The model is then trained using the *mnb_model.fit()* attribute. The predictions are then generated, and passed into the *model_verification* function and then visualized. The output of the function are the respective precision, accuracy, and recall scores and a confusion matrix both displayed and saved to the local machine. 
 
 ```python
 def mnb_modeler(data_train, labels_train, data_test, labels_test, label_column_name,  graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
@@ -156,7 +160,14 @@ def mnb_modeler(data_train, labels_train, data_test, labels_test, label_column_n
     return (accuracy, precision, recall)
 ```
 
+<a id="evaluation-metrics"></a>
 #### Devoping a System for Model Evaluation
+There are three metrics used to commonly assess machine learning models. These are [recall, precision, and accuracy](https://en.wikipedia.org/wiki/Precision_and_recall). To generate these metrics, the 'positives' and 'negatives' are calculated. A 'positive' may be understood in regards to both a gold (or true) porsitive and a system positive. A 'negative' is essentially the other label, or series of them. The overlap between the system and gold positives are referred to as 'true positives', however, if the system predicted another label for the label in question, this is referred to as a 'false negative'. 'False postivies' are similar to a 'false negative' in the sense that it was an inocrrect prediction for the label. The 'true negative' is the pair to the 'true positive' and is when the system and gold labels are aligned.
+
+Using a combination of the positive and negative labels, recall, precision, and accuracy may be calculated. Precision is the number of true positives divided by everything the system predicted to be that label. This measures the "percentage of the items that the system detected that are in fact positive" (Jurasky and Martin: 2025). Next, recall is the number of true positives divided by the number of items that had the true positive label. This is measuring "the percentage of items actually present in the input that were correctly identified by the system". Finally, is accuracy. This calculates how many total correct observations were labeled divided by the size of the corpus. This measures how accuracte the model was with respect to the entire corpus. 
+
+The definitions outlined here focus on binary labels (like partisian affiliation), however, when calculating for additional labels [marcro averaging](https://web.stanford.edu/~jurafsky/slp3/4.pdf#page=13.29) is reported - as it demosntrates the general preformance for each class (Jurafsky and Martin: 2025). 
+
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
@@ -167,7 +178,14 @@ def mnb_modeler(data_train, labels_train, data_test, labels_test, label_column_n
 </section>
 *Image Source: Jurafsky and Martin, Speech and Language Processing, page 67*
 
+To systemtically compute each [recall](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html#sklearn.metrics.recall_score), [accuracy](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.accuracy_score.html), and [precision](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html), with a macro average SciKit Learn's Metrics Package was utilized. for precision and recall, the average was set to macro to ensure correct reporting of the evaluation metrics. 
+
+This function was utilized to feed into the [visual confusion matrix](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes-code.html). Using the predictions, a confusion matrix may be generated to understand how accurate the model is at a glance. The intuition behind these matricies is that the diagonal, going from upper left corner to lower right corner, should have the largest classification of predictions - that is is the model is trained accurately. Any patterns that aren't necessarily a clean diagonal indicate misunderstandings in the models learning, and deeper discussion should be presented with regards to speculating *why* the model has learned in the way it did.
+
 ```python
+from sklearn import metrics
+from sklearn.metrics import precision_score, recall_score, accuracy_score,
+
 def model_verification(true_labels, predictions):
     accuracy = accuracy_score(true_labels, predictions)
     precision = precision_score(true_labels, predictions, average='macro', zero_division = 0)
