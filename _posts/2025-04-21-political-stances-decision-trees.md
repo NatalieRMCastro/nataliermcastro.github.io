@@ -355,7 +355,9 @@ This essentially means that the maximum value of entropy is dependent on the num
   style="border: none;">
 </iframe>
 
-The Bill Sponsor Information Root Node beings with 'temperatur' starts 
+The Bill Sponsor Information Root Node beings with 'temperatur' starts with an entropy of 1.585. This is less than the entropy in the folllowing root node for Bill Type. The next leaf node is split between the Republican Label or the Independent Label. The node is the 'disabl'. This than roots into the Republican or Independent Class. It Is not until a depth of three until the Democrat label is mentioned. Once it is, the words which are illustrative of the Democrat label are 'literaci', 'barrag', 'taken', 'past', and 'extrem'. words which are important to the Republican label are 'program', 'capito', 'fall', 'deriv', 'network', and 'box'.
+
+The words identified as salient here are different than that in the [LDA clustering](https://nataliermcastro.github.io/projects/2025/03/28/political-stances-lda.html#findings) and [Association Rule Mining](https://nataliermcastro.github.io/projects/2025/03/15/political-stances-arm.html#ARM_Viz). 
 
 ### Decision Tree: Bill Type
 <iframe
@@ -365,6 +367,11 @@ The Bill Sponsor Information Root Node beings with 'temperatur' starts
   style="border: none;">
 </iframe>
 
+The root node for bill type is "SJRES", or Senate Led Join resolution, which then leafs into the 'HCONRES' or "HJRES". It is determined that the lemma 'hollen' is salient in identifying this distinction, however the lemma is 2.916. When exploring the tree, some of the words are more representative of that of those in the LDA clustering, like 'famil' (HR), 'construct' (SCONRES), or 'damag' (HR).
+
+In comparison to the tree generated for both Sponsor Affiliation and News Headlines, the tree is more diverse and illustrative of the multi-class complexity when discriminating between proposed bill types.
+
+
 ### Decision Tree: News Headlines 
 <iframe
   src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/NatalieRMCastro/nataliermcastro.github.io/89c8ed91d5d8d2a8f1387f0795ca1abcab36f197/assets/images/Decision%20Tree%20-%20News%20Headlines%20Partisan%20Affiliation%20Entropy.pdf"
@@ -373,5 +380,11 @@ The Bill Sponsor Information Root Node beings with 'temperatur' starts
   style="border: none;">
 </iframe>
 
+The root node for news headlines considers the word 'angeles' (D). The leaf nodes split and interesting illustrate the next word as 'democrat' with an entropy of 0.999 for the class 'Republican'. This may illustrate the interconnectedness and complexity of media polarization. The next splits are wildfire (R), Biden (R), right (R), president (D), or watch (R). This [data](https://nataliermcastro.github.io/projects/2025/01/14/political-stances-data.html) was collected shortly after the [Los Angeles wildifres](https://en.wikipedia.org/wiki/January_2025_Southern_California_wildfires), which may shape the output of the decision tree.
+
 <a id="conclusion"></a>
 ### Conclusions
+
+For the collected data, the Decision Tree model preformed poorly. It did not preform competitvely with SVM or Naive Bayes. In addition, in the cases which it had similar accuracy, the other preformance metrics were decreased. It is suggested to consider the illustration of patterns within this dataset less so through the framework presented here.
+
+In response to the physical nodes that were provided in the visualizations, they are logical, however are not aligned with the clustering methods which are presented in earlier stages of this analysis. It would be intresting to consider how these relate to each other in an attempt to holistically answer the research questions presented in the introduction.
