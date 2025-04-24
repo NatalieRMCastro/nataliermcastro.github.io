@@ -73,9 +73,15 @@ def sentiment_translator(x):
         return ("Negative")
 ```
 
-<section>
-		<p><span class="image left"><img src="/assets/images/sentiment full text.png" alt="Snippet of the full text cell. The second row says 'biden biden cimate come cop death green job'" /></span> This is a portion of the combined text that was generated from the CountVectorizer counts. This function utilized *x* as an input, which would then be lambda applied to an alphabatized text string (as the data was reconstructed from the Count Vectorizer counts). This generated a sentiment value column, which would then be converted using the *sentiment_translator* into a categorical label. The threshold of 0.7 was selected after an exploratory analysis of both the data and the distribution of sentiment.</p>
-	</section>
+ <section>
+	<p><span class="image righ">
+		<img src="/assets/images/sentiment full text.png" 
+		     alt="Snippet of the full text cell. The second row says 'biden biden cimate come cop death green job'" 
+		     style="width: 96px;" />
+	</span> 
+	This is a portion of the combined text that was generated from the CountVectorizer counts. This function utilized *x* as an input, which would then be lambda applied to an alphabatized text string (as the data was reconstructed from the Count Vectorizer counts). This generated a sentiment value column, which would then be converted using the *sentiment_translator* into a categorical label. The threshold of 0.7 was selected after an exploratory analysis of both the data and the distribution of sentiment.</p>
+</section>
+
 
 #### Sentiment Distribution for the Testing Dataset
 <section class="gallery">
