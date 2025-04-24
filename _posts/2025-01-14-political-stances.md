@@ -36,7 +36,7 @@ This page houses the current work for my text mining course (Spring 2025), where
 		</div>
   		<div class="col-6 col-12-small">
 			<ul class="actions stacked">
-				<li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-neural-networks.html" class="button fit small">Neural Networks</a></li>
+				<li><a href="https://nataliermcastro.github.io/projects/2025/04/24/political-stances-neural-networks.html" class="button fit small">Neural Networks</a></li>
 			</ul>
 		</div>
   		<div class="col-6 col-12-small">
