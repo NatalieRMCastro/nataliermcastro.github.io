@@ -359,6 +359,12 @@ The classifier had the most success at discriminating between bills introducing 
 
 ### Conclusions
 
+The Naive Bayes model was able to accurately classify partisan labeling present in news headlines and proposed climate bills. The classier was able to most accurately classify news headlines, however had a higher accuracy evaluation rate for proposed climate bills. This finding suggests that the language used to delineate between the two partisian affiliations is clear - polarization was able to be detected in the text. It should be noted that I use polarization here to illustrate difference, not necessarily anomisty. The model struggled to accurately identify the Independent party, however the bills that were introduced by Independnet Sponsors were most often actually Democrat. 
+
+This partisian conclusions may be drawn because the model was not able to delineate as well other labels in the text such as the publisher of the news headline or the state which the bill sponsor represents. However, both the bill sponsor state, and the metadata (bill type, partisian affiliation, and sponsor state) both illustrated clear demarcations as the brightest part of the confusion matrix was along the diagonal.
+
+Proposed climate change bills are able to be classified into their respective sponsor characteristics, and in some cases even bill committee. This demonstrates that there is a difference in [problematizations](https://www.adelaide.edu.au/graduate-research/ua/media/162/wpr-summary.pdf) which underlie the language used to construct action regarding climate policy. In addition the [observed media polarization](https://www.pewresearch.org/topic/news-habits-media/media-society/politics-media-1/media-polarization/) holds consistent in the findings illustrated here.
+
 ---
 ### Bibliography
 
