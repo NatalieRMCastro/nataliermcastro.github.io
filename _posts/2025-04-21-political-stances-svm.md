@@ -16,7 +16,20 @@ in_feed: false
 </section> 
 
 ### Overview
+The Support Vector Machine (SVM) preforms linear classification (among with other kernels) to project the data into classifications, based on their long vector inputs. Applying this model to text data may allow for classification of unlabeled text. This classification is based in [Vapnik's statistical learning theory ](https://en.wikipedia.org/wiki/Vapnik%E2%80%93Chervonenkis_theory) which has provided insight into the classification of text. These methods inform the ability to understand nuance and future action of a particular text. For exampale, the query '[using support vector machines to predict the future](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C6&q=using+support+vector+machines+to+predict+the+future&btnG=)' generates over one million citations on Google Scholar. Specifically in the context of bills, it may be insightful to understand the characteristics and similarities to understand how bills change and evolve both spatially and temporally. Applying SVM to news data may provide insights into media bias as well. How are certain features in the news cycle represented differently by different sources and within different contexts? Applyinng SVM in for this case will provide insight into differences of language when reporting on partisian issues and how this polarization (may or may not) be present in proposed climate oriented bills. 
 
+**Table of Contents**
+- [Sentiment Analysis](#sentiment-analysis)
+- [Data Preparation](#data-prep)
+- [Method](#method)
+- [Model Evaluation](#results-model-evaluation)
+- [Assessing the Preformance of SVM Models](#results-model-evaluation)
+- [Assessing the Classifications of the Polynomial Cost 1000 SVM](#polynomial-classifications)
+- [Conclusions](#conclusions)
+  
+---
+
+ <a id="sentiment-analysis"></a>
 ### Sentiment Analaysis
 The sentiment was calculated for all news articles and climate bills in an attempt to generate a classifier which preforms well on sentiment. This decision was motivated as it may be interesting to train a classifier - in addition to the tools already provided - in an attempt to identify nuance within sentiment. To generate a sentiment label to compliment the eight labels in the data already, NLTK was utilized. The [Seniment Intensity Analyzer from the Vader attribute](https://www.nltk.org/api/nltk.sentiment.vader.html#nltk.sentiment.vader.SentimentIntensityAnalyzer) was utilized to generate a numerical score referred to as the 'compound'. It illustrates how strong a particular emotion is throughout the text. 
 
@@ -65,7 +78,7 @@ This function utilized *x* as an input, which would then be lambda applied to an
 	</div>
 </section>
 
-
+ <a id="data-prep"></a>
 ### Data Preparation
 
 <table>
@@ -86,6 +99,7 @@ This function utilized *x* as an input, which would then be lambda applied to an
 </tbody>
 </table>
 
+ <a id="method"></a>
 ### Method
 <section>
     <div class="row">
@@ -122,7 +136,7 @@ This function utilized *x* as an input, which would then be lambda applied to an
 
 Multiple Kernels and costs were tested to exhaust the possibilities of the model. The linear kernel 
 
-
+ <a id="results-model-evaluation"></a>
 ### Assessing the Preformance of Multiple Iterations of SVM
 Across all tests, the relative performance of different labels is similar. The Sentiment classification has the highest accuracy with a range between 93% and 94% for Climate Bills. The precision and recall mirror these patterns with the same rate of prediction. The News headlines have a larger range between 89%  and 90%. Precison tends to be above the accuracy, ranging between 82% - 94%. The recall is much lower, yet comparable to the scores of the other 'well' preforming labels in the news data. It ranges from 58% to 66%. The model had similar preformance trends to that of the Naive Bayes model and the same labels.
 
@@ -164,6 +178,7 @@ Across all tests, the relative performance of different labels is similar. The S
 
 So... what is the best model? The polynomial kernel with cost 1000. The data was paritioned using a "U" like concave into the other classification. This works particulary well for this type of data because in some cases, the labels are binary - in addition, the few testing instances that are negative may make their features *more salient* because they are more unique in this way. To keep the discussion concisce, only the results from this particular model will be reported. If desired, the outputs from the models are all listed in the [GitHub version of the code notebook](https://github.com/NatalieRMCastro/climate-policy/blob/main/8.%20Support%20Vector%20Machines.ipynb).
 
+ <a id="polynomial-classifications"></a>
 ### Assessing the Classifications of the Polynomial Cost 1000 SVM
 <section class="gallery">
 	<div class="row">
@@ -200,4 +215,5 @@ So... what is the best model? The polynomial kernel with cost 1000. The data was
 	</div>
 </section>
 
+ <a id="conclusions"></a>
 ### Conclusions
