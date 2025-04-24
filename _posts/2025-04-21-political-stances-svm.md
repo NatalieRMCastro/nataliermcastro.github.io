@@ -28,6 +28,28 @@ The Support Vector Machine (SVM) preforms linear classification (among with othe
 - [Conclusions](#conclusions)
   
 ---
+The data utilized in this method is similar to that of the other machine learning methods applied. A lemmatized version of the Count Vectorizer was utilized. This data may be found at my [Hugging Face Collection](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136). 
+
+Illustrated below is the dataframe which stores the counts utilized to calculate probabilities which help the model 'learn'. Described in the following sections is the steps used to generate a sentiment label for each of the text files and then the additional data preparation for supervised learning.
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - bills data.png" alt="Labeled Proposed Climate Bill Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/NB - news data.png" alt="Labeled News Headline Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
 
  <a id="sentiment-analysis"></a>
 ### Sentiment Analaysis
@@ -50,7 +72,10 @@ def sentiment_translator(x):
     else:
         return ("Negative")
 ```
-This function utilized *x* as an input, which would then be lambda applied to an alphabatized text string (as the data was reconstructed from the Count Vectorizer counts). This generated a sentiment value column, which would then be converted using the *sentiment_translator* into a categorical label. The threshold of 0.7 was selected after an exploratory analysis of both the data and the distribution of sentiment.
+
+<section>
+		<p><span class="image left"><img src="/assets/images/sentiment full text.png" alt="Snippet of the full text cell. The second row says 'biden biden cimate come cop death green job'" /></span> This is a portion of the combined text that was generated from the CountVectorizer counts. This function utilized *x* as an input, which would then be lambda applied to an alphabatized text string (as the data was reconstructed from the Count Vectorizer counts). This generated a sentiment value column, which would then be converted using the *sentiment_translator* into a categorical label. The threshold of 0.7 was selected after an exploratory analysis of both the data and the distribution of sentiment.</p>
+	</section>
 
 #### Sentiment Distribution for the Testing Dataset
 <section class="gallery">
