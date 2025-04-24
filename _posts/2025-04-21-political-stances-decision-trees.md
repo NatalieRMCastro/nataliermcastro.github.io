@@ -334,6 +334,8 @@ The classifications observed by the evaluation metrics for both Gini and Entropy
 
 Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn. To generate these visualizations, the values (or impurity) scores were removed, and the class name was added to the node in order to identify more clearly the detail within the tree.
 
+**Note: If the browser you are working in does not display the PDFs, they work in Chrome :), thank you**
+
 ### Decision Tree: Bill Sponsor Affiliation
 <iframe
   src="https://mozilla.github.io/pdf.js/web/viewer.html?file=https://raw.githubusercontent.com/NatalieRMCastro/nataliermcastro.github.io/89c8ed91d5d8d2a8f1387f0795ca1abcab36f197/assets/images/Decision%20Tree%20-%20Climate%20Bills%20Sponsor%20Affiliation%20Entropy.pdf"
