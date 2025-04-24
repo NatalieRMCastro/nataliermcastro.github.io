@@ -291,42 +291,45 @@ The Entropy model had stronger preformance than the Gini model. It specically in
 The classifications observed by the evaluation metrics for both Gini and Entropy illustrate that the data may not be a good fit for the Decision Tree model.
 
 #### Label Classification: Consufion Matrix Comparison
+
+Presented above are the limitations of the Decision Tree method through the framework of evaluation metrics. Presented below are the confusion matricies which will contextualize these errors. The discussion presented here is caveated with an understanding of the above (atrocious) preformance metrics.
+
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree gini cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- bills partisian affiliation.png" alt="" /></a>
 			<h3> Gini Partisian Affiliation Labeling for Climate Bills </h3>
-			<p> TEXT </p>
+			<p> The model was more likely to predict the Democrat Label than the Republican Label. Many of hte misclassifications were of the Independent party. Many of the true Democrat labels were predicted as Republican - more so than the predictions of the the true Democrat label. This suggests that the model favored the Republican party when assigning classificatons. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree entropy cm- bills partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bills partisian affiliation.png" alt="" /></a>
 			<h3> Entropy Partisian Affiliation Labeling for Climate Bills </h3>
-			<p> TEXT </p>
+			<p> The Entropy model follows a similar trend as the Gini model. The Entropy model was not able to accurately predict the Republican model as well, and has more Democrat and Independent mis-predictions than the Gini Model. The preformance of the Democrat label increased, with less misclassifications than the entropy model. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree gini cm- news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- news partisian affiliation.png" alt="" /></a>
 			<h3>Gini Partisian Affiliation Labeling for News Headlines</h3>
-			<p> TEXT .</p>
+			<p> The Gini model again favored Repblican Predictions, but matched the preformance of the Entropy Model exactly. This is interseting and suggests that there are som esaleint features which were confusing the models when deliniating between media origented predictions.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree entropy cm- news partisian affiliation.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- news partisian affiliation.png" alt=" " /></a>
 			<h3>Entropy Partisian Affiliation Labeling for News Headlines</h3>
-			<p> TEXT </p>
+			<p>Both the Gini and Entropy models struggled to accurately predict the Democrat Label and had the most false negatives in that category. </p>
 		</article>
   <article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree gini cm- bill type label.png" class="image fit thumb"><img src="/assets/images/decision tree gini cm- bill type label.png" alt="" /></a>
-			<h3>Entropy Proposed Bill Type Labeling</h3>
-			<p> TEXT .</p>
+			<h3>Gini Proposed Bill Type Labeling</h3>
+			<p> The Gini Model  was most sensitive to HR predictions, however, many of which were misclassifications for the HConRes. The model was most likely to predict the labels 'HConRes', 'S', and 'SConRes'. Illustrated from the preformance metrics, many of these were just by chance guesses as the precision and recall are rather low.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/decision tree entropy cm- bill type label.png" class="image fit thumb"><img src="/assets/images/decision tree entropy cm- bill type label.png" alt=" " /></a>
 			<h3>Entropy Proposed Bill Type Labeling</h3>
-			<p> TEXT </p>
+			<p> The Entropy Model favored the HR label. It was ale to accurately predict 73% of the bills that originated from the House of Representatives. The mdoel frequently confused the HR proposed bills with S proposed. This is different than the Gini model due to the attention to the larger points of origination in comparison to the resolutions. </p>
 		</article>
 	</div>
 </section>
 
-
+*[View Table Explaining Bill Types](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-trees.html)*
 
 
 
