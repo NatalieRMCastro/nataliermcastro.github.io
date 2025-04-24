@@ -18,49 +18,26 @@ in_feed: false
 ### Overview
 A decision tree is used to identify which features are important in a label. The salient features are those which are discriminating factors to determine what is important to a particular label. For example, a decision tree can provide important information about what is important for 'Republican', or a particular news media company. 
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/decision tree example.png" alt=""  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-Image Citation: [Geeks for Geeks Decision Tree](https://www.geeksforgeeks.org/decision-tree/)
-
 The discrimate word, or the root node, is used as the original split for the classification path. The features included in a decision tree subsqeuntly then show 'lef nodes' which are further paritions of the root node. The tree will then generate until the paritions are no longer fit (either decided through parameters or the data is exahusted). 
-
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/decision tree node example.png" alt=""  /></span> 
-			</div>
-		</div>
-	</div>
-</section>
-
-Image Citation:[ Abhigyan "Understanding Decision Tree!!"](https://medium.com/analytics-vidhya/understanding-decision-tree-3591922690a6)
 
 The nodes generate a parallel leaf which illustrate the change of a particular item, with respect to the other options that are available to it. For this example the chance is demonstarted in the node on the right. Until the leaf reaches its final node, the chance is not yet illustrated clearly through a special model type, samples, and class nodes.
 
-<section>
-	<div class="box alt">
-		<div class="row gtr-50 gtr-uniform">
-			<!-- Image Column -->
-			<div class="col-6 col-12-medium">
-				<span class="image fit">
-					<img src="/assets/images/decision tree example.png" alt="" style="width: 96px; height: auto;" />
-				</span>
-			</div>
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree example.png" class="image fit thumb"><img src="/assets/images/decision tree example.png" alt="" /></a>
+			<h3>Decision Tree Structure</h3>
+   <p>Image Citation: <a href="https://www.geeksforgeeks.org/decision-tree/" target="_blank">Geeks for Geeks Decision Tree</a></p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/decision tree node example.png" class="image fit thumb"><img src="/assets/images/decision tree node example.png" alt="" /></a>
+			<h3>Decision Tree Nodes</h3>
+			<p>Image Citation: <a href="https://medium.com/analytics-vidhya/understanding-decision-tree-3591922690a6" target="_blank">Abhigyan "Understanding Decision Tree!!"</a></p>
 
-			<!-- Text Column -->
-			<div class="col-6 col-12-medium">
-				<p>This image represents a sample decision tree node. It’s shown here for reference in understanding how categorical splits are applied during model training.</p>
-			</div>
-		</div>
+		</article>
 	</div>
 </section>
+
 
 
 **Table of Contents**
