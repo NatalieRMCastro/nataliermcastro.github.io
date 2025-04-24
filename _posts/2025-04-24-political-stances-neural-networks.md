@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Political Stances: Decision Trees"
+title: "Political Stances: Neural Networks"
 categories: projects
 published: true
 in_feed: false
