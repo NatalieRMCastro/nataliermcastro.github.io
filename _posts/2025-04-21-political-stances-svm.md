@@ -134,7 +134,57 @@ This function utilized *x* as an input, which would then be lambda applied to an
 </div>
 *Image Source: [Plot Classification Boundaries with Different SVM Kernels](https://scikit-learn.org/stable/auto_examples/svm/plot_svm_kernels.html)*
 
-Multiple Kernels and costs were tested to exhaust the possibilities of the model. The linear kernel 
+Multiple Kernels and costs were tested to exhaust the possibilities of the model. The linear kernel was selected because of its simplicity. It draws a line through the data in order to separate the paritions. Next, the polynomial kernel was selected in an attempt to provide the model with forgiveness in real-life language, as often polarization and text labels are more nuanced than the binary. The third kernel selected was Radial Basis Kernel (RBF), which generates data clusters. This kernel was selected to continue the clustering methods applied earlier in the project, and to also identify more nuance between multi-dimensional labels. 
+
+```python
+svm_model = sklearn.svm.SVC(C=100, kernel = 'rbf', degree = 3, gamma = 'scale', verbose = True)
+```
+
+The SVM model instantiation, through SciKitLearns [Support Vector Classification ](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html) function. The cost was changed iteratively to either 100 or 1000. The intution behind [cost](https://scikit-learn.org/stable/auto_examples/svm/plot_svm_scale_c.html#sphx-glr-auto-examples-svm-plot-svm-scale-c-py) is its use for regularizaiton. This is then multiplied by the loss function and penalty in order to classify the instance. High cost was set in this model in order to control for the high dimensionality present in the data. The gamma was set to scale in an attempt to control for the kernel coefficient systematically across the data. This is also the rational for keeping the degree set at 1, which represents fair linearity across the different models. The findings below are a comparison of cost - not how other parameters are changed.
+
+Similar to [Naïve Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#method) and [Decision trees](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-trees.html#method), an SVM modeler function was generated. The change in this function is that it requires an SVM model. This was used in order to easily change the parameters needed for the model. 
+
+```python
+def svm_modeler(svm_model, data_train, labels_train, data_test, labels_test, label_column_name,
+                graph_title, labels_name, file_name,filter_top_n = False, N=10 ,fig_x = 6, fig_y = 4):
+    data_train = data_train.drop(columns = label_column_name).copy()
+    data_test = data_test.drop(columns = label_column_name).copy()
+    
+    feature_names_train = list(data_train.columns)
+    feature_names_test = list(data_test.columns)
+    
+    ## These may be edited depending on the test
+
+    ## Fitting the data
+    svm_model.fit(data_train, labels_train)
+    
+    ## Creating predictions
+    predictions = svm_model.predict(data_test)
+    
+
+    ## Assessing the models abilitiy
+    accuracy, precision, recall = model_verification(labels_test, predictions)
+    
+    ## Filtering for Clean Visualizations
+        ## Filtering for Clean Visualizations
+    if filter_top_n:
+        # Call filter_top_n_labels to get filtered labels and predictions
+        labels_test_filtered, predictions_filtered = filter_top_n_labels(labels_test, predictions, N)
+
+        # If data remains after filtering, create the filtered confusion matrix
+        if len(labels_test_filtered) > 0 and len(predictions_filtered) > 0:
+            visual_confusion_matrix(labels_test_filtered, predictions_filtered,
+                                    f"{graph_title} (Top {N})", labels_name,
+                                    f"filtered_{file_name}", fig_x, fig_y)
+        else:
+            print(f"[Warning] No data left after filtering top {N} labels — skipping confusion matrix.")
+    else:
+        # If no filtering is needed, generate confusion matrix with all data
+        visual_confusion_matrix(labels_test, predictions, graph_title, labels_name, file_name, fig_x, fig_y)
+    
+    return (accuracy, precision, recall)
+```
+The same evaluation metrics (accuracy, recall, and precision) were generated using the functions described in Naive Bayes. The definition of these metrics are provided at length in [its own section on the page](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes#evaluation-metrics.html). The confusion matricies where generated in the same way in order to compare between the models in the final conclusions. 
 
  <a id="results-model-evaluation"></a>
 ### Assessing the Preformance of Multiple Iterations of SVM
