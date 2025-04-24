@@ -16,6 +16,33 @@ in_feed: false
 </section> 
 
 ### Overview
+A decision tree is used to identify which features are important in a label. The salient features are those which are discriminating factors to determine what is important to a particular label. For example, a decision tree can provide important information about what is important for 'Republican', or a particular news media company. 
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/decision tree example.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+Image Citation: [Geeks for Geeks Decision Tree](https://www.geeksforgeeks.org/decision-tree/)
+
+The discrimate word, or the root node, is used as the original split for the classification path. The features included in a decision tree subsqeuntly then show 'lef nodes' which are further paritions of the root node. The tree will then generate until the paritions are no longer fit (either decided through parameters or the data is exahusted). 
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/decision tree node example.png" alt=""  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+
+Image Citation:[ Abhigyan "Understanding Decision Tree!!"](https://medium.com/analytics-vidhya/understanding-decision-tree-3591922690a6)
+
+The nodes generate a parallel leaf which illustrate the change of a particular item, with respect to the other options that are available to it. For this example the chance is demonstarted in the node on the right. Until the leaf reaches its final node, the chance is not yet illustrated clearly through a special model type, samples, and class nodes.
 
 **Table of Contents**
 - [Data Preparation](#data-prep)
