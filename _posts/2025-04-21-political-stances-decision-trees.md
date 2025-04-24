@@ -44,13 +44,13 @@ The nodes generate a parallel leaf which illustrate the change of a particular i
 - [Data Preparation](#data-prep)
 - [Method](#method)
 - [Evaluating The Gini and Entropy Decision Trees](#results-model-evaluation)
-- [A Naive Reading of the News](#results-news-data)
-- [Interpreting Features about Climate Bills Naively](#results-bills-data)
-- [Conclusions](#conc)
+- [Decision Tree Confusion Matricies](#confusion-matrix)
+- [Branching of Labels: Visualizing Salient Factors](#results-generated-trees)
+- [Conclusions](#conclusion)
   
 ---
 
- <a id="data-prep"></a>
+<a id="data-prep"></a>
 ### Data Preparation
 Data was prepared using the same functions outlined in great detail in the Naive Bayes model. It can be reviewed [here](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#data-prep), or in any of the linked notebooks. The training and testing split is similar to that of the Naive Bayes model as well. A headed version of the dataframes are provided here alongside with the distribution of the train, test, split.
 
@@ -91,6 +91,7 @@ Data was prepared using the same functions outlined in great detail in the Naive
 
 The same naming scheme and train and test scheme were applied across all machine learning methods applied here. This is in order to be able to compare the methods and discuss the original nuance between them. For all three methods, the exact same data preparation was applied - which is why it is not repeated here. 
 
+<a id="method"></a>
 ### Method
 <section>
     <div class="row">
@@ -290,6 +291,7 @@ The Entropy model had stronger preformance than the Gini model. It specically in
 
 The classifications observed by the evaluation metrics for both Gini and Entropy illustrate that the data may not be a good fit for the Decision Tree model.
 
+<a id="confusion-matrix"></a>
 #### Label Classification: Consufion Matrix Comparison
 
 Presented above are the limitations of the Decision Tree method through the framework of evaluation metrics. Presented below are the confusion matricies which will contextualize these errors. The discussion presented here is caveated with an understanding of the above (atrocious) preformance metrics.
@@ -329,15 +331,21 @@ Presented above are the limitations of the Decision Tree method through the fram
 	</div>
 </section>
 
-*[View Table Explaining Bill Types](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-decision-trees.html)*
+*[View Table Explaining Bill Types](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html)*
 
 
-
+<a id="results-generated-trees"></a>
 ### Decision Tree Visualization
 
-Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn. To generate these visualizations, the values (or impurity) scores were removed, and the class name was added to the node in order to identify more clearly the detail within the tree.
+Due to the lower results of the ability to classify across many labels, the decision trees illustrated here are the only models that may be assumed were not direct guesses, and illustrative of the models ability to learn. To generate these visualizations, the values (or impurity) scores were removed, and the class name was added to the node in order to identify more clearly the detail within the tree. If any of the words are truncated, it is because the original data was lemmatized. This encapsulates multiple wordforms and helps to demonstrate the root idea. For example, the lemma 'extrem' may represent any of the words 'extreme', 'extremely', or 'extremital'. These variations are used in many other [NLP studies](https://scholar.google.com/scholar?hl=en&as_sdt=0%2C6&q=lemmatization+nlp&btnG=), which is why they are left in lemma form here.
 
-**Note: If the browser you are working in does not display the PDFs, they work in Chrome :), thank you**
+The measure '[entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))' will be discussed to contextualize the trees. Entropy is the calculation of how random or uncertain something is. This is then calculated using a randomly selected probability for the selected instance to belong in the class. With respect to decision trees, entropy may be understood as information gain, and representative of how important the feature is. This is in part random, as we have constructed language, however, its randomness provides important semantic meaning to the narrative of the particular text. As best described:
+
+<q>"The entropy has its maximum value when all probabilities are equal (we assume the number of possible states is finite), and the resulting value for entropy is the logarithm of the number of states, with a possible scale factor like kB."</q> ([MIT Information Entropy Course Notes, CH 10](https://mtlsites.mit.edu/Courses/6.050/2003/notes/chapter10.pdf))
+
+This essentially means that the maximum value of entropy is dependent on the number of classes, or labels, which are present in the dataset.
+
+**Note: If the browser you are working in does not display the PDFs, they work in Chrome, thank you**
 
 ### Decision Tree: Bill Sponsor Affiliation
 <iframe
@@ -346,6 +354,8 @@ Due to the lower results of the ability to classify across many labels, the deci
   height="600px"
   style="border: none;">
 </iframe>
+
+The Bill Sponsor Information Root Node beings with 'temperatur' starts 
 
 ### Decision Tree: Bill Type
 <iframe
@@ -363,4 +373,5 @@ Due to the lower results of the ability to classify across many labels, the deci
   style="border: none;">
 </iframe>
 
+<a id="conclusion"></a>
 ### Conclusions
