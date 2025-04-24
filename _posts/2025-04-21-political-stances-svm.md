@@ -234,33 +234,33 @@ So... what is the best model? The polynomial kernel with cost 1000. The data was
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/filtered_svm - poly - cost 1000 - news - metadata.png" class="image fit thumb"><img src="/assets/images/filtered_svm - poly - cost 1000 - news - metadata.png" alt="" /></a>
-			<h3>News: Publisher & Partisianship</h3>
-			<p>  </p>
+			<h3>News: Publisher</h3>
+			<p> The model did not learn properly, and predicted the majority of the labels to be of FreeRepublic.Com. This was illustrated similarly in the Naive Bayes modeling. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - news - party.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - news - party.png" alt="" /></a>
 			<h3>News: Partisian Affiliation</h3>
-			<p> </p>
+			<p>The model tended to predict more labels 'Democrat', and predict more 'Democrat' labels than Republican labels. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - news - sentiment.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - news - sentiment.png" alt="" /></a>
 			<h3>News: Sentiment</h3>
-			<p></p>
+			<p>The model preferred to predict negative sentiment, however through counts, it is clear that the majority of the testing set was negative labels.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" alt="" /></a>
 			<h3>Climate Bills: Sentiment</h3>
-			<p></p>
+			<p>The classifier preformed accurately when predicting sentiment and only misclassified 6% of the testing instances./p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" alt="" /></a>
 			<h3>Climate Bills: Sponsor Affiliation</h3>
-			<p></p>
+			<p>The model strugged with predicting the Independent proposed bills, however, preformed better in comparison to the Naive Bayes model. The SVM model preferred to predict Democrat labels over Republican labels.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/filtered_svm - poly - cost 1000 - bills - sponsor state.png" class="image fit thumb"><img src="/assets/images/filtered_svm - poly - cost 1000 - bills - sponsor state.png" alt="" /></a>
 			<h3>Climate Bills: Sponsor State</h3>
-			<p> </p>
+			<p>The model was unable to learn anything meaningful about State Affiliation, as the confusion matrix is 'randomly' colored. </p>
 		</article>
 	</div>
 </section>
