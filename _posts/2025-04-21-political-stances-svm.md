@@ -250,7 +250,7 @@ So... what is the best model? The polynomial kernel with cost 1000. The data was
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sentiment.png" alt="" /></a>
 			<h3>Climate Bills: Sentiment</h3>
-			<p>The classifier preformed accurately when predicting sentiment and only misclassified 6% of the testing instances./p>
+			<p>The classifier preformed accurately when predicting sentiment and only misclassified 6% of the testing instances.</p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" class="image fit thumb"><img src="/assets/images/svm - poly - cost 1000 - bills - sponsor party.png" alt="" /></a>
