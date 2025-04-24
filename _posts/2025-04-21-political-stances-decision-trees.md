@@ -203,9 +203,6 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 	</div>
 </section>
 
-
-</table>
-
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
