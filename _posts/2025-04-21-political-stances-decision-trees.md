@@ -44,6 +44,25 @@ Image Citation:[ Abhigyan "Understanding Decision Tree!!"](https://medium.com/an
 
 The nodes generate a parallel leaf which illustrate the change of a particular item, with respect to the other options that are available to it. For this example the chance is demonstarted in the node on the right. Until the leaf reaches its final node, the chance is not yet illustrated clearly through a special model type, samples, and class nodes.
 
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<!-- Image Column -->
+			<div class="col-6 col-12-medium">
+				<span class="image fit">
+					<img src="/assets/images/decision tree example.png" alt="" style="width: 96px; height: auto;" />
+				</span>
+			</div>
+
+			<!-- Text Column -->
+			<div class="col-6 col-12-medium">
+				<p>This image represents a sample decision tree node. It’s shown here for reference in understanding how categorical splits are applied during model training.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
 **Table of Contents**
 - [Data Preparation](#data-prep)
 - [Method](#method)
