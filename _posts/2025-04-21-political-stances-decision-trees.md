@@ -176,6 +176,10 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 
  <a id="results-model-evaluation"></a>
 ### Evaluating Gini and Entropy Decision Trees
+The precision, recall, and accuracy measures will be reported and compared. By an initial look at the bar charts, it is evident that the model only learned features about paritisan affiliation in news, bill sponsor affiliation and bill type. The preformance of all of the other models illustrate a failure of learning for the more complicated labels such as sponsor state or bill hearing committee.
+
+In this section,first, the evaluation metrics will be reported for the entire set, and then for the three models which had non-zero (some learning) preformance.
+
 
 #### Gini Model Evaluation
 
@@ -188,6 +192,19 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 	</div>
 </section>
 
+**Average Full Model Preformance**
+- Accuracy: 10.18%
+- Recall: 18.12%
+- Precision: 17.8%
+
+**Average Learned Label Preformance**
+- Accuracy: 37.33%
+- Recall: 46.33%
+- Precision: 47%
+
+The overall preformance of the model is poor. The evaluation metrics, specicially that of precision and recall, demonstrate that the model did not learn in many facets. It preformed the best on partisan affiliation for both cliamte bills and news headlines. The Gini model preformed the same on News Headlines paritisan affiliation as [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#results-model-evaluation) (58%) but had a lower accuracy on climate bills (compared to 76%). The Gini Model preformed stronger than the SVM model on News Headlines (54%) but lower on Bill Sponsor evaluation (compared to 80%). 
+
+This demonstrates that in comparison to the other models utilized, and for this data, that the Gini Model would not be appropriate to draw accurate conclusions on.
 
 #### Entropy Model Evaluation
 <section>
@@ -199,6 +216,21 @@ def tree_modeler(data_train, labels_train, data_test, labels_test, label_column_
 	</div>
 </section>
 
+**Average Full Model Preformance**
+- Accuracy: 19.12%
+- Recall: 18.5%
+- Precision: 17.37%
+
+**Average Learned Label Preformance**
+- Accuracy: 49%
+- Recall: 45.33%
+- Precision: 44.33%
+
+The Entropy model had stronger preformance than the Gini model. It specically increased the ability to classify the Bill Type imprving the Gini accuracy from 9% to 46%. However, 'better' does not necessarily mean the model would be able to reliably classify, as while the accuracy is higher the precision and recall averages are both lower. In comparison to the aforementioned comparison between Naive Bayes and the SVM models, the Entropy Model mirrors the preformance of the Gini. The difference lies in the ability for Bill Type Prediction. The Entropy model preforms at an evaluation of 31% (P), 46% (A), and 29% (R). When comparing to the Gini, the models have similar accuracy and recall (35% and 30% respectively), but do not preform as well as the Naive Bayes Model (45% P, 71% A, 46% R) or the SVM Model (76% P, 79% A, 69% R). 
+
+The classifications observed by the evaluation metrics for both Gini and Entropy illustrate that the data may not be a good fit for the Decision Tree model.
+
+#### Label Classification: Consufion Matrix Comparison
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
