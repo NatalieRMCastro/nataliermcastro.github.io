@@ -230,6 +230,11 @@ So... what is the best model? The polynomial kernel with cost 1000. The data was
 
  <a id="polynomial-classifications"></a>
 ### Assessing the Classifications of the Polynomial Cost 1000 SVM
+
+The patterns illustrated here are generated from the Polynomial Cost 1000 SVM. In this case, the patterns are illustrated only in some of the labels because of the length and commplexity of the confuson matrix. In addition the accuracy of the publisher and affiliation, bill metadata, and bill committee scored low on preformance. This suggests that even if there were patterns identified, they may not have actually been learning, and the classifier managed to get a few lucky guesses.
+
+The patterns illustrated in the confusion matricies show minimal learning for the publisher of the news data and the bill sponsor states. The strongest learning is illustrated through sentiment. This may be in part due to the distribution of the training data, and the relatively positive valence scores generally.
+
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
