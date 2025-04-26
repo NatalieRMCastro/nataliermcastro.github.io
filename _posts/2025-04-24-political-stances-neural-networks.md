@@ -46,10 +46,40 @@ What is the advantage of using a neural network to classify climate bills and ne
 ---
 <a id="data-prep"></a>
 ### Data Preparation
+The data needed to for neural networks originates from text data. The data utilized at the start of this process was the raw data. Neural networks need text data, and not counts (like originating from TF-IDF or Count Vectorizer). A function was utilized to preprocess the raw text data. It is used to separate the text, lemmatize the words, and then remove any special tokens. This returns a string of the lemmatized and clean texts. 
+
+```python
+def preprocess(text : str) -> list:
+    ## first, converting the string into a list format
+    text_ = text.split()
+    
+    text_storage = []
+    ## using the wordnet lemmatizer to lemmatize the words
+    for word in text_:
+        lemma = lemmatizer.lemmatize(word)
+        text_storage.append(lemma)
+        
+    ## removing all of the punctuation, special characters, digits, and trailing spaces using RegEx
+    text_for_cleaning = ' '.join(text_storage)
+    clean_text = re.sub('[!@#$%^&*()_+\'",.?*-+:;<>~`0-9]',' ',text_for_cleaning)
+    stripped_text = clean_text.strip()
+    
+    ##splitting the string back into a list 
+    preprocessed_text = stripped_text.split()
+    
+    ## returning the the final processed text
+    return (preprocessed_text)
+```
+
+After processing both the bills and the news data, the sequences have to be embedded. This changes the word tokens into numerical tokens based on the order of the text. Each word in the vocabulary is assigned to a number, which is then organized into vectors which are representative of the sentence. For example the sentence "Trump's first day in office" would then become the vector [4, 19, 32, 21, 7]. To generate a token to index vector a dictionary was used to mangage the conversions. The index zero was reserved for a '[PAD]' token which is used to help truncate the input sequences. In order to preform matrix multiplication and shape the The news tokens were set to have a truncated value of 380 and an input label of 512. 
+
 
 #### Labels
+The Label Encoder from [SciKit Learn](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html) was utilized to encode the labels. 
 
-
+```python
+y_label_train_news_party = label_encoder.fit_transform(y_label_train_news)
+```
 
 <a id="method"></a>
 ### Method
