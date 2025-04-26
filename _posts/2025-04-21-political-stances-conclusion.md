@@ -15,6 +15,13 @@ in_feed: false
     </div> 
 </section> 
 
+Climate chage is an increasingly salient issue, it is ubiqutious in its impact, however highly contentious. Those who reside in the Global South are dispropotionaley impacted by the policy and response to climate change from large companies who reside in the United States - especially those who outsouce their labor. For many, climate change is a daily concern, it results in housing inequality, shift in agriculture, and other daily aspects of well being. Across the world, 2024 was the hottest year on record. 
+
+While tclimate change issues have developed over time, its severity and polarization has increased. After 2009, a clear partisian divide was idenitfied in response to the shift in President Barack Obama's climate policies - and the Republican Media campagain against it. Something similar may be observed in the current news cycle. While President Joe Biden recently granted the largest amount of monies in support of climate preservation policies, President Donald Trump, leading a Republican Trifecta has now pledged to repeal the Green Deal, and more recently impact the funding of many scientific funded agencides. 
+
+
+
+
 
 <section>
 		<p><span class="image right"><img src="/assets/images/TOMAYTO.png" alt="Two people in characicture drawings yelling at a can of tomato soup. One has the pronunciation 'tomayto' the other 'tomahto'."  /></span> Party Polartization feels nearly akin to screaming different things at the same topic (cliamte change).</p>
