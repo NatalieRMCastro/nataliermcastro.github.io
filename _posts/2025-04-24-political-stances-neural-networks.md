@@ -91,5 +91,31 @@ The Neural Network was hand coded. As introduced earlier, the network requires a
 <a id="evaluation"></a>
 ### Evaluating the Neural Network
 
+To evaluate the model, it is asked to predict (with no altered gradient - or it would result to training on the test set!) the testing and validation sets. The predictions are then stored and the evaluation metrics are computer. The evaluation metrics are discussed at length 
+
+``` python
+def evaluation(model, test_loader):
+    for batch in test_loader:
+        test_inputs, test_targets = batch
+        with torch.no_grad():
+            test_outputs = model(test_inputs)
+        
+        predictions = test_outputs.view(-1)
+        predictions = torch.tensor([1 if x >= 0.5 else 0 for x in predictions])
+    
+        accuracy = accuracy_score(test_targets, predictions)
+        precision = precision_score(test_targets, predictions)
+        recall = recall_score(test_targets, predictions)
+        f1 = f1_score(test_targets, predictions)
+        
+        print(f'accuracy: {accuracy}')
+        print(f'precision: {precision}')
+        print(f'recall: {recall}')
+        print(f'f1: {f1}')
+        
+
+    return (predictions, test_targets, accuracy, precision, recall, f1 )
+```
+
 <a id="conclusion"></a>
 ### Conclusions
