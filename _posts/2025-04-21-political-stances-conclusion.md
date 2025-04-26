@@ -26,7 +26,14 @@ Posed at the start of this project were two central research questions:
 These questions were explored through the lens of over 3,000 proposed climate bills and resolutions at the United States federal level in addition to over 800 news articles tagged with paritisan affiliations. Three different categories of text mining methods were applied to generate the following conclusions. 
 
 ### Key Findings
- 
+
+**Text Clustering**
+CLustering illustsrated the prevalence of the Environmental Protection Agency across all bills. The semantic distance between the language used for climate bills were demonstrated to be close to multiple topics suhc as 'greenhouse gas and carbon dioxide', 'lead and contaminated drinking water', or 'threatened wildlife and engaged species'. This prevalence demonstrates that the EPA is synonymolus with different facets of climate policy. Specific partisian differences were not identified through K-Means. This method demonstated different nuance within climate policy. The most prevalent topics helped to illustrate trends within climate policy over time in the United Stated.
+
+This trend is not illustrated as clearly for news sourcces. The largest clusters focused on President Donald Trump, with one cluster about the Los Angeles wildfire. Between the clusters, there was not as much overlap  between pnamed political entities and their partisian affiliation. For example, topics either focused soley on Donald Trump or Joe Biden. There was one exception to this trend with the topic name 'joe biden, job, trump, did'. This was one of the smaller clusters, so it is a small exception to this.
+
+
+
 
 ### Study Implications
 <section>
