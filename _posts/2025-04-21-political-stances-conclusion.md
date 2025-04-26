@@ -27,11 +27,12 @@ These questions were explored through the lens of over 3,000 proposed climate bi
 
 ### Key Findings
 
-**Text Clustering**
-CLustering illustsrated the prevalence of the Environmental Protection Agency across all bills. The semantic distance between the language used for climate bills were demonstrated to be close to multiple topics suhc as 'greenhouse gas and carbon dioxide', 'lead and contaminated drinking water', or 'threatened wildlife and engaged species'. This prevalence demonstrates that the EPA is synonymolus with different facets of climate policy. Specific partisian differences were not identified through K-Means. This method demonstated different nuance within climate policy. The most prevalent topics helped to illustrate trends within climate policy over time in the United Stated.
+**Text Clustering**  
+Clustering illustsrated the prevalence of the Environmental Protection Agency across all bills. The semantic distance between the language used for climate bills were demonstrated to be close to multiple topics suhc as 'greenhouse gas and carbon dioxide', 'lead and contaminated drinking water', or 'threatened wildlife and engaged species'. This prevalence demonstrates that the EPA is synonymolus with different facets of climate policy. Specific partisian differences were not identified through K-Means. This method demonstated different nuance within climate policy. The most prevalent topics helped to illustrate trends within climate policy over time in the United Stated. This trend was identified in both K-Means clustering and Latent Dirichlet Allocation. The consistency across methods supports the accuracy of this finding. Through twenty different topics, it is clear that different concerns such as land, chemical regulations, and environmental factors illustrate the multiciplicty and different complexities of climate regulation. 
 
-This trend is not illustrated as clearly for news sourcces. The largest clusters focused on President Donald Trump, with one cluster about the Los Angeles wildfire. Between the clusters, there was not as much overlap  between pnamed political entities and their partisian affiliation. For example, topics either focused soley on Donald Trump or Joe Biden. There was one exception to this trend with the topic name 'joe biden, job, trump, did'. This was one of the smaller clusters, so it is a small exception to this.
+This trend is not illustrated as clearly for news sources. The largest clusters focused on President Donald Trump, with one cluster about the Los Angeles wildfire. Between the clusters, there was not as much overlap  between pnamed political entities and their partisian affiliation. For example, topics either focused soley on Donald Trump or Joe Biden. There was one exception to this trend with the topic name 'joe biden, job, trump, did'. An additional cluster generated through a different method illustrated paritisan overlap in two topics about the California wildfires and about offshore drilling. This was one of the smaller clusters, so it is a small exception to this. 
 
+**
 
 
 
