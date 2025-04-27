@@ -49,3 +49,13 @@ This page houses the current work for my text mining course (Spring 2025), where
  </section>
 
  Want the data? Visit my [HuggingFace Repository](https://huggingface.co/collections/nataliecastro/climate-policy-bills-67afd0eaa0c3f328d4b00136) 🐻. Want the code? Visit my [GitHub Repository](https://github.com/NatalieRMCastro/climate-policy/tree/main)🐈‍⬛.
+ 
+ ---
+ 
+ <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ip5rw03mFP4" 
+          title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+          encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>
+</div>
