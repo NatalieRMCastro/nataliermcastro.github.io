@@ -34,7 +34,10 @@ This trend is not illustrated as clearly for news sources. The largest clusters 
 
 Association Rule Mining was used to identify was co-occurance between particular words. The words most associate with climate are to be expected, in addition, both political affiliations were illustrated in words that are associated. Government was not illustrated to be aligned with any of the named political parties. For Republican, the words associated highlight more concerns about immigration and climate change with resepect to the administration. The Democrat Associations were illustrated to be aligned with words about concern for welfare and other aspects about well-being.
 
-**
+**Machine Learning**
+Classification methods may illustrate how clear, or learnable, the language is used to delineate partisian ideology. A variety of methods (Support Vector Machines, Naive Bayes, Decision Trees, and Neural Networks) were used to identify how clear these language differences were and to understand the consistency across categories. Between methods, the accuracy was assessed using the same scale. This demonstrated both the strength of some methods in relation to others and the potential 'confusion' which the models may have learned.
+
+Partisian Affiliations were often the most correct label predicted across all methods. In comparison, proposed climate bills were predicted more consistently than news articles. This finding may be in result to how the climate bills are structured. They include the bill type, bill sponsor state, bill sponsor affiliation, and hearing committee in the metadata. Using a classifier in this sense then in the future may be able to predict alignment of text in the future to a corpora of historic bills. A classifier was able to identify with relatively high accuracy the Bill Sponsor's state. Another method struggled to do so consistently. This may suggest that some methods were not the most appropriate to identify ideological diversions while others may 'learn' the features of the text better. 
 
 
 
@@ -48,15 +51,14 @@ Association Rule Mining was used to identify was co-occurance between particular
 ### Study Limitations
 
 
-The findings generated here must be hedged with the natural limitations of these methods. 
-
-<section>
-		<p><span class="image fit"><img src="/assets/images/climate-protest.jpg" alt="People holding up protest signs. One has a large print of the NOAA logo and says 'we save lives'."  /></span> With increasing shifts in government priorities, polarization continues to increase as federal funding fear spreads.</p>
-*Note: This image from a local Colorado news source. The faces of the people in the photo have been blurred and the image citation will not be provided in an attempt to protect the anonymity of the protestors.*
-	</section>
-
+The findings generated here must be hedged with the natural limitations of these methods. Text mining methods are not actually reading the text, nor are they understanding the contextual or historical meaning embedded in the language. In addition, the language used in political text is illustrative of problematized norms and understandings about what is approporiate for bills and resolutions. For these reasons, the language used may be convulated and more challenging to read. This embedded text complicity and nuanced partisian language may not be identified through methods which read only the words which are present in the text. A second limitation may be the labeling strategy used to generate partisian affiliations from News Sources. The labeling scheme was generated using a query based technique provided by NewsAPI. A more appropriate scheme in the future may use word matching in order to labeling the data in response to the true content provided. 
 
 ### Future Work
+<section>
+		<p><span class="image fit"><img src="/assets/images/climate-protest.jpg" alt="People holding up protest signs. One has a large print of the NOAA logo and says 'we save lives'."  /></span> With increasing shifts in government priorities, polarization continues to increase as federal funding fear spreads.</p>
+	</section>
+*Note: This image from a local Colorado news source. The faces of the people in the photo have been blurred and the image citation will not be provided in an attempt to protect the anonymity of the protestors.*
 
+A future consideration may expand the usage of the classifiers to identify predicted metadata about unlabeled or speculative text. This would contribute information about how bills are constructed and what portions of joint resolutions may be truly bi-partisian. Applying this method with respect to political polarization would contribute to insights into *how* polarized the bill content is, or if it is attempting to achieve a similar goal.
 
 ### Final Conclusions
