@@ -52,7 +52,6 @@ The findings generated here must be hedged with the natural limitations of these
 
 ### Final Conclusions
 This project illustrated how political polarization may be understood through proposed climate bills and news articles. Identified was a clear delineation between language used to speak to similar issues about climate change. In news headlines political parties were often not named together, suggestiong an opposing dialogue instead of a conjoined one. Clustering a large corpora of bills identified a temporal understanding of climate change bills with specific named language. This may be useful in the future to understand the placement and direction of political shifts in administration into the future. 
-<section>
-		<p><span class="image fit"><img src="/assets/images/climate-protest.jpg" alt="People holding up protest signs. One has a large print of the NOAA logo and says 'we save lives'."  /></span> With increasing shifts in government priorities, polarization continues to increase as federal funding fear spreads.</p>
-	</section>
+<section> <span class="image fit"><img src="/assets/images/climate-protest.jpg" alt="People holding up protest signs. One has a large print of the NOAA logo and says 'we save lives'."  /></span>  </section>
+ 
 *Note: This image from a local Colorado news source. The faces of the people in the photo have been blurred and the image citation will not be provided in an attempt to protect the anonymity of the protestors.*
