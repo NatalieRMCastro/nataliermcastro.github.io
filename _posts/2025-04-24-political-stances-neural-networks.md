@@ -41,6 +41,7 @@ What is the advantage of using a neural network to classify climate bills and ne
 - [Data Preparation](#data-prep)
 - [Method](#method)
 - [Evaluating the Neural Network](#evaluation)
+- [Results](#results)
 - [Conclusions](#conclusion)
   
 ---
@@ -97,27 +98,66 @@ After processing both the bills and the news data, the sequences have to be embe
 		<p><span class="image left"><img src="/assets/images/neural net -tokenized data.png" alt="A tokenized and padded sequence."  /></span> The sequences were padded and tokenized into numbers in order to be accurately passed to the Tensors. This workflow is common when training a neural network and is an accepted practice to pad the input sequences. </p>
 	</section>
 
+The data was split into train, test, and validation paritions. The threshold set for training was 80% with 10% reserved for testing and validation (each). The train_test_split from SciKit Learn ws utilized to generate these paritions. Using [PyTorch's Tensor](https://pytorch.org/docs/stable/tensors.html) Object, the vectorized data was transformed for better training. [Tensor Dataset](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) was also utilized in tandem with the DataLoader. To generate a training and testing set the code utilized the Label Encoded data (explained below) and an array of Tensor data. This reserved validation set will be held out until a model has been selected for good preformance on the train and testing sets. In addition, the labels for the news data are binary, however, this is not true for the climate bills. Each type of label for the climate bill (sponsor affiliation and sponsor state) were used to generate an individual training, testing, and validation split.
 
-
-The data was split into train, test, and validation paritions. The threshold set for training was 80% with 10% reserved for testing and validation (each). The train_test_split from SciKit Learn ws utilized to generate these paritions. Using [PyTorch's Tensor](https://pytorch.org/docs/stable/tensors.html) Object, the vectorized data was transformed for better training. [Tensor Dataset](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) was also utilized in tandem with the DataLoader. 
-
+``` python
+''' NEWS'''
+X_train_news, X_test_and_val_news, y_label_train_news, y_label_test_and_val_news = train_test_split(truncated_sequences_int_news, labels_full_news_party, test_size=0.2, random_state=123)
+X_test_news, X_val_news, y_test_label_news, y_val_label_news = train_test_split(X_test_and_val_news, y_label_test_and_val_news, test_size=0.5, random_state=42)
+```
+Keeping the training, testing, and validation sets completely separate are important. If this is not maintained, the model may be overfit, incorrect results are reported, or the application of the model on truly held out data will be incorrect. In addition, the training data, testing data, and later the validation data must originate from similar instances or the model will not preform as expected. For example, if a model is trained on niche academic representations of partisian affiliations, if the model was tested on Reddit slang and discourse about partisian affiliations, because the language used is fundamentally different - and with a different goal, it will not preform accurately.
 
 #### Labels
-The Label Encoder from [SciKit Learn](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html) was utilized to encode the labels. This function also allows for reverse encoding, so the development of visualizations are rooted in text labels - not numerical labels. This is particularly important non-binary labels, such as the Sponsor State, which may have multiple categories.
+The Label Encoder from [SciKit Learn](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html) was utilized to encode the labels. This function also allows for reverse encoding, so the development of visualizations are rooted in text labels - not numerical labels. This is particularly important non-binary labels, such as the Sponsor State, which may have multiple categories. 
 
 ```python
-y_label_train_news_party = label_encoder.fit_transform(y_label_train_news)
+''' NEWS LABELS '''
+labels_full_news_party = news_data_raw['Party'].to_list()
+label_encoder = LabelEncoder()
+labels_full_news_party = label_encoder.fit_transform(labels_full_news_party)
 ```
+
+As noted above, the Climate Bills have two labels of interest - partisian affiliation and sponsor state, and for these reasons, the labels were generated separately - one for each. These are kept separate and stored with their respective training, testing, or validation split, in order to assess the models preformance. 
 
 <a id="method"></a>
 ### Method
-The Neural Network was hand coded. As introduced earlier, the network requires a few different layers. The data preparation discussed above prepared the original input layer. 
+The Neural Network was hand coded. As introduced earlier, the network requires a few different layers. The data preparation discussed above prepared the original input layer or the embedding layer. The padding_idx token was noted earlier as 0, and the number of embeddings are the total vocabulary. 
 
+```python
+''' EMBEDDING LAYER: '''
+ self.embedding = nn.Embedding(num_embeddings=num_embeddings, embedding_dim=embedding_dim, padding_idx=padding_idx)
+```
+
+The subsequnet layers are the first linear layer, then an activation, the second linear layer, and finally the sigmoid:
+
+```python
+''' MODEL ARCHITECTURE '''
+self.linear1 = nn.Linear(input_size, hidden_size)
+self.activation = torch.nn.ReLU()
+self.linear2 = torch.nn.Linear(hidden_size, 1)
+self.sigmoid = torch.nn.Sigmoid()
+```
+
+These layes are instantiated as functions, howver during the forward pass, where the model is 'learning' the current *x* or the token is passed into the calculations.
+```python
+''' FORWARD PASS '''
+    def forward(self, x):
+        x = self.embedding(x)
+        x = torch.mean(x, dim=1) 
+        x = self.linear1(x)
+        x = self.activation(x)
+        x = self.linear2(x)
+        x = self.sigmoid(x)
+        
+        return (x)
+```
+
+An early stop function was also implemented in the case that the model was overfit on the data and during the validation of the model the loss was actually increasing. Finally, a training loop was developed in order to assess the validity of the model and compare between paramaterized models. To address the above note of non-binary labels for the Climate Bills, the training loop is able to alter the instantiation of the model in order to take multiple options for the labels.
 
 <a id="evaluation"></a>
 ### Evaluating the Neural Network
 
-To evaluate the model, it is asked to predict (with no altered gradient - or it would result to training on the test set!) the testing and validation sets. The predictions are then stored and the evaluation metrics are computer. The evaluation metrics are discussed at length 
+To evaluate the model, it is asked to predict (with no altered gradient - or it would result to training on the test set!) the testing and validation sets. The predictions are then stored and the evaluation metrics are computer. The evaluation metrics are discussed at length in the [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#method) section of the project page. In addition, a similar confusion matrix was genereated using the same code (also in Naive Bayes) to illustrate differences between the models.
 
 ``` python
 def evaluation(model, test_loader):
@@ -142,6 +182,22 @@ def evaluation(model, test_loader):
 
     return (predictions, test_targets, accuracy, precision, recall, f1 )
 ```
+
+#### Classifying News Headline Partisian Affiliations:
+
+| D  | H  | Batch Size | Epochs | Epochs Completed | Learning Rate | F1    | Accuracy | Precision | Recall |
+|----|----|-------------|--------|------------------|----------------|-------|----------|-----------|--------|
+| 50 | 50 | 8 | 500 |  3 | 0.2 | 0.64 |  0.47  | 0.47  | 1  |
+| 50 | 50 | 4 | 100 | 23 | 0.005 | 0.49 | 0.59 | 0.61 | 0.41 |
+| 500 | 500 | 4 | 100 | 100 | 0.005 | 0.50 | 0.57 | 0.56 | 0.46 |
+| 500 | 500 | 4 | 100 | 18 | 0.0005 | 0.53 | 0.59 | 0.59 | 0.48 |
+| 500 | 500 | 8 | 100 | 100 | 0.0005 | 0.45 | 0.56 | 0.55 | 0.38 |
+| 700 | 700 | 4 | 100 | 60 | 0.0001 | 0.48 | 0.58 | 0.59 | 0.41 |
+| 500 | 500 | 8 | 500 | 250 | 0.0001 | 0.57 | 0.67 | 0.75 | 0.46 |
+| 500 | 500 | 4 | 500 | 500 | 0.0001 | 0.47 | 0.62 | 0.70 | 0.35 |
+|    |    |             |        |                  |                |       |          |           |        |
+
+
 
 <a id="conclusion"></a>
 ### Conclusions
