@@ -205,8 +205,8 @@ The parameters and evaluation metrics are reported in the table below. For each 
 The model which preforemd the best was determined using F1, as it is a holisitc understanding of multiple different measures, this will also be determined using a look at the other evaluation metrics as well. Model 7 had the highest F1 score and the highest supporting evaluation scores. 
 
 <section>
-		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="Line Chart showing decreasing loss and training validation over five epochs."  /></span>   </p>
-		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span>   </p>
+		<p><span class="image fit"><img src="/assets/images/neural net - news - best model loss.png" alt="Line Chart showing decreasing loss and training validation over five epochs."  /></span>   </p>
+		<p><span class="image fit"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span>   </p>
 	</section>
 
 <p> </p>
