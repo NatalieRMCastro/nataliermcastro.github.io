@@ -203,9 +203,11 @@ The parameters and evaluation metrics are reported in the table below. For each 
 The model which preforemd the best was determined using F1, as it is a holisitc understanding of multiple different measures, this will also be determined using a look at the other evaluation metrics as well. Model 7 had the highest F1 score and the highest supporting evaluation scores. 
 
 <section>
-		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="A photo of Donald Trump holding a paper sign that says 'TRUMP DIGS COAL'."  /></span> </p>
+		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="Line Chart showing decreasing loss and training validation over five epochs."  /></span> </p>
 		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span> </p>
 	</section>
+
+The few epochs completed by the model indicates that the early stop was utilized in order to prevent overfitting. However, such an early stop shows that the model is deeply struggling to learn on the text that it is provided with.
 
 
 #### Classifying Cliamte Bill Sponsor Partisian Affiliations:
