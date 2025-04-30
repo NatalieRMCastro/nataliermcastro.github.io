@@ -200,8 +200,12 @@ The parameters and evaluation metrics are reported in the table below. For each 
 | 9 | 500 | 500 | 4 | 1000 | 586 | 0.0001 | 0.50 | 0.62 | 0.66 | 0.41 |
 | 10 | 500 | 500 | 16 | 1000 | 1000 | 0.0001 | 0.52 | 0.59 | 0.60 | 0.46 |
 
-The model which preforemd the best 
+The model which preforemd the best was determined using F1, as it is a holisitc understanding of multiple different measures, this will also be determined using a look at the other evaluation metrics as well. Model 7 had the highest F1 score and the highest supporting evaluation scores. 
 
+<section>
+		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="A photo of Donald Trump holding a paper sign that says 'TRUMP DIGS COAL'."  /></span> </p>
+		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span> </p>
+	</section>
 
 <a id="conclusion"></a>
 ### Conclusions
