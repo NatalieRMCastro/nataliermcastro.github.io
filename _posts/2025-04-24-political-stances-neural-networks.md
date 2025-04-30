@@ -91,7 +91,13 @@ def preprocess(text : str) -> list:
 	</div>
 </section>
 
-After processing both the bills and the news data, the sequences have to be embedded. This changes the word tokens into numerical tokens based on the order of the text. Each word in the vocabulary is assigned to a number, which is then organized into vectors which are representative of the sentence. For example the sentence "Trump's first day in office" would then become the vector [4, 19, 32, 21, 7]. To generate a token to index vector a dictionary was used to mangage the conversions. The index zero was reserved for a '[PAD]' token which is used to help truncate the input sequences. In order to preform matrix multiplication and shape the The news tokens were set to have a truncated value of 380 and an input label of 512. 
+After processing both the bills and the news data, the sequences have to be embedded. This changes the word tokens into numerical tokens based on the order of the text. Each word in the vocabulary is assigned to a number, which is then organized into vectors which are representative of the sentence. For example the sentence "Trump's first day in office" would then become the vector [4, 19, 32, 21, 7]. To generate a token to index vector a dictionary was used to mangage the conversions. The index zero was reserved for a '[PAD]' token which is used to help truncate the input sequences. In order to preform matrix multiplication and shape the The news tokens were set to have a truncated value of 200 and an input label of 512. 
+
+<section>
+		<p><span class="image left"><img src="/assets/images/neural net -tokenized data.png" alt="A tokenized and padded sequence."  /></span> The sequences were padded and tokenized into numbers in order to be accurately passed to the Tensors. This workflow is common when training a neural network and is an accepted practice to pad the input sequences. </p>
+	</section>
+
+
 
 The data was split into train, test, and validation paritions. The threshold set for training was 80% with 10% reserved for testing and validation (each). The train_test_split from SciKit Learn ws utilized to generate these paritions. Using [PyTorch's Tensor](https://pytorch.org/docs/stable/tensors.html) Object, the vectorized data was transformed for better training. [Tensor Dataset](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) was also utilized in tandem with the DataLoader. 
 
