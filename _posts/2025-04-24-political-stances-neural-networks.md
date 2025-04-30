@@ -292,7 +292,7 @@ These results make it challenging to compare and select a best model. Model 10 r
 
 <a id="evaluation-bills-state"></a>
 #### Classifying Climate Bill Sponsor State:
-
+There was a total of 54 different options for state Sponsor. This is a challenging prediction task, and does not afford the model much room for error. In the evaluation presented here, the patterns of learning will be identified - not so much the models true ability to learn, as it underpreformed on all metrics utilized in this test. 
 
 
 | Test Number | D   | H   | Batch Size | Epochs | Epochs Completed | Learning Rate | F1       | Accuracy | Precision | Recall |
