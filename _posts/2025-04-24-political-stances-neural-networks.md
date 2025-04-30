@@ -207,5 +207,21 @@ The model which preforemd the best was determined using F1, as it is a holisitc 
 		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span> </p>
 	</section>
 
+
+#### Classifying Cliamte Bill Sponsor Partisian Affiliations:
+
+| Test Number | D   | H   | Batch Size | Epochs | Epochs Completed | Learning Rate | F1       | Accuracy | Precision | Recall |
+|-------------|-----|-----|------------|--------|------------------|---------------|----------|----------|-----------|--------|
+| 1           | 50  | 50  | 16         | 5      | 4                | 0.2           | 0.37     | 0.59     | 0.29      | 0.5    |
+| 2           | 500 | 500 | 16         | 500    | 4                | 0.002         | 0.53     | 0.81     | 0.54      | 0.53   |
+| 3           | 500 | 500 | 8          | 500    | 4                | 0.002         | 0.81     | 0.82     | 0.81      | 0.80   |
+| 4           | 500 | 500 | 16         | 500    | 6                | 0.0009        | 0.82     | 0.83     | 0.82      | 0.82   |
+| 5           | 250 | 250 | 16         | 500    | 5                | 0.002         | 0.82     | 0.83     | 0.82      | 0.82   |
+| 6           | 500 | 500 | 32         | 500    | 29               | 0.0001        | 0.54     | 0.81     | 0.54      | 0.53   |
+| 7           | 250 | 250 | 16         | 500    | 6                | 0.001         | 0.80     | 0.81     | 0.80      | 0.80   |
+| 8           | 300 | 300 | 16         | 500    | 4                | 0.002         | 0.81     | 0.82     | 0.82      | 0.80   |
+| 9           | 500 | 500 | 16         | 500    | 24               | 0.0001        | 0.79     | 0.80     | 0.79      | 0.79   |
+| 10          | 499 | 499 | 31         | 500    | 21               | 0.00015       | 0.81     | 0.82     | 0.81      | 0.81   |
+
 <a id="conclusion"></a>
 ### Conclusions
