@@ -229,9 +229,9 @@ Implications of this accuracy suggests that there is some differences in languag
 <a id="evaluation-bills-party"></a>
 #### Classifying Climate Bill Sponsor Partisian Affiliations:
 
-A similar iteration process to identify a potential best model was utilized for the climate bill sponsor partisian affiliation as well. It should be noted that for this data the labels are not binary as the climate bill sponsor may be independent as well. In addition, due to the truncation of the otherwise lengthy data, this may result in a more challenging prediction task. This is not so clearly evidenced in the evaluation table presented below. As demonstrated through the epochs completed, this data had a problem with overfitting - despite rather small learning rates. This caused the early stopper function to trigger, thus the training was cut short as soon as the function detected overfitting.
+A similar iteration process to identify a potential best model was utilized for the climate bill sponsor partisian affiliation as well. It should be noted that for this data the labels are not binary as the climate bill sponsor may be independent as well. In addition, due to the truncation of the otherwise lengthy data, this may result in a more challenging prediction task. This is not so clearly evidenced in the evaluation table presented below. As demonstrated through the epochs completed, this data had a problem with overfitting - despite rather small learning rates. This caused the early stopper function to trigger, thus the training was cut short as soon as the function detected overfitting. It should be reiterated that the train test split for each model used the same data and the same random seed. This means that the data used to test the models were consistent across iterations.
 
-While the models were able to achieve relatively high F1 scores (in addition to high evaluation scores all around), however the issue is that the models struggled to learn features of Independent affiliated sponsored bills. This presents a challenge, as other models such as Naive Bayes, were able to identify this distinction. Only one model (2) was able to identify  
+While the models were able to achieve relatively high F1 scores (in addition to high evaluation scores all around), however the issue is that the models struggled to learn features of Independent affiliated sponsored bills. This presents a challenge, as other models such as Naive Bayes, were able to identify this distinction. Only one model (2) was able to identify the Independent label, but it did not predict correctly.
 
 | Test Number | D   | H   | Batch Size | Epochs | Epochs Completed | Learning Rate | F1       | Accuracy | Precision | Recall |
 |-------------|-----|-----|------------|--------|------------------|---------------|----------|----------|-----------|--------|
@@ -268,15 +268,17 @@ While the models were able to achieve relatively high F1 scores (in addition to 
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/neural net - bills party - confusion matrix.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - confusion matrix.png" alt="" /></a>
 			<h3>Test 10 Confusion Matrix</h3>
-			<p> TEXT </p>
+			<p> This model predicted a relatively accurate split between the Democrat and Republican affiliated bills - however, it was not able to learn the features of an Independent bill sponsor. Similar to other models, the model was more likely to predict Democrat than Republican. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/neural net - bills party - test 2 confusion matrix.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - test 2 confusion matrix.png" alt="" /></a>
 			<h3>Test 2 Confusion Matrix</h3>
-			<p> TEXT </p>
+			<p> This model preformed nearly identical to that of Model 10, however, it was able to learn about the Independent party. While it did misclassfy it during its prediction, it still understood that it was a viable label. </p>
 		</article>
 	</div>
 </section>
+
+These results make it challenging to compare and select a best model. Model 10 recieved a much higher F1 score (nearly 30% improved) and an increase in both precision and recall. However, it is clear that the model did not learn all of the features of the data. Yet, due to its evaluation metrics overall the 10th model was selected to be utilized in further comparisons.
 
 <a id="evaluation-bills-state"></a>
 #### Classifying Climate Bill Sponsor State:
