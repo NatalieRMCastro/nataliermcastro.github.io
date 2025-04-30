@@ -124,6 +124,16 @@ As noted above, the Climate Bills have two labels of interest - partisian affili
 
 <a id="method"></a>
 ### Method
+<section>
+    <div class="row">
+        <div class="col-6 col-12-small">
+            <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
+                <li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-neural-networks-code.html" class="button fit small">View Code</a></li>
+		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/6.%20Naive%20Bayes.ipynb" class="button fit small">Visit GitHub Repository</a></li>
+            </ul>
+        </div>
+    </div> 
+</section> 
 The Neural Network was hand coded. As introduced earlier, the network requires a few different layers. The data preparation discussed above prepared the original input layer or the embedding layer. The padding_idx token was noted earlier as 0, and the number of embeddings are the total vocabulary. 
 
 ```python
