@@ -227,7 +227,11 @@ The few epochs completed by the model indicates that the early stop was utilized
 Implications of this accuracy suggests that there is some differences in language used to define partisian affiliations through news headlines, however, these distinctions are not always clear. This is a finding that was evidenced through [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#results-news-data) and [Support Vector Machines](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html#polynomial-classifications) as well. Naive Bayes had observed a similar misclassification pattern, predicting Democrat when the label was actually Republican. This is interesting because it is consisteny across models, and suggests that instead of one model preforming poorly there is a trend throughout different training and pre-procoessing techniques. The Neural Network achieved a higher accuracy rate of 67% (compared to 57%), higher precision 75% (NB: 57%), but lower recall of 46% (NB: 57%). In comparison to the SVM the Neural Network was able to preform better on all metrics except for recall. Further explorations of accuracy will be discussed using the helf out testing set (different than the validation and training) in the next section.
 
 <a id="evaluation-bills-party"></a>
-#### Classifying Cliamte Bill Sponsor Partisian Affiliations:
+#### Classifying Climate Bill Sponsor Partisian Affiliations:
+
+A similar iteration process to identify a potential best model was utilized for the climate bill sponsor partisian affiliation as well. It should be noted that for this data the labels are not binary as the climate bill sponsor may be independent as well. In addition, due to the truncation of the otherwise lengthy data, this may result in a more challenging prediction task. This is not so clearly evidenced in the evaluation table presented below. As demonstrated through the epochs completed, this data had a problem with overfitting - despite rather small learning rates. This caused the early stopper function to trigger, thus the training was cut short as soon as the function detected overfitting.
+
+While the models were able to achieve relatively high F1 scores (in addition to high evaluation scores all around), however the issue is that the models struggled to learn features of Independent affiliated sponsored bills. This presents a challenge, as other models such as Naive Bayes, were able to identify this distinction. Only one model (2) was able to identify  
 
 | Test Number | D   | H   | Batch Size | Epochs | Epochs Completed | Learning Rate | F1       | Accuracy | Precision | Recall |
 |-------------|-----|-----|------------|--------|------------------|---------------|----------|----------|-----------|--------|
@@ -248,12 +252,12 @@ Implications of this accuracy suggests that there is some differences in languag
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/neural net - bills party - best model loss.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - best model loss.png" alt="" /></a>
 			<h3>Test 10 Model Loss</h3>
-			<p> TEXT </p>
+			<p> This model was able to completed 20 epochs, but experienced overfitting around Epoch 15. The training loss decreased, with a clear elbow at about the fourth epoch, which was also when the validation departed from the continual decrease with the training losses. </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
 			<a href="/assets/images/neural net - bills party - test 2 model loss.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - test 2 model loss.png" alt="" /></a>
 			<h3>Test 2 Model Loss</h3>
-			<p> TEXT </p>
+			<p> This model only completed five epochs. At epoch three, the model began to overfit as the validation loss began to increase and continue to do so. </p>
 		</article>
 	</div>
 </section>
