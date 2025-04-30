@@ -41,6 +41,9 @@ What is the advantage of using a neural network to classify climate bills and ne
 - [Data Preparation](#data-prep)
 - [Method](#method)
 - [Evaluating the Neural Network](#evaluation)
+- [Classifying News Headline Partisian Affiliations](#evaluation-news-headlines)
+- [Classifying Climate Bill Sponsor Partisian Affiliations](#evaluation-bills-party)
+- [Classifying Climate Bill Sponsor State](#evaluation-bills-state)
 - [Results](#results)
 - [Conclusions](#conclusion)
   
@@ -185,6 +188,8 @@ def evaluation(model, test_loader):
     return (predictions, test_targets, accuracy, precision, recall, f1 )
 ```
 
+
+<a id="evaluation-news-headlines"></a>
 #### Classifying News Headline Partisian Affiliations:
 
 The parameters and evaluation metrics are reported in the table below. For each different iteration of the parameters, they were recorded in order to select the most effective model for subsequent discussion. In addition, a lineplot was generated to identify the training versus validation loss per epoch. This type of metric provides insight into what model is the most effective. 
@@ -219,7 +224,9 @@ The model which preforemd the best was determined using F1, as it is a holisitc 
 
 The few epochs completed by the model indicates that the early stop was utilized in order to prevent overfitting. However, such an early stop shows that the model is deeply struggling to learn on the text that it is provided with. After 250 epochs, the training loss was 0.55 and the validation loss was around 0.70. This was then validated using a visual confusion matrix. The model was more accurately able to predict the Democrat Labels, however, it had a strong tendancy to only predict Democrat Labels. The balance of the testing corpora was 43 Democrat labels and 39 Republican labels. This implies that the Neural Network was able to accurately classify news headlines and labels 57% of the time, with higher accuracy for Democrat mentions.
 
+Implications of this accuracy suggests that there is some differences in language used to define partisian affiliations through news headlines, however, these distinctions are not always clear. This is a finding that was evidenced through [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#results-news-data) and [Support Vector Machines](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html#polynomial-classifications) as well. Naive Bayes had observed a similar misclassification pattern, predicting Democrat when the label was actually Republican. This is interesting because it is consisteny across models, and suggests that instead of one model preforming poorly there is a trend throughout different training and pre-procoessing techniques. The Neural Network achieved a higher accuracy rate of 67% (compared to 57%), higher precision 75% (NB: 57%), but lower recall of 46% (NB: 57%). In comparison to the SVM the Neural Network was able to preform better on all metrics except for recall. Further explorations of accuracy will be discussed using the helf out testing set (different than the validation and training) in the next section.
 
+<a id="evaluation-bills-party"></a>
 #### Classifying Cliamte Bill Sponsor Partisian Affiliations:
 
 | Test Number | D   | H   | Batch Size | Epochs | Epochs Completed | Learning Rate | F1       | Accuracy | Precision | Recall |
@@ -267,6 +274,7 @@ The few epochs completed by the model indicates that the early stop was utilized
 	</div>
 </section>
 
-
+<a id="evaluation-bills-state"></a>
+#### Classifying Climate Bill Sponsor State:
 <a id="conclusion"></a>
 ### Conclusions
