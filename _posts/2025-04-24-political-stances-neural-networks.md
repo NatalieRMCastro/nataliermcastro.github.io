@@ -229,5 +229,38 @@ The few epochs completed by the model indicates that the early stop was utilized
 | 9           | 500 | 500 | 16         | 500    | 24               | 0.0001        | 0.79     | 0.80     | 0.79      | 0.79   |
 | 10          | 499 | 499 | 31         | 500    | 21               | 0.00015       | 0.81     | 0.82     | 0.81      | 0.81   |
 
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills party - best model loss.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - best model loss.png" alt="" /></a>
+			<h3>Test 10 Model Loss</h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills party - test 2 model loss.png" class="image fit thumb"><img src="assets/images/neural net - bills party - test 2 model loss.png" alt="" /></a>
+			<h3>Test 2 Model Loss</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
+
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills party - confusion matrix.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - confusion matrix.png" alt="" /></a>
+			<h3>Test 10 Confusion Matrix</h3>
+			<p> TEXT </p>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills party - test 2 confusion matrix.png" class="image fit thumb"><img src="assets/images/neural net - bills party - test 2 confusion matrix.png" alt="" /></a>
+			<h3>Test 2 Confusion Matrix</h3>
+			<p> TEXT </p>
+		</article>
+	</div>
+</section>
+
+
 <a id="conclusion"></a>
 ### Conclusions
