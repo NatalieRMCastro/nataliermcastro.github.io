@@ -238,7 +238,7 @@ The few epochs completed by the model indicates that the early stop was utilized
 			<p> TEXT </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/neural net - bills party - test 2 model loss.png" class="image fit thumb"><img src="assets/images/neural net - bills party - test 2 model loss.png" alt="" /></a>
+			<a href="/assets/images/neural net - bills party - test 2 model loss.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - test 2 model loss.png" alt="" /></a>
 			<h3>Test 2 Model Loss</h3>
 			<p> TEXT </p>
 		</article>
@@ -254,7 +254,7 @@ The few epochs completed by the model indicates that the early stop was utilized
 			<p> TEXT </p>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/neural net - bills party - test 2 confusion matrix.png" class="image fit thumb"><img src="assets/images/neural net - bills party - test 2 confusion matrix.png" alt="" /></a>
+			<a href="/assets/images/neural net - bills party - test 2 confusion matrix.png" class="image fit thumb"><img src="/assets/images/neural net - bills party - test 2 confusion matrix.png" alt="" /></a>
 			<h3>Test 2 Confusion Matrix</h3>
 			<p> TEXT </p>
 		</article>
