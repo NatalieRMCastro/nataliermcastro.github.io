@@ -154,6 +154,8 @@ These layes are instantiated as functions, howver during the forward pass, where
 
 An early stop function was also implemented in the case that the model was overfit on the data and during the validation of the model the loss was actually increasing. Finally, a training loop was developed in order to assess the validity of the model and compare between paramaterized models. To address the above note of non-binary labels for the Climate Bills, the training loop is able to alter the instantiation of the model in order to take multiple options for the labels.
 
+The model had a 
+
 <a id="evaluation"></a>
 ### Evaluating the Neural Network
 
@@ -203,11 +205,13 @@ The parameters and evaluation metrics are reported in the table below. For each 
 The model which preforemd the best was determined using F1, as it is a holisitc understanding of multiple different measures, this will also be determined using a look at the other evaluation metrics as well. Model 7 had the highest F1 score and the highest supporting evaluation scores. 
 
 <section>
-		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="Line Chart showing decreasing loss and training validation over five epochs."  /></span> </p>
-		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span> </p>
+		<p><span class="image left"><img src="/assets/images/neural net - news - best model loss.png" alt="Line Chart showing decreasing loss and training validation over five epochs."  /></span>   </p>
+		<p><span class="image right"><img src="/assets/images/neural net - news - confusion matrix.png" alt="" /></span>   </p>
 	</section>
 
-The few epochs completed by the model indicates that the early stop was utilized in order to prevent overfitting. However, such an early stop shows that the model is deeply struggling to learn on the text that it is provided with.
+<p> </p>
+
+The few epochs completed by the model indicates that the early stop was utilized in order to prevent overfitting. However, such an early stop shows that the model is deeply struggling to learn on the text that it is provided with. After 250 epochs, the training loss was 0.55 and the validation loss was around 0.70. This was then validated using a visual confusion matrix. The model was more accurately able to predict the Democrat Labels, however, it had a strong tendancy to only predict Democrat Labels. The balance of the testing corpora was 43 Democrat labels and 39 Republican labels. This implies that the Neural Network was able to accurately classify news headlines and labels 57% of the time, with higher accuracy for Democrat mentions.
 
 
 #### Classifying Cliamte Bill Sponsor Partisian Affiliations:
