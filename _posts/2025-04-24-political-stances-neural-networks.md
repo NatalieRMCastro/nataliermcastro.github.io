@@ -46,7 +46,18 @@ What is the advantage of using a neural network to classify climate bills and ne
 ---
 <a id="data-prep"></a>
 ### Data Preparation
-The data needed to for neural networks originates from text data. The data utilized at the start of this process was the raw data. Neural networks need text data, and not counts (like originating from TF-IDF or Count Vectorizer). A function was utilized to preprocess the raw text data. It is used to separate the text, lemmatize the words, and then remove any special tokens. This returns a string of the lemmatized and clean texts. 
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/neural net - start data.png" alt="Labeled Proposed Climate Bill Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
+Neural network needs text data and does not rely on counts from CountVectorizer and TF-IDF. To generate this, the original data was used that is not split and preserves the original text. This data may be found at the [HuggingFace Repository](https://huggingface.co/datasets/nataliecastro/climate-news/blob/main/News%20Data%20Cleaned.csv) for this project. While the neural network takes text data it needs to still be processed in order to have a clean training environment that is tokenized. To do so, a function was utilized to preprocess the raw text data. It is used to separate the text, lemmatize the words, and then remove any special tokens. This returns a string of the lemmatized and clean texts. 
+
+
 
 ```python
 def preprocess(text : str) -> list:
@@ -70,6 +81,15 @@ def preprocess(text : str) -> list:
     ## returning the the final processed text
     return (preprocessed_text)
 ```
+
+<section>
+	<div class="box alt">
+		<div class="row gtr-50 gtr-uniform">
+			<div class="col-12"><span class="image fit"><img src="/assets/images/neural net - preprocessed documents.png" alt="Labeled News Headline Data Headed Dataframe"  /></span> 
+			</div>
+		</div>
+	</div>
+</section>
 
 After processing both the bills and the news data, the sequences have to be embedded. This changes the word tokens into numerical tokens based on the order of the text. Each word in the vocabulary is assigned to a number, which is then organized into vectors which are representative of the sentence. For example the sentence "Trump's first day in office" would then become the vector [4, 19, 32, 21, 7]. To generate a token to index vector a dictionary was used to mangage the conversions. The index zero was reserved for a '[PAD]' token which is used to help truncate the input sequences. In order to preform matrix multiplication and shape the The news tokens were set to have a truncated value of 380 and an input label of 512. 
 
