@@ -185,17 +185,21 @@ def evaluation(model, test_loader):
 
 #### Classifying News Headline Partisian Affiliations:
 
-| D  | H  | Batch Size | Epochs | Epochs Completed | Learning Rate | F1    | Accuracy | Precision | Recall |
-|----|----|-------------|--------|------------------|----------------|-------|----------|-----------|--------|
-| 50 | 50 | 8 | 500 |  3 | 0.2 | 0.64 |  0.47  | 0.47  | 1  |
-| 50 | 50 | 4 | 100 | 23 | 0.005 | 0.49 | 0.59 | 0.61 | 0.41 |
-| 500 | 500 | 4 | 100 | 100 | 0.005 | 0.50 | 0.57 | 0.56 | 0.46 |
-| 500 | 500 | 4 | 100 | 18 | 0.0005 | 0.53 | 0.59 | 0.59 | 0.48 |
-| 500 | 500 | 8 | 100 | 100 | 0.0005 | 0.45 | 0.56 | 0.55 | 0.38 |
-| 700 | 700 | 4 | 100 | 60 | 0.0001 | 0.48 | 0.58 | 0.59 | 0.41 |
-| 500 | 500 | 8 | 500 | 250 | 0.0001 | 0.57 | 0.67 | 0.75 | 0.46 |
-| 500 | 500 | 4 | 500 | 500 | 0.0001 | 0.47 | 0.62 | 0.70 | 0.35 |
-|    |    |             |        |                  |                |       |          |           |        |
+The parameters and evaluation metrics are reported in the table below. For each different iteration of the parameters, they were recorded in order to select the most effective model for subsequent discussion. In addition, a lineplot was generated to identify the training versus validation loss per epoch. This type of metric provides insight into what model is the most effective. 
+
+| Test Number | D  | H  | Batch Size | Epochs | Epochs Completed | Learning Rate | F1    | Accuracy | Precision | Recall |
+|--------|----|----|-------------|--------|------------------|----------------|-------|----------|-----------|--------|
+| 1 | 50 | 50 | 8 | 500 |  3 | 0.2 | 0.64 |  0.47  | 0.47  | 1  |
+| 2 | 50 | 50 | 4 | 100 | 23 | 0.005 | 0.49 | 0.59 | 0.61 | 0.41 |
+| 3 | 500 | 500 | 4 | 100 | 100 | 0.005 | 0.50 | 0.57 | 0.56 | 0.46 |
+| 4 | 500 | 500 | 4 | 100 | 18 | 0.0005 | 0.53 | 0.59 | 0.59 | 0.48 |
+| 5 | 500 | 500 | 8 | 100 | 100 | 0.0005 | 0.45 | 0.56 | 0.55 | 0.38 |
+| 6 | 700 | 700 | 4 | 100 | 60 | 0.0001 | 0.48 | 0.58 | 0.59 | 0.41 |
+| 7 | 500 | 500 | 8 | 500 | 255 | 0.0001 | 0.57 | 0.67 | 0.75 | 0.46 |
+| 8 | 500 | 500 | 4 | 500 | 500 | 0.0001 | 0.47 | 0.62 | 0.70 | 0.35 |
+| 9 | 500 | 500 | 4 | 1000 | 586 | 0.0001 | 0.50 | 0.62 | 0.66 | 0.41 |
+| 10 | 500 | 500 | 16 | 500 |  | 0.0001 | 0. | 0. | 0. | 0. |
+
 
 
 
