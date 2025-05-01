@@ -254,7 +254,7 @@ While the models were able to achieve relatively high F1 scores (in addition to 
 | 7           | 250 | 250 | 16         | 500    | 6                | 0.001         | 0.80     | 0.81     | 0.80      | 0.80   |
 | 8           | 300 | 300 | 16         | 500    | 4                | 0.002         | 0.81     | 0.82     | 0.82      | 0.80   |
 | 9           | 500 | 500 | 16         | 500    | 24               | 0.0001        | 0.79     | 0.80     | 0.79      | 0.79   |
-| 10          | 499 | 499 | 31         | 500    | 21               | 0.00015       | 0.81     | 0.82     | 0.81      | 0.81   |
+| 10          | 499 | 499 | 31         | 1000    | 21               | 0.00015       | 0.81     | 0.82     | 0.81      | 0.81   |
 
 
 <section class="gallery">
@@ -304,8 +304,28 @@ There was a total of 54 different options for state Sponsor. This is a challengi
 | 5           | 50  | 50  | 200        | 500    | 402              | 0.0005        | 0.025    | 0.071    | 0.024     | 0.029  |
 | 6           | 100 | 100 | 250        | 500    | 331               | 0.00005       | 0.018    | 0.052    | 0.019     | 0.020  |
 | 7           | 250 | 250 | 250        | 1500   |  99               | 0.00005       | 0.023    | 0.064    | 0.027     | 0.023  |
-| 8 | 500 | 500 | 16 | 0.00001 | 1500 | 651 | 0.02 | 0.06 | 0.02 | 0.02 
+| 8 | 500 | 500 | 16 | 1500 | 651 | 0.00001 | 0.02 | 0.06 | 0.02 | 0.02 |
+| 9 | 500 | 500 | 16 | 1500 | 10 | 0.001 | 0.01 | 0.05 | 0.01 | 0.01 |
+| 10 | 700 | 700 | 8 | 1500 | 5 | 0.01 | 0.01 | 0.04 | 0.01 | 0.01 | 
 
+This model was unable to learn any of the features and did not achieve any evaluation metrics (except one) over 1%. This implied that using a neural network for this kind of data, and in its truncated form, may not be the most appropriate. Future research may consider training a neural network with the entirety of the corpus, not just the first 200 characters. Although the model did not train appropriately, its predictions match that of some of the other models utilize to classify the Bill Sponsor State.
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills state - model 2 loss.png" class="image fit thumb"><img src="/assets/images/neural net - bills state - model 2 loss.png" alt="" /></a>
+			<h3>Log Loss During Training</h3>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/neural net - bills state - confusion matrix.png" class="image fit thumb"><img src="/assets/images/neural net - bills state - confusion matrix.png" alt="" /></a>
+			<h3>Classifier Results: Sponsor State</h3>
+		</article>
+	</div>
+</section>
+
+The Log Loss shows that the model began with a much higher log loss than the News Predictions or the Proposed Cliamte Predictions. This supports what was demonstrated in the later accuracy scores is that the models predictions are much further away from the true label - due to the sheer number of labels available for the model. It is much more likely for while the model is intially taking steps with the learning rate to identify where it needs to be, due to the success of random guessing. This is not an affordance of attempting sponsor state classification.
+
+Through [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#results-bills-data) it became clear that California had the most classifications, however the model did not struggle to predict as much as the neural networks. While the neural network was able to identify this frequency, it assumed nearly everything to be the label 'California' (highlighted in green on the image). This suggests that California's prevalence may introduce difficulties in classification for models which are not as robust. In addition, this large column suggests that the model did learn the label, just not very well. In comparison to [Support Vector Machines](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html#polynomial-classifications), this is some improvement.
 
 
 <a id="conclusion"></a>
