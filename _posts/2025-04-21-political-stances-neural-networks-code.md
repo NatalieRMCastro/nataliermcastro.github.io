@@ -16,7 +16,7 @@ in_feed: false
     </div> 
 </section> 
 
-Note: This markdown does not have the images rendered, but the IPYNB in GitHub does!
+Note: This markdown does not have the images rendered, but the IPYNB in [GitHub](https://github.com/NatalieRMCastro/climate-policy/blob/main/9.%20Neural%20Networks.ipynb) does!
 
 ---
 
