@@ -44,7 +44,7 @@ What is the advantage of using a neural network to classify climate bills and ne
 - [Classifying News Headline Partisian Affiliations](#evaluation-news-headlines)
 - [Classifying Climate Bill Sponsor Partisian Affiliations](#evaluation-bills-party)
 - [Classifying Climate Bill Sponsor State](#evaluation-bills-state)
-- [Results](#results)
+- [Validation](#validation)
 - [Conclusions](#conclusion)
   
 ---
@@ -129,7 +129,7 @@ As noted above, the Climate Bills have two labels of interest - partisian affili
         <div class="col-6 col-12-small">
             <ul class="actions" style="display: flex; gap: 10px; list-style: none; padding: 0;">
                 <li><a href="https://nataliermcastro.github.io/projects/2025/04/21/political-stances-neural-networks-code.html" class="button fit small">View Code</a></li>
-		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/6.%20Naive%20Bayes.ipynb" class="button fit small">Visit GitHub Repository</a></li>
+		<li><a href="https://github.com/NatalieRMCastro/climate-policy/blob/main/9.%20Neural%20Networks.ipynb" class="button fit small">Visit GitHub Repository</a></li>
             </ul>
         </div>
     </div> 
@@ -326,6 +326,25 @@ This model was unable to learn any of the features and did not achieve any evalu
 The Log Loss shows that the model began with a much higher log loss than the News Predictions or the Proposed Cliamte Predictions. This supports what was demonstrated in the later accuracy scores is that the models predictions are much further away from the true label - due to the sheer number of labels available for the model. It is much more likely for while the model is intially taking steps with the learning rate to identify where it needs to be, due to the success of random guessing. This is not an affordance of attempting sponsor state classification.
 
 Through [Naive Bayes](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-naive-bayes.html#results-bills-data) it became clear that California had the most classifications, however the model did not struggle to predict as much as the neural networks. While the neural network was able to identify this frequency, it assumed nearly everything to be the label 'California' (highlighted in green on the image). This suggests that California's prevalence may introduce difficulties in classification for models which are not as robust. In addition, this large column suggests that the model did learn the label, just not very well. In comparison to [Support Vector Machines](https://nataliermcastro.github.io/projects/2025/04/21/political-stances-svm.html#polynomial-classifications), this is some improvement.
+
+<a id="validation"></a>
+### Validation
+
+Validation is a process used that is similar to testing and can help provide insights into how the model is preforming. The validation set was split from the remainder of the training set and composes 10% of the dataset. Only the partisian affiliations are represented here as it was discussed earlier about the shortcomings of training the neural networks on a large corpora of labels.
+
+
+<section class="gallery">
+	<div class="row">
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/nn - bills - party - validation cm.png" class="image fit thumb"><img src="//assets/images/nn - bills - party - validation cm.png" alt="" /></a>
+			<h3>Climate Bills Sponsor Affiliation </h3>
+		</article>
+		<article class="col-6 col-12-xsmall gallery-item">
+			<a href="/assets/images/nn - news validation cm.png" class="image fit thumb"><img src="/assets/images/nn - news validation cm.png" alt="" /></a>
+			<h3>News Headline Partisian Affiliation</h3>
+		</article>
+	</div>
+</section>
 
 
 <a id="conclusion"></a>
