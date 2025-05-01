@@ -336,7 +336,7 @@ Validation is a process used that is similar to testing and can help provide ins
 <section class="gallery">
 	<div class="row">
 		<article class="col-6 col-12-xsmall gallery-item">
-			<a href="/assets/images/nn - bills - party - validation cm.png" class="image fit thumb"><img src="//assets/images/nn - bills - party - validation cm.png" alt="" /></a>
+			<a href="/assets/images/nn - bills - party - validation cm.png" class="image fit thumb"><img src="/assets/images/nn - bills - party - validation cm.png" alt="" /></a>
 			<h3>Climate Bills Sponsor Affiliation </h3>
 		</article>
 		<article class="col-6 col-12-xsmall gallery-item">
@@ -349,3 +349,4 @@ Validation is a process used that is similar to testing and can help provide ins
 
 <a id="conclusion"></a>
 ### Conclusions
+The neural network provided further insight into how labeled data may be used to parition and classify data. The results here were promising, and with additional computational resources to train full models without truncating the data, the models may experience increased accuracy. The ability for a neural network to classify partisian affiliation suggests that through its deep learning it may be able to interpret what language is used form different ideologies within United States politics. 
