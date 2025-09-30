@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A Book review of 'Digitally Invisible: How The Internet is Creating the New Underclass'"
+title: "A Book Review of 'Digitally Invisible: How The Internet is Creating the New Underclass'"
 categories: projects
 published: true
 in_feed: true
@@ -9,7 +9,7 @@ Authored by Dr. Nicol Turner Lee, *Digitally Invisible: How the Internet is Crea
 
 ---
 
-*Interested in reading this story on Medium? [Check it out here](https://medium.com/@naca4005/a-book-review-of-digitally-invisible-how-the-internet-is-creating-the-new-underclass-601a728c2747), Interested in saving a PDF? [Download it here](https://drive.google.com/file/d/1kbUFIOw2WSlz55nFsCgmAxbMJlUuGByQ/view)*
+*Interested in reading this story on Medium? [Check it out here](https://medium.com/@naca4005/a-book-review-of-digitally-invisible-how-the-internet-is-creating-the-new-underclass-601a728c2747). Interested in saving a PDF? [Download it here](https://drive.google.com/file/d/1kbUFIOw2WSlz55nFsCgmAxbMJlUuGByQ/view).*
 
 Turner Lee, N. (2024). Digitally invisible: How the Internet is creating the new underclass / Nicol Turner Lee. (1st ed.). Brookings Institution Press. $25.00 
 
@@ -54,7 +54,7 @@ Big technology CEO Elon Musk looms close to Trump, having appeared along the cam
 <section>
 	<div class="box alt">
 		<div class="row gtr-50 gtr-uniform">
-			<div class="col-12"><span class="image fit"><img src="/assets/images/digitally invisible cover.png" alt="A teal and blue book cover with a mainframe drawing superimposed over three people. In the center is a younger Black woman with a short afro and serious look on her face. To her left is an asian woman with an inquisitive expression, and to her right is an older man also with a serious look wearing a straw hat. The text reads the title of the book."  /></span> 
+			<div class="col-12"><span class="image fit"><img src="/assets/images/digitally invisible cover.jpg" alt="A teal and blue book cover with a mainframe drawing superimposed over three people. In the center is a younger Black woman with a short afro and serious look on her face. To her left is an asian woman with an inquisitive expression, and to her right is an older man also with a serious look wearing a straw hat. The text reads the title of the book."  /></span> 
 			</div>
 		</div>
 	</div>
