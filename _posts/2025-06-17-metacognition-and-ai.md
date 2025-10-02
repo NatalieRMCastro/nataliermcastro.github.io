@@ -10,4 +10,11 @@ For my role at the Division of Continuing Education and Online Credit, I prepare
 
 
 
-<iframe src="https://youtu.be/gmd77oeLCpw" width="640" height="480" allow="autoplay"></iframe>
+<iframe width="640" height="480" 
+    src="https://www.youtube.com/embed/gmd77oeLCpw" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+</iframe>
+
